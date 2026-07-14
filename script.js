@@ -250,6 +250,13 @@ const productSets = {
   ]
 };
 
+const menuProducts = [
+  { name: "Echo Pods Neo", price: "$440.00", img: "/public/images/pods.jpg" },
+  { name: "Aura Speaker", price: "$390.00", img: "/public/images/p-pulse.jpg" },
+  { name: "Heritage Sound", price: "$680.00", img: "/public/images/p-heritage.jpg" },
+  { name: "Noise Guard Elite", price: "$950.00", img: "/public/images/p-noise.jpg" }
+];
+
 const pad = (number) => number.toString().padStart(2, "0");
 
 function renderHeroSlide(index = 0) {
@@ -542,16 +549,30 @@ function renderCategories() {
         <div class="grid gap-1" id="category-main-list">
           ${categories
             .map(
-              (category, index) => `
-                <button
-                  class="category-tab flex items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm font-semibold transition ${index === 0 ? "bg-foreground text-background" : "hover:bg-background"}"
-                  data-category-index="${index}"
-                  type="button"
-                >
-                  <span>${category.label}</span>
-                  <i data-lucide="chevron-right" class="h-4 w-4"></i>
-                </button>
-              `
+              (category, index) => {
+                const hasChildren = Boolean(category.children?.length);
+                return `
+                  ${
+                    hasChildren
+                      ? `
+                        <button
+                          class="category-tab flex items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm font-semibold transition ${index === 0 ? "bg-foreground text-background" : "hover:bg-background"}"
+                          data-category-index="${index}"
+                          type="button"
+                        >
+                          <span>${category.label}</span>
+                          <i data-lucide="chevron-right" class="h-4 w-4"></i>
+                        </button>
+                      `
+                      : `
+                        <a href="${category.href}" class="category-direct flex items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm font-semibold text-muted-foreground transition hover:bg-background hover:text-foreground">
+                          <span>${category.label}</span>
+                          <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+                        </a>
+                      `
+                  }
+                `;
+              }
             )
             .join("")}
         </div>
@@ -568,6 +589,10 @@ function renderCategories() {
             </a>
           </div>
           <div id="category-detail-links" class="grid gap-2 sm:grid-cols-2"></div>
+          <div class="mt-6 border-t border-border pt-5">
+            <div class="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">Öne Çıkan Ürünler</div>
+            <div id="category-menu-products" class="grid gap-3 sm:grid-cols-2"></div>
+          </div>
         </div>
         <a id="category-feature-card" href="${firstCategory.href}" class="relative hidden overflow-hidden rounded-lg bg-foreground p-5 text-background lg:block">
           <div class="relative z-10">
@@ -590,7 +615,7 @@ function renderCategories() {
 
 function updateCategoryDetail(index) {
   const category = categories[index];
-  const links = category.children?.length ? category.children : [{ label: category.label, href: category.href }];
+  const links = category.children || [];
   document.querySelector("#category-detail-title").textContent = category.label;
   document.querySelector("#category-detail-all").href = category.href;
   document.querySelector("#category-feature-card").href = category.href;
@@ -601,6 +626,19 @@ function updateCategoryDetail(index) {
         <a href="${link.href}" class="category-link flex items-center justify-between rounded-lg border border-border bg-background px-3 py-3 text-sm font-medium transition hover:border-foreground hover:bg-foreground hover:text-background">
           <span>${link.label}</span>
           <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+        </a>
+      `
+    )
+    .join("");
+  document.querySelector("#category-menu-products").innerHTML = menuProducts
+    .map(
+      (product) => `
+        <a href="#trending" class="category-product flex items-center gap-3 rounded-lg bg-secondary p-2 transition hover:bg-muted">
+          <img src="${product.img}" alt="${product.name}" class="h-14 w-14 rounded-md object-cover" />
+          <span class="min-w-0">
+            <span class="block truncate text-sm font-semibold">${product.name}</span>
+            <span class="mt-0.5 block text-xs text-muted-foreground">${product.price}</span>
+          </span>
         </a>
       `
     )
@@ -633,6 +671,13 @@ function setActiveCategoryTab(tab) {
       delay: stagger(24),
       ease: "outCubic"
     });
+    animate("#category-menu-products .category-product", {
+      opacity: [0, 1],
+      y: [12, 0],
+      duration: 320,
+      delay: stagger(35),
+      ease: "outCubic"
+    });
   }
 }
 
@@ -649,7 +694,7 @@ function bindCategoryMenu() {
         duration: 260,
         ease: "outCubic"
       });
-      animate("#category-main-list .category-tab", {
+      animate("#category-main-list > *", {
         opacity: [0, 1],
         y: [-10, 0],
         duration: 360,
