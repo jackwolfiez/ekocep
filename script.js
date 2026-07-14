@@ -459,13 +459,12 @@ function renderAccessories() {
 let activeBoldIndex = 2;
 let isBoldAnimating = false;
 
-function renderBoldProducts() {
+function renderBoldProducts(offsets = [-2, -1, 0, 1, 2], activeOffset = 0) {
   const container = document.querySelector("#bold-products");
-  const offsets = [-2, -1, 0, 1, 2];
   container.innerHTML = offsets
     .map((offset) => {
       const index = (activeBoldIndex + offset + boldProducts.length) % boldProducts.length;
-      return renderBoldProductCard(boldProducts[index], offset, index);
+      return renderBoldProductCard(boldProducts[index], offset - activeOffset, index);
     })
     .join("");
   lucide.createIcons();
@@ -486,7 +485,7 @@ function renderBoldProductCard(product, offset, productIndex) {
   const priceClass = hasVideo ? "text-white/75" : "text-muted-foreground";
 
   return `
-        <a href="#shop" data-bold-index="${productIndex}" class="group relative shrink-0 ${visibilityClass} ${sizeClass} overflow-hidden rounded-2xl bg-secondary transition-shadow duration-300 ${isActive ? "shadow-xl" : ""}">
+        <a href="#shop" data-bold-index="${productIndex}" data-bold-offset="${offset}" class="group relative shrink-0 ${visibilityClass} ${sizeClass} overflow-hidden rounded-2xl bg-secondary transition-shadow duration-300 ${isActive ? "shadow-xl" : ""}">
           ${
             hasVideo
               ? `
@@ -519,59 +518,46 @@ function bindBoldCarousel() {
   const showBoldSlide = (nextIndex) => {
     if (isBoldAnimating) return;
     const direction = nextIndex > activeBoldIndex ? 1 : -1;
+    const nextActiveIndex = (nextIndex + boldProducts.length) % boldProducts.length;
 
     if (prefersReducedMotion) {
-      activeBoldIndex = (nextIndex + boldProducts.length) % boldProducts.length;
+      activeBoldIndex = nextActiveIndex;
       renderBoldProducts();
       return;
     }
-
-    const previousRects = new Map(
-      [...container.querySelectorAll("[data-bold-index]")]
-        .map((card) => [card.dataset.boldIndex, card.getBoundingClientRect()])
-        .filter(([, rect]) => rect.width > 0 && rect.height > 0)
-    );
 
     isBoldAnimating = true;
     previous.disabled = true;
     next.disabled = true;
 
-    activeBoldIndex = (nextIndex + boldProducts.length) % boldProducts.length;
-    renderBoldProducts();
+    const offsets = direction > 0 ? [-2, -1, 0, 1, 2, 3] : [-3, -2, -1, 0, 1, 2];
+    renderBoldProducts(offsets);
 
-    container.querySelectorAll("[data-bold-index]").forEach((card) => {
-      const previousRect = previousRects.get(card.dataset.boldIndex);
-      const currentRect = card.getBoundingClientRect();
+    const activeCard = container.querySelector('[data-bold-offset="0"]');
+    const nextCard = container.querySelector(`[data-bold-offset="${direction}"]`);
+    const viewportRect = container.parentElement.getBoundingClientRect();
+    const activeRect = activeCard?.getBoundingClientRect();
+    const nextRect = nextCard?.getBoundingClientRect();
+    const viewportCenter = viewportRect.left + viewportRect.width / 2;
+    const startX = activeRect ? viewportCenter - (activeRect.left + activeRect.width / 2) : 0;
+    const endX = nextRect ? viewportCenter - (nextRect.left + nextRect.width / 2) : direction * -360;
 
-      card.style.transformOrigin = "center bottom";
+    container.style.transform = `translateX(${startX}px)`;
 
-      if (previousRect && currentRect.width > 0 && currentRect.height > 0) {
-        animate(card, {
-          x: [previousRect.left - currentRect.left, 0],
-          y: [previousRect.top - currentRect.top, 0],
-          scaleX: [previousRect.width / currentRect.width, 1],
-          scaleY: [previousRect.height / currentRect.height, 1],
-          opacity: [0.98, 1],
-          duration: 760,
-          ease: "outCubic"
-        });
-        return;
-      }
-
-      animate(card, {
-        opacity: [0, 1],
-        x: [direction * 90, 0],
-        scale: [0.94, 1],
-        duration: 620,
-        ease: "outCubic"
-      });
+    animate(container, {
+      x: [startX, endX],
+      duration: 720,
+      ease: "outCubic"
     });
 
     window.setTimeout(() => {
+      container.style.transform = "";
+      activeBoldIndex = nextActiveIndex;
+      renderBoldProducts();
       isBoldAnimating = false;
       previous.disabled = false;
       next.disabled = false;
-    }, 660);
+    }, 740);
   };
 
   previous.addEventListener("click", () => showBoldSlide(activeBoldIndex - 1));
