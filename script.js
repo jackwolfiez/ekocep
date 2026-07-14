@@ -11,149 +11,149 @@ const announcements = [
 const categories = [
   {
     label: "Telefon / Tablet",
-    href: "https://nettechstore.com/telefon-tablet",
+    href: "#shop",
     children: [
-      { label: "Cep Telefonu", href: "https://nettechstore.com/telefon-tablet/cep-telefonu" },
-      { label: "Tablet", href: "https://nettechstore.com/telefon-tablet/tablet" }
+      { label: "Cep Telefonu", href: "#shop" },
+      { label: "Tablet", href: "#shop" }
     ]
   },
-  { label: "Teknoloji Ürünleri", href: "https://nettechstore.com/teknoloji-urunleri" },
-  { label: "Powerbank", href: "https://nettechstore.com/powerbank" },
+  { label: "Teknoloji Ürünleri", href: "#shop" },
+  { label: "Powerbank", href: "#shop" },
   {
     label: "Şarj Cihazı",
-    href: "https://nettechstore.com/sarj-cihazi",
+    href: "#shop",
     children: [
-      { label: "Şarj Aleti", href: "https://nettechstore.com/sarj-cihazi/sarj-aleti" },
-      { label: "Kablosuz Wireless Şarj", href: "https://nettechstore.com/sarj-cihazi/kablosuz-wireless-sarj" },
-      { label: "Araç Şarj Aleti", href: "https://nettechstore.com/sarj-cihazi/arac-sarj-aleti" }
+      { label: "Şarj Aleti", href: "#shop" },
+      { label: "Kablosuz Wireless Şarj", href: "#shop" },
+      { label: "Araç Şarj Aleti", href: "#shop" }
     ]
   },
   {
     label: "Kablo",
-    href: "https://nettechstore.com/kablo",
+    href: "#shop",
     children: [
-      { label: "Şarj ve Data Kablosu", href: "https://nettechstore.com/kablo/sarj-ve-data-kablosu" },
-      { label: "Otg ve Dönüştürücü Kablo", href: "https://nettechstore.com/kablo/otg-ve-donusturucu-kablo" },
-      { label: "Hdmi ve Audio Kablosu", href: "https://nettechstore.com/kablo/hdmi-ve-audio-kablosu" }
+      { label: "Şarj ve Data Kablosu", href: "#shop" },
+      { label: "Otg ve Dönüştürücü Kablo", href: "#shop" },
+      { label: "Hdmi ve Audio Kablosu", href: "#shop" }
     ]
   },
   {
     label: "Ses ve Müzik",
-    href: "https://nettechstore.com/ses-ve-muzik",
+    href: "#shop",
     children: [
-      { label: "Bluetooth Kulaklık", href: "https://nettechstore.com/ses-ve-muzik/bluetooth-kulaklik" },
-      { label: "Kulak Üstü Kulaklık", href: "https://nettechstore.com/ses-ve-muzik/kulak-ustu-kulaklik" },
-      { label: "Hoparlör - Speaker", href: "https://nettechstore.com/ses-ve-muzik/hoparlor-speaker" },
-      { label: "Kulak İçi Kulaklık", href: "https://nettechstore.com/ses-ve-muzik/kulak-ici-kulaklik" }
+      { label: "Bluetooth Kulaklık", href: "#shop" },
+      { label: "Kulak Üstü Kulaklık", href: "#shop" },
+      { label: "Hoparlör - Speaker", href: "#shop" },
+      { label: "Kulak İçi Kulaklık", href: "#shop" }
     ]
   },
   {
     label: "Aksesuar",
-    href: "https://nettechstore.com/aksesuar",
+    href: "#shop",
     children: [
-      { label: "Monopod - Tripod", href: "https://nettechstore.com/aksesuar/monopod-tripod" },
-      { label: "Araç Tutucu", href: "https://nettechstore.com/aksesuar/arac-tutucu" },
-      { label: "Telefon - Tablet Standı", href: "https://nettechstore.com/aksesuar/telefon-tablet-standi" },
-      { label: "Aydınlatma Lamba", href: "https://nettechstore.com/aksesuar/aydinlatma-lamba" },
-      { label: "Diğer Aksesuarlar", href: "https://nettechstore.com/aksesuar/diger-aksesuarlar" }
+      { label: "Monopod - Tripod", href: "#shop" },
+      { label: "Araç Tutucu", href: "#shop" },
+      { label: "Telefon - Tablet Standı", href: "#shop" },
+      { label: "Aydınlatma Lamba", href: "#shop" },
+      { label: "Diğer Aksesuarlar", href: "#shop" }
     ]
   },
   {
     label: "Giyilebilir Teknoloji",
-    href: "https://nettechstore.com/giyilebilir-teknoloji",
+    href: "#shop",
     children: [
-      { label: "Akıllı Saat", href: "https://nettechstore.com/giyilebilir-teknoloji/akilli-saat" },
-      { label: "Akıllı Saat Aksesuarları", href: "https://nettechstore.com/giyilebilir-teknoloji/akilli-saat-aksesuarlari" },
-      { label: "Aksiyon Kamera", href: "https://nettechstore.com/giyilebilir-teknoloji/aksiyon-kamera" }
+      { label: "Akıllı Saat", href: "#shop" },
+      { label: "Akıllı Saat Aksesuarları", href: "#shop" },
+      { label: "Aksiyon Kamera", href: "#shop" }
     ]
   },
   {
     label: "Hafıza Ürünleri",
-    href: "https://nettechstore.com/hafiza-urunleri",
+    href: "#shop",
     children: [
-      { label: "Usb Bellek", href: "https://nettechstore.com/hafiza-urunleri/usb-bellek" },
-      { label: "Hafıza Kartı", href: "https://nettechstore.com/hafiza-urunleri/hafiza-karti" }
+      { label: "Usb Bellek", href: "#shop" },
+      { label: "Hafıza Kartı", href: "#shop" }
     ]
   },
   {
     label: "Telefon Kılıfı",
-    href: "https://nettechstore.com/telefon-kilifi",
+    href: "#shop",
     children: [
-      { label: "Arka Koruma Kılıf", href: "https://nettechstore.com/telefon-kilifi/arka-koruma-kilif" },
-      { label: "Kapaklı Kılıf", href: "https://nettechstore.com/telefon-kilifi/kapakli-kilif" },
-      { label: "Diğer Kılıflar", href: "https://nettechstore.com/telefon-kilifi/diger-kiliflar" }
+      { label: "Arka Koruma Kılıf", href: "#shop" },
+      { label: "Kapaklı Kılıf", href: "#shop" },
+      { label: "Diğer Kılıflar", href: "#shop" }
     ]
   },
   {
     label: "Tablet Kılıfı",
-    href: "https://nettechstore.com/tablet-kilifi",
+    href: "#shop",
     children: [
-      { label: "Arka Koruma", href: "https://nettechstore.com/tablet-kilifi/arka-koruma" },
-      { label: "Kapaklı Kılıf", href: "https://nettechstore.com/tablet-kilifi/kapakli-kilif" }
+      { label: "Arka Koruma", href: "#shop" },
+      { label: "Kapaklı Kılıf", href: "#shop" }
     ]
   },
   {
     label: "Telefon Ekran Koruyucu",
-    href: "https://nettechstore.com/telefon-ekran-koruyucu",
+    href: "#shop",
     children: [
-      { label: "Full Cam Koruyucu", href: "https://nettechstore.com/telefon-ekran-koruyucu/full-cam-koruyucu" },
-      { label: "Cam Ekran Koruyucu", href: "https://nettechstore.com/telefon-ekran-koruyucu/cam-ekran-koruyucu" },
-      { label: "Nano Ekran Koruyucu", href: "https://nettechstore.com/telefon-ekran-koruyucu/nano-ekran-koruyucu" },
-      { label: "Kamera Cam Koruyucu", href: "https://nettechstore.com/telefon-ekran-koruyucu/kamera-cam-koruyucu" },
-      { label: "360 Full Kaplama", href: "https://nettechstore.com/telefon-ekran-koruyucu/360-full-kaplama" }
+      { label: "Full Cam Koruyucu", href: "#shop" },
+      { label: "Cam Ekran Koruyucu", href: "#shop" },
+      { label: "Nano Ekran Koruyucu", href: "#shop" },
+      { label: "Kamera Cam Koruyucu", href: "#shop" },
+      { label: "360 Full Kaplama", href: "#shop" }
     ]
   },
   {
     label: "Tablet Ekran Koruyucu",
-    href: "https://nettechstore.com/tablet-ekran-koruyucu",
+    href: "#shop",
     children: [
-      { label: "Cam Ekran Koruyucu", href: "https://nettechstore.com/tablet-ekran-koruyucu/cam-ekran-koruyucu" },
-      { label: "Nano Ekran Koruyucu", href: "https://nettechstore.com/tablet-ekran-koruyucu/nano-ekran-koruyucu" }
+      { label: "Cam Ekran Koruyucu", href: "#shop" },
+      { label: "Nano Ekran Koruyucu", href: "#shop" }
     ]
   },
-  { label: "Lcd Ekran", href: "https://nettechstore.com/lcd-ekran" },
-  { label: "Batarya", href: "https://nettechstore.com/batarya" },
+  { label: "Lcd Ekran", href: "#shop" },
+  { label: "Batarya", href: "#shop" },
   {
     label: "Yedek Parça",
-    href: "https://nettechstore.com/yedek-parca",
+    href: "#shop",
     children: [
-      { label: "Kasa - Kapak", href: "https://nettechstore.com/yedek-parca/kasa-kapak" },
-      { label: "Batarya Kapağı", href: "https://nettechstore.com/yedek-parca/batarya-kapagi" },
-      { label: "Dokunmatik Lens", href: "https://nettechstore.com/yedek-parca/dokunmatik-lens" },
-      { label: "Sim ve Hafıza Kart Yuvası", href: "https://nettechstore.com/yedek-parca/sim-ve-hafiza-kart-yuvasi" },
-      { label: "Şarj - Kulaklık Soket", href: "https://nettechstore.com/yedek-parca/sarj-kulaklik-soket" },
-      { label: "Flex - Film", href: "https://nettechstore.com/yedek-parca/flex-film" },
-      { label: "Buzzer - İç Kulaklık", href: "https://nettechstore.com/yedek-parca/buzzer-ic-kulaklik" },
-      { label: "Entegre", href: "https://nettechstore.com/yedek-parca/entegre" },
-      { label: "Home - Power Tuş", href: "https://nettechstore.com/yedek-parca/home-power-tus" },
-      { label: "Titreşim Motoru", href: "https://nettechstore.com/yedek-parca/titresim-motoru" },
-      { label: "Mikrofon - Sensör", href: "https://nettechstore.com/yedek-parca/mikrofon-sensor" },
-      { label: "Anten - Konnektör", href: "https://nettechstore.com/yedek-parca/anten-konnektor" },
-      { label: "Kamera", href: "https://nettechstore.com/yedek-parca/kamera" },
-      { label: "Kamera Camı", href: "https://nettechstore.com/yedek-parca/kamera-cami" },
-      { label: "Ekran Bileşenleri", href: "https://nettechstore.com/yedek-parca/ekran-bilesenleri" },
-      { label: "Diğer Yedek Parça", href: "https://nettechstore.com/yedek-parca/diger-yedek-parca" }
+      { label: "Kasa - Kapak", href: "#shop" },
+      { label: "Batarya Kapağı", href: "#shop" },
+      { label: "Dokunmatik Lens", href: "#shop" },
+      { label: "Sim ve Hafıza Kart Yuvası", href: "#shop" },
+      { label: "Şarj - Kulaklık Soket", href: "#shop" },
+      { label: "Flex - Film", href: "#shop" },
+      { label: "Buzzer - İç Kulaklık", href: "#shop" },
+      { label: "Entegre", href: "#shop" },
+      { label: "Home - Power Tuş", href: "#shop" },
+      { label: "Titreşim Motoru", href: "#shop" },
+      { label: "Mikrofon - Sensör", href: "#shop" },
+      { label: "Anten - Konnektör", href: "#shop" },
+      { label: "Kamera", href: "#shop" },
+      { label: "Kamera Camı", href: "#shop" },
+      { label: "Ekran Bileşenleri", href: "#shop" },
+      { label: "Diğer Yedek Parça", href: "#shop" }
     ]
   },
   {
     label: "Çevre Birimleri",
-    href: "https://nettechstore.com/cevre-birimleri",
+    href: "#shop",
     children: [
-      { label: "Klavye", href: "https://nettechstore.com/cevre-birimleri/klavye" },
-      { label: "Mouse", href: "https://nettechstore.com/cevre-birimleri/mouse" },
-      { label: "Oyun Konsolu", href: "https://nettechstore.com/cevre-birimleri/oyun-konsolu" },
-      { label: "Modem, Router", href: "https://nettechstore.com/cevre-birimleri/modem-router" },
-      { label: "Bilgisayar Bileşenleri", href: "https://nettechstore.com/cevre-birimleri/bilgisayar-bilesenleri" }
+      { label: "Klavye", href: "#shop" },
+      { label: "Mouse", href: "#shop" },
+      { label: "Oyun Konsolu", href: "#shop" },
+      { label: "Modem, Router", href: "#shop" },
+      { label: "Bilgisayar Bileşenleri", href: "#shop" }
     ]
   },
   {
     label: "Tamir Malzeme",
-    href: "https://nettechstore.com/tamir-malzeme",
+    href: "#shop",
     children: [
-      { label: "Tamir Makinaları", href: "https://nettechstore.com/tamir-malzeme/tamir-makinalari" },
-      { label: "Tamir El Aletleri", href: "https://nettechstore.com/tamir-malzeme/tamir-el-aletleri" },
-      { label: "Yapıştırıcılar ve Sıvı Malzemeler", href: "https://nettechstore.com/tamir-malzeme/yapistiricilar-ve-sivi-malzemeler" },
-      { label: "Kalıplar Ve Board Tutucu", href: "https://nettechstore.com/tamir-malzeme/kaliplar-ve-board-tutucu" }
+      { label: "Tamir Makinaları", href: "#shop" },
+      { label: "Tamir El Aletleri", href: "#shop" },
+      { label: "Yapıştırıcılar ve Sıvı Malzemeler", href: "#shop" },
+      { label: "Kalıplar Ve Board Tutucu", href: "#shop" }
     ]
   }
 ];
@@ -210,15 +210,15 @@ const heroSlides = [
 ];
 
 const accessories = [
-  { label: "Sana Özel", href: "https://nettechstore.com/aksesuar", img: "/public/images/pods.jpg" },
-  { label: "Fırsatlar", href: "https://nettechstore.com/arama?outlet=1", img: "/public/images/p-pulse.jpg" },
-  { label: "Yeni Ürünler", href: "https://nettechstore.com/arama?new=1", img: "/public/images/p-aura.jpg" },
-  { label: "Web Özel", href: "https://nettechstore.com/kampanyalar", img: "/public/images/soft-base.jpg" },
-  { label: "Kulaklıklar", href: "https://nettechstore.com/ses-ve-muzik/kulak-ustu-kulaklik", img: "/public/images/p-heritage.jpg" },
-  { label: "Kılıflar", href: "https://nettechstore.com/telefon-kilifi", img: "/public/images/classic.jpg" },
-  { label: "Saat", href: "https://nettechstore.com/giyilebilir-teknoloji", img: "/public/images/earbuds.jpg" },
-  { label: "Hoparlör", href: "https://nettechstore.com/ses-ve-muzik/hoparlor-speaker", img: "/public/images/base-speakers.jpg" },
-  { label: "Powerbank", href: "https://nettechstore.com/powerbank", img: "/public/images/p-noise.jpg" }
+  { label: "Sana Özel", href: "#shop", img: "/public/images/pods.jpg" },
+  { label: "Fırsatlar", href: "#shop", img: "/public/images/p-pulse.jpg" },
+  { label: "Yeni Ürünler", href: "#shop", img: "/public/images/p-aura.jpg" },
+  { label: "Web Özel", href: "#shop", img: "/public/images/soft-base.jpg" },
+  { label: "Kulaklıklar", href: "#shop", img: "/public/images/p-heritage.jpg" },
+  { label: "Kılıflar", href: "#shop", img: "/public/images/classic.jpg" },
+  { label: "Saat", href: "#shop", img: "/public/images/earbuds.jpg" },
+  { label: "Hoparlör", href: "#shop", img: "/public/images/base-speakers.jpg" },
+  { label: "Powerbank", href: "#shop", img: "/public/images/p-noise.jpg" }
 ];
 
 const boldProducts = [
