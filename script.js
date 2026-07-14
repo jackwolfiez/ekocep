@@ -545,9 +545,10 @@ function bindBoldCarousel() {
     const viewportRect = container.parentElement.getBoundingClientRect();
     const activeRect = activeCard?.getBoundingClientRect();
     const nextRect = nextCard?.getBoundingClientRect();
+    const hasNextRect = nextRect && nextRect.width > 80 && nextRect.height > 80;
     const viewportCenter = viewportRect.left + viewportRect.width / 2;
     const startX = activeRect ? viewportCenter - (activeRect.left + activeRect.width / 2) : 0;
-    const endX = nextRect ? viewportCenter - (nextRect.left + nextRect.width / 2) : direction * -360;
+    const endX = hasNextRect ? viewportCenter - (nextRect.left + nextRect.width / 2) : direction * -Math.min(360, viewportRect.width * 0.72);
 
     container.style.transform = `translateX(${startX}px)`;
 
@@ -558,8 +559,7 @@ function bindBoldCarousel() {
     });
 
     window.setTimeout(() => {
-      const incomingCard = container.querySelector(`[data-bold-index="${nextActiveIndex}"]`);
-      const incomingRect = incomingCard?.getBoundingClientRect();
+      const incomingRect = nextCard?.getBoundingClientRect();
 
       container.style.transform = "";
       activeBoldIndex = nextActiveIndex;
@@ -567,16 +567,26 @@ function bindBoldCarousel() {
 
       const finalActiveCard = container.querySelector('[data-bold-offset="0"]');
       const finalRect = finalActiveCard?.getBoundingClientRect();
-      if (incomingRect && finalRect && finalActiveCard) {
+      const hasIncomingRect = incomingRect && incomingRect.width > 80 && incomingRect.height > 80;
+      if (finalRect && finalActiveCard) {
         finalActiveCard.style.transformOrigin = "center bottom";
-        animate(finalActiveCard, {
-          x: [incomingRect.left - finalRect.left, 0],
-          y: [incomingRect.top - finalRect.top, 0],
-          scaleX: [incomingRect.width / finalRect.width, 1],
-          scaleY: [incomingRect.height / finalRect.height, 1],
-          duration: 420,
-          ease: "outCubic"
-        });
+        if (hasIncomingRect) {
+          animate(finalActiveCard, {
+            x: [incomingRect.left - finalRect.left, 0],
+            y: [incomingRect.top - finalRect.top, 0],
+            scaleX: [incomingRect.width / finalRect.width, 1],
+            scaleY: [incomingRect.height / finalRect.height, 1],
+            duration: 420,
+            ease: "outCubic"
+          });
+        } else {
+          animate(finalActiveCard, {
+            y: [18, 0],
+            scale: [0.92, 1],
+            duration: 380,
+            ease: "outCubic"
+          });
+        }
       }
 
       isBoldAnimating = false;
