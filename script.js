@@ -460,23 +460,27 @@ let activeBoldIndex = 2;
 
 function renderBoldProducts() {
   const container = document.querySelector("#bold-products");
-  container.innerHTML = boldProducts
-    .map(
-      (product, index) => renderBoldProductCard(product, index)
-    )
+  const offsets = [-2, -1, 0, 1, 2];
+  container.innerHTML = offsets
+    .map((offset) => {
+      const index = (activeBoldIndex + offset + boldProducts.length) % boldProducts.length;
+      return renderBoldProductCard(boldProducts[index], offset);
+    })
     .join("");
   lucide.createIcons();
 }
 
-function renderBoldProductCard(product, index) {
-  const isActive = index === activeBoldIndex;
+function renderBoldProductCard(product, offset) {
+  const isActive = offset === 0;
+  const distance = Math.abs(offset);
+  const visibilityClass = distance === 2 ? "hidden xl:block" : distance === 1 ? "hidden md:block" : "";
   const sizeClass = isActive
-    ? "min-w-[82%] sm:min-w-[54%] lg:min-w-[36%]"
-    : "min-w-[68%] sm:min-w-[38%] lg:min-w-[22%]";
-  const mediaClass = isActive ? "aspect-[3/5]" : "aspect-square";
+    ? "w-[min(76vw,390px)]"
+    : "w-[min(70vw,350px)] md:w-[330px] xl:w-[350px]";
+  const mediaClass = isActive ? "aspect-[4/5]" : "aspect-square";
 
   return `
-        <a href="#shop" class="group relative ${sizeClass} snap-center overflow-hidden rounded-2xl bg-secondary transition-all duration-500 ${isActive ? "shadow-2xl ring-1 ring-foreground/10" : "opacity-85"}">
+        <a href="#shop" class="group relative shrink-0 ${visibilityClass} ${sizeClass} overflow-hidden rounded-2xl bg-secondary transition-all duration-500 ${isActive ? "shadow-xl ring-1 ring-foreground/10" : ""}">
           ${
             product.video
               ? `
@@ -503,19 +507,24 @@ function renderBoldProductCard(product, index) {
 }
 
 function bindBoldCarousel() {
-  const carousel = document.querySelector("#bold-products");
   const previous = document.querySelector("#bold-prev");
   const next = document.querySelector("#bold-next");
   const showBoldSlide = (nextIndex) => {
     activeBoldIndex = (nextIndex + boldProducts.length) % boldProducts.length;
     renderBoldProducts();
-    const activeCard = carousel.children[activeBoldIndex];
-    activeCard?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    if (!prefersReducedMotion) {
+      animate("#bold-products > a", {
+        opacity: [0, 1],
+        y: [18, 0],
+        duration: 360,
+        delay: stagger(45),
+        ease: "outCubic"
+      });
+    }
   };
 
   previous.addEventListener("click", () => showBoldSlide(activeBoldIndex - 1));
   next.addEventListener("click", () => showBoldSlide(activeBoldIndex + 1));
-  requestAnimationFrame(() => carousel.children[activeBoldIndex]?.scrollIntoView({ inline: "center", block: "nearest" }));
 }
 
 function renderProducts(type = "trending") {

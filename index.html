@@ -137,20 +137,20 @@
       </section>
 
       <section class="py-24">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="mx-auto max-w-[2000px] px-4 sm:px-6">
           <div class="text-center">
             <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Güçlü Tasarım, Yumuşak Konfor</h2>
             <p class="mt-4 text-muted-foreground">İşten yolculuğa, dinlenme anlarından günlük kullanıma kadar konfor odaklı ses deneyimi.</p>
           </div>
-          <div class="mt-10 flex justify-end gap-2">
-            <button id="bold-prev" aria-label="Önceki ürünler" class="grid h-10 w-10 place-items-center rounded-full border border-border transition hover:bg-foreground hover:text-background">
+          <div class="relative mt-20">
+            <button id="bold-prev" aria-label="Önceki ürünler" class="absolute left-2 top-1/2 z-20 grid h-12 w-12 -translate-y-1/2 place-items-center bg-black text-white transition hover:bg-foreground sm:left-6">
               <i data-lucide="chevron-left" class="h-4 w-4"></i>
             </button>
-            <button id="bold-next" aria-label="Sonraki ürünler" class="grid h-10 w-10 place-items-center rounded-full border border-border transition hover:bg-foreground hover:text-background">
+            <div id="bold-products" class="flex min-h-[430px] items-end justify-center gap-6 overflow-hidden px-12 sm:min-h-[470px] lg:gap-8 lg:px-20"></div>
+            <button id="bold-next" aria-label="Sonraki ürünler" class="absolute right-2 top-1/2 z-20 grid h-12 w-12 -translate-y-1/2 place-items-center bg-black text-white transition hover:bg-foreground sm:right-6">
               <i data-lucide="chevron-right" class="h-4 w-4"></i>
             </button>
           </div>
-          <div id="bold-products" class="mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-4"></div>
         </div>
       </section>
 
