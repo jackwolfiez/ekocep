@@ -1,4 +1,7 @@
+import { animate, stagger } from "https://cdn.jsdelivr.net/npm/animejs@4.5.0/+esm";
+
 const targetDate = new Date("2026-10-10T00:00:00").getTime();
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const announcements = [
   "We offer free delivery on all orders",
   "New arrivals - Fall collection is live",
@@ -141,6 +144,7 @@ function renderHeroSlide(index = 0) {
       `
     )
     .join("");
+  animateHeroSlide();
 }
 
 function bindHeroSlider() {
@@ -171,6 +175,76 @@ function bindHeroSlider() {
 function bindHeroDots(showSlide) {
   document.querySelectorAll("[data-hero-dot]").forEach((dot) => {
     dot.addEventListener("click", () => showSlide(Number(dot.dataset.heroDot)));
+  });
+}
+
+function animateHeroSlide() {
+  if (prefersReducedMotion) return;
+
+  animate("#hero-image", {
+    opacity: [0.72, 1],
+    scale: [1.035, 1],
+    duration: 900,
+    ease: "outCubic"
+  });
+
+  animate(["#hero-title", "#hero-copy", "#hero-cta", "#hero-mini-products > a"], {
+    opacity: [0, 1],
+    y: [26, 0],
+    duration: 760,
+    delay: stagger(90),
+    ease: "outCubic"
+  });
+}
+
+function animateProductGrid() {
+  if (prefersReducedMotion) return;
+
+  animate("#product-grid article", {
+    opacity: [0, 1],
+    y: [20, 0],
+    duration: 620,
+    delay: stagger(80),
+    ease: "outCubic"
+  });
+}
+
+function bindScrollAnimations() {
+  if (prefersReducedMotion) return;
+
+  const groups = [
+    { selector: "#accessories > a", delay: 35 },
+    { selector: "#bold-products > a", delay: 70 },
+    { selector: "#features .grid > div", delay: 80 }
+  ];
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const target = entry.target.dataset.animateGroup;
+        const group = groups[Number(target)];
+
+        animate(group.selector, {
+          opacity: [0, 1],
+          y: [22, 0],
+          duration: 650,
+          delay: stagger(group.delay),
+          ease: "outCubic"
+        });
+
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.18 }
+  );
+
+  groups.forEach((group, index) => {
+    const firstElement = document.querySelector(group.selector);
+    const parent = firstElement?.parentElement;
+    if (!parent) return;
+    parent.dataset.animateGroup = String(index);
+    observer.observe(parent);
   });
 }
 
@@ -254,6 +328,7 @@ function renderProducts(type = "trending") {
     )
     .join("");
   lucide.createIcons();
+  animateProductGrid();
 }
 
 function bindTabs() {
@@ -299,6 +374,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderAccessories();
   renderBoldProducts();
   renderProducts("trending");
+  bindScrollAnimations();
   bindTabs();
   bindAnnouncementControls();
   bindMobileMenu();
