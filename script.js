@@ -515,6 +515,13 @@ function bindBoldCarousel() {
   const previous = document.querySelector("#bold-prev");
   const next = document.querySelector("#bold-next");
   const container = document.querySelector("#bold-products");
+  const viewport = container.parentElement;
+  let swipeStartX = 0;
+  let swipeStartY = 0;
+  let swipeDeltaX = 0;
+  let swipePointerId = null;
+  let isSwiping = false;
+  let didSwipe = false;
   const showBoldSlide = (nextIndex) => {
     if (isBoldAnimating) return;
     const direction = nextIndex > activeBoldIndex ? 1 : -1;
@@ -562,6 +569,76 @@ function bindBoldCarousel() {
 
   previous.addEventListener("click", () => showBoldSlide(activeBoldIndex - 1));
   next.addEventListener("click", () => showBoldSlide(activeBoldIndex + 1));
+
+  viewport.addEventListener("pointerdown", (event) => {
+    if (isBoldAnimating || event.pointerType === "mouse") return;
+    swipePointerId = event.pointerId;
+    swipeStartX = event.clientX;
+    swipeStartY = event.clientY;
+    swipeDeltaX = 0;
+    isSwiping = false;
+    viewport.setPointerCapture(event.pointerId);
+  });
+
+  viewport.addEventListener("pointermove", (event) => {
+    if (event.pointerId !== swipePointerId || isBoldAnimating) return;
+
+    const deltaX = event.clientX - swipeStartX;
+    const deltaY = event.clientY - swipeStartY;
+    if (!isSwiping && Math.abs(deltaX) < 8) return;
+    if (!isSwiping && Math.abs(deltaY) > Math.abs(deltaX)) return;
+
+    isSwiping = true;
+    didSwipe = true;
+    swipeDeltaX = deltaX;
+    container.style.transform = `translateX(${deltaX * 0.35}px)`;
+    event.preventDefault();
+  });
+
+  const finishSwipe = (event) => {
+    if (event.pointerId !== swipePointerId) return;
+    const threshold = Math.min(90, viewport.clientWidth * 0.18);
+
+    if (isSwiping && Math.abs(swipeDeltaX) > threshold) {
+      container.style.transform = "";
+      showBoldSlide(activeBoldIndex + (swipeDeltaX < 0 ? 1 : -1));
+    } else if (isSwiping && !prefersReducedMotion) {
+      animate(container, {
+        x: [swipeDeltaX * 0.35, 0],
+        duration: 260,
+        ease: "outCubic"
+      });
+      window.setTimeout(() => {
+        container.style.transform = "";
+      }, 280);
+    } else {
+      container.style.transform = "";
+    }
+
+    if (swipePointerId !== null && viewport.hasPointerCapture(swipePointerId)) {
+      viewport.releasePointerCapture(swipePointerId);
+    }
+
+    swipePointerId = null;
+    swipeDeltaX = 0;
+    isSwiping = false;
+    window.setTimeout(() => {
+      didSwipe = false;
+    }, 350);
+  };
+
+  viewport.addEventListener("pointerup", finishSwipe);
+  viewport.addEventListener("pointercancel", finishSwipe);
+  viewport.addEventListener(
+    "click",
+    (event) => {
+      if (!didSwipe) return;
+      event.preventDefault();
+      event.stopPropagation();
+      didSwipe = false;
+    },
+    true
+  );
 }
 
 function renderProducts(type = "trending") {

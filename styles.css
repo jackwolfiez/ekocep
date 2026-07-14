@@ -12,6 +12,8 @@ img {
 
 #bold-products {
   scrollbar-width: none;
+  touch-action: pan-y;
+  user-select: none;
 }
 
 #bold-products > a {
