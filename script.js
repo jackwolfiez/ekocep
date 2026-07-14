@@ -534,9 +534,9 @@ function renderProducts(type = "trending") {
       (product) => `
         <article class="group">
           <div class="relative aspect-square overflow-hidden rounded-2xl bg-secondary">
-            ${product.sale ? `<span class="absolute left-3 top-3 z-10 rounded-md bg-destructive px-2 py-1 text-xs font-medium text-destructive-foreground">İndirim</span>` : ""}
+            ${product.sale ? `<span class="absolute left-3 top-3 z-10 rounded-full bg-white px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-destructive shadow-md ring-1 ring-black/5">İndirim</span>` : ""}
             <img src="${product.img}" alt="${product.name}" loading="lazy" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-            <button aria-label="Sepete ekle: ${product.name}" class="absolute bottom-3 right-3 grid h-10 w-10 place-items-center rounded-full bg-background shadow-md transition group-hover:bg-foreground group-hover:text-background">
+            <button aria-label="Sepete ekle: ${product.name}" class="absolute bottom-3 right-3 grid h-11 w-11 place-items-center rounded-full bg-white text-foreground shadow-lg ring-1 ring-black/5 transition duration-300 hover:scale-105 hover:bg-foreground hover:text-background">
               <i data-lucide="plus" class="h-4 w-4"></i>
             </button>
           </div>
