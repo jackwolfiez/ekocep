@@ -70,7 +70,7 @@
       </div>
 
       <section class="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
-        <img src="/public/images/hero.jpg" alt="Woman wearing Ekocep wireless earbuds" class="absolute inset-0 h-full w-full object-cover" />
+        <img id="hero-image" src="/public/images/hero.jpg" alt="Woman wearing Ekocep wireless earbuds" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-500" />
         <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
 
         <header class="absolute inset-x-0 top-0 z-20">
@@ -110,36 +110,28 @@
 
         <div class="relative z-10 mx-auto flex h-full max-w-[1600px] items-end px-4 pb-16 sm:px-6 sm:pb-24">
           <div class="max-w-xl text-white">
-            <h1 class="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+            <h1 id="hero-title" class="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
               Pure Sound. <br /> Total Control.
             </h1>
-            <p class="mt-6 max-w-md text-base leading-relaxed text-white/85 sm:text-lg">
+            <p id="hero-copy" class="mt-6 max-w-md text-base leading-relaxed text-white/85 sm:text-lg">
               Experience immersive audio engineered for clarity, comfort and uninterrupted listening wherever life takes you.
             </p>
-            <a href="#features" class="mt-8 inline-flex items-center rounded-full bg-white px-8 py-3.5 text-xs font-semibold tracking-[0.15em] text-black transition hover:bg-white/90">
+            <a id="hero-cta" href="#features" class="mt-8 inline-flex items-center rounded-full bg-white px-8 py-3.5 text-xs font-semibold tracking-[0.15em] text-black transition hover:bg-white/90">
               DISCOVER FEATURES
             </a>
-            <div class="mt-10 flex flex-col gap-3 sm:flex-row">
-              <a href="#shop" class="flex items-center gap-3 rounded-2xl bg-white/15 p-2 pr-5 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
-                <img src="/public/images/pods.jpg" alt="Wireless Pods" class="h-14 w-14 rounded-xl object-cover" />
-                <span class="text-sm leading-tight"><span class="block font-medium">Wireless Pods</span><span class="block text-white/75">Shop now</span></span>
-              </a>
-              <a href="#shop" class="flex items-center gap-3 rounded-2xl bg-white/15 p-2 pr-5 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
-                <img src="/public/images/earbuds.jpg" alt="Sleek Earbuds" class="h-14 w-14 rounded-xl object-cover" />
-                <span class="text-sm leading-tight"><span class="block font-medium">Sleek Earbuds</span><span class="block text-white/75">Shop now</span></span>
-              </a>
-            </div>
+            <div id="hero-mini-products" class="mt-10 flex flex-col gap-3 sm:flex-row"></div>
           </div>
         </div>
 
         <div class="absolute bottom-10 right-4 z-10 flex flex-col gap-2 text-white sm:bottom-16 sm:right-10">
-          <button aria-label="Next slide" class="grid h-11 w-11 place-items-center rounded-full bg-white/15 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
+          <button id="hero-next" aria-label="Next slide" class="grid h-11 w-11 place-items-center rounded-full bg-white/15 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
             <i data-lucide="chevron-right" class="h-5 w-5"></i>
           </button>
-          <button aria-label="Previous slide" class="grid h-11 w-11 place-items-center rounded-full bg-white/15 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
+          <button id="hero-prev" aria-label="Previous slide" class="grid h-11 w-11 place-items-center rounded-full bg-white/15 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
             <i data-lucide="chevron-left" class="h-5 w-5"></i>
           </button>
         </div>
+        <div id="hero-dots" class="absolute bottom-8 left-4 z-10 flex gap-2 text-white sm:left-6"></div>
       </section>
 
       <section id="shop" class="bg-secondary py-24">

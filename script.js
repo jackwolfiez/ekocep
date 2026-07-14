@@ -5,6 +5,57 @@ const announcements = [
   "30-day money-back guarantee on every order"
 ];
 
+const heroSlides = [
+  {
+    title: "Pure Sound. <br /> Total Control.",
+    copy: "Experience immersive audio engineered for clarity, comfort and uninterrupted listening wherever life takes you.",
+    cta: "DISCOVER FEATURES",
+    ctaHref: "#features",
+    image: "/public/images/hero.jpg",
+    alt: "Woman wearing Ekocep wireless earbuds",
+    products: [
+      { name: "Wireless Pods", img: "/public/images/pods.jpg" },
+      { name: "Sleek Earbuds", img: "/public/images/earbuds.jpg" }
+    ]
+  },
+  {
+    title: "Studio Detail. <br /> Everyday Ease.",
+    copy: "Move through calls, playlists and quiet focus with premium headphones tuned for rich balance.",
+    cta: "SHOP HEADPHONES",
+    ctaHref: "#shop",
+    image: "/public/images/classic.jpg",
+    alt: "Classic Ekocep wireless headphones",
+    products: [
+      { name: "Classic Wireless", img: "/public/images/classic.jpg" },
+      { name: "Heritage Sound", img: "/public/images/p-heritage.jpg" }
+    ]
+  },
+  {
+    title: "Room-Filling Bass. <br /> Clean Design.",
+    copy: "Compact speakers bring warm depth, crisp vocals and simple setup into every corner of home.",
+    cta: "EXPLORE SPEAKERS",
+    ctaHref: "#features",
+    image: "/public/images/base-speakers.jpg",
+    alt: "Ekocep base speakers in a minimal room",
+    products: [
+      { name: "Base Speakers", img: "/public/images/base-speakers.jpg" },
+      { name: "Aura Speaker", img: "/public/images/p-pulse.jpg" }
+    ]
+  },
+  {
+    title: "Noise Down. <br /> Energy Up.",
+    copy: "Lightweight active noise control keeps your listening clear from morning commute to late workout.",
+    cta: "VIEW NEW LAUNCHES",
+    ctaHref: "#trending",
+    image: "/public/images/p-noise.jpg",
+    alt: "Noise Guard Elite headphones",
+    products: [
+      { name: "Noise Guard Elite", img: "/public/images/p-noise.jpg" },
+      { name: "Aura Luxe Sound", img: "/public/images/p-aura.jpg" }
+    ]
+  }
+];
+
 const accessories = [
   { label: "Accessories", img: "/public/images/pods.jpg" },
   { label: "Bluetooth Speaker", img: "/public/images/p-pulse.jpg" },
@@ -50,6 +101,78 @@ const productSets = {
 };
 
 const pad = (number) => number.toString().padStart(2, "0");
+
+function renderHeroSlide(index = 0) {
+  const slide = heroSlides[index];
+  const image = document.querySelector("#hero-image");
+  const title = document.querySelector("#hero-title");
+  const copy = document.querySelector("#hero-copy");
+  const cta = document.querySelector("#hero-cta");
+  const products = document.querySelector("#hero-mini-products");
+  const dots = document.querySelector("#hero-dots");
+
+  image.src = slide.image;
+  image.alt = slide.alt;
+  title.innerHTML = slide.title;
+  copy.textContent = slide.copy;
+  cta.textContent = slide.cta;
+  cta.href = slide.ctaHref;
+  products.innerHTML = slide.products
+    .map(
+      (product) => `
+        <a href="#shop" class="flex items-center gap-3 rounded-2xl bg-white/15 p-2 pr-5 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
+          <img src="${product.img}" alt="${product.name}" class="h-14 w-14 rounded-xl object-cover" />
+          <span class="text-sm leading-tight">
+            <span class="block font-medium">${product.name}</span>
+            <span class="block text-white/75">Shop now</span>
+          </span>
+        </a>
+      `
+    )
+    .join("");
+  dots.innerHTML = heroSlides
+    .map(
+      (_, dotIndex) => `
+        <button
+          class="h-2.5 rounded-full transition-all ${dotIndex === index ? "w-8 bg-white" : "w-2.5 bg-white/45 hover:bg-white/75"}"
+          data-hero-dot="${dotIndex}"
+          aria-label="Go to slide ${dotIndex + 1}"
+        ></button>
+      `
+    )
+    .join("");
+}
+
+function bindHeroSlider() {
+  let index = 0;
+  let timer;
+  const showSlide = (nextIndex) => {
+    index = (nextIndex + heroSlides.length) % heroSlides.length;
+    renderHeroSlide(index);
+    bindHeroDots(showSlide);
+  };
+  const restartTimer = () => {
+    clearInterval(timer);
+    timer = setInterval(() => showSlide(index + 1), 6000);
+  };
+
+  document.querySelector("#hero-next").addEventListener("click", () => {
+    showSlide(index + 1);
+    restartTimer();
+  });
+  document.querySelector("#hero-prev").addEventListener("click", () => {
+    showSlide(index - 1);
+    restartTimer();
+  });
+  showSlide(0);
+  restartTimer();
+}
+
+function bindHeroDots(showSlide) {
+  document.querySelectorAll("[data-hero-dot]").forEach((dot) => {
+    dot.addEventListener("click", () => showSlide(Number(dot.dataset.heroDot)));
+  });
+}
 
 function updateCountdown() {
   const diff = Math.max(0, targetDate - Date.now());
@@ -172,6 +295,7 @@ function bindMobileMenu() {
 document.addEventListener("DOMContentLoaded", () => {
   updateCountdown();
   setInterval(updateCountdown, 1000);
+  bindHeroSlider();
   renderAccessories();
   renderBoldProducts();
   renderProducts("trending");
