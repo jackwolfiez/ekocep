@@ -8,6 +8,27 @@ const announcements = [
   "30-day money-back guarantee on every order"
 ];
 
+const categories = [
+  { label: "Telefon / Tablet", href: "https://nettechstore.com/telefon-tablet" },
+  { label: "Teknoloji Ürünleri", href: "https://nettechstore.com/teknoloji-urunleri" },
+  { label: "Powerbank", href: "https://nettechstore.com/powerbank" },
+  { label: "Şarj Cihazı", href: "https://nettechstore.com/sarj-cihazi" },
+  { label: "Kablo", href: "https://nettechstore.com/kablo" },
+  { label: "Ses ve Müzik", href: "https://nettechstore.com/ses-ve-muzik" },
+  { label: "Aksesuar", href: "https://nettechstore.com/aksesuar" },
+  { label: "Giyilebilir Teknoloji", href: "https://nettechstore.com/giyilebilir-teknoloji" },
+  { label: "Hafıza Ürünleri", href: "https://nettechstore.com/hafiza-urunleri" },
+  { label: "Telefon Kılıfı", href: "https://nettechstore.com/telefon-kilifi" },
+  { label: "Tablet Kılıfı", href: "https://nettechstore.com/tablet-kilifi" },
+  { label: "Telefon Ekran Koruyucu", href: "https://nettechstore.com/telefon-ekran-koruyucu" },
+  { label: "Tablet Ekran Koruyucu", href: "https://nettechstore.com/tablet-ekran-koruyucu" },
+  { label: "Lcd Ekran", href: "https://nettechstore.com/lcd-ekran" },
+  { label: "Batarya", href: "https://nettechstore.com/batarya" },
+  { label: "Yedek Parça", href: "https://nettechstore.com/yedek-parca" },
+  { label: "Çevre Birimleri", href: "https://nettechstore.com/cevre-birimleri" },
+  { label: "Tamir Malzeme", href: "https://nettechstore.com/tamir-malzeme" }
+];
+
 const heroSlides = [
   {
     title: "Pure Sound. <br /> Total Control.",
@@ -382,11 +403,52 @@ function bindAnnouncementControls() {
   restartTimer();
 }
 
-function bindMobileMenu() {
+function renderCategories() {
+  const list = document.querySelector("#category-list");
+  list.innerHTML = categories
+    .map(
+      (category) => `
+        <a href="${category.href}" class="category-link rounded-md px-3 py-2.5 transition hover:bg-foreground hover:text-background">
+          ${category.label}
+        </a>
+      `
+    )
+    .join("");
+}
+
+function bindCategoryMenu() {
   const button = document.querySelector("#menu-toggle");
-  const menu = document.querySelector("#mobile-menu");
-  button.addEventListener("click", () => menu.classList.toggle("hidden"));
-  menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => menu.classList.add("hidden")));
+  const menu = document.querySelector("#category-menu");
+  const setOpen = (isOpen) => {
+    menu.classList.toggle("hidden", !isOpen);
+    button.setAttribute("aria-expanded", String(isOpen));
+    if (isOpen && !prefersReducedMotion) {
+      animate("#category-menu", {
+        opacity: [0, 1],
+        y: [-8, 0],
+        duration: 260,
+        ease: "outCubic"
+      });
+      animate("#category-list .category-link", {
+        opacity: [0, 1],
+        x: [-12, 0],
+        duration: 360,
+        delay: stagger(22),
+        ease: "outCubic"
+      });
+    }
+  };
+
+  button.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setOpen(menu.classList.contains("hidden"));
+  });
+  menu.addEventListener("click", (event) => event.stopPropagation());
+  menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setOpen(false)));
+  document.addEventListener("click", () => setOpen(false));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setOpen(false);
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -396,9 +458,10 @@ document.addEventListener("DOMContentLoaded", () => {
   renderAccessories();
   renderBoldProducts();
   renderProducts("trending");
+  renderCategories();
   bindScrollAnimations();
   bindTabs();
   bindAnnouncementControls();
-  bindMobileMenu();
+  bindCategoryMenu();
   lucide.createIcons();
 });

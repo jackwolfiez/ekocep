@@ -76,7 +76,7 @@
         <header class="absolute inset-x-0 top-0 z-20">
           <div class="mx-auto flex max-w-[1600px] items-center justify-between px-4 py-6 text-white sm:px-6">
             <div class="flex items-center gap-8">
-              <button id="menu-toggle" aria-label="Menu" class="grid h-11 w-11 place-items-center rounded-full bg-white/15 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
+              <button id="menu-toggle" aria-label="Categories" aria-expanded="false" aria-controls="category-menu" class="grid h-11 w-11 place-items-center rounded-full bg-white/15 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
                 <i data-lucide="menu" class="h-5 w-5"></i>
               </button>
               <nav class="hidden items-center gap-8 text-sm font-medium tracking-wide lg:flex">
@@ -99,12 +99,8 @@
               </button>
             </div>
           </div>
-          <nav id="mobile-menu" class="mx-4 hidden rounded-lg bg-black/65 px-4 py-4 text-sm font-medium tracking-wide text-white backdrop-blur-md sm:mx-6 lg:hidden">
-            <a href="#top" class="block py-2">HOME</a>
-            <a href="#shop" class="block py-2">SHOP</a>
-            <a href="#trending" class="block py-2">TRENDING</a>
-            <a href="#contact" class="block py-2">CONTACT</a>
-            <a href="#features" class="block py-2">BLOG</a>
+          <nav id="category-menu" class="mx-4 hidden max-h-[70svh] max-w-[620px] overflow-y-auto rounded-lg bg-white/95 p-3 text-sm font-semibold text-foreground shadow-2xl ring-1 ring-white/40 backdrop-blur-md sm:mx-6 sm:p-4" aria-label="Product categories">
+            <div id="category-list" class="grid gap-1 sm:grid-cols-2"></div>
           </nav>
         </header>
 
