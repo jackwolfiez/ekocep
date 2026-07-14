@@ -237,7 +237,7 @@ const accessories = [
 
 const boldProducts = [
   { name: "Echo Pods Neo", price: "14.999 TL", img: "/public/images/pods.jpg" },
-  { name: "Aura Hoparlör", price: "12.999 TL", img: "/public/images/p-pulse.jpg" },
+  { name: "Aura Hoparlör", price: "12.999 TL", img: "/public/images/p-pulse.jpg", video: "/public/images/carousel-video-2.mp4" },
   { name: "Kablosuz Kulaklık", price: "22.999 TL", img: "/public/images/p-aura.jpg", video: "/public/images/carousel-video-1.mp4" },
   { name: "Aura Luxe Ses", price: "28.999 TL", img: "/public/images/p-aura.jpg" },
   { name: "Kablosuz Kulaklık", price: "22.999 TL", img: "/public/images/p-heritage.jpg" }
