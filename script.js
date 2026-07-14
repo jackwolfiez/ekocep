@@ -650,7 +650,7 @@ function renderCategories() {
             .join("")}
         </div>
       </div>
-      <div class="grid gap-5 p-5 lg:grid-cols-[1fr_260px]">
+      <div class="p-5">
         <div>
           <div class="mb-4 flex flex-wrap items-end justify-between gap-3">
             <div>
@@ -667,17 +667,6 @@ function renderCategories() {
             <div id="category-menu-products" class="grid gap-3 sm:grid-cols-2"></div>
           </div>
         </div>
-        <a id="category-feature-card" href="${firstCategory.href}" class="relative hidden overflow-hidden rounded-lg bg-foreground p-5 text-background lg:block">
-          <div class="relative z-10">
-            <div class="text-xs font-semibold uppercase tracking-[0.18em] opacity-70">Hızlı Erişim</div>
-            <div id="category-feature-title" class="mt-3 text-2xl font-semibold leading-tight">${firstCategory.label}</div>
-            <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.12em]">
-              KEŞFET <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i>
-            </div>
-          </div>
-          <div class="absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-white/10"></div>
-          <div class="absolute -right-5 top-8 h-24 w-24 rounded-full bg-white/10"></div>
-        </a>
       </div>
     </div>
   `;
@@ -691,8 +680,6 @@ function updateCategoryDetail(index) {
   const links = category.children || [];
   document.querySelector("#category-detail-title").textContent = category.label;
   document.querySelector("#category-detail-all").href = category.href;
-  document.querySelector("#category-feature-card").href = category.href;
-  document.querySelector("#category-feature-title").textContent = category.label;
   document.querySelector("#category-detail-links").innerHTML = links
     .map(
       (link) => `
