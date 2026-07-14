@@ -558,9 +558,27 @@ function bindBoldCarousel() {
     });
 
     window.setTimeout(() => {
+      const incomingCard = container.querySelector(`[data-bold-index="${nextActiveIndex}"]`);
+      const incomingRect = incomingCard?.getBoundingClientRect();
+
       container.style.transform = "";
       activeBoldIndex = nextActiveIndex;
       renderBoldProducts();
+
+      const finalActiveCard = container.querySelector('[data-bold-offset="0"]');
+      const finalRect = finalActiveCard?.getBoundingClientRect();
+      if (incomingRect && finalRect && finalActiveCard) {
+        finalActiveCard.style.transformOrigin = "center bottom";
+        animate(finalActiveCard, {
+          x: [incomingRect.left - finalRect.left, 0],
+          y: [incomingRect.top - finalRect.top, 0],
+          scaleX: [incomingRect.width / finalRect.width, 1],
+          scaleY: [incomingRect.height / finalRect.height, 1],
+          duration: 420,
+          ease: "outCubic"
+        });
+      }
+
       isBoldAnimating = false;
       previous.disabled = false;
       next.disabled = false;
