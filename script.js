@@ -480,7 +480,7 @@ function renderBoldProductCard(product, offset) {
   const mediaClass = isActive ? "aspect-[4/5]" : "aspect-square";
 
   return `
-        <a href="#shop" class="group relative shrink-0 ${visibilityClass} ${sizeClass} overflow-hidden rounded-2xl bg-secondary transition-all duration-500 ${isActive ? "shadow-xl ring-1 ring-foreground/10" : ""}">
+        <a href="#shop" class="group relative shrink-0 ${visibilityClass} ${sizeClass} overflow-hidden rounded-2xl bg-secondary transition-all duration-500 ${isActive ? "shadow-xl" : ""}">
           ${
             product.video
               ? `

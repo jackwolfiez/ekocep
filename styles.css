@@ -18,6 +18,26 @@ img {
   display: none;
 }
 
+#bold-products a,
+#bold-products video,
+#bold-prev,
+#bold-next {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+#bold-products a:focus,
+#bold-products a:focus-visible,
+#bold-products video:focus,
+#bold-products video:focus-visible,
+#bold-prev:focus,
+#bold-prev:focus-visible,
+#bold-next:focus,
+#bold-next:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);
