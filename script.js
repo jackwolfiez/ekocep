@@ -189,7 +189,7 @@ const heroSlides = [
     cta: "KILIFLARI KEŞFET",
     ctaHref: "#shop",
     image: "/public/images/classic.jpg",
-    video: "/public/images/iphone-case.mp4",
+    video: "/public/images/iphone-case-slider.mp4",
     alt: "Yaz temasına uygun iPhone kılıfı",
     products: [
       { name: "iPhone Kılıfları", img: "/public/images/classic.jpg" },

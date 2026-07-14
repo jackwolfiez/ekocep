@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 *.local
+public/images/iphone-case.mp4
 
 # Editor directories and files
 .vscode/*
