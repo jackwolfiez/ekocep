@@ -9,24 +9,153 @@ const announcements = [
 ];
 
 const categories = [
-  { label: "Telefon / Tablet", href: "https://nettechstore.com/telefon-tablet" },
+  {
+    label: "Telefon / Tablet",
+    href: "https://nettechstore.com/telefon-tablet",
+    children: [
+      { label: "Cep Telefonu", href: "https://nettechstore.com/telefon-tablet/cep-telefonu" },
+      { label: "Tablet", href: "https://nettechstore.com/telefon-tablet/tablet" }
+    ]
+  },
   { label: "Teknoloji Ürünleri", href: "https://nettechstore.com/teknoloji-urunleri" },
   { label: "Powerbank", href: "https://nettechstore.com/powerbank" },
-  { label: "Şarj Cihazı", href: "https://nettechstore.com/sarj-cihazi" },
-  { label: "Kablo", href: "https://nettechstore.com/kablo" },
-  { label: "Ses ve Müzik", href: "https://nettechstore.com/ses-ve-muzik" },
-  { label: "Aksesuar", href: "https://nettechstore.com/aksesuar" },
-  { label: "Giyilebilir Teknoloji", href: "https://nettechstore.com/giyilebilir-teknoloji" },
-  { label: "Hafıza Ürünleri", href: "https://nettechstore.com/hafiza-urunleri" },
-  { label: "Telefon Kılıfı", href: "https://nettechstore.com/telefon-kilifi" },
-  { label: "Tablet Kılıfı", href: "https://nettechstore.com/tablet-kilifi" },
-  { label: "Telefon Ekran Koruyucu", href: "https://nettechstore.com/telefon-ekran-koruyucu" },
-  { label: "Tablet Ekran Koruyucu", href: "https://nettechstore.com/tablet-ekran-koruyucu" },
+  {
+    label: "Şarj Cihazı",
+    href: "https://nettechstore.com/sarj-cihazi",
+    children: [
+      { label: "Şarj Aleti", href: "https://nettechstore.com/sarj-cihazi/sarj-aleti" },
+      { label: "Kablosuz Wireless Şarj", href: "https://nettechstore.com/sarj-cihazi/kablosuz-wireless-sarj" },
+      { label: "Araç Şarj Aleti", href: "https://nettechstore.com/sarj-cihazi/arac-sarj-aleti" }
+    ]
+  },
+  {
+    label: "Kablo",
+    href: "https://nettechstore.com/kablo",
+    children: [
+      { label: "Şarj ve Data Kablosu", href: "https://nettechstore.com/kablo/sarj-ve-data-kablosu" },
+      { label: "Otg ve Dönüştürücü Kablo", href: "https://nettechstore.com/kablo/otg-ve-donusturucu-kablo" },
+      { label: "Hdmi ve Audio Kablosu", href: "https://nettechstore.com/kablo/hdmi-ve-audio-kablosu" }
+    ]
+  },
+  {
+    label: "Ses ve Müzik",
+    href: "https://nettechstore.com/ses-ve-muzik",
+    children: [
+      { label: "Bluetooth Kulaklık", href: "https://nettechstore.com/ses-ve-muzik/bluetooth-kulaklik" },
+      { label: "Kulak Üstü Kulaklık", href: "https://nettechstore.com/ses-ve-muzik/kulak-ustu-kulaklik" },
+      { label: "Hoparlör - Speaker", href: "https://nettechstore.com/ses-ve-muzik/hoparlor-speaker" },
+      { label: "Kulak İçi Kulaklık", href: "https://nettechstore.com/ses-ve-muzik/kulak-ici-kulaklik" }
+    ]
+  },
+  {
+    label: "Aksesuar",
+    href: "https://nettechstore.com/aksesuar",
+    children: [
+      { label: "Monopod - Tripod", href: "https://nettechstore.com/aksesuar/monopod-tripod" },
+      { label: "Araç Tutucu", href: "https://nettechstore.com/aksesuar/arac-tutucu" },
+      { label: "Telefon - Tablet Standı", href: "https://nettechstore.com/aksesuar/telefon-tablet-standi" },
+      { label: "Aydınlatma Lamba", href: "https://nettechstore.com/aksesuar/aydinlatma-lamba" },
+      { label: "Diğer Aksesuarlar", href: "https://nettechstore.com/aksesuar/diger-aksesuarlar" }
+    ]
+  },
+  {
+    label: "Giyilebilir Teknoloji",
+    href: "https://nettechstore.com/giyilebilir-teknoloji",
+    children: [
+      { label: "Akıllı Saat", href: "https://nettechstore.com/giyilebilir-teknoloji/akilli-saat" },
+      { label: "Akıllı Saat Aksesuarları", href: "https://nettechstore.com/giyilebilir-teknoloji/akilli-saat-aksesuarlari" },
+      { label: "Aksiyon Kamera", href: "https://nettechstore.com/giyilebilir-teknoloji/aksiyon-kamera" }
+    ]
+  },
+  {
+    label: "Hafıza Ürünleri",
+    href: "https://nettechstore.com/hafiza-urunleri",
+    children: [
+      { label: "Usb Bellek", href: "https://nettechstore.com/hafiza-urunleri/usb-bellek" },
+      { label: "Hafıza Kartı", href: "https://nettechstore.com/hafiza-urunleri/hafiza-karti" }
+    ]
+  },
+  {
+    label: "Telefon Kılıfı",
+    href: "https://nettechstore.com/telefon-kilifi",
+    children: [
+      { label: "Arka Koruma Kılıf", href: "https://nettechstore.com/telefon-kilifi/arka-koruma-kilif" },
+      { label: "Kapaklı Kılıf", href: "https://nettechstore.com/telefon-kilifi/kapakli-kilif" },
+      { label: "Diğer Kılıflar", href: "https://nettechstore.com/telefon-kilifi/diger-kiliflar" }
+    ]
+  },
+  {
+    label: "Tablet Kılıfı",
+    href: "https://nettechstore.com/tablet-kilifi",
+    children: [
+      { label: "Arka Koruma", href: "https://nettechstore.com/tablet-kilifi/arka-koruma" },
+      { label: "Kapaklı Kılıf", href: "https://nettechstore.com/tablet-kilifi/kapakli-kilif" }
+    ]
+  },
+  {
+    label: "Telefon Ekran Koruyucu",
+    href: "https://nettechstore.com/telefon-ekran-koruyucu",
+    children: [
+      { label: "Full Cam Koruyucu", href: "https://nettechstore.com/telefon-ekran-koruyucu/full-cam-koruyucu" },
+      { label: "Cam Ekran Koruyucu", href: "https://nettechstore.com/telefon-ekran-koruyucu/cam-ekran-koruyucu" },
+      { label: "Nano Ekran Koruyucu", href: "https://nettechstore.com/telefon-ekran-koruyucu/nano-ekran-koruyucu" },
+      { label: "Kamera Cam Koruyucu", href: "https://nettechstore.com/telefon-ekran-koruyucu/kamera-cam-koruyucu" },
+      { label: "360 Full Kaplama", href: "https://nettechstore.com/telefon-ekran-koruyucu/360-full-kaplama" }
+    ]
+  },
+  {
+    label: "Tablet Ekran Koruyucu",
+    href: "https://nettechstore.com/tablet-ekran-koruyucu",
+    children: [
+      { label: "Cam Ekran Koruyucu", href: "https://nettechstore.com/tablet-ekran-koruyucu/cam-ekran-koruyucu" },
+      { label: "Nano Ekran Koruyucu", href: "https://nettechstore.com/tablet-ekran-koruyucu/nano-ekran-koruyucu" }
+    ]
+  },
   { label: "Lcd Ekran", href: "https://nettechstore.com/lcd-ekran" },
   { label: "Batarya", href: "https://nettechstore.com/batarya" },
-  { label: "Yedek Parça", href: "https://nettechstore.com/yedek-parca" },
-  { label: "Çevre Birimleri", href: "https://nettechstore.com/cevre-birimleri" },
-  { label: "Tamir Malzeme", href: "https://nettechstore.com/tamir-malzeme" }
+  {
+    label: "Yedek Parça",
+    href: "https://nettechstore.com/yedek-parca",
+    children: [
+      { label: "Kasa - Kapak", href: "https://nettechstore.com/yedek-parca/kasa-kapak" },
+      { label: "Batarya Kapağı", href: "https://nettechstore.com/yedek-parca/batarya-kapagi" },
+      { label: "Dokunmatik Lens", href: "https://nettechstore.com/yedek-parca/dokunmatik-lens" },
+      { label: "Sim ve Hafıza Kart Yuvası", href: "https://nettechstore.com/yedek-parca/sim-ve-hafiza-kart-yuvasi" },
+      { label: "Şarj - Kulaklık Soket", href: "https://nettechstore.com/yedek-parca/sarj-kulaklik-soket" },
+      { label: "Flex - Film", href: "https://nettechstore.com/yedek-parca/flex-film" },
+      { label: "Buzzer - İç Kulaklık", href: "https://nettechstore.com/yedek-parca/buzzer-ic-kulaklik" },
+      { label: "Entegre", href: "https://nettechstore.com/yedek-parca/entegre" },
+      { label: "Home - Power Tuş", href: "https://nettechstore.com/yedek-parca/home-power-tus" },
+      { label: "Titreşim Motoru", href: "https://nettechstore.com/yedek-parca/titresim-motoru" },
+      { label: "Mikrofon - Sensör", href: "https://nettechstore.com/yedek-parca/mikrofon-sensor" },
+      { label: "Anten - Konnektör", href: "https://nettechstore.com/yedek-parca/anten-konnektor" },
+      { label: "Kamera", href: "https://nettechstore.com/yedek-parca/kamera" },
+      { label: "Kamera Camı", href: "https://nettechstore.com/yedek-parca/kamera-cami" },
+      { label: "Ekran Bileşenleri", href: "https://nettechstore.com/yedek-parca/ekran-bilesenleri" },
+      { label: "Diğer Yedek Parça", href: "https://nettechstore.com/yedek-parca/diger-yedek-parca" }
+    ]
+  },
+  {
+    label: "Çevre Birimleri",
+    href: "https://nettechstore.com/cevre-birimleri",
+    children: [
+      { label: "Klavye", href: "https://nettechstore.com/cevre-birimleri/klavye" },
+      { label: "Mouse", href: "https://nettechstore.com/cevre-birimleri/mouse" },
+      { label: "Oyun Konsolu", href: "https://nettechstore.com/cevre-birimleri/oyun-konsolu" },
+      { label: "Modem, Router", href: "https://nettechstore.com/cevre-birimleri/modem-router" },
+      { label: "Bilgisayar Bileşenleri", href: "https://nettechstore.com/cevre-birimleri/bilgisayar-bilesenleri" }
+    ]
+  },
+  {
+    label: "Tamir Malzeme",
+    href: "https://nettechstore.com/tamir-malzeme",
+    children: [
+      { label: "Tamir Makinaları", href: "https://nettechstore.com/tamir-malzeme/tamir-makinalari" },
+      { label: "Tamir El Aletleri", href: "https://nettechstore.com/tamir-malzeme/tamir-el-aletleri" },
+      { label: "Yapıştırıcılar ve Sıvı Malzemeler", href: "https://nettechstore.com/tamir-malzeme/yapistiricilar-ve-sivi-malzemeler" },
+      { label: "Kalıplar Ve Board Tutucu", href: "https://nettechstore.com/tamir-malzeme/kaliplar-ve-board-tutucu" }
+    ]
+  }
 ];
 
 const heroSlides = [
@@ -405,12 +534,33 @@ function renderCategories() {
   list.innerHTML = categories
     .map(
       (category) => `
-        <a href="${category.href}" class="category-link rounded-md px-3 py-2.5 transition hover:bg-foreground hover:text-background">
-          ${category.label}
-        </a>
+        <div class="category-card rounded-lg border border-border/80 bg-background p-3 shadow-sm transition hover:shadow-md">
+          <a href="${category.href}" class="category-link flex items-center justify-between rounded-md px-2 py-1.5 font-semibold transition hover:bg-foreground hover:text-background">
+            <span>${category.label}</span>
+            ${category.children?.length ? '<i data-lucide="chevron-right" class="h-4 w-4"></i>' : ""}
+          </a>
+          ${
+            category.children?.length
+              ? `
+                <div class="mt-2 grid gap-1 border-t border-border/70 pt-2">
+                  ${category.children
+                    .map(
+                      (child) => `
+                        <a href="${child.href}" class="category-link rounded-md px-2 py-1.5 text-xs font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground">
+                          ${child.label}
+                        </a>
+                      `
+                    )
+                    .join("")}
+                </div>
+              `
+              : ""
+          }
+        </div>
       `
     )
     .join("");
+  lucide.createIcons();
 }
 
 function bindCategoryMenu() {
@@ -426,11 +576,11 @@ function bindCategoryMenu() {
         duration: 260,
         ease: "outCubic"
       });
-      animate("#category-list .category-link", {
+      animate("#category-list .category-card", {
         opacity: [0, 1],
-        x: [-12, 0],
+        y: [-10, 0],
         duration: 360,
-        delay: stagger(22),
+        delay: stagger(28),
         ease: "outCubic"
       });
     }
