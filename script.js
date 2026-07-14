@@ -529,32 +529,21 @@ function bindBoldCarousel() {
     previous.disabled = true;
     next.disabled = true;
 
+    renderBoldProducts();
     animate("#bold-products > a", {
-      opacity: [1, 0],
-      x: [0, direction * -64],
-      scale: [1, 0.98],
-      duration: 180,
-      delay: stagger(25),
-      ease: "inCubic"
+      opacity: [0.86, 1],
+      x: [direction * 42, 0],
+      scale: [0.975, 1],
+      duration: 620,
+      delay: stagger(42, { from: direction > 0 ? "last" : "first" }),
+      ease: "outExpo"
     });
 
     window.setTimeout(() => {
-      renderBoldProducts();
-      animate("#bold-products > a", {
-        opacity: [0, 1],
-        x: [direction * 84, 0],
-        scale: [0.98, 1],
-        duration: 520,
-        delay: stagger(55, { from: direction > 0 ? "last" : "first" }),
-        ease: "outCubic"
-      });
-
-      window.setTimeout(() => {
-        isBoldAnimating = false;
-        previous.disabled = false;
-        next.disabled = false;
-      }, 560);
-    }, 190);
+      isBoldAnimating = false;
+      previous.disabled = false;
+      next.disabled = false;
+    }, 660);
   };
 
   previous.addEventListener("click", () => showBoldSlide(activeBoldIndex - 1));
