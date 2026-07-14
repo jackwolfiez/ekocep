@@ -238,7 +238,7 @@ const accessories = [
 const boldProducts = [
   { name: "Echo Pods Neo", price: "14.999 TL", img: "/public/images/pods.jpg" },
   { name: "Aura Hoparlör", price: "12.999 TL", img: "/public/images/p-pulse.jpg" },
-  { name: "Kablosuz Kulaklık", price: "22.999 TL", img: "/public/images/p-aura.jpg", wide: true },
+  { name: "Kablosuz Kulaklık", price: "22.999 TL", img: "/public/images/p-aura.jpg", video: "/public/images/headphones-9-16.mp4", wide: true },
   { name: "Aura Luxe Ses", price: "28.999 TL", img: "/public/images/p-aura.jpg" },
   { name: "Kablosuz Kulaklık", price: "22.999 TL", img: "/public/images/p-heritage.jpg" }
 ];
@@ -462,7 +462,15 @@ function renderBoldProducts() {
     .map(
       (product) => `
         <a href="#shop" class="group relative overflow-hidden rounded-2xl bg-secondary ${product.wide ? "lg:row-span-2" : ""}">
-          <img src="${product.img}" alt="${product.name}" loading="lazy" class="w-full object-cover transition duration-500 group-hover:scale-105 ${product.wide ? "aspect-[3/5]" : "aspect-square"}" />
+          ${
+            product.video
+              ? `
+                <video class="w-full object-cover transition duration-500 group-hover:scale-105 ${product.wide ? "aspect-[3/5]" : "aspect-square"}" autoplay muted loop playsinline preload="metadata" poster="${product.img}">
+                  <source src="${product.video}" type="video/mp4" />
+                </video>
+              `
+              : `<img src="${product.img}" alt="${product.name}" loading="lazy" class="w-full object-cover transition duration-500 group-hover:scale-105 ${product.wide ? "aspect-[3/5]" : "aspect-square"}" />`
+          }
           <span class="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-xl bg-background/90 p-3 backdrop-blur">
             <span class="flex items-center gap-2">
               <span class="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-muted">
