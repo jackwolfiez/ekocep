@@ -531,36 +531,109 @@ function bindAnnouncementControls() {
 
 function renderCategories() {
   const list = document.querySelector("#category-list");
-  list.innerHTML = categories
-    .map(
-      (category) => `
-        <div class="category-card rounded-lg border border-border/80 bg-background p-3 shadow-sm transition hover:shadow-md">
-          <a href="${category.href}" class="category-link flex items-center justify-between rounded-md px-2 py-1.5 font-semibold transition hover:bg-foreground hover:text-background">
-            <span>${category.label}</span>
-            ${category.children?.length ? '<i data-lucide="chevron-right" class="h-4 w-4"></i>' : ""}
-          </a>
-          ${
-            category.children?.length
-              ? `
-                <div class="mt-2 grid gap-1 border-t border-border/70 pt-2">
-                  ${category.children
-                    .map(
-                      (child) => `
-                        <a href="${child.href}" class="category-link rounded-md px-2 py-1.5 text-xs font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground">
-                          ${child.label}
-                        </a>
-                      `
-                    )
-                    .join("")}
-                </div>
-              `
-              : ""
-          }
+  const firstCategory = categories[0];
+  list.innerHTML = `
+    <div class="grid max-h-[72svh] overflow-y-auto lg:grid-cols-[290px_1fr]">
+      <div class="border-b border-border bg-secondary/80 p-4 lg:border-b-0 lg:border-r">
+        <div class="mb-4 flex items-center justify-between">
+          <span class="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">Kategoriler</span>
+          <span class="rounded-full bg-background px-2.5 py-1 text-xs font-semibold text-muted-foreground">${categories.length}</span>
         </div>
+        <div class="grid gap-1" id="category-main-list">
+          ${categories
+            .map(
+              (category, index) => `
+                <button
+                  class="category-tab flex items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm font-semibold transition ${index === 0 ? "bg-foreground text-background" : "hover:bg-background"}"
+                  data-category-index="${index}"
+                  type="button"
+                >
+                  <span>${category.label}</span>
+                  <i data-lucide="chevron-right" class="h-4 w-4"></i>
+                </button>
+              `
+            )
+            .join("")}
+        </div>
+      </div>
+      <div class="grid gap-5 p-5 lg:grid-cols-[1fr_260px]">
+        <div>
+          <div class="mb-4 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">Alt Kategoriler</div>
+              <h3 id="category-detail-title" class="mt-1 text-2xl font-semibold tracking-tight">${firstCategory.label}</h3>
+            </div>
+            <a id="category-detail-all" href="${firstCategory.href}" class="inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-2 text-xs font-semibold tracking-[0.12em] text-background">
+              TÜMÜNÜ GÖR <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i>
+            </a>
+          </div>
+          <div id="category-detail-links" class="grid gap-2 sm:grid-cols-2"></div>
+        </div>
+        <a id="category-feature-card" href="${firstCategory.href}" class="relative hidden overflow-hidden rounded-lg bg-foreground p-5 text-background lg:block">
+          <div class="relative z-10">
+            <div class="text-xs font-semibold uppercase tracking-[0.18em] opacity-70">Hızlı Erişim</div>
+            <div id="category-feature-title" class="mt-3 text-2xl font-semibold leading-tight">${firstCategory.label}</div>
+            <div class="mt-4 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.12em]">
+              KEŞFET <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i>
+            </div>
+          </div>
+          <div class="absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-white/10"></div>
+          <div class="absolute -right-5 top-8 h-24 w-24 rounded-full bg-white/10"></div>
+        </a>
+      </div>
+    </div>
+  `;
+  updateCategoryDetail(0);
+  bindCategoryTabs();
+  lucide.createIcons();
+}
+
+function updateCategoryDetail(index) {
+  const category = categories[index];
+  const links = category.children?.length ? category.children : [{ label: category.label, href: category.href }];
+  document.querySelector("#category-detail-title").textContent = category.label;
+  document.querySelector("#category-detail-all").href = category.href;
+  document.querySelector("#category-feature-card").href = category.href;
+  document.querySelector("#category-feature-title").textContent = category.label;
+  document.querySelector("#category-detail-links").innerHTML = links
+    .map(
+      (link) => `
+        <a href="${link.href}" class="category-link flex items-center justify-between rounded-lg border border-border bg-background px-3 py-3 text-sm font-medium transition hover:border-foreground hover:bg-foreground hover:text-background">
+          <span>${link.label}</span>
+          <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+        </a>
       `
     )
     .join("");
   lucide.createIcons();
+}
+
+function bindCategoryTabs() {
+  document.querySelectorAll(".category-tab").forEach((tab) => {
+    tab.addEventListener("mouseenter", () => setActiveCategoryTab(tab));
+    tab.addEventListener("focus", () => setActiveCategoryTab(tab));
+    tab.addEventListener("click", () => setActiveCategoryTab(tab));
+  });
+}
+
+function setActiveCategoryTab(tab) {
+  const index = Number(tab.dataset.categoryIndex);
+  document.querySelectorAll(".category-tab").forEach((item) => {
+    item.classList.remove("bg-foreground", "text-background");
+    item.classList.add("hover:bg-background");
+  });
+  tab.classList.add("bg-foreground", "text-background");
+  tab.classList.remove("hover:bg-background");
+  updateCategoryDetail(index);
+  if (!prefersReducedMotion) {
+    animate("#category-detail-links .category-link", {
+      opacity: [0, 1],
+      x: [14, 0],
+      duration: 280,
+      delay: stagger(24),
+      ease: "outCubic"
+    });
+  }
 }
 
 function bindCategoryMenu() {
@@ -576,7 +649,7 @@ function bindCategoryMenu() {
         duration: 260,
         ease: "outCubic"
       });
-      animate("#category-list .category-card", {
+      animate("#category-main-list .category-tab", {
         opacity: [0, 1],
         y: [-10, 0],
         duration: 360,
