@@ -81,18 +81,15 @@ const heroSlides = [
 ];
 
 const accessories = [
-  { label: "Accessories", img: "/public/images/pods.jpg" },
-  { label: "Bluetooth Speaker", img: "/public/images/p-pulse.jpg" },
-  { label: "Classic Headphones", img: "/public/images/p-heritage.jpg" },
-  { label: "Gaming", img: "/public/images/p-noise.jpg" },
-  { label: "Home Speaker", img: "/public/images/p-pulse.jpg" },
-  { label: "Ocean Beats", img: "/public/images/p-aura.jpg" },
-  { label: "Pure Outdoor", img: "/public/images/soft-base.jpg" },
-  { label: "Pure Sound", img: "/public/images/earbuds.jpg" },
-  { label: "Sleek Earbuds", img: "/public/images/earbuds.jpg" },
-  { label: "Smart Device", img: "/public/images/classic.jpg" },
-  { label: "Warm Harmony", img: "/public/images/p-heritage.jpg" },
-  { label: "Wireless Pods", img: "/public/images/pods.jpg" }
+  { label: "Sana Özel", href: "https://nettechstore.com/aksesuar", img: "/public/images/pods.jpg" },
+  { label: "Fırsatlar", href: "https://nettechstore.com/arama?outlet=1", img: "/public/images/p-pulse.jpg" },
+  { label: "Yeni Ürünler", href: "https://nettechstore.com/arama?new=1", img: "/public/images/p-aura.jpg" },
+  { label: "Web Özel", href: "https://nettechstore.com/kampanyalar", img: "/public/images/soft-base.jpg" },
+  { label: "Kulaklıklar", href: "https://nettechstore.com/ses-ve-muzik/kulak-ustu-kulaklik", img: "/public/images/p-heritage.jpg" },
+  { label: "Kılıflar", href: "https://nettechstore.com/telefon-kilifi", img: "/public/images/classic.jpg" },
+  { label: "Saat", href: "https://nettechstore.com/giyilebilir-teknoloji", img: "/public/images/earbuds.jpg" },
+  { label: "Hoparlör", href: "https://nettechstore.com/ses-ve-muzik/hoparlor-speaker", img: "/public/images/base-speakers.jpg" },
+  { label: "Powerbank", href: "https://nettechstore.com/powerbank", img: "/public/images/p-noise.jpg" }
 ];
 
 const boldProducts = [
@@ -287,7 +284,7 @@ function renderAccessories() {
   container.innerHTML = accessories
     .map(
       (item) => `
-        <a href="#shop" class="flex items-center gap-3 rounded-full border border-border bg-background py-2 pl-2 pr-6 transition hover:shadow-md">
+        <a href="${item.href}" class="flex items-center gap-3 rounded-full border border-border bg-background py-2 pl-2 pr-6 transition hover:shadow-md">
           <img src="${item.img}" alt="" loading="lazy" class="h-10 w-10 rounded-full object-cover" />
           <span class="text-sm font-medium">${item.label}</span>
         </a>
