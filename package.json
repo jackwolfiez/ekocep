@@ -1,0 +1,10 @@
+{
+  "name": "ekocep",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static HTML, Tailwind CSS and JavaScript storefront.",
+  "scripts": {
+    "dev": "python3 -m http.server 4173",
+    "start": "python3 -m http.server 4173"
+  }
+}
