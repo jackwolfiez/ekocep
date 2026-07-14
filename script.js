@@ -461,15 +461,15 @@ function renderBoldProducts() {
   container.innerHTML = boldProducts
     .map(
       (product) => `
-        <a href="#shop" class="group relative overflow-hidden rounded-2xl bg-secondary ${product.wide ? "lg:row-span-2" : ""}">
+        <a href="#shop" class="group relative min-w-[78%] snap-start overflow-hidden rounded-2xl bg-secondary sm:min-w-[46%] lg:min-w-[31%]">
           ${
             product.video
               ? `
-                <video class="w-full object-cover transition duration-500 group-hover:scale-105 ${product.wide ? "aspect-[3/5]" : "aspect-square"}" autoplay muted loop playsinline preload="metadata" poster="${product.img}">
+                <video class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-105" autoplay muted loop playsinline preload="metadata" poster="${product.img}">
                   <source src="${product.video}" type="video/mp4" />
                 </video>
               `
-              : `<img src="${product.img}" alt="${product.name}" loading="lazy" class="w-full object-cover transition duration-500 group-hover:scale-105 ${product.wide ? "aspect-[3/5]" : "aspect-square"}" />`
+              : `<img src="${product.img}" alt="${product.name}" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-105" />`
           }
           <span class="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-xl bg-background/90 p-3 backdrop-blur">
             <span class="flex items-center gap-2">
@@ -487,6 +487,21 @@ function renderBoldProducts() {
       `
     )
     .join("");
+}
+
+function bindBoldCarousel() {
+  const carousel = document.querySelector("#bold-products");
+  const previous = document.querySelector("#bold-prev");
+  const next = document.querySelector("#bold-next");
+  const scrollByCard = (direction) => {
+    const card = carousel.querySelector("a");
+    if (!card) return;
+    const gap = 16;
+    carousel.scrollBy({ left: direction * (card.getBoundingClientRect().width + gap), behavior: "smooth" });
+  };
+
+  previous.addEventListener("click", () => scrollByCard(-1));
+  next.addEventListener("click", () => scrollByCard(1));
 }
 
 function renderProducts(type = "trending") {
@@ -757,6 +772,7 @@ document.addEventListener("DOMContentLoaded", () => {
   bindHeroSlider();
   renderAccessories();
   renderBoldProducts();
+  bindBoldCarousel();
   renderProducts("trending");
   renderCategories();
   bindScrollAnimations();

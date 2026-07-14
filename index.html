@@ -142,7 +142,15 @@
             <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Güçlü Tasarım, Yumuşak Konfor</h2>
             <p class="mt-4 text-muted-foreground">İşten yolculuğa, dinlenme anlarından günlük kullanıma kadar konfor odaklı ses deneyimi.</p>
           </div>
-          <div id="bold-products" class="mt-14 grid grid-cols-2 gap-4 lg:grid-cols-5"></div>
+          <div class="mt-10 flex justify-end gap-2">
+            <button id="bold-prev" aria-label="Önceki ürünler" class="grid h-10 w-10 place-items-center rounded-full border border-border transition hover:bg-foreground hover:text-background">
+              <i data-lucide="chevron-left" class="h-4 w-4"></i>
+            </button>
+            <button id="bold-next" aria-label="Sonraki ürünler" class="grid h-10 w-10 place-items-center rounded-full border border-border transition hover:bg-foreground hover:text-background">
+              <i data-lucide="chevron-right" class="h-4 w-4"></i>
+            </button>
+          </div>
+          <div id="bold-products" class="mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-4"></div>
         </div>
       </section>
 

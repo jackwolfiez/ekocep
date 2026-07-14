@@ -10,6 +10,14 @@ img {
   display: block;
 }
 
+#bold-products {
+  scrollbar-width: none;
+}
+
+#bold-products::-webkit-scrollbar {
+  display: none;
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);
