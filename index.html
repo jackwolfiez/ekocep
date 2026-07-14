@@ -39,8 +39,8 @@
   <body id="top" class="bg-background text-foreground antialiased">
     <div class="min-h-screen">
       <div class="w-full border-b border-border/70 bg-background text-foreground">
-        <div class="mx-auto flex max-w-[1600px] items-center justify-between px-4 py-3 text-xs sm:px-6 sm:text-sm">
-          <div class="flex items-center gap-2 tabular-nums" aria-label="Countdown">
+        <div class="mx-auto grid max-w-[1600px] grid-cols-[1fr_auto_1fr] items-center gap-4 px-4 py-3 text-xs sm:px-6 sm:text-sm">
+          <div class="col-start-1 flex min-w-0 items-center gap-2 tabular-nums" aria-label="Countdown">
             <span id="days">00 Days</span>
             <span class="opacity-40">:</span>
             <span id="hours">00 Hours</span>
@@ -49,20 +49,20 @@
             <span class="opacity-40">:</span>
             <span id="seconds">00 Seconds</span>
           </div>
-          <div class="hidden items-center gap-3 md:flex">
+          <div class="col-start-2 hidden min-w-[340px] items-center justify-center gap-3 lg:min-w-[420px] md:flex">
             <button id="announcement-prev" aria-label="Previous announcement" class="rounded-full p-1 hover:bg-muted">
               <i data-lucide="chevron-left" class="h-4 w-4"></i>
             </button>
-            <span class="flex items-center gap-2 text-center">
+            <span class="flex w-[280px] items-center justify-center gap-2 overflow-hidden text-center lg:w-[340px]">
               <i data-lucide="headphones" class="h-4 w-4"></i>
-              <span id="announcement">We offer free delivery on all orders</span>
+              <span id="announcement" class="inline-block min-w-[210px] lg:min-w-[250px]">We offer free delivery on all orders</span>
               <i data-lucide="headphones" class="h-4 w-4"></i>
             </span>
             <button id="announcement-next" aria-label="Next announcement" class="rounded-full p-1 hover:bg-muted">
               <i data-lucide="chevron-right" class="h-4 w-4"></i>
             </button>
           </div>
-          <div class="flex items-center gap-1">
+          <div class="col-start-3 flex min-w-0 items-center justify-end gap-1">
             <i data-lucide="globe" class="h-4 w-4"></i>
             <span>English / USD</span>
           </div>

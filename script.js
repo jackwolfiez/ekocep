@@ -351,13 +351,35 @@ function bindTabs() {
 function bindAnnouncementControls() {
   let index = 0;
   const output = document.querySelector("#announcement");
-  const setAnnouncement = (nextIndex) => {
+  let timer;
+  const animateAnnouncement = (direction) => {
+    if (prefersReducedMotion) return;
+    animate(output, {
+      opacity: [0, 1],
+      x: [direction * 22, 0],
+      duration: 430,
+      ease: "outCubic"
+    });
+  };
+  const setAnnouncement = (nextIndex, direction = 1) => {
     index = (nextIndex + announcements.length) % announcements.length;
     output.textContent = announcements[index];
+    animateAnnouncement(direction);
+  };
+  const restartTimer = () => {
+    clearInterval(timer);
+    timer = setInterval(() => setAnnouncement(index + 1, 1), 4000);
   };
 
-  document.querySelector("#announcement-prev").addEventListener("click", () => setAnnouncement(index - 1));
-  document.querySelector("#announcement-next").addEventListener("click", () => setAnnouncement(index + 1));
+  document.querySelector("#announcement-prev").addEventListener("click", () => {
+    setAnnouncement(index - 1, -1);
+    restartTimer();
+  });
+  document.querySelector("#announcement-next").addEventListener("click", () => {
+    setAnnouncement(index + 1, 1);
+    restartTimer();
+  });
+  restartTimer();
 }
 
 function bindMobileMenu() {
