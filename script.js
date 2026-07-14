@@ -465,13 +465,13 @@ function renderBoldProducts() {
   container.innerHTML = offsets
     .map((offset) => {
       const index = (activeBoldIndex + offset + boldProducts.length) % boldProducts.length;
-      return renderBoldProductCard(boldProducts[index], offset);
+      return renderBoldProductCard(boldProducts[index], offset, index);
     })
     .join("");
   lucide.createIcons();
 }
 
-function renderBoldProductCard(product, offset) {
+function renderBoldProductCard(product, offset, productIndex) {
   const isActive = offset === 0;
   const distance = Math.abs(offset);
   const visibilityClass = distance === 2 ? "hidden xl:block" : distance === 1 ? "hidden md:block" : "";
@@ -486,7 +486,7 @@ function renderBoldProductCard(product, offset) {
   const priceClass = hasVideo ? "text-white/75" : "text-muted-foreground";
 
   return `
-        <a href="#shop" class="group relative shrink-0 ${visibilityClass} ${sizeClass} overflow-hidden rounded-2xl bg-secondary transition-all duration-500 ${isActive ? "shadow-xl" : ""}">
+        <a href="#shop" data-bold-index="${productIndex}" class="group relative shrink-0 ${visibilityClass} ${sizeClass} overflow-hidden rounded-2xl bg-secondary transition-shadow duration-300 ${isActive ? "shadow-xl" : ""}">
           ${
             hasVideo
               ? `
@@ -515,28 +515,56 @@ function renderBoldProductCard(product, offset) {
 function bindBoldCarousel() {
   const previous = document.querySelector("#bold-prev");
   const next = document.querySelector("#bold-next");
+  const container = document.querySelector("#bold-products");
   const showBoldSlide = (nextIndex) => {
     if (isBoldAnimating) return;
     const direction = nextIndex > activeBoldIndex ? 1 : -1;
-    activeBoldIndex = (nextIndex + boldProducts.length) % boldProducts.length;
 
     if (prefersReducedMotion) {
+      activeBoldIndex = (nextIndex + boldProducts.length) % boldProducts.length;
       renderBoldProducts();
       return;
     }
+
+    const previousRects = new Map(
+      [...container.querySelectorAll("[data-bold-index]")]
+        .map((card) => [card.dataset.boldIndex, card.getBoundingClientRect()])
+        .filter(([, rect]) => rect.width > 0 && rect.height > 0)
+    );
 
     isBoldAnimating = true;
     previous.disabled = true;
     next.disabled = true;
 
+    activeBoldIndex = (nextIndex + boldProducts.length) % boldProducts.length;
     renderBoldProducts();
-    animate("#bold-products > a", {
-      opacity: [0.86, 1],
-      x: [direction * 42, 0],
-      scale: [0.975, 1],
-      duration: 620,
-      delay: stagger(42, { from: direction > 0 ? "last" : "first" }),
-      ease: "outExpo"
+
+    container.querySelectorAll("[data-bold-index]").forEach((card) => {
+      const previousRect = previousRects.get(card.dataset.boldIndex);
+      const currentRect = card.getBoundingClientRect();
+
+      card.style.transformOrigin = "center bottom";
+
+      if (previousRect && currentRect.width > 0 && currentRect.height > 0) {
+        animate(card, {
+          x: [previousRect.left - currentRect.left, 0],
+          y: [previousRect.top - currentRect.top, 0],
+          scaleX: [previousRect.width / currentRect.width, 1],
+          scaleY: [previousRect.height / currentRect.height, 1],
+          opacity: [0.98, 1],
+          duration: 760,
+          ease: "outCubic"
+        });
+        return;
+      }
+
+      animate(card, {
+        opacity: [0, 1],
+        x: [direction * 90, 0],
+        scale: [0.94, 1],
+        duration: 620,
+        ease: "outCubic"
+      });
     });
 
     window.setTimeout(() => {
