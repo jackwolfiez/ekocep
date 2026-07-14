@@ -189,6 +189,7 @@ const heroSlides = [
     cta: "EXPLORE SPEAKERS",
     ctaHref: "#features",
     image: "/public/images/base-speakers.jpg",
+    video: "/public/images/slider-speaker1.mp4",
     alt: "Ekocep base speakers in a minimal room",
     products: [
       { name: "Base Speakers", img: "/public/images/base-speakers.jpg" },
@@ -262,14 +263,27 @@ const pad = (number) => number.toString().padStart(2, "0");
 function renderHeroSlide(index = 0) {
   const slide = heroSlides[index];
   const image = document.querySelector("#hero-image");
+  const video = document.querySelector("#hero-video");
   const title = document.querySelector("#hero-title");
   const copy = document.querySelector("#hero-copy");
   const cta = document.querySelector("#hero-cta");
   const products = document.querySelector("#hero-mini-products");
   const dots = document.querySelector("#hero-dots");
 
-  image.src = slide.image;
   image.alt = slide.alt;
+  if (slide.video) {
+    image.classList.add("hidden");
+    video.classList.remove("hidden");
+    if (video.getAttribute("src") !== slide.video) {
+      video.src = slide.video;
+    }
+    video.play().catch(() => {});
+  } else {
+    video.pause();
+    video.classList.add("hidden");
+    image.classList.remove("hidden");
+    image.src = slide.image;
+  }
   title.innerHTML = slide.title;
   copy.textContent = slide.copy;
   cta.textContent = slide.cta;
@@ -335,7 +349,7 @@ function bindHeroDots(showSlide) {
 function animateHeroSlide() {
   if (prefersReducedMotion) return;
 
-  animate("#hero-image", {
+  animate(["#hero-image:not(.hidden)", "#hero-video:not(.hidden)"], {
     opacity: [0.72, 1],
     scale: [1.035, 1],
     duration: 900,
