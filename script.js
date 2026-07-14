@@ -479,11 +479,16 @@ function renderBoldProductCard(product, offset) {
     ? "w-[min(76vw,390px)]"
     : "w-[min(70vw,350px)] md:w-[330px] xl:w-[350px]";
   const mediaClass = isActive ? "aspect-[4/5]" : "aspect-square";
+  const hasVideo = Boolean(product.video);
+  const labelClass = hasVideo
+    ? "bg-black/62 text-white ring-1 ring-white/20 shadow-2xl backdrop-blur-md"
+    : "bg-background/90 text-foreground backdrop-blur";
+  const priceClass = hasVideo ? "text-white/75" : "text-muted-foreground";
 
   return `
         <a href="#shop" class="group relative shrink-0 ${visibilityClass} ${sizeClass} overflow-hidden rounded-2xl bg-secondary transition-all duration-500 ${isActive ? "shadow-xl" : ""}">
           ${
-            product.video
+            hasVideo
               ? `
                 <video class="${mediaClass} w-full object-cover transition duration-500 group-hover:scale-105" autoplay muted loop playsinline preload="metadata" poster="${product.img}">
                   <source src="${product.video}" type="video/mp4" />
@@ -491,14 +496,14 @@ function renderBoldProductCard(product, offset) {
               `
               : `<img src="${product.img}" alt="${product.name}" loading="lazy" class="${mediaClass} w-full object-cover transition duration-500 group-hover:scale-105" />`
           }
-          <span class="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-xl bg-background/90 p-3 backdrop-blur">
+          <span class="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-xl p-3 ${labelClass}">
             <span class="flex min-w-0 items-center gap-2">
-              <span class="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-muted">
+              <span class="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-muted ${hasVideo ? "ring-1 ring-white/30" : ""}">
                 <img src="${product.img}" alt="" class="h-full w-full object-cover" />
               </span>
               <span class="min-w-0 text-xs leading-tight">
                 <span class="block truncate font-medium">${product.name}</span>
-                <span class="block text-muted-foreground">${product.price}</span>
+                <span class="block ${priceClass}">${product.price}</span>
               </span>
             </span>
             <i data-lucide="arrow-up-right" class="h-4 w-4 shrink-0"></i>
