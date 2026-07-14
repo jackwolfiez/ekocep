@@ -40,10 +40,14 @@ img {
 
 .add-to-cart-button {
   animation: cart-button-idle 2.8s ease-in-out infinite;
+  background-color: #ffffff;
+  color: hsl(var(--foreground));
 }
 
 .add-to-cart-button:hover {
   animation: none;
+  background-color: hsl(var(--destructive));
+  color: #ffffff;
 }
 
 .add-to-cart-button:hover svg {
