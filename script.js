@@ -536,8 +536,8 @@ function renderProducts(type = "trending") {
           <div class="relative aspect-square overflow-hidden rounded-2xl bg-secondary">
             ${product.sale ? `<span class="absolute left-3 top-3 z-10 rounded-full bg-white px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-destructive shadow-md ring-1 ring-black/5">İndirim</span>` : ""}
             <img src="${product.img}" alt="${product.name}" loading="lazy" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-            <button aria-label="Sepete ekle: ${product.name}" class="absolute bottom-3 right-3 grid h-11 w-11 place-items-center rounded-full bg-white text-foreground shadow-lg ring-1 ring-black/5 transition duration-300 hover:scale-105 hover:bg-foreground hover:text-background">
-              <i data-lucide="plus" class="h-4 w-4"></i>
+            <button aria-label="Sepete ekle: ${product.name}" class="add-to-cart-button absolute bottom-3 right-3 grid h-11 w-11 place-items-center rounded-full bg-white text-foreground shadow-lg ring-1 ring-black/5 transition duration-300 hover:scale-105 hover:bg-destructive hover:text-white">
+              <i data-lucide="plus" class="h-4 w-4 transition-transform duration-300"></i>
             </button>
           </div>
           <div class="mt-4">

@@ -38,6 +38,28 @@ img {
   box-shadow: none;
 }
 
+.add-to-cart-button {
+  animation: cart-button-idle 2.8s ease-in-out infinite;
+}
+
+.add-to-cart-button:hover {
+  animation: none;
+}
+
+.add-to-cart-button:hover svg {
+  transform: rotate(90deg);
+}
+
+@keyframes cart-button-idle {
+  0%,
+  100% {
+    background-color: #ffffff;
+  }
+  50% {
+    background-color: #fff1f0;
+  }
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);
