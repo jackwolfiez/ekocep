@@ -50,7 +50,7 @@ img {
 
 .add-to-cart-button:hover {
   animation: none;
-  background-color: hsl(var(--destructive));
+  background-color: #000000;
   color: #ffffff;
 }
 
