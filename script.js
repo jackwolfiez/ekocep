@@ -238,7 +238,7 @@ const accessories = [
 const boldProducts = [
   { name: "Echo Pods Neo", price: "14.999 TL", img: "/public/images/pods.jpg" },
   { name: "Aura Hoparlör", price: "12.999 TL", img: "/public/images/p-pulse.jpg" },
-  { name: "Kablosuz Kulaklık", price: "22.999 TL", img: "/public/images/p-aura.jpg", video: "/public/images/headphones-9-16.mp4", wide: true },
+  { name: "Kablosuz Kulaklık", price: "22.999 TL", img: "/public/images/p-aura.jpg", video: "/public/images/headphones-9-16.mp4" },
   { name: "Aura Luxe Ses", price: "28.999 TL", img: "/public/images/p-aura.jpg" },
   { name: "Kablosuz Kulaklık", price: "22.999 TL", img: "/public/images/p-heritage.jpg" }
 ];
@@ -456,52 +456,66 @@ function renderAccessories() {
     .join("");
 }
 
+let activeBoldIndex = 2;
+
 function renderBoldProducts() {
   const container = document.querySelector("#bold-products");
   container.innerHTML = boldProducts
     .map(
-      (product) => `
-        <a href="#shop" class="group relative min-w-[78%] snap-start overflow-hidden rounded-2xl bg-secondary sm:min-w-[46%] lg:min-w-[31%]">
+      (product, index) => renderBoldProductCard(product, index)
+    )
+    .join("");
+  lucide.createIcons();
+}
+
+function renderBoldProductCard(product, index) {
+  const isActive = index === activeBoldIndex;
+  const sizeClass = isActive
+    ? "min-w-[82%] sm:min-w-[54%] lg:min-w-[36%]"
+    : "min-w-[68%] sm:min-w-[38%] lg:min-w-[22%]";
+  const mediaClass = isActive ? "aspect-[3/5]" : "aspect-square";
+
+  return `
+        <a href="#shop" class="group relative ${sizeClass} snap-center overflow-hidden rounded-2xl bg-secondary transition-all duration-500 ${isActive ? "shadow-2xl ring-1 ring-foreground/10" : "opacity-85"}">
           ${
             product.video
               ? `
-                <video class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-105" autoplay muted loop playsinline preload="metadata" poster="${product.img}">
+                <video class="${mediaClass} w-full object-cover transition duration-500 group-hover:scale-105" autoplay muted loop playsinline preload="metadata" poster="${product.img}">
                   <source src="${product.video}" type="video/mp4" />
                 </video>
               `
-              : `<img src="${product.img}" alt="${product.name}" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-105" />`
+              : `<img src="${product.img}" alt="${product.name}" loading="lazy" class="${mediaClass} w-full object-cover transition duration-500 group-hover:scale-105" />`
           }
           <span class="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-xl bg-background/90 p-3 backdrop-blur">
-            <span class="flex items-center gap-2">
+            <span class="flex min-w-0 items-center gap-2">
               <span class="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-muted">
                 <img src="${product.img}" alt="" class="h-full w-full object-cover" />
               </span>
-              <span class="text-xs leading-tight">
-                <span class="block font-medium">${product.name}</span>
+              <span class="min-w-0 text-xs leading-tight">
+                <span class="block truncate font-medium">${product.name}</span>
                 <span class="block text-muted-foreground">${product.price}</span>
               </span>
             </span>
-            <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+            <i data-lucide="arrow-up-right" class="h-4 w-4 shrink-0"></i>
           </span>
         </a>
-      `
-    )
-    .join("");
+      `;
 }
 
 function bindBoldCarousel() {
   const carousel = document.querySelector("#bold-products");
   const previous = document.querySelector("#bold-prev");
   const next = document.querySelector("#bold-next");
-  const scrollByCard = (direction) => {
-    const card = carousel.querySelector("a");
-    if (!card) return;
-    const gap = 16;
-    carousel.scrollBy({ left: direction * (card.getBoundingClientRect().width + gap), behavior: "smooth" });
+  const showBoldSlide = (nextIndex) => {
+    activeBoldIndex = (nextIndex + boldProducts.length) % boldProducts.length;
+    renderBoldProducts();
+    const activeCard = carousel.children[activeBoldIndex];
+    activeCard?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
   };
 
-  previous.addEventListener("click", () => scrollByCard(-1));
-  next.addEventListener("click", () => scrollByCard(1));
+  previous.addEventListener("click", () => showBoldSlide(activeBoldIndex - 1));
+  next.addEventListener("click", () => showBoldSlide(activeBoldIndex + 1));
+  requestAnimationFrame(() => carousel.children[activeBoldIndex]?.scrollIntoView({ inline: "center", block: "nearest" }));
 }
 
 function renderProducts(type = "trending") {
