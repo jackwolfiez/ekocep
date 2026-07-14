@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Ekocep premium audio storefront built with HTML, Tailwind CSS and JavaScript."
+      content="Ekocep teknoloji ve ses ürünleri vitrin sitesi."
     />
-    <title>Ekocep - Premium Audio</title>
+    <title>Ekocep - Teknoloji ve Ses Ürünleri</title>
     <link rel="icon" href="/public/favicon.ico" />
     <link rel="stylesheet" href="./styles.css" />
     <script>
@@ -40,49 +40,49 @@
     <div class="min-h-screen">
       <div class="w-full border-b border-border/70 bg-background text-foreground">
         <div class="mx-auto grid max-w-[1600px] grid-cols-[1fr_auto_1fr] items-center gap-4 px-4 py-3 text-xs sm:px-6 sm:text-sm">
-          <div class="col-start-1 flex min-w-0 items-center gap-2 tabular-nums" aria-label="Countdown">
-            <span id="days">00 Days</span>
+          <div class="col-start-1 flex min-w-0 items-center gap-2 tabular-nums" aria-label="Geri sayım">
+            <span id="days">00 Gün</span>
             <span class="opacity-40">:</span>
-            <span id="hours">00 Hours</span>
+            <span id="hours">00 Saat</span>
             <span class="opacity-40">:</span>
-            <span id="minutes">00 Minutes</span>
+            <span id="minutes">00 Dakika</span>
             <span class="opacity-40">:</span>
-            <span id="seconds">00 Seconds</span>
+            <span id="seconds">00 Saniye</span>
           </div>
           <div class="col-start-2 hidden min-w-[340px] items-center justify-center gap-3 lg:min-w-[420px] md:flex">
-            <button id="announcement-prev" aria-label="Previous announcement" class="rounded-full p-1 hover:bg-muted">
+            <button id="announcement-prev" aria-label="Önceki duyuru" class="rounded-full p-1 hover:bg-muted">
               <i data-lucide="chevron-left" class="h-4 w-4"></i>
             </button>
             <span class="flex w-[280px] items-center justify-center overflow-hidden text-center lg:w-[340px]">
-              <span id="announcement" class="inline-block min-w-[240px] lg:min-w-[300px]">We offer free delivery on all orders</span>
+              <span id="announcement" class="inline-block min-w-[240px] lg:min-w-[300px]">Tüm siparişlerde ücretsiz teslimat</span>
             </span>
-            <button id="announcement-next" aria-label="Next announcement" class="rounded-full p-1 hover:bg-muted">
+            <button id="announcement-next" aria-label="Sonraki duyuru" class="rounded-full p-1 hover:bg-muted">
               <i data-lucide="chevron-right" class="h-4 w-4"></i>
             </button>
           </div>
           <div class="col-start-3 flex min-w-0 items-center justify-end gap-1">
             <i data-lucide="globe" class="h-4 w-4"></i>
-            <span>English / USD</span>
+            <span>Türkçe / TL</span>
           </div>
         </div>
       </div>
 
       <section class="relative h-[78svh] min-h-[520px] w-full overflow-hidden lg:h-[82svh] lg:min-h-[580px]">
-        <img id="hero-image" src="/public/images/hero.jpg" alt="Woman wearing Ekocep wireless earbuds" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-500" />
+        <img id="hero-image" src="/public/images/hero.jpg" alt="Ekocep kablosuz kulaklık kullanan kişi" class="absolute inset-0 h-full w-full object-cover transition-opacity duration-500" />
         <video id="hero-video" class="absolute inset-0 hidden h-full w-full object-cover" muted playsinline loop preload="metadata"></video>
         <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30"></div>
 
         <header class="absolute inset-x-0 top-0 z-20">
           <div class="mx-auto flex max-w-[1600px] items-center justify-between px-4 py-6 text-white sm:px-6">
             <div class="flex items-center gap-8">
-              <button id="menu-toggle" aria-label="Categories" aria-expanded="false" aria-controls="category-menu" class="grid h-11 w-11 place-items-center rounded-full bg-white/15 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
+              <button id="menu-toggle" aria-label="Kategoriler" aria-expanded="false" aria-controls="category-menu" class="grid h-11 w-11 place-items-center rounded-full bg-white/15 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
                 <i data-lucide="menu" class="h-5 w-5"></i>
               </button>
               <nav class="hidden items-center gap-8 text-sm font-medium tracking-wide lg:flex">
-                <a href="#top" class="hover:opacity-70">HOME</a>
-                <a href="#shop" class="hover:opacity-70">SHOP</a>
-                <a href="#trending" class="hover:opacity-70">TRENDING</a>
-                <a href="#contact" class="hover:opacity-70">CONTACT</a>
+                <a href="#top" class="hover:opacity-70">ANA SAYFA</a>
+                <a href="#shop" class="hover:opacity-70">MAĞAZA</a>
+                <a href="#trending" class="hover:opacity-70">POPÜLER</a>
+                <a href="#contact" class="hover:opacity-70">İLETİŞİM</a>
                 <a href="#features" class="hover:opacity-70">BLOG</a>
               </nav>
             </div>
@@ -90,15 +90,15 @@
             <a href="#top" class="absolute left-1/2 -translate-x-1/2 font-serif text-3xl italic tracking-tight">Ekocep</a>
 
             <div class="flex items-center gap-4">
-              <button aria-label="Search" class="hover:opacity-70"><i data-lucide="search" class="h-5 w-5"></i></button>
-              <button aria-label="Account" class="hover:opacity-70"><i data-lucide="user" class="h-5 w-5"></i></button>
-              <button aria-label="Cart" class="relative hover:opacity-70">
+              <button aria-label="Arama" class="hover:opacity-70"><i data-lucide="search" class="h-5 w-5"></i></button>
+              <button aria-label="Hesap" class="hover:opacity-70"><i data-lucide="user" class="h-5 w-5"></i></button>
+              <button aria-label="Sepet" class="relative hover:opacity-70">
                 <i data-lucide="shopping-bag" class="h-5 w-5"></i>
                 <span class="absolute -right-2 -top-2 grid h-4 w-4 place-items-center rounded-full bg-white text-[10px] font-semibold text-black">0</span>
               </button>
             </div>
           </div>
-          <nav id="category-menu" class="mx-4 hidden max-h-[72svh] max-w-[1080px] overflow-hidden rounded-xl bg-white/95 text-foreground shadow-2xl ring-1 ring-white/40 backdrop-blur-md sm:mx-6" aria-label="Product categories">
+          <nav id="category-menu" class="mx-4 hidden max-h-[72svh] max-w-[1080px] overflow-hidden rounded-xl bg-white/95 text-foreground shadow-2xl ring-1 ring-white/40 backdrop-blur-md sm:mx-6" aria-label="Ürün kategorileri">
             <div id="category-list"></div>
           </nav>
         </header>
@@ -106,23 +106,23 @@
         <div class="relative z-10 mx-auto flex h-full max-w-[1600px] items-end px-4 pb-12 sm:px-6 sm:pb-16">
           <div class="max-w-xl text-white">
             <h1 id="hero-title" class="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
-              Pure Sound. <br /> Total Control.
+              Saf Ses. <br /> Tam Kontrol.
             </h1>
             <p id="hero-copy" class="mt-6 max-w-md text-base leading-relaxed text-white/85 sm:text-lg">
-              Experience immersive audio engineered for clarity, comfort and uninterrupted listening wherever life takes you.
+              Netlik, konfor ve kesintisiz dinleme için tasarlanan sürükleyici ses deneyimi.
             </p>
             <a id="hero-cta" href="#features" class="mt-8 inline-flex items-center rounded-full bg-white px-8 py-3.5 text-xs font-semibold tracking-[0.15em] text-black transition hover:bg-white/90">
-              DISCOVER FEATURES
+              ÖZELLİKLERİ KEŞFET
             </a>
             <div id="hero-mini-products" class="mt-10 flex flex-col gap-3 sm:flex-row"></div>
           </div>
         </div>
 
         <div class="absolute bottom-10 right-4 z-10 flex flex-col gap-2 text-white sm:bottom-16 sm:right-10">
-          <button id="hero-next" aria-label="Next slide" class="grid h-11 w-11 place-items-center rounded-full bg-white/15 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
+          <button id="hero-next" aria-label="Sonraki slayt" class="grid h-11 w-11 place-items-center rounded-full bg-white/15 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
             <i data-lucide="chevron-right" class="h-5 w-5"></i>
           </button>
-          <button id="hero-prev" aria-label="Previous slide" class="grid h-11 w-11 place-items-center rounded-full bg-white/15 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
+          <button id="hero-prev" aria-label="Önceki slayt" class="grid h-11 w-11 place-items-center rounded-full bg-white/15 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
             <i data-lucide="chevron-left" class="h-5 w-5"></i>
           </button>
         </div>
@@ -139,8 +139,8 @@
       <section class="py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <div class="text-center">
-            <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Bold Looks, Soft Base</h2>
-            <p class="mt-4 text-muted-foreground">Work to travel to unwind time, experience comfort-driven audio anytime you need it.</p>
+            <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Güçlü Tasarım, Yumuşak Konfor</h2>
+            <p class="mt-4 text-muted-foreground">İşten yolculuğa, dinlenme anlarından günlük kullanıma kadar konfor odaklı ses deneyimi.</p>
           </div>
           <div id="bold-products" class="mt-14 grid grid-cols-2 gap-4 lg:grid-cols-5"></div>
         </div>
@@ -149,29 +149,29 @@
       <section class="pb-24">
         <div class="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-2">
           <a href="#shop" class="relative overflow-hidden rounded-3xl">
-            <img src="/public/images/classic.jpg" alt="Classic" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+            <img src="/public/images/classic.jpg" alt="Klasik" loading="lazy" class="aspect-[4/5] w-full object-cover" />
             <span class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></span>
             <span class="absolute inset-x-6 bottom-8 text-white sm:inset-x-8">
-              <span class="block text-4xl font-semibold tracking-tight sm:text-6xl">CLASSIC</span>
-              <span class="mt-2 block text-sm opacity-90">Super classic headphones</span>
-              <span class="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-xs font-semibold tracking-[0.15em] text-black">SHOP NOW</span>
+              <span class="block text-4xl font-semibold tracking-tight sm:text-6xl">KLASİK</span>
+              <span class="mt-2 block text-sm opacity-90">Zamansız kulaklık deneyimi</span>
+              <span class="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-xs font-semibold tracking-[0.15em] text-black">HEMEN İNCELE</span>
             </span>
           </a>
           <div class="grid gap-6">
             <a href="#shop" class="relative overflow-hidden rounded-3xl">
-              <img src="/public/images/soft-base.jpg" alt="Soft Base" loading="lazy" class="aspect-[16/10] w-full object-cover" />
+              <img src="/public/images/soft-base.jpg" alt="Yumuşak Bas" loading="lazy" class="aspect-[16/10] w-full object-cover" />
               <span class="absolute inset-0 bg-black/20"></span>
               <span class="absolute left-1/2 top-1/2 block -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                <span class="block text-4xl font-semibold">Soft Base</span>
-                <span class="mt-4 inline-flex rounded-full bg-white px-6 py-3 text-xs font-semibold tracking-[0.15em] text-black">SHOP NOW</span>
+                <span class="block text-4xl font-semibold">Yumuşak Bas</span>
+                <span class="mt-4 inline-flex rounded-full bg-white px-6 py-3 text-xs font-semibold tracking-[0.15em] text-black">HEMEN İNCELE</span>
               </span>
             </a>
             <a href="#shop" class="relative overflow-hidden rounded-3xl">
-              <img src="/public/images/base-speakers.jpg" alt="Base Speakers" loading="lazy" class="aspect-[16/10] w-full object-cover" />
+              <img src="/public/images/base-speakers.jpg" alt="Bas Hoparlörler" loading="lazy" class="aspect-[16/10] w-full object-cover" />
               <span class="absolute inset-0 bg-black/25"></span>
               <span class="absolute left-1/2 top-1/2 block -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                <span class="block text-4xl font-semibold">Base Speakers</span>
-                <span class="mt-4 inline-flex rounded-full bg-white px-6 py-3 text-xs font-semibold tracking-[0.15em] text-black">SHOP NOW</span>
+                <span class="block text-4xl font-semibold">Bas Hoparlörler</span>
+                <span class="mt-4 inline-flex rounded-full bg-white px-6 py-3 text-xs font-semibold tracking-[0.15em] text-black">HEMEN İNCELE</span>
               </span>
             </a>
           </div>
@@ -181,12 +181,12 @@
       <section id="trending" class="pb-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <div class="flex flex-wrap items-end justify-between gap-6">
-            <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Flawless Audio</h2>
+            <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Kusursuz Ses</h2>
             <div class="flex flex-wrap items-center gap-4 text-sm sm:gap-6">
-              <button data-tab="trending" class="tab-button flex items-center gap-2 transition text-foreground"><span class="h-1.5 w-1.5 rounded-full bg-destructive"></span>Trending products</button>
-              <button data-tab="best" class="tab-button flex items-center gap-2 text-muted-foreground transition hover:text-foreground">Best Sellers</button>
-              <button data-tab="new" class="tab-button flex items-center gap-2 text-muted-foreground transition hover:text-foreground">New Launches</button>
-              <a href="#shop" class="inline-flex items-center rounded-full bg-foreground px-5 py-2.5 text-xs font-semibold tracking-[0.15em] text-background">SHOP NOW</a>
+              <button data-tab="trending" class="tab-button flex items-center gap-2 transition text-foreground"><span class="h-1.5 w-1.5 rounded-full bg-destructive"></span>Popüler ürünler</button>
+              <button data-tab="best" class="tab-button flex items-center gap-2 text-muted-foreground transition hover:text-foreground">Çok satanlar</button>
+              <button data-tab="new" class="tab-button flex items-center gap-2 text-muted-foreground transition hover:text-foreground">Yeni çıkanlar</button>
+              <a href="#shop" class="inline-flex items-center rounded-full bg-foreground px-5 py-2.5 text-xs font-semibold tracking-[0.15em] text-background">HEMEN İNCELE</a>
             </div>
           </div>
           <div id="product-grid" class="mt-10 grid grid-cols-2 gap-6 md:grid-cols-4"></div>
@@ -195,10 +195,10 @@
 
       <section class="overflow-hidden bg-[#8b6b6b] py-10 text-white">
         <div class="marquee flex gap-16 whitespace-nowrap text-4xl font-semibold tracking-tight sm:text-6xl">
-          <span class="flex items-center gap-16">ELITE SOUND PERFORMANCE <span class="opacity-70">- UP TO 50% OFF ON PREMIUM AUDIO -</span></span>
-          <span class="flex items-center gap-16">ELITE SOUND PERFORMANCE <span class="opacity-70">- UP TO 50% OFF ON PREMIUM AUDIO -</span></span>
-          <span class="flex items-center gap-16">ELITE SOUND PERFORMANCE <span class="opacity-70">- UP TO 50% OFF ON PREMIUM AUDIO -</span></span>
-          <span class="flex items-center gap-16">ELITE SOUND PERFORMANCE <span class="opacity-70">- UP TO 50% OFF ON PREMIUM AUDIO -</span></span>
+          <span class="flex items-center gap-16">ÜST DÜZEY SES PERFORMANSI <span class="opacity-70">- PREMIUM SES ÜRÜNLERİNDE %50'YE VARAN FIRSATLAR -</span></span>
+          <span class="flex items-center gap-16">ÜST DÜZEY SES PERFORMANSI <span class="opacity-70">- PREMIUM SES ÜRÜNLERİNDE %50'YE VARAN FIRSATLAR -</span></span>
+          <span class="flex items-center gap-16">ÜST DÜZEY SES PERFORMANSI <span class="opacity-70">- PREMIUM SES ÜRÜNLERİNDE %50'YE VARAN FIRSATLAR -</span></span>
+          <span class="flex items-center gap-16">ÜST DÜZEY SES PERFORMANSI <span class="opacity-70">- PREMIUM SES ÜRÜNLERİNDE %50'YE VARAN FIRSATLAR -</span></span>
         </div>
       </section>
 
@@ -207,27 +207,27 @@
         <div class="absolute inset-0 bg-black/25"></div>
         <div class="absolute inset-0 mx-auto flex max-w-7xl flex-col items-start justify-end gap-6 px-4 pb-14 text-white sm:px-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <h3 class="text-5xl font-semibold tracking-tight">Don't Miss</h3>
-            <p class="mt-3 text-white/85">Limited-time styles and exclusive offers waiting for you.</p>
+            <h3 class="text-5xl font-semibold tracking-tight">Kaçırma</h3>
+            <p class="mt-3 text-white/85">Sınırlı süreli ürünler ve özel fırsatlar seni bekliyor.</p>
           </div>
           <a href="#shop" class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-xs font-semibold tracking-[0.15em] text-black">
-            EXPLORE PRODUCT <i data-lucide="plus" class="h-4 w-4"></i>
+            ÜRÜNLERİ KEŞFET <i data-lucide="plus" class="h-4 w-4"></i>
           </a>
         </div>
       </section>
 
       <section id="features" class="bg-secondary py-24">
         <div class="mx-auto max-w-4xl px-4 text-center sm:px-6">
-          <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Next-Level Audio Performance</h2>
+          <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Yeni Nesil Ses Performansı</h2>
           <p class="mt-4 text-muted-foreground">
-            Engineered with advanced audio technology to deliver powerful performance, seamless connectivity and lasting comfort.
+            Güçlü performans, kesintisiz bağlantı ve uzun süreli konfor için gelişmiş ses teknolojileriyle tasarlandı.
           </p>
         </div>
         <div class="mx-auto mt-14 grid max-w-7xl grid-cols-2 gap-6 px-4 sm:px-6 md:grid-cols-4">
-          <div class="rounded-3xl bg-background p-8"><div class="text-4xl font-semibold tracking-tight">40h</div><div class="mt-2 text-sm text-muted-foreground">Battery Life</div></div>
-          <div class="rounded-3xl bg-background p-8"><div class="text-4xl font-semibold tracking-tight">ANC</div><div class="mt-2 text-sm text-muted-foreground">Active Noise Cancellation</div></div>
-          <div class="rounded-3xl bg-background p-8"><div class="text-4xl font-semibold tracking-tight">Hi-Res</div><div class="mt-2 text-sm text-muted-foreground">Studio-grade Audio</div></div>
-          <div class="rounded-3xl bg-background p-8"><div class="text-4xl font-semibold tracking-tight">IPX5</div><div class="mt-2 text-sm text-muted-foreground">Sweat & Water Resistant</div></div>
+          <div class="rounded-3xl bg-background p-8"><div class="text-4xl font-semibold tracking-tight">40sa</div><div class="mt-2 text-sm text-muted-foreground">Pil Ömrü</div></div>
+          <div class="rounded-3xl bg-background p-8"><div class="text-4xl font-semibold tracking-tight">ANC</div><div class="mt-2 text-sm text-muted-foreground">Aktif Gürültü Engelleme</div></div>
+          <div class="rounded-3xl bg-background p-8"><div class="text-4xl font-semibold tracking-tight">Hi-Res</div><div class="mt-2 text-sm text-muted-foreground">Stüdyo Kalitesinde Ses</div></div>
+          <div class="rounded-3xl bg-background p-8"><div class="text-4xl font-semibold tracking-tight">IPX5</div><div class="mt-2 text-sm text-muted-foreground">Tere ve Suya Dayanıklı</div></div>
         </div>
       </section>
 
@@ -235,7 +235,7 @@
         <div class="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-4">
           <div>
             <div class="font-serif text-3xl italic">Ekocep</div>
-            <p class="mt-4 max-w-xs text-sm opacity-70">Premium audio designed for clarity, comfort and every moment of your day.</p>
+            <p class="mt-4 max-w-xs text-sm opacity-70">Netlik, konfor ve günün her anı için tasarlanmış premium teknoloji ürünleri.</p>
             <div class="mt-6 flex gap-3">
               <a href="#" aria-label="Instagram" class="grid h-9 w-9 place-items-center rounded-full bg-background/10 hover:bg-background/20"><i data-lucide="instagram" class="h-4 w-4"></i></a>
               <a href="#" aria-label="Facebook" class="grid h-9 w-9 place-items-center rounded-full bg-background/10 hover:bg-background/20"><i data-lucide="facebook" class="h-4 w-4"></i></a>
@@ -243,14 +243,14 @@
               <a href="#" aria-label="Twitter" class="grid h-9 w-9 place-items-center rounded-full bg-background/10 hover:bg-background/20"><i data-lucide="twitter" class="h-4 w-4"></i></a>
             </div>
           </div>
-          <div><div class="text-sm font-semibold uppercase tracking-widest">Shop</div><ul class="mt-5 space-y-3 text-sm opacity-80"><li><a href="#">Earbuds</a></li><li><a href="#">Headphones</a></li><li><a href="#">Speakers</a></li><li><a href="#">Accessories</a></li></ul></div>
-          <div><div class="text-sm font-semibold uppercase tracking-widest">Company</div><ul class="mt-5 space-y-3 text-sm opacity-80"><li><a href="#">About</a></li><li><a href="#">Contact</a></li><li><a href="#">Careers</a></li><li><a href="#">Blog</a></li></ul></div>
-          <div><div class="text-sm font-semibold uppercase tracking-widest">Support</div><ul class="mt-5 space-y-3 text-sm opacity-80"><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Warranty</a></li><li><a href="#">FAQ</a></li></ul></div>
+          <div><div class="text-sm font-semibold uppercase tracking-widest">Mağaza</div><ul class="mt-5 space-y-3 text-sm opacity-80"><li><a href="#">Kulak İçi Kulaklık</a></li><li><a href="#">Kulaklıklar</a></li><li><a href="#">Hoparlörler</a></li><li><a href="#">Aksesuarlar</a></li></ul></div>
+          <div><div class="text-sm font-semibold uppercase tracking-widest">Kurumsal</div><ul class="mt-5 space-y-3 text-sm opacity-80"><li><a href="#">Hakkımızda</a></li><li><a href="#">İletişim</a></li><li><a href="#">Kariyer</a></li><li><a href="#">Blog</a></li></ul></div>
+          <div><div class="text-sm font-semibold uppercase tracking-widest">Destek</div><ul class="mt-5 space-y-3 text-sm opacity-80"><li><a href="#">Kargo</a></li><li><a href="#">İade</a></li><li><a href="#">Garanti</a></li><li><a href="#">SSS</a></li></ul></div>
         </div>
         <div class="border-t border-background/10">
           <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 text-xs opacity-70 sm:px-6">
-            <span>&copy; 2026 Ekocep. All rights reserved.</span>
-            <a href="#top" class="inline-flex items-center gap-2 hover:opacity-100">Back to top <i data-lucide="arrow-up" class="h-3 w-3"></i></a>
+            <span>&copy; 2026 Ekocep. Tüm hakları saklıdır.</span>
+            <a href="#top" class="inline-flex items-center gap-2 hover:opacity-100">Yukarı dön <i data-lucide="arrow-up" class="h-3 w-3"></i></a>
           </div>
         </div>
       </footer>

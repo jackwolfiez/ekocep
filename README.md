@@ -1,17 +1,17 @@
 # Ekocep
 
-Static storefront built with HTML, Tailwind CSS CDN and JavaScript.
+HTML, Tailwind CSS CDN ve JavaScript ile hazırlanmış statik vitrin sitesi.
 
-## Run locally
+## Lokalde çalıştırma
 
 ```bash
 npm run dev
 ```
 
-Then open:
+Açılacak adres:
 
 ```text
 http://localhost:4173/
 ```
 
-You can also open `index.html` directly in a browser.
+İstersen `index.html` dosyasını doğrudan tarayıcıda da açabilirsin.

@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Static HTML, Tailwind CSS and JavaScript storefront.",
+  "description": "HTML, Tailwind CSS ve JavaScript ile hazırlanmış statik vitrin sitesi.",
   "scripts": {
     "build": "rm -rf dist && mkdir -p dist && cp index.html styles.css script.js dist/ && cp -R public dist/public",
     "dev": "python3 -m http.server 4173",
