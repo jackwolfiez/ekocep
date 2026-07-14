@@ -184,6 +184,19 @@ const heroSlides = [
     ]
   },
   {
+    title: "Yaza Renk Kat. <br /> iPhone'unu Koru.",
+    copy: "Canlı renkler, hafif tasarım ve günlük koruma ile iPhone kılıfını yaz enerjisine uydur.",
+    cta: "KILIFLARI KEŞFET",
+    ctaHref: "#shop",
+    image: "/public/images/classic.jpg",
+    video: "/public/images/iphone-case.mp4",
+    alt: "Yaz temasına uygun iPhone kılıfı",
+    products: [
+      { name: "iPhone Kılıfları", img: "/public/images/classic.jpg" },
+      { name: "Sana Özel Seçimler", img: "/public/images/pods.jpg" }
+    ]
+  },
+  {
     title: "Odayı Dolduran Bas. <br /> Sade Tasarım.",
     copy: "Kompakt hoparlörler sıcak bas, net vokal ve kolay kurulum sunar.",
     cta: "HOPARLÖRLERİ KEŞFET",
