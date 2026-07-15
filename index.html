@@ -92,7 +92,7 @@
 
             <ul class="header-icons list-style-none" aria-label="Hızlı işlemler">
               <li class="search">
-                <button type="button" class="header-icon" aria-label="Arama">
+                <button type="button" class="header-icon" aria-label="Arama" data-search-toggle aria-controls="search-drawer" aria-expanded="false">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M16 8C16 3.58 12.42 0 8 0C3.58 0 0 3.58 0 8C0 12.42 3.58 16 8 16C9.94 16 11.72 15.31 13.1 14.16L14.94 16L16 14.94L14.16 13.1C15.31 11.72 16 9.94 16 8ZM8 14.5C4.42 14.5 1.5 11.58 1.5 8C1.5 4.42 4.42 1.5 8 1.5C11.58 1.5 14.5 4.42 14.5 8C14.5 11.58 11.58 14.5 8 14.5Z" fill="currentColor"></path>
                   </svg>
@@ -317,6 +317,60 @@
         </div>
       </footer>
     </div>
+    <aside id="search-drawer" class="search-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="search-drawer-title">
+      <button class="search-drawer-overlay" type="button" data-search-close aria-label="Arama panelini kapat"></button>
+      <div class="search-drawer-panel">
+        <div class="search-drawer-head">
+          <h2 id="search-drawer-title">Arama</h2>
+          <button class="search-drawer-close" type="button" data-search-close aria-label="Arama panelini kapat">
+            <i data-lucide="x" class="h-5 w-5"></i>
+          </button>
+        </div>
+        <div class="search-drawer-body">
+          <form class="search-form" role="search">
+            <label for="site-search">Arama</label>
+            <div class="search-input-wrap">
+              <input id="site-search" type="search" placeholder="Ürün, kategori veya aksesuar ara" autocomplete="off" data-search-input />
+              <button type="button" data-search-clear>Temizle</button>
+            </div>
+          </form>
+          <div class="search-quick-view">
+            <div class="search-section-title">Hızlı görünüm</div>
+            <div class="search-products">
+              <a href="./product.html" class="search-product-card" data-search-item="Kablosuz Kulaklık">
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3.jpg?v=1767809480&width=300" alt="Kablosuz Kulaklık" loading="lazy" />
+                <span>
+                  <strong>Kablosuz Kulaklık</strong>
+                  <small>22.999 TL</small>
+                </span>
+              </a>
+              <a href="./product.html" class="search-product-card" data-search-item="Echo Pods Neo">
+                <img src="/public/images/pods.jpg" alt="Echo Pods Neo" loading="lazy" />
+                <span>
+                  <strong>Echo Pods Neo</strong>
+                  <small>14.999 TL</small>
+                </span>
+              </a>
+              <a href="./product.html" class="search-product-card" data-search-item="Noise Guard Elite">
+                <img src="/public/images/p-noise.jpg" alt="Noise Guard Elite" loading="lazy" />
+                <span>
+                  <strong>Noise Guard Elite</strong>
+                  <small>31.999 TL</small>
+                </span>
+              </a>
+              <a href="./product.html" class="search-product-card" data-search-item="Aura Hoparlör">
+                <img src="/public/images/p-pulse.jpg" alt="Aura Hoparlör" loading="lazy" />
+                <span>
+                  <strong>Aura Hoparlör</strong>
+                  <small>12.999 TL</small>
+                </span>
+              </a>
+            </div>
+            <p class="search-empty" hidden data-search-empty>Aramana uygun ürün bulunamadı.</p>
+          </div>
+        </div>
+      </div>
+    </aside>
     <aside id="login-drawer" class="login-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="login-drawer-title">
       <button class="login-drawer-overlay" type="button" data-login-close aria-label="Giriş panelini kapat"></button>
       <div class="login-drawer-panel">

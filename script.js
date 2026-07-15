@@ -962,6 +962,65 @@ function bindLoginDrawer() {
   });
 }
 
+function bindSearchDrawer() {
+  const drawer = document.querySelector("#search-drawer");
+  const toggles = document.querySelectorAll("[data-search-toggle]");
+  const closeTriggers = document.querySelectorAll("[data-search-close]");
+  const input = document.querySelector("[data-search-input]");
+  const clearButton = document.querySelector("[data-search-clear]");
+  const items = document.querySelectorAll("[data-search-item]");
+  const emptyState = document.querySelector("[data-search-empty]");
+  if (!drawer || !toggles.length) return;
+
+  const filterItems = () => {
+    const term = (input?.value || "").trim().toLocaleLowerCase("tr");
+    let visibleCount = 0;
+
+    items.forEach((item) => {
+      const matches = !term || item.dataset.searchItem.toLocaleLowerCase("tr").includes(term);
+      item.hidden = !matches;
+      if (matches) visibleCount += 1;
+    });
+
+    if (emptyState) emptyState.hidden = visibleCount > 0;
+  };
+
+  const setOpen = (isOpen) => {
+    drawer.classList.toggle("is-open", isOpen);
+    drawer.setAttribute("aria-hidden", String(!isOpen));
+    toggles.forEach((toggle) => toggle.setAttribute("aria-expanded", String(isOpen)));
+    document.body.classList.toggle("search-drawer-open", isOpen);
+    if (isOpen) window.setTimeout(() => input?.focus(), 120);
+  };
+
+  toggles.forEach((toggle) => {
+    toggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setOpen(true);
+    });
+  });
+
+  closeTriggers.forEach((trigger) => trigger.addEventListener("click", () => setOpen(false)));
+  input?.addEventListener("input", filterItems);
+  clearButton?.addEventListener("click", () => {
+    if (input) input.value = "";
+    filterItems();
+    input?.focus();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!drawer.classList.contains("is-open")) return;
+    if (drawer.contains(event.target) || event.target.closest("[data-search-toggle]")) return;
+    setOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setOpen(false);
+  });
+
+  filterItems();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   updateCountdown();
   setInterval(updateCountdown, 1000);
@@ -977,5 +1036,6 @@ document.addEventListener("DOMContentLoaded", () => {
   bindCategoryMenu();
   bindCartDrawer();
   bindLoginDrawer();
+  bindSearchDrawer();
   lucide.createIcons();
 });
