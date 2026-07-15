@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ekocep iletişim sayfası." />
+    <title>İletişim - Ekocep</title>
+    <link rel="icon" href="/public/favicon.ico" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="bg-background text-foreground antialiased">
+    <header class="policy-header">
+      <a href="./index.html" class="policy-logo">Ekocep</a>
+      <nav>
+        <a href="./index.html">Ana Sayfa</a>
+        <a href="./index.html#shop">Mağaza</a>
+        <a href="./privacy-policy.html">Gizlilik</a>
+      </nav>
+    </header>
+    <main class="policy-page">
+      <div class="policy-hero">
+        <p>Destek</p>
+        <h1>İletişim</h1>
+        <span>Her türlü soru ve destek talebi için bize ulaş.</span>
+      </div>
+      <div class="contact-grid">
+        <section class="contact-card">
+          <i data-lucide="mail" class="h-6 w-6"></i>
+          <h2>E-posta</h2>
+          <a href="mailto:info@example.com">info@example.com</a>
+        </section>
+        <section class="contact-card">
+          <i data-lucide="phone" class="h-6 w-6"></i>
+          <h2>Telefon</h2>
+          <a href="tel:+902125550123">+90 (212) 555 01 23</a>
+        </section>
+        <section class="contact-card">
+          <i data-lucide="map-pin" class="h-6 w-6"></i>
+          <h2>Adres</h2>
+          <p>İstanbul, Türkiye</p>
+        </section>
+      </div>
+      <form class="contact-form">
+        <label>Ad Soyad<input type="text" placeholder="Adını yaz" /></label>
+        <label>E-posta<input type="email" placeholder="E-posta adresin" /></label>
+        <label>Mesaj<textarea rows="5" placeholder="Mesajını yaz"></textarea></label>
+        <button type="button">Gönder</button>
+      </form>
+    </main>
+    <script>lucide.createIcons();</script>
+  </body>
+</html>
