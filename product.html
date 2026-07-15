@@ -57,14 +57,30 @@
             </nav>
           </div>
           <a href="./index.html" class="product-logo">Ekocep</a>
-          <div class="product-header-actions">
-            <button type="button" aria-label="Arama"><i data-lucide="search" class="h-5 w-5"></i></button>
-            <button type="button" aria-label="Hesap"><i data-lucide="user" class="h-5 w-5"></i></button>
-            <button id="cart-toggle" type="button" aria-label="Sepet" aria-controls="cart-drawer" aria-expanded="false" class="relative">
-              <i data-lucide="shopping-bag" class="h-5 w-5"></i>
-              <span data-cart-count class="product-cart-count">0</span>
-            </button>
-          </div>
+          <ul class="header-icons product-header-actions list-style-none" aria-label="Hızlı işlemler">
+            <li class="search">
+              <button type="button" class="header-icon" aria-label="Arama">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M16 8C16 3.58 12.42 0 8 0C3.58 0 0 3.58 0 8C0 12.42 3.58 16 8 16C9.94 16 11.72 15.31 13.1 14.16L14.94 16L16 14.94L14.16 13.1C15.31 11.72 16 9.94 16 8ZM8 14.5C4.42 14.5 1.5 11.58 1.5 8C1.5 4.42 4.42 1.5 8 1.5C11.58 1.5 14.5 4.42 14.5 8C14.5 11.58 11.58 14.5 8 14.5Z" fill="currentColor"></path>
+                </svg>
+              </button>
+            </li>
+            <li class="user">
+              <a href="#contact" class="header-icon" title="Hesap" aria-label="Hesap">
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M7 10C9.76 10 12 7.76 12 5C12 2.24 9.76 0 7 0C4.24 0 2 2.24 2 5C2 7.76 4.24 10 7 10ZM7 1.5C8.93 1.5 10.5 3.07 10.5 5C10.5 6.93 8.93 8.5 7 8.5C5.07 8.5 3.5 6.93 3.5 5C3.5 3.07 5.07 1.5 7 1.5ZM13.75 14V16H12.25V14C12.25 13.31 11.69 12.75 11 12.75H3C2.31 12.75 1.75 13.31 1.75 14V16H0.25V14C0.25 12.48 1.48 11.25 3 11.25H11C12.52 11.25 13.75 12.48 13.75 14Z" fill="currentColor"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="cart">
+              <button id="cart-toggle" type="button" class="header-icon" aria-label="Sepet" aria-controls="cart-drawer" aria-expanded="false">
+                <span data-cart-count>0</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M14.0002 3H11.7502V1.75C11.7502 0.79 10.9702 0 10.0002 0H5.99023C5.03023 0 4.24023 0.78 4.24023 1.75V3H1.99023C0.890234 3 -0.00976562 3.89 -0.00976562 5V14C-0.00976562 15.1 0.880234 16 1.99023 16H13.9902C15.0902 16 15.9902 15.11 15.9902 14V5C15.9902 3.9 15.1002 3 13.9902 3H14.0002ZM5.75023 1.75C5.75023 1.61 5.86023 1.5 6.0002 1.5H10.0102C10.1502 1.5 10.2602 1.61 10.2602 1.75V3H5.76023V1.75H5.75023ZM14.5002 14.01C14.5002 14.28 14.2802 14.51 14.0002 14.51H2.00023C1.73023 14.51 1.50023 14.29 1.50023 14.01V5.01C1.50023 4.74 1.72023 4.51 2.00023 4.51H4.25023V6.01H5.75023V4.51H10.2502V6.01H11.7502V4.51H14.0002C14.2702 4.51 14.5002 4.73 14.5002 5.01V14.01Z" fill="currentColor"></path>
+                </svg>
+              </button>
+            </li>
+          </ul>
         </div>
         <nav id="product-category-menu" class="product-category-menu hidden" aria-label="Ürün kategorileri">
           <div id="product-category-list"></div>
