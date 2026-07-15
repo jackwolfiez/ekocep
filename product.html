@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Wireless Headphone ürün detay sayfası." />
-    <title>Wireless Headphone - Ekocep</title>
+    <meta name="description" content="Kablosuz Kulaklık ürün detay sayfası." />
+    <title>Kablosuz Kulaklık - Ekocep</title>
     <link rel="icon" href="/public/favicon.ico" />
     <link rel="stylesheet" href="./styles.css" />
     <script>
@@ -37,20 +37,25 @@
     <div class="product-page-shell">
       <div class="product-topbar">
         <div class="product-container product-topbar-inner">
-          <span>MORE</span>
-          <span>Premium Headphones 80% off</span>
-          <span>English / USD</span>
+          <span>DAHA FAZLA</span>
+          <span>Premium kulaklıklarda %80'e varan fırsatlar</span>
+          <span>Türkçe / TL</span>
         </div>
       </div>
 
       <header class="product-header">
         <div class="product-container product-header-inner">
-          <nav class="product-nav" aria-label="Ana navigasyon">
-            <a href="./index.html">HOME</a>
-            <a href="./index.html#shop">SHOP</a>
-            <a href="./index.html#trending">TRENDING</a>
-            <a href="./index.html#contact">CONTACT</a>
-          </nav>
+          <div class="product-header-left">
+            <button id="product-menu-toggle" type="button" aria-label="Tüm kategoriler" aria-expanded="false" aria-controls="product-category-menu" class="product-menu-button">
+              <i data-lucide="menu" class="h-5 w-5"></i>
+            </button>
+            <nav class="product-nav" aria-label="Ana navigasyon">
+              <a href="./index.html">ANA SAYFA</a>
+              <a href="./index.html#shop">MAĞAZA</a>
+              <a href="./index.html#trending">POPÜLER</a>
+              <a href="./index.html#contact">İLETİŞİM</a>
+            </nav>
+          </div>
           <a href="./index.html" class="product-logo">Ekocep</a>
           <div class="product-header-actions">
             <button type="button" aria-label="Arama"><i data-lucide="search" class="h-5 w-5"></i></button>
@@ -61,15 +66,18 @@
             </button>
           </div>
         </div>
+        <nav id="product-category-menu" class="product-category-menu hidden" aria-label="Ürün kategorileri">
+          <div id="product-category-list"></div>
+        </nav>
       </header>
 
       <main>
         <div class="product-container product-breadcrumb">
-          <a href="./index.html">Home</a>
+          <a href="./index.html">Ana Sayfa</a>
           <span>/</span>
-          <a href="./index.html#shop">Best Seller</a>
+          <a href="./index.html#shop">Çok Satanlar</a>
           <span>/</span>
-          <span>Wireless Headphone</span>
+          <span>Kablosuz Kulaklık</span>
         </div>
 
         <section class="product-detail-grid">
@@ -93,37 +101,37 @@
             </div>
 
             <div class="product-main-media">
-              <img id="product-main-image" src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3.jpg?v=1767809480&width=1500" alt="Wireless Headphone" />
+              <img id="product-main-image" src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3.jpg?v=1767809480&width=1500" alt="Kablosuz Kulaklık" />
             </div>
           </div>
 
           <aside class="product-info-panel" aria-label="Ürün bilgileri">
-            <div class="product-stock">Hurry up, only 2 left in stock</div>
-            <h1>Wireless Headphone</h1>
-            <div class="product-price">$680.00</div>
+            <div class="product-stock">Acele et, stokta sadece 2 adet kaldı</div>
+            <h1>Kablosuz Kulaklık</h1>
+            <div class="product-price">22.999 TL</div>
 
             <div class="product-option-block">
-              <div class="product-option-label">Color: <span data-selected-color>Brown</span></div>
-              <div class="product-swatch-row" role="radiogroup" aria-label="Color">
-                <button type="button" class="product-swatch is-active" data-option-group="color" data-option-value="Brown" style="--swatch: #7d3f24" aria-label="Brown"></button>
-                <button type="button" class="product-swatch" data-option-group="color" data-option-value="Beige" style="--swatch: #d9c7b1" aria-label="Beige"></button>
-                <button type="button" class="product-swatch" data-option-group="color" data-option-value="Gray" style="--swatch: #808080" aria-label="Gray"></button>
-                <button type="button" class="product-swatch" data-option-group="color" data-option-value="Black" style="--swatch: #111111" aria-label="Black"></button>
-                <button type="button" class="product-swatch" data-option-group="color" data-option-value="Rose gold" style="--swatch: #c58c78" aria-label="Rose gold"></button>
+              <div class="product-option-label">Renk: <span data-selected-color>Kahverengi</span></div>
+              <div class="product-swatch-row" role="radiogroup" aria-label="Renk">
+                <button type="button" class="product-swatch is-active" data-option-group="color" data-option-value="Kahverengi" style="--swatch: #7d3f24" aria-label="Kahverengi"></button>
+                <button type="button" class="product-swatch" data-option-group="color" data-option-value="Bej" style="--swatch: #d9c7b1" aria-label="Bej"></button>
+                <button type="button" class="product-swatch" data-option-group="color" data-option-value="Gri" style="--swatch: #808080" aria-label="Gri"></button>
+                <button type="button" class="product-swatch" data-option-group="color" data-option-value="Siyah" style="--swatch: #111111" aria-label="Siyah"></button>
+                <button type="button" class="product-swatch" data-option-group="color" data-option-value="Pembe Altın" style="--swatch: #c58c78" aria-label="Pembe Altın"></button>
               </div>
             </div>
 
             <div class="product-option-block">
-              <div class="product-option-label">Material: <span data-selected-material>Chrome</span></div>
-              <div class="product-material-row" role="radiogroup" aria-label="Material">
-                <button type="button" class="product-material is-active" data-option-group="material" data-option-value="Chrome">Chrome</button>
-                <button type="button" class="product-material" data-option-group="material" data-option-value="Glass">Glass</button>
+              <div class="product-option-label">Materyal: <span data-selected-material>Krom</span></div>
+              <div class="product-material-row" role="radiogroup" aria-label="Materyal">
+                <button type="button" class="product-material is-active" data-option-group="material" data-option-value="Krom">Krom</button>
+                <button type="button" class="product-material" data-option-group="material" data-option-value="Cam">Cam</button>
                 <button type="button" class="product-material" data-option-group="material" data-option-value="Metal">Metal</button>
-                <button type="button" class="product-material" data-option-group="material" data-option-value="Plush">Plush</button>
+                <button type="button" class="product-material" data-option-group="material" data-option-value="Yumuşak Kaplama">Yumuşak Kaplama</button>
               </div>
             </div>
 
-            <label class="product-quantity-label" for="product-quantity">Quantity</label>
+            <label class="product-quantity-label" for="product-quantity">Adet</label>
             <div class="product-purchase-row">
               <div class="product-quantity">
                 <button type="button" data-qty-minus aria-label="Adedi azalt">-</button>
@@ -131,39 +139,39 @@
                 <button type="button" data-qty-plus aria-label="Adedi artır">+</button>
               </div>
               <button type="button" class="product-add-button" data-product-add>
-                ADD TO CART <span>$680.00</span>
+                SEPETE EKLE <span>22.999 TL</span>
               </button>
             </div>
-            <button type="button" class="product-buy-button">BUY IT NOW</button>
+            <button type="button" class="product-buy-button">HEMEN SATIN AL</button>
 
             <div class="product-benefits">
-              <div><i data-lucide="truck" class="h-5 w-5"></i><span>Delivered within 2-5 days</span></div>
-              <div><i data-lucide="rotate-ccw" class="h-5 w-5"></i><span>30 days return policy</span></div>
-              <div><i data-lucide="star" class="h-5 w-5"></i><span>Customer rating</span></div>
-              <div><i data-lucide="shield-check" class="h-5 w-5"></i><span>High-quality beige suede</span></div>
+              <div><i data-lucide="truck" class="h-5 w-5"></i><span>2-5 gün içinde teslimat</span></div>
+              <div><i data-lucide="rotate-ccw" class="h-5 w-5"></i><span>30 gün iade güvencesi</span></div>
+              <div><i data-lucide="star" class="h-5 w-5"></i><span>Yüksek müşteri puanı</span></div>
+              <div><i data-lucide="shield-check" class="h-5 w-5"></i><span>Premium malzeme kalitesi</span></div>
             </div>
 
             <div class="product-store-card">
               <img src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3.jpg?v=1767809480&width=300" alt="" loading="lazy" />
               <div>
-                <div class="font-semibold">Wireless Headphone</div>
-                <p>Color: <span data-selected-color-copy>Brown</span>, Material: <span data-selected-material-copy>Chrome</span></p>
+                <div class="font-semibold">Kablosuz Kulaklık</div>
+                <p>Renk: <span data-selected-color-copy>Kahverengi</span>, Materyal: <span data-selected-material-copy>Krom</span></p>
               </div>
             </div>
 
             <div class="product-accordions">
               <details open>
-                <summary>DELIVERY & RETURNS</summary>
-                <p>Shipping: We offer fast and reliable delivery across the country. Orders are typically processed within 1-2 business days.</p>
-                <p>Returns: You can return any unworn, unused item within 14 days of delivery for a full refund or exchange.</p>
+                <summary>TESLİMAT & İADE</summary>
+                <p>Kargo: Siparişler ülke genelinde hızlı ve güvenilir teslimatla gönderilir. Ürünler genellikle 1-2 iş günü içinde hazırlanır.</p>
+                <p>İade: Kullanılmamış ürünleri teslimattan sonraki 14 gün içinde iade veya değişim için gönderebilirsin.</p>
               </details>
               <details>
-                <summary>PERFORMANCE</summary>
-                <p>High-fidelity sound, noise isolation, all-day comfort and stable connectivity are tuned for everyday premium listening.</p>
+                <summary>PERFORMANS</summary>
+                <p>Yüksek çözünürlüklü ses, güçlü izolasyon, gün boyu konfor ve stabil bağlantı günlük premium dinleme deneyimi için optimize edildi.</p>
               </details>
               <details>
-                <summary>ASK A QUESTION</summary>
-                <p>Need help choosing the right color, material or accessory? Customer support responds within 24 hours.</p>
+                <summary>SORU SOR</summary>
+                <p>Doğru renk, materyal veya aksesuar seçimi için desteğe ihtiyacın varsa müşteri ekibimiz 24 saat içinde dönüş yapar.</p>
               </details>
             </div>
           </aside>
@@ -171,31 +179,101 @@
 
         <section class="product-feature-band">
           <div class="product-container product-feature-grid">
-            <img src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3b.jpg?v=1767809482&width=1200" alt="Wireless Headphone detay" loading="lazy" />
+            <img src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3b.jpg?v=1767809482&width=1200" alt="Kablosuz Kulaklık detay" loading="lazy" />
             <div>
-              <h2>Professional-Grade Features for an Enhanced Audio Experience</h2>
+              <h2>Gelişmiş Ses Deneyimi İçin Profesyonel Özellikler</h2>
               <ul>
-                <li>High-Fidelity Sound - Rich bass, crisp highs, balanced audio</li>
-                <li>Noise Isolation - Blocks unwanted noise for immersive listening</li>
-                <li>All-Day Comfort - Lightweight design with soft ear cushions</li>
-                <li>Long Battery Life - Uninterrupted playback for hours</li>
-                <li>Built-In Mic & Controls - Calls and music control made easy</li>
+                <li>Yüksek ses doğruluğu - Zengin bas, net tizler ve dengeli performans</li>
+                <li>Gürültü izolasyonu - Dış sesleri azaltarak odaklı dinleme sağlar</li>
+                <li>Gün boyu konfor - Hafif yapı ve yumuşak kulak pedleri</li>
+                <li>Uzun pil ömrü - Saatlerce kesintisiz kullanım</li>
+                <li>Dahili mikrofon ve kontrol - Arama ve müzik yönetimi kolaylaşır</li>
               </ul>
             </div>
           </div>
         </section>
+
+        <section class="related-products-section">
+          <div class="product-container">
+            <div class="related-products-head">
+              <h2>Benzer ürünler</h2>
+              <a href="./index.html#trending">TÜMÜNÜ GÖR <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i></a>
+            </div>
+            <div class="related-products-grid">
+              <article class="related-product-card">
+                <a href="./product.html" class="related-product-media" aria-label="Echo Pods Neo">
+                  <img src="/public/images/pods.jpg" alt="Echo Pods Neo" loading="lazy" />
+                </a>
+                <div class="related-product-body">
+                  <a href="./product.html">Echo Pods Neo</a>
+                  <span>14.999 TL</span>
+                </div>
+              </article>
+              <article class="related-product-card">
+                <a href="./product.html" class="related-product-media" aria-label="Aura Luxe Ses">
+                  <img src="/public/images/p-aura.jpg" alt="Aura Luxe Ses" loading="lazy" />
+                </a>
+                <div class="related-product-body">
+                  <a href="./product.html">Aura Luxe Ses</a>
+                  <span>28.999 TL</span>
+                </div>
+              </article>
+              <article class="related-product-card">
+                <a href="./product.html" class="related-product-media" aria-label="Noise Guard Elite">
+                  <img src="/public/images/p-noise.jpg" alt="Noise Guard Elite" loading="lazy" />
+                </a>
+                <div class="related-product-body">
+                  <a href="./product.html">Noise Guard Elite</a>
+                  <span>31.999 TL</span>
+                </div>
+              </article>
+              <article class="related-product-card">
+                <a href="./product.html" class="related-product-media" aria-label="Miras Ses">
+                  <img src="/public/images/p-heritage.jpg" alt="Miras Ses" loading="lazy" />
+                </a>
+                <div class="related-product-body">
+                  <a href="./product.html">Miras Ses</a>
+                  <span>22.999 TL</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
       </main>
+      <footer id="contact" class="bg-foreground text-background">
+        <div class="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-4">
+          <div>
+            <div class="font-serif text-3xl italic">Ekocep</div>
+            <p class="mt-4 max-w-xs text-sm opacity-70">Netlik, konfor ve günün her anı için tasarlanmış premium teknoloji ürünleri.</p>
+            <div class="mt-6 flex gap-3">
+              <a href="#" aria-label="Instagram" class="grid h-9 w-9 place-items-center rounded-full bg-background/10 hover:bg-background/20"><i data-lucide="instagram" class="h-4 w-4"></i></a>
+              <a href="#" aria-label="Facebook" class="grid h-9 w-9 place-items-center rounded-full bg-background/10 hover:bg-background/20"><i data-lucide="facebook" class="h-4 w-4"></i></a>
+              <a href="#" aria-label="Youtube" class="grid h-9 w-9 place-items-center rounded-full bg-background/10 hover:bg-background/20"><i data-lucide="youtube" class="h-4 w-4"></i></a>
+              <a href="#" aria-label="Twitter" class="grid h-9 w-9 place-items-center rounded-full bg-background/10 hover:bg-background/20"><i data-lucide="twitter" class="h-4 w-4"></i></a>
+            </div>
+          </div>
+          <div><div class="text-sm font-semibold uppercase tracking-widest">Mağaza</div><ul class="mt-5 space-y-3 text-sm opacity-80"><li><a href="./index.html#shop">Kulak İçi Kulaklık</a></li><li><a href="./index.html#shop">Kulaklıklar</a></li><li><a href="./index.html#shop">Hoparlörler</a></li><li><a href="./index.html#shop">Aksesuarlar</a></li></ul></div>
+          <div><div class="text-sm font-semibold uppercase tracking-widest">Kurumsal</div><ul class="mt-5 space-y-3 text-sm opacity-80"><li><a href="./index.html">Hakkımızda</a></li><li><a href="#contact">İletişim</a></li><li><a href="./index.html">Kariyer</a></li><li><a href="./index.html">Blog</a></li></ul></div>
+          <div><div class="text-sm font-semibold uppercase tracking-widest">Destek</div><ul class="mt-5 space-y-3 text-sm opacity-80"><li><a href="./index.html">Kargo</a></li><li><a href="./index.html">İade</a></li><li><a href="./index.html">Garanti</a></li><li><a href="./index.html">SSS</a></li></ul></div>
+        </div>
+        <div class="border-t border-background/10">
+          <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 text-xs opacity-70 sm:px-6">
+            <span>&copy; 2026 Ekocep. Tüm hakları saklıdır.</span>
+            <a href="#" class="inline-flex items-center gap-2 hover:opacity-100">Yukarı dön <i data-lucide="arrow-up" class="h-3 w-3"></i></a>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <div class="product-sticky-bar" aria-label="Hızlı satın alma">
       <div class="product-sticky-summary">
         <img src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3.jpg?v=1767809480&width=120" alt="" />
         <div>
-          <div class="font-semibold">Wireless Headphone</div>
-          <span>$680.00</span>
+          <div class="font-semibold">Kablosuz Kulaklık</div>
+          <span>22.999 TL</span>
         </div>
       </div>
-      <button type="button" data-product-add>ADD TO CART</button>
+      <button type="button" data-product-add>SEPETE EKLE</button>
     </div>
 
     <aside id="cart-drawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
@@ -211,19 +289,19 @@
           <div class="cart-empty-state">
             <i data-lucide="shopping-bag" class="h-11 w-11"></i>
             <h3 class="mt-5 text-xl font-semibold">Sepetin şu anda boş.</h3>
-            <p class="mt-2 text-sm text-muted-foreground">Wireless Headphone sepete eklenince sayaç ve drawer burada güncellenir.</p>
+            <p class="mt-2 text-sm text-muted-foreground">Kablosuz Kulaklık sepete eklenince sayaç ve drawer burada güncellenir.</p>
             <a href="./index.html#shop" class="cart-continue-button" data-cart-close>Alışverişe devam et</a>
           </div>
           <div class="mt-8">
             <div class="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">Popüler kategoriler</div>
             <div class="cart-empty-collections mt-4">
               <a href="./index.html#shop" class="cart-empty-collection" data-cart-close>
-                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_6.jpg?v=1767736752&width=500" alt="Bluetooth Speaker" loading="lazy" />
-                <span>Bluetooth Speaker</span>
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_6.jpg?v=1767736752&width=500" alt="Bluetooth Hoparlör" loading="lazy" />
+                <span>Bluetooth Hoparlör</span>
               </a>
               <a href="./index.html#shop" class="cart-empty-collection" data-cart-close>
-                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_8.jpg?v=1767736799&width=500" alt="Sleek Earbuds" loading="lazy" />
-                <span>Sleek Earbuds</span>
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_8.jpg?v=1767736799&width=500" alt="Şık Kulak İçi" loading="lazy" />
+                <span>Şık Kulak İçi</span>
               </a>
             </div>
           </div>
