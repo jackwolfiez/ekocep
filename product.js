@@ -4,8 +4,25 @@ const closeTriggers = document.querySelectorAll("[data-cart-close]");
 const countOutputs = document.querySelectorAll("[data-cart-count]");
 const countLabel = document.querySelector("[data-cart-count-label]");
 const quantityInput = document.querySelector("#product-quantity");
+const cartEmptyState = drawer?.querySelector(".cart-empty-state");
+const cartEmptyExtra = drawer?.querySelector("[data-cart-empty-extra]");
+const cartFilledState = drawer?.querySelector("[data-cart-filled]");
+const cartItemImage = drawer?.querySelector("[data-cart-item-image]");
+const cartItemName = drawer?.querySelector("[data-cart-item-name]");
+const cartItemVariant = drawer?.querySelector("[data-cart-item-variant]");
+const cartItemQuantity = drawer?.querySelector("[data-cart-item-quantity]");
+const cartItemPrice = drawer?.querySelector("[data-cart-item-price]");
+const cartSubtotal = drawer?.querySelector("[data-cart-subtotal]");
+const cartQtyMinus = drawer?.querySelector("[data-cart-qty-minus]");
+const cartQtyPlus = drawer?.querySelector("[data-cart-qty-plus]");
+const cartRemove = drawer?.querySelector("[data-cart-remove]");
 
 let cartCount = 0;
+const productCartItem = {
+  name: "Kablosuz Kulaklık",
+  price: "22.999 TL",
+  image: "https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3.jpg?v=1767809480&width=300"
+};
 
 const categories = [
   {
@@ -105,6 +122,21 @@ function syncCartCount() {
     output.textContent = String(cartCount);
   });
   if (countLabel) countLabel.textContent = `(${cartCount})`;
+  const hasItem = cartCount > 0;
+  if (cartEmptyState) cartEmptyState.hidden = hasItem;
+  if (cartEmptyExtra) cartEmptyExtra.hidden = hasItem;
+  if (cartFilledState) cartFilledState.hidden = !hasItem;
+  if (!hasItem) return;
+
+  const color = document.querySelector("[data-selected-color]")?.textContent || "Kahverengi";
+  const material = document.querySelector("[data-selected-material]")?.textContent || "Krom";
+  const priceValue = Number(productCartItem.price.replace(/[^\d]/g, "")) || 0;
+  if (cartItemImage) cartItemImage.src = productCartItem.image;
+  if (cartItemName) cartItemName.textContent = productCartItem.name;
+  if (cartItemVariant) cartItemVariant.textContent = `Renk: ${color}, Materyal: ${material}`;
+  if (cartItemQuantity) cartItemQuantity.textContent = String(cartCount);
+  if (cartItemPrice) cartItemPrice.textContent = productCartItem.price;
+  if (cartSubtotal) cartSubtotal.textContent = `${new Intl.NumberFormat("tr-TR").format(priceValue * cartCount)} TL`;
 }
 
 function bindCartDrawer() {
@@ -133,6 +165,21 @@ function bindCartDrawer() {
       syncCartCount();
       setCartOpen(true);
     });
+  });
+
+  cartQtyMinus?.addEventListener("click", () => {
+    cartCount = Math.max(0, cartCount - 1);
+    syncCartCount();
+  });
+
+  cartQtyPlus?.addEventListener("click", () => {
+    cartCount += 1;
+    syncCartCount();
+  });
+
+  cartRemove?.addEventListener("click", () => {
+    cartCount = 0;
+    syncCartCount();
   });
 
   syncCartCount();

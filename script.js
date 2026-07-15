@@ -618,7 +618,7 @@ function renderProducts(type = "trending") {
               <a href="${productHref}" class="popular-action-button" aria-label="Hızlı görüntüle: ${product.name}">
                 <i data-lucide="eye" class="h-4 w-4"></i>
               </a>
-              <button aria-label="Sepete ekle: ${product.name}" class="popular-action-button" type="button" data-cart-add="${product.name}">
+              <button aria-label="Sepete ekle: ${product.name}" class="popular-action-button" type="button" data-cart-add="${product.name}" data-cart-name="${product.name}" data-cart-price="${product.price}" data-cart-img="${product.img}" data-cart-variant="Renk seçimi">
                 <i data-lucide="shopping-bag" class="h-4 w-4"></i>
               </button>
             </div>
@@ -867,7 +867,28 @@ function bindCartDrawer() {
   const closeTriggers = document.querySelectorAll("[data-cart-close]");
   const countOutputs = document.querySelectorAll("[data-cart-count]");
   const countLabel = document.querySelector("[data-cart-count-label]");
+  const emptyState = drawer.querySelector(".cart-empty-state");
+  const emptyExtra = drawer.querySelector("[data-cart-empty-extra]");
+  const filledState = drawer.querySelector("[data-cart-filled]");
+  const itemImage = drawer.querySelector("[data-cart-item-image]");
+  const itemName = drawer.querySelector("[data-cart-item-name]");
+  const itemVariant = drawer.querySelector("[data-cart-item-variant]");
+  const itemQuantity = drawer.querySelector("[data-cart-item-quantity]");
+  const itemPrice = drawer.querySelector("[data-cart-item-price]");
+  const subtotal = drawer.querySelector("[data-cart-subtotal]");
+  const qtyMinus = drawer.querySelector("[data-cart-qty-minus]");
+  const qtyPlus = drawer.querySelector("[data-cart-qty-plus]");
+  const removeButton = drawer.querySelector("[data-cart-remove]");
   let cartCount = 0;
+  let cartItem = {
+    name: "Echo Pods Neo",
+    price: "14.999 TL",
+    image: "/public/images/pods.jpg",
+    variant: "Renk seçimi"
+  };
+
+  const parsePrice = (price) => Number(String(price).replace(/[^\d]/g, "")) || 0;
+  const formatPrice = (value) => `${new Intl.NumberFormat("tr-TR").format(value)} TL`;
 
   const setOpen = (isOpen) => {
     drawer.classList.toggle("is-open", isOpen);
@@ -882,6 +903,17 @@ function bindCartDrawer() {
       output.textContent = String(cartCount);
     });
     if (countLabel) countLabel.textContent = `(${cartCount})`;
+    const hasItem = cartCount > 0;
+    if (emptyState) emptyState.hidden = hasItem;
+    if (emptyExtra) emptyExtra.hidden = hasItem;
+    if (filledState) filledState.hidden = !hasItem;
+    if (!hasItem) return;
+    if (itemImage) itemImage.src = cartItem.image;
+    if (itemName) itemName.textContent = cartItem.name;
+    if (itemVariant) itemVariant.textContent = cartItem.variant;
+    if (itemQuantity) itemQuantity.textContent = String(cartCount);
+    if (itemPrice) itemPrice.textContent = cartItem.price;
+    if (subtotal) subtotal.textContent = formatPrice(parsePrice(cartItem.price) * cartCount);
   };
 
   toggle.addEventListener("click", (event) => {
@@ -906,9 +938,30 @@ function bindCartDrawer() {
   document.addEventListener("click", (event) => {
     const addButton = event.target.closest("[data-cart-add]");
     if (!addButton) return;
+    cartItem = {
+      name: addButton.dataset.cartName || addButton.dataset.cartAdd || cartItem.name,
+      price: addButton.dataset.cartPrice || cartItem.price,
+      image: addButton.dataset.cartImg || cartItem.image,
+      variant: addButton.dataset.cartVariant || cartItem.variant
+    };
     cartCount += 1;
     syncCount();
     setOpen(true);
+  });
+
+  qtyMinus?.addEventListener("click", () => {
+    cartCount = Math.max(0, cartCount - 1);
+    syncCount();
+  });
+
+  qtyPlus?.addEventListener("click", () => {
+    cartCount += 1;
+    syncCount();
+  });
+
+  removeButton?.addEventListener("click", () => {
+    cartCount = 0;
+    syncCount();
   });
 
   syncCount();

@@ -426,7 +426,42 @@
             <p class="mt-2 text-sm text-muted-foreground">Kablosuz Kulaklık sepete eklenince sayaç ve drawer burada güncellenir.</p>
             <a href="./index.html#shop" class="cart-continue-button" data-cart-close>Alışverişe devam et</a>
           </div>
-          <div class="mt-8">
+          <div class="cart-filled-state" data-cart-filled hidden>
+            <div class="cart-line-item">
+              <img src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3.jpg?v=1767809480&width=300" alt="" loading="lazy" data-cart-item-image />
+              <div class="cart-line-main">
+                <div class="cart-line-top">
+                  <div>
+                    <a href="./product.html" data-cart-item-name>Kablosuz Kulaklık</a>
+                    <p data-cart-item-variant>Renk: Kahverengi, Materyal: Krom</p>
+                  </div>
+                  <button type="button" data-cart-remove aria-label="Ürünü sepetten kaldır">
+                    <i data-lucide="x" class="h-4 w-4"></i>
+                  </button>
+                </div>
+                <div class="cart-line-bottom">
+                  <div class="cart-line-quantity" aria-label="Sepet adedi">
+                    <button type="button" data-cart-qty-minus aria-label="Adedi azalt">-</button>
+                    <span data-cart-item-quantity>1</span>
+                    <button type="button" data-cart-qty-plus aria-label="Adedi artır">+</button>
+                  </div>
+                  <strong data-cart-item-price>22.999 TL</strong>
+                </div>
+              </div>
+            </div>
+            <label class="cart-note">
+              <span>Sipariş notu</span>
+              <textarea rows="3" placeholder="Kargo veya ürünle ilgili not ekle"></textarea>
+            </label>
+            <div class="cart-summary-row">
+              <span>Ara toplam</span>
+              <strong data-cart-subtotal>22.999 TL</strong>
+            </div>
+            <p class="cart-tax-note">Kargo ve indirimler ödeme adımında hesaplanır.</p>
+            <a href="./index.html#shop" class="cart-checkout-button">ÖDEMEYE GEÇ</a>
+            <button type="button" class="cart-view-button" data-cart-close>Alışverişe devam et</button>
+          </div>
+          <div class="mt-8" data-cart-empty-extra>
             <div class="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">Popüler kategoriler</div>
             <div class="cart-empty-collections mt-4">
               <a href="./index.html#shop" class="cart-empty-collection" data-cart-close>
