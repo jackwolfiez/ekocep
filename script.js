@@ -240,27 +240,41 @@ const boldProducts = [
   { name: "Aura Hoparlör", price: "12.999 TL", img: "/public/images/p-pulse.jpg", video: "/public/images/carousel-video-2.mp4" },
   { name: "Kablosuz Kulaklık", price: "22.999 TL", img: "/public/images/p-aura.jpg", video: "/public/images/carousel-video-1.mp4" },
   { name: "Aura Luxe Ses", price: "28.999 TL", img: "/public/images/p-aura.jpg" },
-  { name: "Kablosuz Kulaklık", price: "22.999 TL", img: "/public/images/p-heritage.jpg" }
+  { name: "Kablosuz Kulaklık", price: "22.999 TL", img: "/public/images/p-heritage.jpg" },
+  { name: "Noise Guard Elite", price: "31.999 TL", img: "/public/images/p-noise.jpg" },
+  { name: "Miras Ses", price: "22.999 TL", img: "/public/images/p-heritage.jpg" }
 ];
 
 const productSets = {
   trending: [
-    { name: "Echo Pods Neo", price: "14.999 TL", img: "/public/images/pods.jpg", colors: ["#111111", "#f4b6c2", "#f5f5f5", "#8b1e1e"] },
-    { name: "Miras Ses", price: "22.999 TL", oldPrice: "29.999 TL", sale: true, img: "/public/images/p-heritage.jpg", colors: ["#f2ead6", "#8b1e1e", "#6d6d6d"] },
-    { name: "Aura Luxe Ses", price: "28.999 TL", img: "/public/images/p-aura.jpg", colors: ["#111111", "#8b1e1e", "#6d6d6d", "#cfcfcf"] },
-    { name: "Noise Guard Elite", price: "31.999 TL", oldPrice: "49.999 TL", sale: true, img: "/public/images/p-noise.jpg", colors: ["#111111", "#e8c93a", "#8b1e1e", "#f4b6c2"] }
+    { name: "Echo Pods Neo", price: "14.999 TL", img: "/public/images/pods.jpg", hoverImg: "/public/images/earbuds.jpg", colors: ["#111111", "#f4b6c2", "#f5f5f5", "#8b1e1e"] },
+    { name: "Miras Ses", price: "22.999 TL", oldPrice: "29.999 TL", sale: true, img: "/public/images/p-heritage.jpg", hoverImg: "/public/images/classic.jpg", colors: ["#f2ead6", "#8b1e1e", "#6d6d6d"] },
+    { name: "Aura Luxe Ses", price: "28.999 TL", img: "/public/images/p-aura.jpg", hoverImg: "/public/images/soft-base.jpg", colors: ["#111111", "#8b1e1e", "#6d6d6d", "#cfcfcf"] },
+    { name: "Noise Guard Elite", price: "31.999 TL", oldPrice: "49.999 TL", sale: true, img: "/public/images/p-noise.jpg", hoverImg: "/public/images/p-pulse.jpg", colors: ["#111111", "#e8c93a", "#8b1e1e", "#f4b6c2"] },
+    { name: "Pulse Bas Hoparlör", price: "12.999 TL", img: "/public/images/p-pulse.jpg", hoverImg: "/public/images/base-speakers.jpg", colors: ["#111111", "#f2ead6", "#8b6b6b"] },
+    { name: "Klasik Kablosuz", price: "24.999 TL", oldPrice: "28.999 TL", sale: true, img: "/public/images/classic.jpg", hoverImg: "/public/images/p-heritage.jpg", colors: ["#111111", "#cfcfcf"] },
+    { name: "Yumuşak Bas Hoparlör", price: "17.499 TL", img: "/public/images/soft-base.jpg", hoverImg: "/public/images/p-aura.jpg", colors: ["#f2ead6", "#8b1e1e", "#6d6d6d"] },
+    { name: "Şık Kulak İçi", price: "8.999 TL", img: "/public/images/earbuds.jpg", hoverImg: "/public/images/pods.jpg", colors: ["#111111", "#f5f5f5", "#f4b6c2"] }
   ],
   best: [
-    { name: "Pulse Bas Hoparlör", price: "12.999 TL", img: "/public/images/p-pulse.jpg", colors: ["#111111", "#f2ead6", "#8b6b6b"] },
-    { name: "Klasik Kablosuz", price: "24.999 TL", oldPrice: "28.999 TL", sale: true, img: "/public/images/classic.jpg", colors: ["#111111", "#cfcfcf"] },
-    { name: "Yumuşak Bas Hoparlör", price: "17.499 TL", img: "/public/images/soft-base.jpg", colors: ["#f2ead6", "#8b1e1e", "#6d6d6d"] },
-    { name: "Şık Kulak İçi", price: "8.999 TL", img: "/public/images/earbuds.jpg", colors: ["#111111", "#f5f5f5", "#f4b6c2"] }
+    { name: "Pulse Bas Hoparlör", price: "12.999 TL", img: "/public/images/p-pulse.jpg", hoverImg: "/public/images/base-speakers.jpg", colors: ["#111111", "#f2ead6", "#8b6b6b"] },
+    { name: "Klasik Kablosuz", price: "24.999 TL", oldPrice: "28.999 TL", sale: true, img: "/public/images/classic.jpg", hoverImg: "/public/images/p-heritage.jpg", colors: ["#111111", "#cfcfcf"] },
+    { name: "Yumuşak Bas Hoparlör", price: "17.499 TL", img: "/public/images/soft-base.jpg", hoverImg: "/public/images/p-aura.jpg", colors: ["#f2ead6", "#8b1e1e", "#6d6d6d"] },
+    { name: "Şık Kulak İçi", price: "8.999 TL", img: "/public/images/earbuds.jpg", hoverImg: "/public/images/pods.jpg", colors: ["#111111", "#f5f5f5", "#f4b6c2"] },
+    { name: "Echo Pods Neo", price: "14.999 TL", img: "/public/images/pods.jpg", hoverImg: "/public/images/earbuds.jpg", colors: ["#111111", "#f4b6c2", "#f5f5f5", "#8b1e1e"] },
+    { name: "Aura Hoparlör", price: "12.999 TL", img: "/public/images/p-pulse.jpg", hoverImg: "/public/images/base-speakers.jpg", colors: ["#111111", "#8b6b6b", "#f5f5f5"] },
+    { name: "Miras Ses", price: "22.999 TL", img: "/public/images/p-heritage.jpg", hoverImg: "/public/images/classic.jpg", colors: ["#f2ead6", "#8b1e1e", "#6d6d6d"] },
+    { name: "Noise Guard Elite", price: "31.999 TL", oldPrice: "49.999 TL", sale: true, img: "/public/images/p-noise.jpg", hoverImg: "/public/images/p-pulse.jpg", colors: ["#111111", "#e8c93a", "#8b1e1e", "#f4b6c2"] }
   ],
   new: [
-    { name: "Aura Studio Kulaklık", price: "19.999 TL", img: "/public/images/p-aura.jpg", colors: ["#111111", "#cfcfcf", "#8b1e1e"] },
-    { name: "Noise Guard Mini", price: "14.499 TL", img: "/public/images/p-noise.jpg", colors: ["#111111", "#e8c93a"] },
-    { name: "Dış Mekan Pure", price: "15.999 TL", img: "/public/images/soft-base.jpg", colors: ["#f2ead6", "#6d6d6d"] },
-    { name: "Bas Hoparlörler Duo", price: "25.999 TL", oldPrice: "30.999 TL", sale: true, img: "/public/images/base-speakers.jpg", colors: ["#111111", "#8b6b6b", "#f5f5f5"] }
+    { name: "Aura Studio Kulaklık", price: "19.999 TL", img: "/public/images/p-aura.jpg", hoverImg: "/public/images/classic.jpg", colors: ["#111111", "#cfcfcf", "#8b1e1e"] },
+    { name: "Noise Guard Mini", price: "14.499 TL", img: "/public/images/p-noise.jpg", hoverImg: "/public/images/earbuds.jpg", colors: ["#111111", "#e8c93a"] },
+    { name: "Dış Mekan Pure", price: "15.999 TL", img: "/public/images/soft-base.jpg", hoverImg: "/public/images/p-pulse.jpg", colors: ["#f2ead6", "#6d6d6d"] },
+    { name: "Bas Hoparlörler Duo", price: "25.999 TL", oldPrice: "30.999 TL", sale: true, img: "/public/images/base-speakers.jpg", hoverImg: "/public/images/p-heritage.jpg", colors: ["#111111", "#8b6b6b", "#f5f5f5"] },
+    { name: "Aura Luxe Ses", price: "28.999 TL", img: "/public/images/p-aura.jpg", hoverImg: "/public/images/soft-base.jpg", colors: ["#111111", "#8b1e1e", "#6d6d6d", "#cfcfcf"] },
+    { name: "Klasik Kablosuz", price: "24.999 TL", img: "/public/images/classic.jpg", hoverImg: "/public/images/p-heritage.jpg", colors: ["#111111", "#cfcfcf"] },
+    { name: "Echo Pods Neo", price: "14.999 TL", img: "/public/images/pods.jpg", hoverImg: "/public/images/earbuds.jpg", colors: ["#111111", "#f4b6c2", "#f5f5f5", "#8b1e1e"] },
+    { name: "Miras Ses", price: "22.999 TL", oldPrice: "29.999 TL", sale: true, img: "/public/images/p-heritage.jpg", hoverImg: "/public/images/classic.jpg", colors: ["#f2ead6", "#8b1e1e", "#6d6d6d"] }
   ]
 };
 
@@ -447,7 +461,7 @@ function renderAccessories() {
   container.innerHTML = accessories
     .map(
       (item) => `
-        <a href="${item.href}" class="flex items-center gap-3 rounded-full border border-border bg-background py-2 pl-2 pr-6 transition hover:shadow-md">
+        <a href="${item.href}" class="category-pill flex items-center gap-3 rounded-full border border-border bg-background py-2 pl-2 pr-6">
           <img src="${item.img}" alt="" loading="lazy" class="h-10 w-10 rounded-full object-cover" />
           <span class="text-sm font-medium">${item.label}</span>
         </a>
@@ -456,234 +470,161 @@ function renderAccessories() {
     .join("");
 }
 
-let activeBoldIndex = 2;
-let isBoldAnimating = false;
-
-function renderBoldProducts(offsets = [-2, -1, 0, 1, 2], activeOffset = 0) {
+function renderBoldProducts() {
   const container = document.querySelector("#bold-products");
-  container.innerHTML = offsets
-    .map((offset) => {
-      const index = (activeBoldIndex + offset + boldProducts.length) % boldProducts.length;
-      return renderBoldProductCard(boldProducts[index], offset - activeOffset, index);
-    })
+  const repeatedProducts = Array.from({ length: 5 }, (_, cycleIndex) =>
+    boldProducts.map((product, productIndex) => ({ ...product, productIndex, cycleIndex }))
+  ).flat();
+
+  container.innerHTML = repeatedProducts
+    .map((product) => renderBoldProductCard(product, product.productIndex))
     .join("");
   lucide.createIcons();
 }
 
-function renderBoldProductCard(product, offset, productIndex) {
-  const isActive = offset === 0;
-  const distance = Math.abs(offset);
-  const visibilityClass = distance === 2 ? "hidden xl:block" : distance === 1 ? "hidden md:block" : "";
-  const sizeClass = isActive
-    ? "w-[min(76vw,390px)]"
-    : "w-[min(70vw,350px)] md:w-[330px] xl:w-[350px]";
-  const mediaClass = isActive ? "aspect-[4/5]" : "aspect-square";
+function renderBoldProductCard(product, productIndex) {
   const hasVideo = Boolean(product.video);
-  const labelClass = hasVideo
-    ? "bg-black/62 text-white ring-1 ring-white/20 shadow-2xl backdrop-blur-md"
-    : "bg-background/90 text-foreground backdrop-blur";
-  const priceClass = hasVideo ? "text-white/75" : "text-muted-foreground";
+  const productHref = "./product.html";
 
   return `
-        <a href="#shop" data-bold-index="${productIndex}" data-bold-offset="${offset}" class="group relative shrink-0 ${visibilityClass} ${sizeClass} overflow-hidden rounded-2xl bg-secondary transition-shadow duration-300 ${isActive ? "shadow-xl" : ""}">
-          ${
-            hasVideo
-              ? `
-                <video class="${mediaClass} w-full object-cover transition duration-500 group-hover:scale-105" autoplay muted loop playsinline preload="metadata" poster="${product.img}">
-                  <source src="${product.video}" type="video/mp4" />
-                </video>
-              `
-              : `<img src="${product.img}" alt="${product.name}" loading="lazy" class="${mediaClass} w-full object-cover transition duration-500 group-hover:scale-105" />`
-          }
-          <span class="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-xl p-3 ${labelClass}">
-            <span class="flex min-w-0 items-center gap-2">
-              <span class="h-8 w-8 shrink-0 overflow-hidden rounded-full bg-muted ${hasVideo ? "ring-1 ring-white/30" : ""}">
-                <img src="${product.img}" alt="" class="h-full w-full object-cover" />
-              </span>
-              <span class="min-w-0 text-xs leading-tight">
-                <span class="block truncate font-medium">${product.name}</span>
-                <span class="block ${priceClass}">${product.price}</span>
-              </span>
-            </span>
-            <i data-lucide="arrow-up-right" class="h-4 w-4 shrink-0"></i>
-          </span>
-        </a>
+        <div class="swiper-slide flexible collection-list--card">
+          <div class="flexi_collection_content">
+            <div class="collection-card--img style-rounded">
+              <a href="${productHref}" class="flexible-gallery-info product-hover" aria-label="${product.name} detay">
+                <div class="flexible-card-info-img">
+                  <img src="${product.img}" alt="" loading="lazy" />
+                </div>
+                <div class="min-w-0">
+                  <span class="block truncate product-info-title">${product.name}</span>
+                  <product-price-list class="product-price-list">
+                    <product-sale-price class="product-price-actual">
+                      <span class="product-actual-price">${product.price}</span>
+                    </product-sale-price>
+                  </product-price-list>
+                </div>
+                <span class="media-gallery-icon" aria-hidden="true">
+                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.597656 0.640625H10.6242V10.5526H9.37092V2.7556L2.29466 9.75223L1.85098 10.1896L0.96488 9.31362L1.4073 8.87502L8.48482 1.87962H0.597656V0.640625Z" fill="currentColor"></path>
+                  </svg>
+                </span>
+              </a>
+              <div class="media-ratio" style="--media-ratio:125%">
+                ${
+                  hasVideo
+                    ? `
+                      <video data-video-src="${product.video}" class="media-grid--video" autoplay muted loop playsinline preload="metadata" poster="${product.img}">
+                        <source src="${product.video}" type="video/mp4" />
+                      </video>
+                    `
+                    : `<img src="${product.img}" alt="${product.name}" loading="lazy" />`
+                }
+              </div>
+            </div>
+          </div>
+        </div>
       `;
 }
 
-function bindBoldCarousel() {
-  const previous = document.querySelector("#bold-prev");
-  const next = document.querySelector("#bold-next");
-  const container = document.querySelector("#bold-products");
-  const viewport = container.parentElement;
-  let swipeStartX = 0;
-  let swipeStartY = 0;
-  let swipeDeltaX = 0;
-  let swipePointerId = null;
-  let isSwiping = false;
-  let didSwipe = false;
-  const showBoldSlide = (nextIndex) => {
-    if (isBoldAnimating) return;
-    const direction = nextIndex > activeBoldIndex ? 1 : -1;
-    const nextActiveIndex = (nextIndex + boldProducts.length) % boldProducts.length;
+function syncBoldVideoClones(root) {
+  const latestTimes = new Map();
 
-    if (prefersReducedMotion) {
-      activeBoldIndex = nextActiveIndex;
-      renderBoldProducts();
-      return;
+  root.querySelectorAll("video[data-video-src]").forEach((video) => {
+    if (Number.isFinite(video.currentTime) && video.currentTime > 0) {
+      latestTimes.set(video.dataset.videoSrc, video.currentTime);
     }
+  });
 
-    isBoldAnimating = true;
-    previous.disabled = true;
-    next.disabled = true;
-
-    const offsets = direction > 0 ? [-2, -1, 0, 1, 2, 3] : [-3, -2, -1, 0, 1, 2];
-    renderBoldProducts(offsets);
-
-    const activeCard = container.querySelector('[data-bold-offset="0"]');
-    const nextCard = container.querySelector(`[data-bold-offset="${direction}"]`);
-    const viewportRect = container.parentElement.getBoundingClientRect();
-    const activeRect = activeCard?.getBoundingClientRect();
-    const nextRect = nextCard?.getBoundingClientRect();
-    const hasNextRect = nextRect && nextRect.width > 80 && nextRect.height > 80;
-    const viewportCenter = viewportRect.left + viewportRect.width / 2;
-    const startX = activeRect ? viewportCenter - (activeRect.left + activeRect.width / 2) : 0;
-    const endX = hasNextRect ? viewportCenter - (nextRect.left + nextRect.width / 2) : direction * -Math.min(360, viewportRect.width * 0.72);
-
-    container.style.transform = `translateX(${startX}px)`;
-
-    animate(container, {
-      x: [startX, endX],
-      duration: 720,
-      ease: "outCubic"
-    });
-
-    window.setTimeout(() => {
-      const incomingRect = nextCard?.getBoundingClientRect();
-
-      container.style.transform = "";
-      activeBoldIndex = nextActiveIndex;
-      renderBoldProducts();
-
-      const finalActiveCard = container.querySelector('[data-bold-offset="0"]');
-      const finalRect = finalActiveCard?.getBoundingClientRect();
-      const hasIncomingRect = incomingRect && incomingRect.width > 80 && incomingRect.height > 80;
-      if (finalRect && finalActiveCard) {
-        finalActiveCard.style.transformOrigin = "center bottom";
-        if (hasIncomingRect) {
-          animate(finalActiveCard, {
-            x: [incomingRect.left - finalRect.left, 0],
-            y: [incomingRect.top - finalRect.top, 0],
-            scaleX: [incomingRect.width / finalRect.width, 1],
-            scaleY: [incomingRect.height / finalRect.height, 1],
-            duration: 420,
-            ease: "outCubic"
-          });
-        } else {
-          animate(finalActiveCard, {
-            y: [18, 0],
-            scale: [0.92, 1],
-            duration: 380,
-            ease: "outCubic"
-          });
-        }
+  root.querySelectorAll("video[data-video-src]").forEach((video) => {
+    const savedTime = latestTimes.get(video.dataset.videoSrc);
+    if (Number.isFinite(savedTime) && Math.abs(video.currentTime - savedTime) > 0.35) {
+      try {
+        video.currentTime = savedTime;
+      } catch {
+        // Metadata can arrive a tick later on cloned loop slides.
       }
-
-      isBoldAnimating = false;
-      previous.disabled = false;
-      next.disabled = false;
-    }, 740);
-  };
-
-  previous.addEventListener("click", () => showBoldSlide(activeBoldIndex - 1));
-  next.addEventListener("click", () => showBoldSlide(activeBoldIndex + 1));
-
-  viewport.addEventListener("pointerdown", (event) => {
-    if (isBoldAnimating || event.pointerType === "mouse") return;
-    swipePointerId = event.pointerId;
-    swipeStartX = event.clientX;
-    swipeStartY = event.clientY;
-    swipeDeltaX = 0;
-    isSwiping = false;
-    viewport.setPointerCapture(event.pointerId);
-  });
-
-  viewport.addEventListener("pointermove", (event) => {
-    if (event.pointerId !== swipePointerId || isBoldAnimating) return;
-
-    const deltaX = event.clientX - swipeStartX;
-    const deltaY = event.clientY - swipeStartY;
-    if (!isSwiping && Math.abs(deltaX) < 8) return;
-    if (!isSwiping && Math.abs(deltaY) > Math.abs(deltaX)) return;
-
-    isSwiping = true;
-    didSwipe = true;
-    swipeDeltaX = deltaX;
-    container.style.transform = `translateX(${deltaX * 0.35}px)`;
-    event.preventDefault();
-  });
-
-  const finishSwipe = (event) => {
-    if (event.pointerId !== swipePointerId) return;
-    const threshold = Math.min(90, viewport.clientWidth * 0.18);
-
-    if (isSwiping && Math.abs(swipeDeltaX) > threshold) {
-      container.style.transform = "";
-      showBoldSlide(activeBoldIndex + (swipeDeltaX < 0 ? 1 : -1));
-    } else if (isSwiping && !prefersReducedMotion) {
-      animate(container, {
-        x: [swipeDeltaX * 0.35, 0],
-        duration: 260,
-        ease: "outCubic"
-      });
-      window.setTimeout(() => {
-        container.style.transform = "";
-      }, 280);
-    } else {
-      container.style.transform = "";
     }
+    video.play().catch(() => {});
+  });
+}
 
-    if (swipePointerId !== null && viewport.hasPointerCapture(swipePointerId)) {
-      viewport.releasePointerCapture(swipePointerId);
-    }
+function bindBoldCarousel() {
+  if (!window.Swiper) return;
+  const middleSlideIndex = boldProducts.length * 2;
 
-    swipePointerId = null;
-    swipeDeltaX = 0;
-    isSwiping = false;
-    window.setTimeout(() => {
-      didSwipe = false;
-    }, 350);
-  };
-
-  viewport.addEventListener("pointerup", finishSwipe);
-  viewport.addEventListener("pointercancel", finishSwipe);
-  viewport.addEventListener(
-    "click",
-    (event) => {
-      if (!didSwipe) return;
-      event.preventDefault();
-      event.stopPropagation();
-      didSwipe = false;
+  const swiper = new window.Swiper("#bold-carousel", {
+    loop: false,
+    initialSlide: middleSlideIndex,
+    speed: prefersReducedMotion ? 0 : 1000,
+    slidesPerGroup: 1,
+    centeredSlides: true,
+    spaceBetween: 8,
+    slidesPerView: 1.3,
+    navigation: {
+      nextEl: "#bold-next",
+      prevEl: "#bold-prev"
     },
-    true
-  );
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 8
+      },
+      1280: {
+        slidesPerView: 5,
+        spaceBetween: 8
+      }
+    },
+    on: {
+      afterInit(swiper) {
+        syncBoldVideoClones(swiper.el);
+      },
+      beforeTransitionStart(swiper) {
+        syncBoldVideoClones(swiper.el);
+      },
+      slideChangeTransitionEnd(swiper) {
+        syncBoldVideoClones(swiper.el);
+        keepBoldCarouselCentered(swiper);
+      }
+    }
+  });
+
+  window.setInterval(() => syncBoldVideoClones(swiper.el), 1200);
+}
+
+function keepBoldCarouselCentered(swiper) {
+  const productCount = boldProducts.length;
+  const minSafeIndex = productCount;
+  const maxSafeIndex = productCount * 4 - 1;
+
+  if (swiper.activeIndex >= minSafeIndex && swiper.activeIndex <= maxSafeIndex) return;
+
+  const realProductIndex = ((swiper.activeIndex % productCount) + productCount) % productCount;
+  swiper.slideTo(productCount * 2 + realProductIndex, 0, false);
 }
 
 function renderProducts(type = "trending") {
   const container = document.querySelector("#product-grid");
+  const productHref = "./product.html";
   container.innerHTML = productSets[type]
     .map(
       (product) => `
-        <article class="group">
-          <div class="relative aspect-square overflow-hidden rounded-2xl bg-secondary">
-            ${product.sale ? `<span class="absolute left-3 top-3 z-10 rounded-full bg-white px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-destructive shadow-md ring-1 ring-black/5">İndirim</span>` : ""}
-            <img src="${product.img}" alt="${product.name}" loading="lazy" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
-            <button aria-label="Sepete ekle: ${product.name}" class="add-to-cart-button absolute bottom-3 right-3 grid h-11 w-11 place-items-center rounded-full shadow-lg ring-1 ring-black/5 transition duration-300 hover:scale-105">
-              <i data-lucide="plus" class="h-4 w-4 transition-transform duration-300"></i>
-            </button>
+        <article class="popular-product-card group">
+          <div class="popular-card-media">
+            <a href="${productHref}" class="popular-card-image-wrap" aria-label="${product.name}">
+              <img src="${product.img}" alt="${product.name}" loading="lazy" class="popular-card-image" />
+              <img src="${product.hoverImg || product.img}" alt="" loading="lazy" class="popular-card-hover-image" />
+            </a>
+            ${product.sale ? `<span class="popular-sale-badge">Sale</span>` : ""}
+            <div class="popular-card-actions">
+              <a href="${productHref}" class="popular-action-button" aria-label="Hızlı görüntüle: ${product.name}">
+                <i data-lucide="eye" class="h-4 w-4"></i>
+              </a>
+              <button aria-label="Sepete ekle: ${product.name}" class="popular-action-button" type="button" data-cart-add="${product.name}">
+                <i data-lucide="shopping-bag" class="h-4 w-4"></i>
+              </button>
+            </div>
           </div>
-          <div class="mt-4">
-            <div class="font-medium">${product.name}</div>
+          <div class="popular-card-text">
+            <a href="${productHref}" class="popular-card-title">${product.name}</a>
             <div class="mt-1 flex items-center gap-2 text-sm">
               <span>${product.price}</span>
               ${product.oldPrice ? `<span class="text-muted-foreground line-through">${product.oldPrice}</span>` : ""}
@@ -705,13 +646,15 @@ function bindTabs() {
     button.addEventListener("click", () => {
       const activeType = button.dataset.tab;
       document.querySelectorAll(".tab-button").forEach((item) => {
+        item.classList.remove("is-active");
         item.classList.remove("text-foreground");
         item.classList.add("text-muted-foreground");
-        item.querySelector("span")?.remove();
+        item.querySelector(".tab-dot")?.classList.replace("opacity-100", "opacity-0");
       });
+      button.classList.add("is-active");
       button.classList.add("text-foreground");
       button.classList.remove("text-muted-foreground");
-      button.insertAdjacentHTML("afterbegin", '<span class="h-1.5 w-1.5 rounded-full bg-destructive"></span>');
+      button.querySelector(".tab-dot")?.classList.replace("opacity-0", "opacity-100");
       renderProducts(activeType);
     });
   });
@@ -918,6 +861,59 @@ function bindCategoryMenu() {
   });
 }
 
+function bindCartDrawer() {
+  const drawer = document.querySelector("#cart-drawer");
+  const toggle = document.querySelector("#cart-toggle");
+  const closeTriggers = document.querySelectorAll("[data-cart-close]");
+  const countOutputs = document.querySelectorAll("[data-cart-count]");
+  const countLabel = document.querySelector("[data-cart-count-label]");
+  let cartCount = 0;
+
+  const setOpen = (isOpen) => {
+    drawer.classList.toggle("is-open", isOpen);
+    drawer.setAttribute("aria-hidden", String(!isOpen));
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    document.body.classList.toggle("cart-drawer-open", isOpen);
+
+  };
+
+  const syncCount = () => {
+    countOutputs.forEach((output) => {
+      output.textContent = String(cartCount);
+    });
+    if (countLabel) countLabel.textContent = `(${cartCount})`;
+  };
+
+  toggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setOpen(true);
+  });
+
+  closeTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => setOpen(false));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!drawer.classList.contains("is-open")) return;
+    if (drawer.contains(event.target) || toggle.contains(event.target)) return;
+    setOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setOpen(false);
+  });
+
+  document.addEventListener("click", (event) => {
+    const addButton = event.target.closest("[data-cart-add]");
+    if (!addButton) return;
+    cartCount += 1;
+    syncCount();
+    setOpen(true);
+  });
+
+  syncCount();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   updateCountdown();
   setInterval(updateCountdown, 1000);
@@ -931,5 +927,6 @@ document.addEventListener("DOMContentLoaded", () => {
   bindTabs();
   bindAnnouncementControls();
   bindCategoryMenu();
+  bindCartDrawer();
   lucide.createIcons();
 });

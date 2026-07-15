@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Wireless Headphone ürün detay sayfası." />
+    <title>Wireless Headphone - Ekocep</title>
+    <link rel="icon" href="/public/favicon.ico" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script>
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "#ffffff",
+              foreground: "#151922",
+              secondary: "#f4f6f8",
+              muted: "#eef1f4",
+              "muted-foreground": "#667085",
+              border: "#e5e9ef",
+              destructive: "#b42318",
+              "destructive-foreground": "#ffffff"
+            },
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+              serif: ["Georgia", "ui-serif", "serif"]
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="bg-background text-foreground antialiased">
+    <div class="product-page-shell">
+      <div class="product-topbar">
+        <div class="product-container product-topbar-inner">
+          <span>MORE</span>
+          <span>Premium Headphones 80% off</span>
+          <span>English / USD</span>
+        </div>
+      </div>
+
+      <header class="product-header">
+        <div class="product-container product-header-inner">
+          <nav class="product-nav" aria-label="Ana navigasyon">
+            <a href="./index.html">HOME</a>
+            <a href="./index.html#shop">SHOP</a>
+            <a href="./index.html#trending">TRENDING</a>
+            <a href="./index.html#contact">CONTACT</a>
+          </nav>
+          <a href="./index.html" class="product-logo">Ekocep</a>
+          <div class="product-header-actions">
+            <button type="button" aria-label="Arama"><i data-lucide="search" class="h-5 w-5"></i></button>
+            <button type="button" aria-label="Hesap"><i data-lucide="user" class="h-5 w-5"></i></button>
+            <button id="cart-toggle" type="button" aria-label="Sepet" aria-controls="cart-drawer" aria-expanded="false" class="relative">
+              <i data-lucide="shopping-bag" class="h-5 w-5"></i>
+              <span data-cart-count class="product-cart-count">0</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="product-container product-breadcrumb">
+          <a href="./index.html">Home</a>
+          <span>/</span>
+          <a href="./index.html#shop">Best Seller</a>
+          <span>/</span>
+          <span>Wireless Headphone</span>
+        </div>
+
+        <section class="product-detail-grid">
+          <div class="product-gallery">
+            <div class="product-thumb-list" aria-label="Ürün görselleri">
+              <button type="button" class="product-thumb is-active" data-product-image="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3.jpg?v=1767809480&width=1500" aria-label="Görsel 1">
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3.jpg?v=1767809480&width=300" alt="" loading="lazy" />
+              </button>
+              <button type="button" class="product-thumb" data-product-image="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3b.jpg?v=1767809482&width=1500" aria-label="Görsel 2">
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3b.jpg?v=1767809482&width=300" alt="" loading="lazy" />
+              </button>
+              <button type="button" class="product-thumb" data-product-image="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3c.jpg?v=1767809481&width=1500" aria-label="Görsel 3">
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3c.jpg?v=1767809481&width=300" alt="" loading="lazy" />
+              </button>
+              <button type="button" class="product-thumb" data-product-image="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3d-1.jpg?v=1767809481&width=1500" aria-label="Görsel 4">
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3d-1.jpg?v=1767809481&width=300" alt="" loading="lazy" />
+              </button>
+              <button type="button" class="product-thumb" data-product-image="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3d.jpg?v=1767809480&width=1500" aria-label="Görsel 5">
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3d.jpg?v=1767809480&width=300" alt="" loading="lazy" />
+              </button>
+            </div>
+
+            <div class="product-main-media">
+              <img id="product-main-image" src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3.jpg?v=1767809480&width=1500" alt="Wireless Headphone" />
+            </div>
+          </div>
+
+          <aside class="product-info-panel" aria-label="Ürün bilgileri">
+            <div class="product-stock">Hurry up, only 2 left in stock</div>
+            <h1>Wireless Headphone</h1>
+            <div class="product-price">$680.00</div>
+
+            <div class="product-option-block">
+              <div class="product-option-label">Color: <span data-selected-color>Brown</span></div>
+              <div class="product-swatch-row" role="radiogroup" aria-label="Color">
+                <button type="button" class="product-swatch is-active" data-option-group="color" data-option-value="Brown" style="--swatch: #7d3f24" aria-label="Brown"></button>
+                <button type="button" class="product-swatch" data-option-group="color" data-option-value="Beige" style="--swatch: #d9c7b1" aria-label="Beige"></button>
+                <button type="button" class="product-swatch" data-option-group="color" data-option-value="Gray" style="--swatch: #808080" aria-label="Gray"></button>
+                <button type="button" class="product-swatch" data-option-group="color" data-option-value="Black" style="--swatch: #111111" aria-label="Black"></button>
+                <button type="button" class="product-swatch" data-option-group="color" data-option-value="Rose gold" style="--swatch: #c58c78" aria-label="Rose gold"></button>
+              </div>
+            </div>
+
+            <div class="product-option-block">
+              <div class="product-option-label">Material: <span data-selected-material>Chrome</span></div>
+              <div class="product-material-row" role="radiogroup" aria-label="Material">
+                <button type="button" class="product-material is-active" data-option-group="material" data-option-value="Chrome">Chrome</button>
+                <button type="button" class="product-material" data-option-group="material" data-option-value="Glass">Glass</button>
+                <button type="button" class="product-material" data-option-group="material" data-option-value="Metal">Metal</button>
+                <button type="button" class="product-material" data-option-group="material" data-option-value="Plush">Plush</button>
+              </div>
+            </div>
+
+            <label class="product-quantity-label" for="product-quantity">Quantity</label>
+            <div class="product-purchase-row">
+              <div class="product-quantity">
+                <button type="button" data-qty-minus aria-label="Adedi azalt">-</button>
+                <input id="product-quantity" type="number" min="1" value="1" inputmode="numeric" aria-label="Adet" />
+                <button type="button" data-qty-plus aria-label="Adedi artır">+</button>
+              </div>
+              <button type="button" class="product-add-button" data-product-add>
+                ADD TO CART <span>$680.00</span>
+              </button>
+            </div>
+            <button type="button" class="product-buy-button">BUY IT NOW</button>
+
+            <div class="product-benefits">
+              <div><i data-lucide="truck" class="h-5 w-5"></i><span>Delivered within 2-5 days</span></div>
+              <div><i data-lucide="rotate-ccw" class="h-5 w-5"></i><span>30 days return policy</span></div>
+              <div><i data-lucide="star" class="h-5 w-5"></i><span>Customer rating</span></div>
+              <div><i data-lucide="shield-check" class="h-5 w-5"></i><span>High-quality beige suede</span></div>
+            </div>
+
+            <div class="product-store-card">
+              <img src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3.jpg?v=1767809480&width=300" alt="" loading="lazy" />
+              <div>
+                <div class="font-semibold">Wireless Headphone</div>
+                <p>Color: <span data-selected-color-copy>Brown</span>, Material: <span data-selected-material-copy>Chrome</span></p>
+              </div>
+            </div>
+
+            <div class="product-accordions">
+              <details open>
+                <summary>DELIVERY & RETURNS</summary>
+                <p>Shipping: We offer fast and reliable delivery across the country. Orders are typically processed within 1-2 business days.</p>
+                <p>Returns: You can return any unworn, unused item within 14 days of delivery for a full refund or exchange.</p>
+              </details>
+              <details>
+                <summary>PERFORMANCE</summary>
+                <p>High-fidelity sound, noise isolation, all-day comfort and stable connectivity are tuned for everyday premium listening.</p>
+              </details>
+              <details>
+                <summary>ASK A QUESTION</summary>
+                <p>Need help choosing the right color, material or accessory? Customer support responds within 24 hours.</p>
+              </details>
+            </div>
+          </aside>
+        </section>
+
+        <section class="product-feature-band">
+          <div class="product-container product-feature-grid">
+            <img src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3b.jpg?v=1767809482&width=1200" alt="Wireless Headphone detay" loading="lazy" />
+            <div>
+              <h2>Professional-Grade Features for an Enhanced Audio Experience</h2>
+              <ul>
+                <li>High-Fidelity Sound - Rich bass, crisp highs, balanced audio</li>
+                <li>Noise Isolation - Blocks unwanted noise for immersive listening</li>
+                <li>All-Day Comfort - Lightweight design with soft ear cushions</li>
+                <li>Long Battery Life - Uninterrupted playback for hours</li>
+                <li>Built-In Mic & Controls - Calls and music control made easy</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="product-sticky-bar" aria-label="Hızlı satın alma">
+      <div class="product-sticky-summary">
+        <img src="https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3.jpg?v=1767809480&width=120" alt="" />
+        <div>
+          <div class="font-semibold">Wireless Headphone</div>
+          <span>$680.00</span>
+        </div>
+      </div>
+      <button type="button" data-product-add>ADD TO CART</button>
+    </div>
+
+    <aside id="cart-drawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
+      <button class="cart-drawer-overlay" type="button" data-cart-close aria-label="Sepeti kapat"></button>
+      <div class="cart-drawer-panel">
+        <div class="cart-drawer-head">
+          <h2 id="cart-drawer-title" class="text-3xl font-semibold tracking-tight">Sepet <span data-cart-count-label>(0)</span></h2>
+          <button class="cart-drawer-close" type="button" data-cart-close aria-label="Sepeti kapat">
+            <i data-lucide="x" class="h-5 w-5"></i>
+          </button>
+        </div>
+        <div class="cart-drawer-body">
+          <div class="cart-empty-state">
+            <i data-lucide="shopping-bag" class="h-11 w-11"></i>
+            <h3 class="mt-5 text-xl font-semibold">Sepetin şu anda boş.</h3>
+            <p class="mt-2 text-sm text-muted-foreground">Wireless Headphone sepete eklenince sayaç ve drawer burada güncellenir.</p>
+            <a href="./index.html#shop" class="cart-continue-button" data-cart-close>Alışverişe devam et</a>
+          </div>
+          <div class="mt-8">
+            <div class="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">Popüler kategoriler</div>
+            <div class="cart-empty-collections mt-4">
+              <a href="./index.html#shop" class="cart-empty-collection" data-cart-close>
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_6.jpg?v=1767736752&width=500" alt="Bluetooth Speaker" loading="lazy" />
+                <span>Bluetooth Speaker</span>
+              </a>
+              <a href="./index.html#shop" class="cart-empty-collection" data-cart-close>
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_8.jpg?v=1767736799&width=500" alt="Sleek Earbuds" loading="lazy" />
+                <span>Sleek Earbuds</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <script type="module" src="./product.js"></script>
+  </body>
+</html>

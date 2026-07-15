@@ -5,7 +5,7 @@
   "type": "module",
   "description": "HTML, Tailwind CSS ve JavaScript ile hazırlanmış statik vitrin sitesi.",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp index.html styles.css script.js dist/ && cp -R public dist/public",
+    "build": "rm -rf dist && mkdir -p dist && cp index.html product.html styles.css script.js product.js dist/ && cp -R public dist/public",
     "dev": "python3 -m http.server 4173",
     "start": "python3 -m http.server 4173"
   }

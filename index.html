@@ -9,6 +9,7 @@
     />
     <title>Ekocep - Teknoloji ve Ses Ürünleri</title>
     <link rel="icon" href="/public/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles.css" />
     <script>
       window.tailwind = window.tailwind || {};
@@ -92,9 +93,9 @@
             <div class="flex items-center gap-4">
               <button aria-label="Arama" class="hover:opacity-70"><i data-lucide="search" class="h-5 w-5"></i></button>
               <button aria-label="Hesap" class="hover:opacity-70"><i data-lucide="user" class="h-5 w-5"></i></button>
-              <button aria-label="Sepet" class="relative hover:opacity-70">
+              <button id="cart-toggle" aria-label="Sepet" aria-controls="cart-drawer" aria-expanded="false" class="relative hover:opacity-70">
                 <i data-lucide="shopping-bag" class="h-5 w-5"></i>
-                <span class="absolute -right-2 -top-2 grid h-4 w-4 place-items-center rounded-full bg-white text-[10px] font-semibold text-black">0</span>
+                <span data-cart-count class="absolute -right-2 -top-2 grid h-4 w-4 place-items-center rounded-full bg-white text-[10px] font-semibold text-black">0</span>
               </button>
             </div>
           </div>
@@ -140,22 +141,20 @@
         </div>
       </section>
 
-      <section class="py-24">
-        <div class="mx-auto max-w-[2000px] px-4 sm:px-6">
+      <section id="bold-carousel-section" class="py-[55px]">
+        <div class="mx-auto max-w-[1480px] px-4 sm:px-6">
           <div class="text-center">
             <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Güçlü Tasarım, Yumuşak Konfor</h2>
             <p class="mt-4 text-muted-foreground">İşten yolculuğa, dinlenme anlarından günlük kullanıma kadar konfor odaklı ses deneyimi.</p>
           </div>
           <div class="relative mt-20">
-            <button id="bold-prev" aria-label="Önceki ürünler" class="absolute left-2 top-1/2 z-20 grid h-12 w-12 -translate-y-1/2 place-items-center bg-black text-white transition hover:bg-foreground sm:left-6">
-              <i data-lucide="chevron-left" class="h-4 w-4"></i>
-            </button>
-            <div class="overflow-hidden px-12 lg:px-20">
-              <div id="bold-products" class="flex min-h-[430px] items-end justify-center gap-6 sm:min-h-[470px] lg:gap-8"></div>
+            <button id="bold-prev" aria-label="Önceki ürünler" class="swiper-button swiper-button-prev bold-swiper-button"></button>
+            <div class="px-8 sm:px-10 lg:px-12">
+              <div id="bold-carousel" class="swiper center-scale-slider">
+                <div id="bold-products" class="swiper-wrapper min-h-[430px] items-end sm:min-h-[470px]"></div>
+              </div>
             </div>
-            <button id="bold-next" aria-label="Sonraki ürünler" class="absolute right-2 top-1/2 z-20 grid h-12 w-12 -translate-y-1/2 place-items-center bg-black text-white transition hover:bg-foreground sm:right-6">
-              <i data-lucide="chevron-right" class="h-4 w-4"></i>
-            </button>
+            <button id="bold-next" aria-label="Sonraki ürünler" class="swiper-button swiper-button-next bold-swiper-button"></button>
           </div>
         </div>
       </section>
@@ -195,12 +194,14 @@
       <section id="trending" class="pb-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <div class="flex flex-wrap items-end justify-between gap-6">
-            <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Kusursuz Ses</h2>
+            <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Most Popular</h2>
             <div class="flex flex-wrap items-center gap-4 text-sm sm:gap-6">
-              <button data-tab="trending" class="tab-button flex items-center gap-2 transition text-foreground"><span class="h-1.5 w-1.5 rounded-full bg-destructive"></span>Popüler ürünler</button>
-              <button data-tab="best" class="tab-button flex items-center gap-2 text-muted-foreground transition hover:text-foreground">Çok satanlar</button>
-              <button data-tab="new" class="tab-button flex items-center gap-2 text-muted-foreground transition hover:text-foreground">Yeni çıkanlar</button>
-              <a href="#shop" class="inline-flex items-center rounded-full bg-foreground px-5 py-2.5 text-xs font-semibold tracking-[0.15em] text-background">HEMEN İNCELE</a>
+              <button data-tab="trending" class="tab-button is-active flex items-center gap-2 text-foreground"><span class="tab-dot h-1.5 w-1.5 rounded-full bg-destructive opacity-100"></span>Popüler ürünler</button>
+              <button data-tab="best" class="tab-button flex items-center gap-2 text-muted-foreground"><span class="tab-dot h-1.5 w-1.5 rounded-full bg-destructive opacity-0"></span>Çok satanlar</button>
+              <button data-tab="new" class="tab-button flex items-center gap-2 text-muted-foreground"><span class="tab-dot h-1.5 w-1.5 rounded-full bg-destructive opacity-0"></span>Yeni çıkanlar</button>
+              <a href="#shop" class="shop-cta-button inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-xs font-semibold tracking-[0.15em] text-background">
+                HEMEN İNCELE <i data-lucide="arrow-up-right" class="h-3.5 w-3.5"></i>
+              </a>
             </div>
           </div>
           <div id="product-grid" class="mt-10 grid grid-cols-2 gap-6 md:grid-cols-4"></div>
@@ -230,18 +231,49 @@
         </div>
       </section>
 
-      <section id="features" class="bg-secondary py-24">
-        <div class="mx-auto max-w-4xl px-4 text-center sm:px-6">
-          <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Yeni Nesil Ses Performansı</h2>
-          <p class="mt-4 text-muted-foreground">
-            Güçlü performans, kesintisiz bağlantı ve uzun süreli konfor için gelişmiş ses teknolojileriyle tasarlandı.
-          </p>
-        </div>
-        <div class="mx-auto mt-14 grid max-w-7xl grid-cols-2 gap-6 px-4 sm:px-6 md:grid-cols-4">
-          <div class="rounded-3xl bg-background p-8"><div class="text-4xl font-semibold tracking-tight">40sa</div><div class="mt-2 text-sm text-muted-foreground">Pil Ömrü</div></div>
-          <div class="rounded-3xl bg-background p-8"><div class="text-4xl font-semibold tracking-tight">ANC</div><div class="mt-2 text-sm text-muted-foreground">Aktif Gürültü Engelleme</div></div>
-          <div class="rounded-3xl bg-background p-8"><div class="text-4xl font-semibold tracking-tight">Hi-Res</div><div class="mt-2 text-sm text-muted-foreground">Stüdyo Kalitesinde Ses</div></div>
-          <div class="rounded-3xl bg-background p-8"><div class="text-4xl font-semibold tracking-tight">IPX5</div><div class="mt-2 text-sm text-muted-foreground">Tere ve Suya Dayanıklı</div></div>
+      <section id="features" class="popular-categories-section py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6">
+          <div class="text-center">
+            <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">🎧 Popular Categories</h2>
+          </div>
+          <div class="popular-categories-grid mt-14">
+            <a href="#shop" class="popular-category-card">
+              <span class="popular-category-media">
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_4.jpg?v=1767736639&width=1500" alt="Wireless Pods" loading="lazy" />
+              </span>
+              <span class="popular-category-title">Wireless Pods</span>
+            </a>
+            <a href="#shop" class="popular-category-card">
+              <span class="popular-category-media">
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_1.jpg?v=1767736459&width=1500" alt="Warm Harmony" loading="lazy" />
+              </span>
+              <span class="popular-category-title">Warm Harmony</span>
+            </a>
+            <a href="#shop" class="popular-category-card">
+              <span class="popular-category-media">
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_9.jpg?v=1767736898&width=1500" alt="Home Speaker" loading="lazy" />
+              </span>
+              <span class="popular-category-title">Home Speaker</span>
+            </a>
+            <a href="#shop" class="popular-category-card">
+              <span class="popular-category-media">
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_8.jpg?v=1767736799&width=1500" alt="Sleek Earbuds" loading="lazy" />
+              </span>
+              <span class="popular-category-title">Sleek Earbuds</span>
+            </a>
+            <a href="#shop" class="popular-category-card">
+              <span class="popular-category-media">
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_12.jpg?v=1767736917&width=1500" alt="Classic Headphones" loading="lazy" />
+              </span>
+              <span class="popular-category-title">Classic Headphones</span>
+            </a>
+            <a href="#shop" class="popular-category-card">
+              <span class="popular-category-media">
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_7.jpg?v=1767736848&width=1500" alt="Smart Device" loading="lazy" />
+              </span>
+              <span class="popular-category-title">Smart Device</span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -269,6 +301,47 @@
         </div>
       </footer>
     </div>
+    <aside id="cart-drawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
+      <button class="cart-drawer-overlay" type="button" data-cart-close aria-label="Sepeti kapat"></button>
+      <div class="cart-drawer-panel">
+        <div class="cart-drawer-head">
+          <h2 id="cart-drawer-title" class="text-3xl font-semibold tracking-tight">Sepet <span data-cart-count-label>(0)</span></h2>
+          <button class="cart-drawer-close" type="button" data-cart-close aria-label="Sepeti kapat">
+            <i data-lucide="x" class="h-5 w-5"></i>
+          </button>
+        </div>
+        <div class="cart-drawer-body">
+          <div class="cart-empty-state">
+            <i data-lucide="shopping-bag" class="h-11 w-11"></i>
+            <h3 class="mt-5 text-xl font-semibold">Sepetin şu anda boş.</h3>
+            <p class="mt-2 text-sm text-muted-foreground">Merak etme, en sevilen ürünler sadece bir tık uzakta.</p>
+            <a href="#shop" class="cart-continue-button" data-cart-close>Alışverişe devam et</a>
+          </div>
+          <div class="mt-8">
+            <div class="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">Popüler kategoriler</div>
+            <div class="cart-empty-collections mt-4">
+              <a href="#shop" class="cart-empty-collection" data-cart-close>
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_6.jpg?v=1767736752&width=500" alt="Bluetooth Speaker" loading="lazy" />
+                <span>Bluetooth Speaker</span>
+              </a>
+              <a href="#shop" class="cart-empty-collection" data-cart-close>
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_7.jpg?v=1767736848&width=500" alt="Smart Device" loading="lazy" />
+                <span>Smart Device</span>
+              </a>
+              <a href="#shop" class="cart-empty-collection" data-cart-close>
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_8.jpg?v=1767736799&width=500" alt="Sleek Earbuds" loading="lazy" />
+                <span>Sleek Earbuds</span>
+              </a>
+              <a href="#shop" class="cart-empty-collection" data-cart-close>
+                <img src="https://supreme-realm.myshopify.com/cdn/shop/collections/Supreme_realm_collection_4.jpg?v=1767736639&width=500" alt="Wireless Pods" loading="lazy" />
+                <span>Wireless Pods</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./script.js"></script>
   </body>
 </html>
