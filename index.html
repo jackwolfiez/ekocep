@@ -99,11 +99,11 @@
                 </button>
               </li>
               <li class="user">
-                <a href="#contact" class="header-icon" title="Hesap" aria-label="Hesap">
+                <button type="button" class="header-icon" title="Hesap" aria-label="Hesap" data-login-toggle aria-controls="login-drawer" aria-expanded="false">
                   <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M7 10C9.76 10 12 7.76 12 5C12 2.24 9.76 0 7 0C4.24 0 2 2.24 2 5C2 7.76 4.24 10 7 10ZM7 1.5C8.93 1.5 10.5 3.07 10.5 5C10.5 6.93 8.93 8.5 7 8.5C5.07 8.5 3.5 6.93 3.5 5C3.5 3.07 5.07 1.5 7 1.5ZM13.75 14V16H12.25V14C12.25 13.31 11.69 12.75 11 12.75H3C2.31 12.75 1.75 13.31 1.75 14V16H0.25V14C0.25 12.48 1.48 11.25 3 11.25H11C12.52 11.25 13.75 12.48 13.75 14Z" fill="currentColor"></path>
                   </svg>
-                </a>
+                </button>
               </li>
               <li class="cart">
                 <button id="cart-toggle" type="button" class="header-icon" aria-label="Sepet" aria-controls="cart-drawer" aria-expanded="false">
@@ -317,6 +317,68 @@
         </div>
       </footer>
     </div>
+    <aside id="login-drawer" class="login-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="login-drawer-title">
+      <button class="login-drawer-overlay" type="button" data-login-close aria-label="Giriş panelini kapat"></button>
+      <div class="login-drawer-panel">
+        <div class="login-drawer-head">
+          <h2 id="login-drawer-title">Hesaba giriş</h2>
+          <button class="login-drawer-close" type="button" data-login-close aria-label="Giriş panelini kapat">
+            <i data-lucide="x" class="h-5 w-5"></i>
+          </button>
+        </div>
+        <div class="login-drawer-body">
+          <section class="login-panel-section login-reset-panel" id="login-reset-panel" hidden>
+            <h3>Şifreni sıfırla</h3>
+            <p>E-postanı yaz, şifreni yenilemen için bağlantı gönderelim.</p>
+            <label for="reset-email">E-posta</label>
+            <input id="reset-email" type="email" autocomplete="email" />
+            <button type="button" class="login-submit-button">Gönder</button>
+            <button type="button" class="login-text-button" data-login-view="login">Vazgeç</button>
+          </section>
+
+          <section class="login-panel-section login-main-panel" id="login-main-panel">
+            <p class="login-helper">Devam etmek için bilgilerini doldur.</p>
+            <label for="login-email">E-posta</label>
+            <input id="login-email" type="email" autocomplete="email" />
+            <label for="login-password">Şifre</label>
+            <input id="login-password" type="password" autocomplete="current-password" />
+            <button type="button" class="login-text-button" data-login-view="reset">Şifreni mi unuttun?</button>
+            <button type="button" class="login-submit-button">Giriş yap</button>
+            <button type="button" class="login-create-link" data-login-view="create">Hesap oluştur</button>
+          </section>
+
+          <section class="login-perks">
+            <h3>Özel avantajlardan yararlan</h3>
+            <ul>
+              <li>Üyelere özel ürünlere erişim</li>
+              <li>Premium destek deneyimi</li>
+              <li>Kişiselleştirilmiş öneriler</li>
+            </ul>
+          </section>
+
+          <section class="login-panel-section login-create-panel" id="login-create-panel" hidden>
+            <h3>Hesap oluştur</h3>
+            <p>Bilgilerini doldur, siparişlerini daha kolay takip et.</p>
+            <div class="login-two-col">
+              <span>
+                <label for="register-name">Ad</label>
+                <input id="register-name" type="text" autocomplete="given-name" />
+              </span>
+              <span>
+                <label for="register-lastname">Soyad</label>
+                <input id="register-lastname" type="text" autocomplete="family-name" />
+              </span>
+            </div>
+            <label for="register-email">E-posta</label>
+            <input id="register-email" type="email" autocomplete="email" />
+            <label for="register-password">Şifre</label>
+            <input id="register-password" type="password" autocomplete="new-password" />
+            <button type="button" class="login-submit-button">Oluştur</button>
+            <button type="button" class="login-text-button" data-login-view="login">Giriş yap</button>
+          </section>
+        </div>
+      </div>
+    </aside>
     <aside id="cart-drawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
       <button class="cart-drawer-overlay" type="button" data-cart-close aria-label="Sepeti kapat"></button>
       <div class="cart-drawer-panel">

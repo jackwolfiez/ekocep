@@ -914,6 +914,54 @@ function bindCartDrawer() {
   syncCount();
 }
 
+function bindLoginDrawer() {
+  const drawer = document.querySelector("#login-drawer");
+  const toggles = document.querySelectorAll("[data-login-toggle]");
+  const closeTriggers = document.querySelectorAll("[data-login-close]");
+  const viewButtons = document.querySelectorAll("[data-login-view]");
+  if (!drawer || !toggles.length) return;
+
+  const setOpen = (isOpen) => {
+    drawer.classList.toggle("is-open", isOpen);
+    drawer.setAttribute("aria-hidden", String(!isOpen));
+    toggles.forEach((toggle) => toggle.setAttribute("aria-expanded", String(isOpen)));
+    document.body.classList.toggle("login-drawer-open", isOpen);
+  };
+
+  const setView = (view) => {
+    const mainPanel = document.querySelector("#login-main-panel");
+    const resetPanel = document.querySelector("#login-reset-panel");
+    const createPanel = document.querySelector("#login-create-panel");
+    if (!mainPanel || !resetPanel || !createPanel) return;
+    mainPanel.hidden = view !== "login";
+    resetPanel.hidden = view !== "reset";
+    createPanel.hidden = view !== "create";
+  };
+
+  toggles.forEach((toggle) => {
+    toggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setView("login");
+      setOpen(true);
+    });
+  });
+
+  closeTriggers.forEach((trigger) => trigger.addEventListener("click", () => setOpen(false)));
+  viewButtons.forEach((button) => {
+    button.addEventListener("click", () => setView(button.dataset.loginView));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!drawer.classList.contains("is-open")) return;
+    if (drawer.contains(event.target) || event.target.closest("[data-login-toggle]")) return;
+    setOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setOpen(false);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   updateCountdown();
   setInterval(updateCountdown, 1000);
@@ -928,5 +976,6 @@ document.addEventListener("DOMContentLoaded", () => {
   bindAnnouncementControls();
   bindCategoryMenu();
   bindCartDrawer();
+  bindLoginDrawer();
   lucide.createIcons();
 });

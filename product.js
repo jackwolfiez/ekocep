@@ -138,6 +138,54 @@ function bindCartDrawer() {
   syncCartCount();
 }
 
+function bindLoginDrawer() {
+  const loginDrawer = document.querySelector("#login-drawer");
+  const toggles = document.querySelectorAll("[data-login-toggle]");
+  const closeTriggers = document.querySelectorAll("[data-login-close]");
+  const viewButtons = document.querySelectorAll("[data-login-view]");
+  if (!loginDrawer || !toggles.length) return;
+
+  const setOpen = (isOpen) => {
+    loginDrawer.classList.toggle("is-open", isOpen);
+    loginDrawer.setAttribute("aria-hidden", String(!isOpen));
+    toggles.forEach((toggle) => toggle.setAttribute("aria-expanded", String(isOpen)));
+    document.body.classList.toggle("login-drawer-open", isOpen);
+  };
+
+  const setView = (view) => {
+    const mainPanel = document.querySelector("#login-main-panel");
+    const resetPanel = document.querySelector("#login-reset-panel");
+    const createPanel = document.querySelector("#login-create-panel");
+    if (!mainPanel || !resetPanel || !createPanel) return;
+    mainPanel.hidden = view !== "login";
+    resetPanel.hidden = view !== "reset";
+    createPanel.hidden = view !== "create";
+  };
+
+  toggles.forEach((toggle) => {
+    toggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setView("login");
+      setOpen(true);
+    });
+  });
+
+  closeTriggers.forEach((trigger) => trigger.addEventListener("click", () => setOpen(false)));
+  viewButtons.forEach((button) => {
+    button.addEventListener("click", () => setView(button.dataset.loginView));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!loginDrawer.classList.contains("is-open")) return;
+    if (loginDrawer.contains(event.target) || event.target.closest("[data-login-toggle]")) return;
+    setOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setOpen(false);
+  });
+}
+
 function bindGallery() {
   const mainImage = document.querySelector("#product-main-image");
   document.querySelectorAll("[data-product-image]").forEach((button) => {
@@ -330,5 +378,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProductCategories();
   bindProductCategoryMenu();
   bindCartDrawer();
+  bindLoginDrawer();
   lucide.createIcons();
 });
