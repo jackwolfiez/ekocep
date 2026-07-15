@@ -1067,13 +1067,15 @@ img {
   width: 100%;
   margin-top: 0.85rem;
   min-height: 3.35rem;
-  background: #7b4b36;
+  background: #f0c417;
+  color: #151922;
 }
 
 .product-add-button:hover,
 .product-buy-button:hover,
 .product-sticky-bar button:hover {
   background: #000000;
+  color: #ffffff;
   box-shadow: 0 16px 32px rgb(15 23 42 / 18%);
   transform: translateY(-1px);
 }
