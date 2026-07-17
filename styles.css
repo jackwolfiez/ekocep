@@ -2169,6 +2169,14 @@ img {
   line-height: 1.18;
 }
 
+.product-generated-description {
+  margin: 0 0 1.15rem;
+  max-width: 960px;
+  color: rgb(21 25 34 / 72%);
+  font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+  line-height: 1.75;
+}
+
 .product-feature-grid ul {
   margin: 1.7rem 0 0;
   padding: 0;

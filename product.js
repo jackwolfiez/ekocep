@@ -152,6 +152,51 @@ function parseProductSpecs(product) {
   ];
 }
 
+function specValue(specs, label) {
+  return specs.find((spec) => spec.label === label)?.value;
+}
+
+function compactValues(values) {
+  return values.filter(Boolean).slice(0, 4).join(", ");
+}
+
+function buildProductDescription(product, specs = parseProductSpecs(product)) {
+  const category = product.subcategory || product.category || "teknoloji ürünü";
+  const color = specValue(specs, "Renk") || product.color;
+  const material = specValue(specs, "Malzeme Cinsi");
+  const connection = specValue(specs, "Bağlantı Tipi");
+  const usage = specValue(specs, "Kullanım Tipi") || specValue(specs, "Şarj Tipi");
+  const battery = specValue(specs, "Pil Kapasitesi (Mah)") || specValue(specs, "Kamera Pil Kapasitesi (Mah)");
+  const power = compactValues([
+    specValue(specs, "Çıkış Voltaj (V)"),
+    specValue(specs, "Giriş Voltaj (V)"),
+    specValue(specs, "Çıkış Amper (Mah)")
+  ]);
+  const cable = compactValues([
+    specValue(specs, "Kablo Tipi"),
+    specValue(specs, "Kablo Uzunluğu (Cm.)"),
+    specValue(specs, "Hızlı Şarj Desteği")
+  ]);
+  const audio = compactValues([
+    specValue(specs, "Kulaklık Tipi"),
+    specValue(specs, "Mikrofon Var Mı ?"),
+    specValue(specs, "Gürültü Önleme"),
+    specValue(specs, "Ses Türü")
+  ]);
+  const warranty = specValue(specs, "Garanti Süresi") || specValue(specs, "Garanti Durumu");
+
+  const details = compactValues([color && `${color} renk`, material && `${material} malzeme`, connection, usage]);
+  const performance = compactValues([audio, battery && `${battery} pil kapasitesi`, power, cable]);
+  const support = compactValues([warranty && `${warranty} garanti`, specValue(specs, "Ürün Durumu")]);
+
+  return [
+    `${product.name}, ${category.toLocaleLowerCase("tr")} kategorisinde günlük kullanım için değerlendirilebilecek pratik bir seçenektir.`,
+    details && `Üründe ${details} bilgileri öne çıkar.`,
+    performance && `Teknik özelliklerde ${performance} gibi değerler ürünün kullanım alanını daha net gösterir.`,
+    support && `${support} bilgisi de ürün tercihinde yardımcı olur.`
+  ].filter(Boolean).join(" ");
+}
+
 const categoryGroups = catalogCategories.reduce((groups, category) => {
   const existing = groups.get(category.parent) || { label: category.parent, href: "./index.html#shop", children: [], productIds: [] };
   existing.productIds.push(...category.productIds);
@@ -429,6 +474,9 @@ function hydrateProductDetail() {
 
   const featureTitle = document.querySelector(".product-feature-grid h2");
   if (featureTitle) featureTitle.textContent = "Ürün Özellikleri";
+  const specs = parseProductSpecs(currentProduct);
+  const generatedDescription = document.querySelector(".product-generated-description");
+  if (generatedDescription) generatedDescription.textContent = buildProductDescription(currentProduct, specs);
   const featureList = document.querySelector(".product-feature-grid ul");
   if (featureList) {
     featureList.innerHTML = `
@@ -441,7 +489,7 @@ function hydrateProductDetail() {
 
   const specTable = document.querySelector(".product-spec-table");
   if (specTable) {
-    specTable.innerHTML = parseProductSpecs(currentProduct)
+    specTable.innerHTML = specs
       .map(
         (spec) => `
           <div class="product-spec-row">
