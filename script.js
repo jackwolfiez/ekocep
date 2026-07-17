@@ -82,9 +82,9 @@ const accessories = catalogCategories.slice(0, 9).map((category) => {
 const boldProducts = featuredProducts.slice(0, 7);
 
 const productSets = {
-  trending: allProducts,
-  best: allProducts.slice(0, 24),
-  new: allProducts.slice(-24)
+  trending: allProducts.slice(0, 12),
+  best: allProducts.slice(0, 12),
+  new: allProducts.slice(-12)
 };
 
 const menuProducts = featuredProducts.slice(0, 4);

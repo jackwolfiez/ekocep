@@ -2196,6 +2196,42 @@ img {
   font-weight: 800;
 }
 
+.product-spec-table {
+  margin-top: 1.7rem;
+  overflow: hidden;
+  border: 1px solid #dde3ea;
+  border-radius: 0.9rem;
+  background: #ffffff;
+}
+
+.product-spec-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.42fr) minmax(0, 0.58fr);
+  border-bottom: 1px solid #e8edf2;
+}
+
+.product-spec-row:last-child {
+  border-bottom: 0;
+}
+
+.product-spec-label,
+.product-spec-value {
+  padding: 0.95rem 1rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.product-spec-label {
+  background: #f7f9fb;
+  color: rgb(21 25 34 / 68%);
+  font-weight: 700;
+}
+
+.product-spec-value {
+  color: #151922;
+  font-weight: 600;
+}
+
 .related-products-section {
   padding: clamp(3.5rem, 7vw, 6rem) 0;
   background: #ffffff;

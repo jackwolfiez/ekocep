@@ -64,6 +64,87 @@ const productCartItem = {
   price: currentProduct.price,
   image: currentProduct.image
 };
+const specLabels = [
+  "Uyumlu Modeller",
+  "Ürün Ağırlığı",
+  "Malzeme Cinsi",
+  "Usb Çıkış Sayısı",
+  "Çıkış Voltaj (V)",
+  "Giriş Voltaj (V)",
+  "Şarj Tipi",
+  "Otomatik Şarj Kesme",
+  "Kablo Dış Materyal",
+  "Kablo Tipi",
+  "Hızlı Şarj Desteği",
+  "Görüntü Aktarım Desteği",
+  "Data Aktarım Hızı ( Mb/S)",
+  "Kablo Uzunluğu (Cm.)",
+  "Medya Kontrol Tuşları",
+  "Kulaklık Tipi",
+  "Mikrofon Var Mı ?",
+  "Çocuklar İçin Uygun mu ?",
+  "Kamera Adedi",
+  "Kamera Pil Kapasitesi (Mah)",
+  "Paket İçeriği",
+  "Kılıf Adı",
+  "Seri",
+  "Stand Olarak Kullanım",
+  "Ürün Kalınlık (Mm)",
+  "Yapışkan Türü",
+  "Baskı Türü",
+  "Ürün Menşei/Ülke",
+  "Bağlantı Tipi",
+  "Kullanım Tipi",
+  "Garanti Durumu",
+  "Ürün Durumu",
+  "Çıkış Amper (Mah)",
+  "Renk"
+];
+
+function escapeHtml(value) {
+  return String(value || "").replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#039;"
+  })[char]);
+}
+
+function parseProductSpecs(product) {
+  const description = String(product.description || "").replace(/^Özellikler\s*/i, "").trim();
+  const matches = specLabels
+    .flatMap((label) => {
+      const positions = [];
+      let startIndex = 0;
+      while (startIndex < description.length) {
+        const index = description.indexOf(label, startIndex);
+        if (index === -1) break;
+        positions.push({ label, index, end: index + label.length });
+        startIndex = index + label.length;
+      }
+      return positions;
+    })
+    .sort((a, b) => a.index - b.index || b.label.length - a.label.length);
+
+  const rows = matches
+    .filter((match, index, list) => index === 0 || match.index !== list[index - 1].index)
+    .map((match, index, list) => {
+      const next = list[index + 1];
+      const value = description.slice(match.end, next?.index ?? description.length).trim();
+      return { label: match.label, value };
+    })
+    .filter((row) => row.value);
+
+  if (!rows.some((row) => row.label === "Renk") && product.color) {
+    rows.unshift({ label: "Renk", value: product.color });
+  }
+
+  return rows.length ? rows : [
+    { label: "Kategori", value: product.subcategory || product.category },
+    { label: "Renk", value: product.color || "Standart" }
+  ];
+}
 
 const categoryGroups = catalogCategories.reduce((groups, category) => {
   const existing = groups.get(category.parent) || { label: category.parent, href: "./index.html#shop", children: [], productIds: [] };
@@ -340,16 +421,13 @@ function hydrateProductDetail() {
   const storeCardName = document.querySelector(".product-store-card .font-semibold");
   if (storeCardName) storeCardName.textContent = currentProduct.name;
 
-  const performanceText = document.querySelector(".product-accordions details:nth-of-type(2) p");
-  if (performanceText) performanceText.textContent = currentProduct.description;
-
   const featureImage = document.querySelector(".product-feature-grid img");
   if (featureImage) {
     featureImage.src = currentProduct.image;
     featureImage.alt = `${currentProduct.name} detay`;
   }
   const featureTitle = document.querySelector(".product-feature-grid h2");
-  if (featureTitle) featureTitle.textContent = currentProduct.name;
+  if (featureTitle) featureTitle.textContent = "Ürün Özellikleri";
   const featureList = document.querySelector(".product-feature-grid ul");
   if (featureList) {
     featureList.innerHTML = `
@@ -358,6 +436,20 @@ function hydrateProductDetail() {
       <li>Ekocep vitrininde güncel ürün listesine dahil edildi</li>
       <li>Kaynak ürün bilgileri Nettech Store sayfasından alınmıştır</li>
     `;
+  }
+
+  const specTable = document.querySelector(".product-spec-table");
+  if (specTable) {
+    specTable.innerHTML = parseProductSpecs(currentProduct)
+      .map(
+        (spec) => `
+          <div class="product-spec-row">
+            <div class="product-spec-label">${escapeHtml(spec.label)}</div>
+            <div class="product-spec-value">${escapeHtml(spec.value)}</div>
+          </div>
+        `
+      )
+      .join("");
   }
 
   const relatedGrid = document.querySelector(".related-products-grid");
