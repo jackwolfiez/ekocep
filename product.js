@@ -427,11 +427,6 @@ function hydrateProductDetail() {
   const storeCardName = document.querySelector(".product-store-card .font-semibold");
   if (storeCardName) storeCardName.textContent = currentProduct.name;
 
-  const featureImage = document.querySelector(".product-feature-grid img");
-  if (featureImage) {
-    featureImage.src = currentProduct.image;
-    featureImage.alt = `${currentProduct.name} detay`;
-  }
   const featureTitle = document.querySelector(".product-feature-grid h2");
   if (featureTitle) featureTitle.textContent = "Ürün Özellikleri";
   const featureList = document.querySelector(".product-feature-grid ul");
