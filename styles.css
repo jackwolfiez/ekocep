@@ -692,16 +692,9 @@ img {
 
 .site-footer-main {
   display: grid;
-  grid-template-columns: minmax(220px, 0.8fr) minmax(180px, 0.55fr) minmax(0, 1.65fr);
+  grid-template-columns: minmax(180px, 0.55fr) minmax(0, 1.45fr);
   gap: clamp(2rem, 4vw, 4.5rem);
   padding: clamp(2rem, 5vw, 4rem) 0;
-}
-
-.site-footer-visual img {
-  width: 100%;
-  max-height: 360px;
-  border-radius: 1rem;
-  object-fit: cover;
 }
 
 .site-footer-contact {
