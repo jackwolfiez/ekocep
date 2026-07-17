@@ -88,6 +88,57 @@ const productSets = {
 };
 
 const menuProducts = featuredProducts.slice(0, 4);
+const footerMenuColumns = [
+  {
+    title: "Kurumsal",
+    links: [
+      { label: "Hakkımızda", href: "#top" },
+      { label: "Blog", href: "#features" },
+      { label: "İletişim", href: "./contact.html" }
+    ]
+  },
+  {
+    title: "Yardım ve Destek",
+    links: [
+      { label: "Sıkça Sorulan Sorular", href: "#contact" },
+      { label: "Sipariş Takibi", href: "#contact" },
+      { label: "Kargo ve Teslimat", href: "#contact" },
+      { label: "İade ve Değişim", href: "./refund-policy.html" },
+      { label: "Bize Ulaşın", href: "./contact.html" }
+    ]
+  },
+  {
+    title: "Alışveriş Rehberi",
+    links: [
+      { label: "Nasıl Sipariş Verilir?", href: "#shop" },
+      { label: "Ödeme Seçenekleri", href: "#shop" },
+      { label: "Güvenli Alışveriş", href: "#shop" },
+      { label: "Üyelik İşlemleri", href: "#shop" },
+      { label: "Kampanyalar", href: "#trending" }
+    ]
+  },
+  {
+    title: "Yasal Bilgilendirme",
+    links: [
+      { label: "Gizlilik Politikası", href: "./privacy-policy.html" },
+      { label: "KVKK Aydınlatma Metni", href: "./privacy-policy.html" },
+      { label: "Mesafeli Satış Sözleşmesi", href: "./refund-policy.html" },
+      { label: "Üyelik Sözleşmesi", href: "./privacy-policy.html" },
+      { label: "Çerez Politikası", href: "./privacy-policy.html" },
+      { label: "Hesap ve Veri Silme Talebi", href: "./contact.html" }
+    ]
+  },
+  {
+    title: "Popüler Kategoriler",
+    links: [
+      { label: "Telefon Aksesuarları", href: "#shop" },
+      { label: "Şarj Cihazları", href: "#shop" },
+      { label: "Kulaklıklar", href: "#shop" },
+      { label: "Kablolar", href: "#shop" },
+      { label: "Akıllı Saat Aksesuarları", href: "#shop" }
+    ]
+  }
+];
 
 const pad = (number) => number.toString().padStart(2, "0");
 
@@ -294,21 +345,19 @@ function renderPopularCategories() {
 }
 
 function renderFooterCatalogLinks() {
-  const columns = document.querySelectorAll(".site-footer-links > div");
-  const collectionColumn = columns[2];
-  const bestsellerColumn = columns[3];
-  if (collectionColumn) {
-    collectionColumn.innerHTML = `
-      <h3>Koleksiyonlar</h3>
-      ${catalogCategories.slice(0, 5).map((category) => `<a href="#shop">${category.child || category.parent}</a>`).join("")}
-    `;
-  }
-  if (bestsellerColumn) {
-    bestsellerColumn.innerHTML = `
-      <h3>Çok Satanlar</h3>
-      ${featuredProducts.slice(0, 5).map((product) => `<a href="${productUrl(product)}">${product.name}</a>`).join("")}
-    `;
-  }
+  const container = document.querySelector(".site-footer-links");
+  if (!container) return;
+
+  container.innerHTML = footerMenuColumns
+    .map(
+      (column) => `
+        <div>
+          <h3>${column.title}</h3>
+          ${column.links.map((link) => `<a href="${link.href}">${link.label}</a>`).join("")}
+        </div>
+      `
+    )
+    .join("");
 }
 
 function renderBoldProducts() {
