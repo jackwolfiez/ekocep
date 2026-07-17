@@ -58,7 +58,7 @@ const currentProduct = allProducts.find((product) => product.id === requestedId)
 const relatedProducts = allProducts
   .filter((product) => product.id !== currentProduct.id && product.category === currentProduct.category)
   .concat(allProducts.filter((product) => product.id !== currentProduct.id))
-  .slice(0, 4);
+  .slice(0, 5);
 const productCartItem = {
   name: currentProduct.name,
   price: currentProduct.price,
@@ -570,7 +570,7 @@ function hydrateProductDetail() {
             </a>
             <div class="related-product-body">
               <a href="${productUrl(product)}">${product.name}</a>
-              <span>${product.price}</span>
+              <span class="related-product-price">${product.price}</span>
             </div>
           </article>
         `
