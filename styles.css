@@ -692,8 +692,8 @@ img {
 
 .site-footer-main {
   display: grid;
-  grid-template-columns: minmax(180px, 0.55fr) minmax(0, 1.45fr);
-  gap: clamp(2rem, 4vw, 4.5rem);
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  gap: clamp(2.5rem, 5vw, 5.5rem);
   padding: clamp(2rem, 5vw, 4rem) 0;
 }
 
@@ -752,8 +752,9 @@ img {
 
 .site-footer-links {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(1.25rem, 3vw, 2.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+  min-width: 0;
 }
 
 .site-footer-links div {
@@ -763,9 +764,13 @@ img {
 }
 
 .site-footer-links a {
+  display: -webkit-box;
+  overflow: hidden;
   color: rgb(255 255 255 / 72%);
   font-size: 0.94rem;
   line-height: 1.25;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .site-footer-bottom {
