@@ -1,4 +1,5 @@
 import { animate, stagger } from "https://cdn.jsdelivr.net/npm/animejs@4.5.0/+esm";
+import { categories as catalogCategories, products as catalogProducts } from "./products-data.js";
 
 const targetDate = new Date("2026-10-10T00:00:00").getTime();
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -8,282 +9,85 @@ const announcements = [
   "30 gün koşulsuz iade garantisi"
 ];
 
-const categories = [
-  {
-    label: "Telefon / Tablet",
-    href: "#shop",
-    children: [
-      { label: "Cep Telefonu", href: "#shop" },
-      { label: "Tablet", href: "#shop" }
-    ]
-  },
-  { label: "Teknoloji Ürünleri", href: "#shop" },
-  { label: "Powerbank", href: "#shop" },
-  {
-    label: "Şarj Cihazı",
-    href: "#shop",
-    children: [
-      { label: "Şarj Aleti", href: "#shop" },
-      { label: "Kablosuz Şarj", href: "#shop" },
-      { label: "Araç Şarj Aleti", href: "#shop" }
-    ]
-  },
-  {
-    label: "Kablo",
-    href: "#shop",
-    children: [
-      { label: "Şarj ve Data Kablosu", href: "#shop" },
-      { label: "Otg ve Dönüştürücü Kablo", href: "#shop" },
-      { label: "Hdmi ve Audio Kablosu", href: "#shop" }
-    ]
-  },
-  {
-    label: "Ses ve Müzik",
-    href: "#shop",
-    children: [
-      { label: "Bluetooth Kulaklık", href: "#shop" },
-      { label: "Kulak Üstü Kulaklık", href: "#shop" },
-      { label: "Hoparlör", href: "#shop" },
-      { label: "Kulak İçi Kulaklık", href: "#shop" }
-    ]
-  },
-  {
-    label: "Aksesuar",
-    href: "#shop",
-    children: [
-      { label: "Monopod - Tripod", href: "#shop" },
-      { label: "Araç Tutucu", href: "#shop" },
-      { label: "Telefon - Tablet Standı", href: "#shop" },
-      { label: "Aydınlatma Lamba", href: "#shop" },
-      { label: "Diğer Aksesuarlar", href: "#shop" }
-    ]
-  },
-  {
-    label: "Giyilebilir Teknoloji",
-    href: "#shop",
-    children: [
-      { label: "Akıllı Saat", href: "#shop" },
-      { label: "Akıllı Saat Aksesuarları", href: "#shop" },
-      { label: "Aksiyon Kamera", href: "#shop" }
-    ]
-  },
-  {
-    label: "Hafıza Ürünleri",
-    href: "#shop",
-    children: [
-      { label: "Usb Bellek", href: "#shop" },
-      { label: "Hafıza Kartı", href: "#shop" }
-    ]
-  },
-  {
-    label: "Telefon Kılıfı",
-    href: "#shop",
-    children: [
-      { label: "Arka Koruma Kılıf", href: "#shop" },
-      { label: "Kapaklı Kılıf", href: "#shop" },
-      { label: "Diğer Kılıflar", href: "#shop" }
-    ]
-  },
-  {
-    label: "Tablet Kılıfı",
-    href: "#shop",
-    children: [
-      { label: "Arka Koruma", href: "#shop" },
-      { label: "Kapaklı Kılıf", href: "#shop" }
-    ]
-  },
-  {
-    label: "Telefon Ekran Koruyucu",
-    href: "#shop",
-    children: [
-      { label: "Full Cam Koruyucu", href: "#shop" },
-      { label: "Cam Ekran Koruyucu", href: "#shop" },
-      { label: "Nano Ekran Koruyucu", href: "#shop" },
-      { label: "Kamera Cam Koruyucu", href: "#shop" },
-      { label: "360 Full Kaplama", href: "#shop" }
-    ]
-  },
-  {
-    label: "Tablet Ekran Koruyucu",
-    href: "#shop",
-    children: [
-      { label: "Cam Ekran Koruyucu", href: "#shop" },
-      { label: "Nano Ekran Koruyucu", href: "#shop" }
-    ]
-  },
-  { label: "Lcd Ekran", href: "#shop" },
-  { label: "Batarya", href: "#shop" },
-  {
-    label: "Yedek Parça",
-    href: "#shop",
-    children: [
-      { label: "Kasa - Kapak", href: "#shop" },
-      { label: "Batarya Kapağı", href: "#shop" },
-      { label: "Dokunmatik Lens", href: "#shop" },
-      { label: "Sim ve Hafıza Kart Yuvası", href: "#shop" },
-      { label: "Şarj - Kulaklık Soket", href: "#shop" },
-      { label: "Flex - Film", href: "#shop" },
-      { label: "Buzzer - İç Kulaklık", href: "#shop" },
-      { label: "Entegre", href: "#shop" },
-      { label: "Home - Power Tuş", href: "#shop" },
-      { label: "Titreşim Motoru", href: "#shop" },
-      { label: "Mikrofon - Sensör", href: "#shop" },
-      { label: "Anten - Konnektör", href: "#shop" },
-      { label: "Kamera", href: "#shop" },
-      { label: "Kamera Camı", href: "#shop" },
-      { label: "Ekran Bileşenleri", href: "#shop" },
-      { label: "Diğer Yedek Parça", href: "#shop" }
-    ]
-  },
-  {
-    label: "Çevre Birimleri",
-    href: "#shop",
-    children: [
-      { label: "Klavye", href: "#shop" },
-      { label: "Mouse", href: "#shop" },
-      { label: "Oyun Konsolu", href: "#shop" },
-      { label: "Modem, Router", href: "#shop" },
-      { label: "Bilgisayar Bileşenleri", href: "#shop" }
-    ]
-  },
-  {
-    label: "Tamir Malzeme",
-    href: "#shop",
-    children: [
-      { label: "Tamir Makinaları", href: "#shop" },
-      { label: "Tamir El Aletleri", href: "#shop" },
-      { label: "Yapıştırıcılar ve Sıvı Malzemeler", href: "#shop" },
-      { label: "Kalıplar Ve Board Tutucu", href: "#shop" }
-    ]
+const productUrl = (product) => `./product.html?id=${encodeURIComponent(product.id)}`;
+const colorValues = {
+  Siyah: "#111111",
+  Beyaz: "#f7f7f2",
+  Gri: "#8a8f98",
+  Krem: "#e9dcc5",
+  Mavi: "#2563eb",
+  Lacivert: "#1e3a8a",
+  Turuncu: "#f97316",
+  Mor: "#7c3aed",
+  Pembe: "#f4a3b8",
+  Turkuaz: "#14b8a6",
+  Kahverengi: "#8b5e3c",
+  "Rose Gold": "#b76e79",
+  Standart: "#d1d5db"
+};
+const withCardFields = (product) => ({
+  ...product,
+  img: product.image,
+  hoverImg: product.hoverImg || product.image,
+  colors: [colorValues[product.color] || colorValues.Standart]
+});
+const allProducts = catalogProducts.map(withCardFields);
+const featuredProducts = allProducts.slice(0, 8);
+const categoryGroups = catalogCategories.reduce((groups, category) => {
+  const existing = groups.get(category.parent) || { label: category.parent, href: "#shop", children: [], productIds: [] };
+  existing.productIds.push(...category.productIds);
+  if (category.child) {
+    existing.children.push({ label: category.child, href: "#shop", productIds: category.productIds });
   }
-];
+  groups.set(category.parent, existing);
+  return groups;
+}, new Map());
+const categories = Array.from(categoryGroups.values());
 
 const heroSlides = [
   {
-    title: "Saf Ses. <br /> Tam Kontrol.",
-    copy: "Netlik, konfor ve kesintisiz dinleme için tasarlanan sürükleyici ses deneyimi.",
-    cta: "ÖZELLİKLERİ KEŞFET",
-    ctaHref: "#features",
-    image: "/public/images/hero.jpg",
-    alt: "Ekocep kablosuz kulaklık kullanan kişi",
-    products: [
-      { name: "Kablosuz Kulaklık", img: "/public/images/pods.jpg" },
-      { name: "Şık Kulak İçi", img: "/public/images/earbuds.jpg" }
-    ]
-  },
-  {
-    title: "Stüdyo Detayı. <br /> Günlük Rahatlık.",
-    copy: "Aramalar, listeler ve odak anları için dengeli ses veren premium kulaklıklar.",
-    cta: "KULAKLIKLARI İNCELE",
+    title: "Teknoloji Ürünleri. <br /> Ekocep'te.",
+    copy: "Günlük kullanım, ofis, araç ve mobil yaşam için seçilmiş güncel teknoloji ürünleri.",
+    cta: "ÜRÜNLERİ İNCELE",
     ctaHref: "#shop",
-    image: "/public/images/classic.jpg",
-    alt: "Klasik Ekocep kablosuz kulaklık",
-    products: [
-      { name: "Klasik Kablosuz", img: "/public/images/classic.jpg" },
-      { name: "Miras Ses", img: "/public/images/p-heritage.jpg" }
-    ]
+    image: featuredProducts[0]?.img || "/public/images/hero.jpg",
+    alt: featuredProducts[0]?.name || "Ekocep teknoloji ürünleri",
+    products: featuredProducts.slice(0, 2)
   },
   {
-    title: "Yaza Renk Kat. <br /> iPhone'unu Koru.",
-    copy: "Canlı renkler, hafif tasarım ve günlük koruma ile iPhone kılıfını yaz enerjisine uydur.",
-    cta: "KILIFLARI KEŞFET",
+    title: "Güç Her Zaman Yanında.",
+    copy: "Powerbank, adaptör ve kablosuz şarj seçenekleriyle cihazların hazır kalsın.",
+    cta: "ŞARJ ÜRÜNLERİ",
     ctaHref: "#shop",
-    image: "/public/images/classic.jpg",
-    video: "/public/images/iphone-case-slider.mp4",
-    alt: "Yaz temasına uygun iPhone kılıfı",
-    products: [
-      { name: "iPhone Kılıfları", img: "/public/images/classic.jpg" },
-      { name: "Sana Özel Seçimler", img: "/public/images/pods.jpg" }
-    ]
+    image: allProducts.find((product) => product.category === "Powerbank")?.img || featuredProducts[1]?.img,
+    alt: "Ekocep powerbank ve şarj ürünleri",
+    products: allProducts.filter((product) => product.category === "Powerbank").slice(0, 2)
   },
   {
-    title: "Odayı Dolduran Bas. <br /> Sade Tasarım.",
-    copy: "Kompakt hoparlörler sıcak bas, net vokal ve kolay kurulum sunar.",
-    cta: "HOPARLÖRLERİ KEŞFET",
-    ctaHref: "#features",
-    image: "/public/images/base-speakers.jpg",
-    video: "/public/images/slider-speaker1.mp4",
-    alt: "Minimal odada Ekocep bas hoparlörleri",
-    products: [
-      { name: "Bas Hoparlörler", img: "/public/images/base-speakers.jpg" },
-      { name: "Aura Hoparlör", img: "/public/images/p-pulse.jpg" }
-    ]
-  },
-  {
-    title: "Gürültü Azalır. <br /> Enerji Artar.",
-    copy: "Hafif aktif gürültü kontrolü gün boyu net dinleme sağlar.",
-    cta: "YENİ ÜRÜNLERİ GÖR",
+    title: "Ses, Müzik ve Aksesuar.",
+    copy: "Kulaklık, hoparlör ve mobil aksesuar kategorilerinde yeni ürünleri keşfet.",
+    cta: "POPÜLER ÜRÜNLER",
     ctaHref: "#trending",
-    image: "/public/images/p-noise.jpg",
-    alt: "Noise Guard Elite kulaklık",
-    products: [
-      { name: "Noise Guard Elite", img: "/public/images/p-noise.jpg" },
-      { name: "Aura Luxe Ses", img: "/public/images/p-aura.jpg" }
-    ]
+    image: allProducts.find((product) => product.category === "Ses ve Müzik")?.img || featuredProducts[2]?.img,
+    alt: "Ekocep ses ve müzik ürünleri",
+    products: allProducts.filter((product) => product.category === "Ses ve Müzik").slice(0, 2)
   }
 ];
 
-const accessories = [
-  { label: "Sana Özel", href: "#shop", img: "/public/images/pods.jpg" },
-  { label: "Fırsatlar", href: "#shop", img: "/public/images/p-pulse.jpg" },
-  { label: "Yeni Ürünler", href: "#shop", img: "/public/images/p-aura.jpg" },
-  { label: "Web Özel", href: "#shop", img: "/public/images/soft-base.jpg" },
-  { label: "Kulaklıklar", href: "#shop", img: "/public/images/p-heritage.jpg" },
-  { label: "Kılıflar", href: "#shop", img: "/public/images/classic.jpg" },
-  { label: "Saat", href: "#shop", img: "/public/images/earbuds.jpg" },
-  { label: "Hoparlör", href: "#shop", img: "/public/images/base-speakers.jpg" },
-  { label: "Powerbank", href: "#shop", img: "/public/images/p-noise.jpg" }
-];
+const accessories = catalogCategories.slice(0, 9).map((category) => {
+  const product = allProducts.find((item) => category.productIds.includes(item.id)) || allProducts[0];
+  return { label: category.child || category.parent, href: "#shop", img: product.img };
+});
 
-const boldProducts = [
-  { name: "Echo Pods Neo", price: "14.999 TL", img: "/public/images/pods.jpg" },
-  { name: "Aura Hoparlör", price: "12.999 TL", img: "/public/images/p-pulse.jpg", video: "/public/images/carousel-video-2.mp4" },
-  { name: "Kablosuz Kulaklık", price: "22.999 TL", img: "/public/images/p-aura.jpg", video: "/public/images/carousel-video-1.mp4" },
-  { name: "Aura Luxe Ses", price: "28.999 TL", img: "/public/images/p-aura.jpg" },
-  { name: "Kablosuz Kulaklık", price: "22.999 TL", img: "/public/images/p-heritage.jpg" },
-  { name: "Noise Guard Elite", price: "31.999 TL", img: "/public/images/p-noise.jpg" },
-  { name: "Miras Ses", price: "22.999 TL", img: "/public/images/p-heritage.jpg" }
-];
+const boldProducts = featuredProducts.slice(0, 7);
 
 const productSets = {
-  trending: [
-    { name: "Echo Pods Neo", price: "14.999 TL", img: "/public/images/pods.jpg", hoverImg: "/public/images/earbuds.jpg", colors: ["#111111", "#f4b6c2", "#f5f5f5", "#8b1e1e"] },
-    { name: "Miras Ses", price: "22.999 TL", oldPrice: "29.999 TL", sale: true, img: "/public/images/p-heritage.jpg", hoverImg: "/public/images/classic.jpg", colors: ["#f2ead6", "#8b1e1e", "#6d6d6d"] },
-    { name: "Aura Luxe Ses", price: "28.999 TL", img: "/public/images/p-aura.jpg", hoverImg: "/public/images/soft-base.jpg", colors: ["#111111", "#8b1e1e", "#6d6d6d", "#cfcfcf"] },
-    { name: "Noise Guard Elite", price: "31.999 TL", oldPrice: "49.999 TL", sale: true, img: "/public/images/p-noise.jpg", hoverImg: "/public/images/p-pulse.jpg", colors: ["#111111", "#e8c93a", "#8b1e1e", "#f4b6c2"] },
-    { name: "Pulse Bas Hoparlör", price: "12.999 TL", img: "/public/images/p-pulse.jpg", hoverImg: "/public/images/base-speakers.jpg", colors: ["#111111", "#f2ead6", "#8b6b6b"] },
-    { name: "Klasik Kablosuz", price: "24.999 TL", oldPrice: "28.999 TL", sale: true, img: "/public/images/classic.jpg", hoverImg: "/public/images/p-heritage.jpg", colors: ["#111111", "#cfcfcf"] },
-    { name: "Yumuşak Bas Hoparlör", price: "17.499 TL", img: "/public/images/soft-base.jpg", hoverImg: "/public/images/p-aura.jpg", colors: ["#f2ead6", "#8b1e1e", "#6d6d6d"] },
-    { name: "Şık Kulak İçi", price: "8.999 TL", img: "/public/images/earbuds.jpg", hoverImg: "/public/images/pods.jpg", colors: ["#111111", "#f5f5f5", "#f4b6c2"] }
-  ],
-  best: [
-    { name: "Pulse Bas Hoparlör", price: "12.999 TL", img: "/public/images/p-pulse.jpg", hoverImg: "/public/images/base-speakers.jpg", colors: ["#111111", "#f2ead6", "#8b6b6b"] },
-    { name: "Klasik Kablosuz", price: "24.999 TL", oldPrice: "28.999 TL", sale: true, img: "/public/images/classic.jpg", hoverImg: "/public/images/p-heritage.jpg", colors: ["#111111", "#cfcfcf"] },
-    { name: "Yumuşak Bas Hoparlör", price: "17.499 TL", img: "/public/images/soft-base.jpg", hoverImg: "/public/images/p-aura.jpg", colors: ["#f2ead6", "#8b1e1e", "#6d6d6d"] },
-    { name: "Şık Kulak İçi", price: "8.999 TL", img: "/public/images/earbuds.jpg", hoverImg: "/public/images/pods.jpg", colors: ["#111111", "#f5f5f5", "#f4b6c2"] },
-    { name: "Echo Pods Neo", price: "14.999 TL", img: "/public/images/pods.jpg", hoverImg: "/public/images/earbuds.jpg", colors: ["#111111", "#f4b6c2", "#f5f5f5", "#8b1e1e"] },
-    { name: "Aura Hoparlör", price: "12.999 TL", img: "/public/images/p-pulse.jpg", hoverImg: "/public/images/base-speakers.jpg", colors: ["#111111", "#8b6b6b", "#f5f5f5"] },
-    { name: "Miras Ses", price: "22.999 TL", img: "/public/images/p-heritage.jpg", hoverImg: "/public/images/classic.jpg", colors: ["#f2ead6", "#8b1e1e", "#6d6d6d"] },
-    { name: "Noise Guard Elite", price: "31.999 TL", oldPrice: "49.999 TL", sale: true, img: "/public/images/p-noise.jpg", hoverImg: "/public/images/p-pulse.jpg", colors: ["#111111", "#e8c93a", "#8b1e1e", "#f4b6c2"] }
-  ],
-  new: [
-    { name: "Aura Studio Kulaklık", price: "19.999 TL", img: "/public/images/p-aura.jpg", hoverImg: "/public/images/classic.jpg", colors: ["#111111", "#cfcfcf", "#8b1e1e"] },
-    { name: "Noise Guard Mini", price: "14.499 TL", img: "/public/images/p-noise.jpg", hoverImg: "/public/images/earbuds.jpg", colors: ["#111111", "#e8c93a"] },
-    { name: "Dış Mekan Pure", price: "15.999 TL", img: "/public/images/soft-base.jpg", hoverImg: "/public/images/p-pulse.jpg", colors: ["#f2ead6", "#6d6d6d"] },
-    { name: "Bas Hoparlörler Duo", price: "25.999 TL", oldPrice: "30.999 TL", sale: true, img: "/public/images/base-speakers.jpg", hoverImg: "/public/images/p-heritage.jpg", colors: ["#111111", "#8b6b6b", "#f5f5f5"] },
-    { name: "Aura Luxe Ses", price: "28.999 TL", img: "/public/images/p-aura.jpg", hoverImg: "/public/images/soft-base.jpg", colors: ["#111111", "#8b1e1e", "#6d6d6d", "#cfcfcf"] },
-    { name: "Klasik Kablosuz", price: "24.999 TL", img: "/public/images/classic.jpg", hoverImg: "/public/images/p-heritage.jpg", colors: ["#111111", "#cfcfcf"] },
-    { name: "Echo Pods Neo", price: "14.999 TL", img: "/public/images/pods.jpg", hoverImg: "/public/images/earbuds.jpg", colors: ["#111111", "#f4b6c2", "#f5f5f5", "#8b1e1e"] },
-    { name: "Miras Ses", price: "22.999 TL", oldPrice: "29.999 TL", sale: true, img: "/public/images/p-heritage.jpg", hoverImg: "/public/images/classic.jpg", colors: ["#f2ead6", "#8b1e1e", "#6d6d6d"] }
-  ]
+  trending: allProducts,
+  best: allProducts.slice(0, 24),
+  new: allProducts.slice(-24)
 };
 
-const menuProducts = [
-  { name: "Echo Pods Neo", price: "14.999 TL", img: "/public/images/pods.jpg" },
-  { name: "Aura Hoparlör", price: "12.999 TL", img: "/public/images/p-pulse.jpg" },
-  { name: "Miras Ses", price: "22.999 TL", img: "/public/images/p-heritage.jpg" },
-  { name: "Noise Guard Elite", price: "31.999 TL", img: "/public/images/p-noise.jpg" }
-];
+const menuProducts = featuredProducts.slice(0, 4);
 
 const pad = (number) => number.toString().padStart(2, "0");
 
@@ -318,7 +122,7 @@ function renderHeroSlide(index = 0) {
   products.innerHTML = slide.products
     .map(
       (product) => `
-        <a href="#shop" class="flex items-center gap-3 rounded-2xl bg-white/15 p-2 pr-5 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
+        <a href="${product.id ? productUrl(product) : "#shop"}" class="flex items-center gap-3 rounded-2xl bg-white/15 p-2 pr-5 backdrop-blur-md ring-1 ring-white/25 transition hover:bg-white/25">
           <img src="${product.img}" alt="${product.name}" class="h-14 w-14 rounded-xl object-cover" />
           <span class="text-sm leading-tight">
             <span class="block font-medium">${product.name}</span>
@@ -458,6 +262,7 @@ function updateCountdown() {
 
 function renderAccessories() {
   const container = document.querySelector("#accessories");
+  if (!container) return;
   container.innerHTML = accessories
     .map(
       (item) => `
@@ -468,6 +273,42 @@ function renderAccessories() {
       `
     )
     .join("");
+}
+
+function renderPopularCategories() {
+  const container = document.querySelector(".popular-categories-grid");
+  if (!container) return;
+  container.innerHTML = catalogCategories.slice(0, 6)
+    .map((category) => {
+      const product = allProducts.find((item) => category.productIds.includes(item.id)) || allProducts[0];
+      return `
+        <a href="#shop" class="popular-category-card">
+          <span class="popular-category-media">
+            <img src="${product.img}" alt="${category.child || category.parent}" loading="lazy" />
+          </span>
+          <span class="popular-category-title">${category.child || category.parent}</span>
+        </a>
+      `;
+    })
+    .join("");
+}
+
+function renderFooterCatalogLinks() {
+  const columns = document.querySelectorAll(".site-footer-links > div");
+  const collectionColumn = columns[2];
+  const bestsellerColumn = columns[3];
+  if (collectionColumn) {
+    collectionColumn.innerHTML = `
+      <h3>Koleksiyonlar</h3>
+      ${catalogCategories.slice(0, 5).map((category) => `<a href="#shop">${category.child || category.parent}</a>`).join("")}
+    `;
+  }
+  if (bestsellerColumn) {
+    bestsellerColumn.innerHTML = `
+      <h3>Çok Satanlar</h3>
+      ${featuredProducts.slice(0, 5).map((product) => `<a href="${productUrl(product)}">${product.name}</a>`).join("")}
+    `;
+  }
 }
 
 function renderBoldProducts() {
@@ -484,13 +325,13 @@ function renderBoldProducts() {
 
 function renderBoldProductCard(product, productIndex) {
   const hasVideo = Boolean(product.video);
-  const productHref = "./product.html";
+  
 
   return `
         <div class="swiper-slide flexible collection-list--card">
           <div class="flexi_collection_content">
             <div class="collection-card--img style-rounded">
-              <a href="${productHref}" class="flexible-gallery-info product-hover" aria-label="${product.name} detay">
+              <a href="${productUrl(product)}" class="flexible-gallery-info product-hover" aria-label="${product.name} detay">
                 <div class="flexible-card-info-img">
                   <img src="${product.img}" alt="" loading="lazy" />
                 </div>
@@ -603,19 +444,19 @@ function keepBoldCarouselCentered(swiper) {
 
 function renderProducts(type = "trending") {
   const container = document.querySelector("#product-grid");
-  const productHref = "./product.html";
+  
   container.innerHTML = productSets[type]
     .map(
       (product) => `
         <article class="popular-product-card group">
           <div class="popular-card-media">
-            <a href="${productHref}" class="popular-card-image-wrap" aria-label="${product.name}">
+            <a href="${productUrl(product)}" class="popular-card-image-wrap" aria-label="${product.name}">
               <img src="${product.img}" alt="${product.name}" loading="lazy" class="popular-card-image" />
               <img src="${product.hoverImg || product.img}" alt="" loading="lazy" class="popular-card-hover-image" />
             </a>
             ${product.sale ? `<span class="popular-sale-badge">Sale</span>` : ""}
             <div class="popular-card-actions">
-              <a href="${productHref}" class="popular-action-button" aria-label="Hızlı görüntüle: ${product.name}">
+              <a href="${productUrl(product)}" class="popular-action-button" aria-label="Hızlı görüntüle: ${product.name}">
                 <i data-lucide="eye" class="h-4 w-4"></i>
               </a>
               <button aria-label="Sepete ekle: ${product.name}" class="popular-action-button" type="button" data-cart-add="${product.name}" data-cart-name="${product.name}" data-cart-price="${product.price}" data-cart-img="${product.img}" data-cart-variant="Renk seçimi">
@@ -624,7 +465,7 @@ function renderProducts(type = "trending") {
             </div>
           </div>
           <div class="popular-card-text">
-            <a href="${productHref}" class="popular-card-title">${product.name}</a>
+            <a href="${productUrl(product)}" class="popular-card-title">${product.name}</a>
             <div class="mt-1 flex items-center gap-2 text-sm">
               <span>${product.price}</span>
               ${product.oldPrice ? `<span class="text-muted-foreground line-through">${product.oldPrice}</span>` : ""}
@@ -778,7 +619,7 @@ function updateCategoryDetail(index) {
   document.querySelector("#category-menu-products").innerHTML = menuProducts
     .map(
       (product) => `
-        <a href="#trending" class="category-product flex items-center gap-3 rounded-lg bg-secondary p-2 transition hover:bg-muted">
+        <a href="${productUrl(product)}" class="category-product flex items-center gap-3 rounded-lg bg-secondary p-2 transition hover:bg-muted">
           <img src="${product.img}" alt="${product.name}" class="h-14 w-14 rounded-md object-cover" />
           <span class="min-w-0">
             <span class="block truncate text-sm font-semibold">${product.name}</span>
@@ -879,11 +720,23 @@ function bindCartDrawer() {
   const qtyMinus = drawer.querySelector("[data-cart-qty-minus]");
   const qtyPlus = drawer.querySelector("[data-cart-qty-plus]");
   const removeButton = drawer.querySelector("[data-cart-remove]");
+  drawer.querySelectorAll(".cart-empty-collection").forEach((card, index) => {
+    const product = featuredProducts[index] || featuredProducts[0];
+    if (!product) return;
+    card.href = productUrl(product);
+    const image = card.querySelector("img");
+    const label = card.querySelector("span");
+    if (image) {
+      image.src = product.img;
+      image.alt = product.name;
+    }
+    if (label) label.textContent = product.subcategory || product.category;
+  });
   let cartCount = 0;
   let cartItem = {
-    name: "Echo Pods Neo",
-    price: "14.999 TL",
-    image: "/public/images/pods.jpg",
+    name: featuredProducts[0]?.name || "Ürün",
+    price: featuredProducts[0]?.price || "Fiyat için iletişime geçin",
+    image: featuredProducts[0]?.img || "",
     variant: "Renk seçimi"
   };
 
@@ -1021,9 +874,25 @@ function bindSearchDrawer() {
   const closeTriggers = document.querySelectorAll("[data-search-close]");
   const input = document.querySelector("[data-search-input]");
   const clearButton = document.querySelector("[data-search-clear]");
-  const items = document.querySelectorAll("[data-search-item]");
+  const productsContainer = drawer?.querySelector(".search-products");
   const emptyState = document.querySelector("[data-search-empty]");
   if (!drawer || !toggles.length) return;
+  if (productsContainer) {
+    productsContainer.innerHTML = allProducts
+      .map(
+        (product) => `
+          <a href="${productUrl(product)}" class="search-product-card" data-search-item="${product.name}">
+            <img src="${product.img}" alt="${product.name}" loading="lazy" />
+            <span>
+              <strong>${product.name}</strong>
+              <small>${product.subcategory || product.category}</small>
+            </span>
+          </a>
+        `
+      )
+      .join("");
+  }
+  const items = document.querySelectorAll("[data-search-item]");
 
   const filterItems = () => {
     const term = (input?.value || "").trim().toLocaleLowerCase("tr");
@@ -1079,6 +948,8 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(updateCountdown, 1000);
   bindHeroSlider();
   renderAccessories();
+  renderPopularCategories();
+  renderFooterCatalogLinks();
   renderBoldProducts();
   bindBoldCarousel();
   renderProducts("trending");

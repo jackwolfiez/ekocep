@@ -1,3 +1,5 @@
+import { categories as catalogCategories, products as catalogProducts } from "./products-data.js";
+
 const drawer = document.querySelector("#cart-drawer");
 const cartToggle = document.querySelector("#cart-toggle");
 const closeTriggers = document.querySelectorAll("[data-cart-close]");
@@ -18,96 +20,63 @@ const cartQtyPlus = drawer?.querySelector("[data-cart-qty-plus]");
 const cartRemove = drawer?.querySelector("[data-cart-remove]");
 
 let cartCount = 0;
+const productUrl = (product) => `./product.html?id=${encodeURIComponent(product.id)}`;
+const colorValues = {
+  Siyah: "#111111",
+  Beyaz: "#f7f7f2",
+  Gri: "#8a8f98",
+  Krem: "#e9dcc5",
+  Mavi: "#2563eb",
+  Lacivert: "#1e3a8a",
+  Turuncu: "#f97316",
+  Mor: "#7c3aed",
+  Pembe: "#f4a3b8",
+  Turkuaz: "#14b8a6",
+  Kahverengi: "#8b5e3c",
+  "Rose Gold": "#b76e79",
+  Standart: "#d1d5db"
+};
+const allProducts = catalogProducts.map((product) => ({
+  ...product,
+  img: product.image,
+  colors: [colorValues[product.color] || colorValues.Standart]
+}));
+drawer?.querySelectorAll(".cart-empty-collection").forEach((card, index) => {
+  const product = allProducts[index] || allProducts[0];
+  if (!product) return;
+  card.href = productUrl(product);
+  const image = card.querySelector("img");
+  const label = card.querySelector("span");
+  if (image) {
+    image.src = product.image;
+    image.alt = product.name;
+  }
+  if (label) label.textContent = product.subcategory || product.category;
+});
+const requestedId = new URLSearchParams(window.location.search).get("id");
+const currentProduct = allProducts.find((product) => product.id === requestedId) || allProducts[0];
+const relatedProducts = allProducts
+  .filter((product) => product.id !== currentProduct.id && product.category === currentProduct.category)
+  .concat(allProducts.filter((product) => product.id !== currentProduct.id))
+  .slice(0, 4);
 const productCartItem = {
-  name: "Kablosuz Kulaklık",
-  price: "22.999 TL",
-  image: "https://supreme-realm.myshopify.com/cdn/shop/files/Supreme_Realm_pro-3.jpg?v=1767809480&width=300"
+  name: currentProduct.name,
+  price: currentProduct.price,
+  image: currentProduct.image
 };
 
-const categories = [
-  {
-    label: "Telefon / Tablet",
-    href: "./index.html#shop",
-    children: [
-      { label: "Cep Telefonu", href: "./index.html#shop" },
-      { label: "Tablet", href: "./index.html#shop" }
-    ]
-  },
-  { label: "Teknoloji Ürünleri", href: "./index.html#shop" },
-  { label: "Powerbank", href: "./index.html#shop" },
-  {
-    label: "Şarj Cihazı",
-    href: "./index.html#shop",
-    children: [
-      { label: "Şarj Aleti", href: "./index.html#shop" },
-      { label: "Kablosuz Şarj", href: "./index.html#shop" },
-      { label: "Araç Şarj Aleti", href: "./index.html#shop" }
-    ]
-  },
-  {
-    label: "Kablo",
-    href: "./index.html#shop",
-    children: [
-      { label: "Şarj ve Data Kablosu", href: "./index.html#shop" },
-      { label: "Otg ve Dönüştürücü Kablo", href: "./index.html#shop" },
-      { label: "Hdmi ve Audio Kablosu", href: "./index.html#shop" }
-    ]
-  },
-  {
-    label: "Ses ve Müzik",
-    href: "./index.html#shop",
-    children: [
-      { label: "Bluetooth Kulaklık", href: "./index.html#shop" },
-      { label: "Kulak Üstü Kulaklık", href: "./index.html#shop" },
-      { label: "Hoparlör", href: "./index.html#shop" },
-      { label: "Kulak İçi Kulaklık", href: "./index.html#shop" }
-    ]
-  },
-  {
-    label: "Aksesuar",
-    href: "./index.html#shop",
-    children: [
-      { label: "Monopod - Tripod", href: "./index.html#shop" },
-      { label: "Araç Tutucu", href: "./index.html#shop" },
-      { label: "Telefon - Tablet Standı", href: "./index.html#shop" },
-      { label: "Aydınlatma Lamba", href: "./index.html#shop" },
-      { label: "Diğer Aksesuarlar", href: "./index.html#shop" }
-    ]
-  },
-  {
-    label: "Giyilebilir Teknoloji",
-    href: "./index.html#shop",
-    children: [
-      { label: "Akıllı Saat", href: "./index.html#shop" },
-      { label: "Akıllı Saat Aksesuarları", href: "./index.html#shop" },
-      { label: "Aksiyon Kamera", href: "./index.html#shop" }
-    ]
-  },
-  {
-    label: "Hafıza Ürünleri",
-    href: "./index.html#shop",
-    children: [
-      { label: "Usb Bellek", href: "./index.html#shop" },
-      { label: "Hafıza Kartı", href: "./index.html#shop" }
-    ]
-  },
-  {
-    label: "Telefon Kılıfı",
-    href: "./index.html#shop",
-    children: [
-      { label: "Arka Koruma Kılıf", href: "./index.html#shop" },
-      { label: "Kapaklı Kılıf", href: "./index.html#shop" },
-      { label: "Diğer Kılıflar", href: "./index.html#shop" }
-    ]
+const categoryGroups = catalogCategories.reduce((groups, category) => {
+  const existing = groups.get(category.parent) || { label: category.parent, href: "./index.html#shop", children: [], productIds: [] };
+  existing.productIds.push(...category.productIds);
+  if (category.child) {
+    existing.children.push({ label: category.child, href: "./index.html#shop", productIds: category.productIds });
   }
-];
+  groups.set(category.parent, existing);
+  return groups;
+}, new Map());
+const categories = Array.from(categoryGroups.values());
 
-const menuProducts = [
-  { name: "Echo Pods Neo", price: "14.999 TL", img: "/public/images/pods.jpg" },
-  { name: "Aura Hoparlör", price: "12.999 TL", img: "/public/images/p-pulse.jpg" },
-  { name: "Miras Ses", price: "22.999 TL", img: "/public/images/p-heritage.jpg" },
-  { name: "Noise Guard Elite", price: "31.999 TL", img: "/public/images/p-noise.jpg" }
-];
+const menuProducts = allProducts.slice(0, 4);
 
 function setCartOpen(isOpen) {
   if (!drawer || !cartToggle) return;
@@ -239,9 +208,25 @@ function bindSearchDrawer() {
   const closeTriggers = document.querySelectorAll("[data-search-close]");
   const input = document.querySelector("[data-search-input]");
   const clearButton = document.querySelector("[data-search-clear]");
-  const items = document.querySelectorAll("[data-search-item]");
+  const productsContainer = searchDrawer?.querySelector(".search-products");
   const emptyState = document.querySelector("[data-search-empty]");
   if (!searchDrawer || !toggles.length) return;
+  if (productsContainer) {
+    productsContainer.innerHTML = allProducts
+      .map(
+        (product) => `
+          <a href="${productUrl(product)}" class="search-product-card" data-search-item="${product.name}">
+            <img src="${product.image}" alt="${product.name}" loading="lazy" />
+            <span>
+              <strong>${product.name}</strong>
+              <small>${product.subcategory || product.category}</small>
+            </span>
+          </a>
+        `
+      )
+      .join("");
+  }
+  const items = document.querySelectorAll("[data-search-item]");
 
   const filterItems = () => {
     const term = (input?.value || "").trim().toLocaleLowerCase("tr");
@@ -290,6 +275,127 @@ function bindSearchDrawer() {
   });
 
   filterItems();
+}
+
+function hydrateProductDetail() {
+  document.title = `${currentProduct.name} - Ekocep`;
+  document.querySelector('meta[name="description"]')?.setAttribute("content", currentProduct.description);
+
+  const breadcrumbCurrent = document.querySelector(".product-breadcrumb span:last-child");
+  if (breadcrumbCurrent) breadcrumbCurrent.textContent = currentProduct.name;
+
+  const breadcrumbCategory = document.querySelector(".product-breadcrumb a:nth-of-type(2)");
+  if (breadcrumbCategory) breadcrumbCategory.textContent = currentProduct.subcategory || currentProduct.category;
+
+  const title = document.querySelector(".product-info-panel h1");
+  if (title) title.textContent = currentProduct.name;
+
+  const price = document.querySelector(".product-price");
+  if (price) price.textContent = currentProduct.price;
+
+  const stock = document.querySelector(".product-stock");
+  if (stock) stock.textContent = "Stoktan hızlı teslimat";
+
+  const galleryImages = [currentProduct.image, currentProduct.hoverImg || currentProduct.image].filter(Boolean);
+  const uniqueImages = Array.from(new Set(galleryImages));
+  const thumbList = document.querySelector(".product-thumb-list");
+  if (thumbList) {
+    thumbList.innerHTML = uniqueImages
+      .map(
+        (image, index) => `
+          <button type="button" class="product-thumb ${index === 0 ? "is-active" : ""}" data-product-image="${image}" aria-label="Görsel ${index + 1}">
+            <img src="${image}" alt="" loading="lazy" />
+          </button>
+        `
+      )
+      .join("");
+  }
+
+  const mainImage = document.querySelector("#product-main-image");
+  if (mainImage) {
+    mainImage.src = currentProduct.image;
+    mainImage.alt = currentProduct.name;
+  }
+
+  document.querySelectorAll("[data-selected-color], [data-selected-color-copy]").forEach((output) => {
+    output.textContent = currentProduct.color || "Standart";
+  });
+  document.querySelectorAll("[data-selected-material], [data-selected-material-copy]").forEach((output) => {
+    output.textContent = "Standart";
+  });
+
+  const swatchRow = document.querySelector(".product-swatch-row");
+  if (swatchRow) {
+    const swatch = currentProduct.colors?.[0] || colorValues.Standart;
+    swatchRow.innerHTML = `<button type="button" class="product-swatch is-active" data-option-group="color" data-option-value="${currentProduct.color || "Standart"}" style="--swatch: ${swatch}" aria-label="${currentProduct.color || "Standart"}"></button>`;
+  }
+
+  const materialRow = document.querySelector(".product-material-row");
+  if (materialRow) {
+    materialRow.innerHTML = `<button type="button" class="product-material is-active" data-option-group="material" data-option-value="Standart">Standart</button>`;
+  }
+
+  const storeCardImage = document.querySelector(".product-store-card img");
+  if (storeCardImage) storeCardImage.src = currentProduct.image;
+  const storeCardName = document.querySelector(".product-store-card .font-semibold");
+  if (storeCardName) storeCardName.textContent = currentProduct.name;
+
+  const performanceText = document.querySelector(".product-accordions details:nth-of-type(2) p");
+  if (performanceText) performanceText.textContent = currentProduct.description;
+
+  const featureImage = document.querySelector(".product-feature-grid img");
+  if (featureImage) {
+    featureImage.src = currentProduct.image;
+    featureImage.alt = `${currentProduct.name} detay`;
+  }
+  const featureTitle = document.querySelector(".product-feature-grid h2");
+  if (featureTitle) featureTitle.textContent = currentProduct.name;
+  const featureList = document.querySelector(".product-feature-grid ul");
+  if (featureList) {
+    featureList.innerHTML = `
+      <li>Kategori: ${currentProduct.subcategory || currentProduct.category}</li>
+      <li>Renk: ${currentProduct.color || "Standart"}</li>
+      <li>Ekocep vitrininde güncel ürün listesine dahil edildi</li>
+      <li>Kaynak ürün bilgileri Nettech Store sayfasından alınmıştır</li>
+    `;
+  }
+
+  const relatedGrid = document.querySelector(".related-products-grid");
+  if (relatedGrid) {
+    relatedGrid.innerHTML = relatedProducts
+      .map(
+        (product) => `
+          <article class="related-product-card">
+            <a href="${productUrl(product)}" class="related-product-media" aria-label="${product.name}">
+              <img src="${product.image}" alt="${product.name}" loading="lazy" />
+            </a>
+            <div class="related-product-body">
+              <a href="${productUrl(product)}">${product.name}</a>
+              <span>${product.price}</span>
+            </div>
+          </article>
+        `
+      )
+      .join("");
+  }
+}
+
+function renderFooterCatalogLinks() {
+  const columns = document.querySelectorAll(".site-footer-links > div");
+  const collectionColumn = columns[2];
+  const bestsellerColumn = columns[3];
+  if (collectionColumn) {
+    collectionColumn.innerHTML = `
+      <h3>Koleksiyonlar</h3>
+      ${catalogCategories.slice(0, 5).map((category) => `<a href="./index.html#shop">${category.child || category.parent}</a>`).join("")}
+    `;
+  }
+  if (bestsellerColumn) {
+    bestsellerColumn.innerHTML = `
+      <h3>Çok Satanlar</h3>
+      ${allProducts.slice(0, 5).map((product) => `<a href="${productUrl(product)}">${product.name}</a>`).join("")}
+    `;
+  }
 }
 
 function bindGallery() {
@@ -478,6 +584,8 @@ function bindProductCategoryMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  hydrateProductDetail();
+  renderFooterCatalogLinks();
   bindGallery();
   bindOptions();
   bindQuantity();
