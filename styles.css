@@ -325,28 +325,27 @@ img {
   position: relative;
   overflow: hidden;
   border-radius: 18px;
-  background: #f4f6f8;
+  background: #ffffff;
 }
 
 .popular-card-image-wrap {
   position: relative;
   display: block;
   overflow: hidden;
+  aspect-ratio: 1 / 0.88;
 }
 
 .popular-card-image-wrap::after {
-  content: "";
-  display: block;
-  padding-top: 116%;
+  display: none;
 }
 
 .popular-card-image,
 .popular-card-hover-image {
   position: absolute;
-  inset: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  inset: 8%;
+  height: 84%;
+  width: 84%;
+  object-fit: contain;
   transition: opacity 0.45s ease, transform 0.55s ease;
 }
 
