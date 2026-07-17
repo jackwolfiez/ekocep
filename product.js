@@ -160,6 +160,10 @@ function compactValues(values) {
   return values.filter(Boolean).slice(0, 4).join(", ");
 }
 
+function descriptionParagraphs(...groups) {
+  return groups.map((group) => group.filter(Boolean).join(" ")).filter(Boolean);
+}
+
 function buildProductDescription(product, specs = parseProductSpecs(product)) {
   const category = product.subcategory || product.category || "teknoloji ürünü";
   const nameLower = product.name.toLocaleLowerCase("tr");
@@ -195,40 +199,56 @@ function buildProductDescription(product, specs = parseProductSpecs(product)) {
   const finish = compactValues([color && `${color.toLocaleLowerCase("tr")} renk`, material && `${material.toLocaleLowerCase("tr")} gövde`]);
 
   if (nameLower.includes("powerbank")) {
-    return [
-      `${product.name}, telefonunu ve günlük mobil cihazlarını yanında priz aramadan kullanmak isteyenler için tasarlanmış taşınabilir bir güç çözümüdür.`,
-      battery && `${battery} kapasitesi, gün içinde şarj ihtiyacı doğduğunda pratik bir yedek enerji alanı sunar.`,
-      compactValues([power, cable]) && `${compactValues([power, cable])} özellikleri sayesinde farklı cihaz ve kablo senaryolarına uyum sağlar.`,
-      finish && `${finish} ile ürün hem teknik hem de görsel olarak sade, modern bir kullanım hissi verir.`,
-      compactValues([warranty && `${warranty} garanti`, status]) && `${compactValues([warranty && `${warranty} garanti`, status])} bilgisiyle ürünün temel satış ve kullanım koşulları netleşir.`
-    ].filter(Boolean).join(" ");
+    return descriptionParagraphs(
+      [
+        `${product.name}, telefonunu ve günlük mobil cihazlarını yanında priz aramadan kullanmak isteyenler için tasarlanmış taşınabilir bir güç çözümüdür.`,
+        battery && `${battery} kapasitesi, gün içinde şarj ihtiyacı doğduğunda pratik bir yedek enerji alanı sunar.`
+      ],
+      [
+        compactValues([power, cable]) && `${compactValues([power, cable])} özellikleri sayesinde farklı cihaz ve kablo senaryolarına uyum sağlar.`,
+        finish && `${finish} ile ürün hem teknik hem de görsel olarak sade, modern bir kullanım hissi verir.`,
+        compactValues([warranty && `${warranty} garanti`, status]) && `${compactValues([warranty && `${warranty} garanti`, status])} bilgisiyle ürünün temel satış ve kullanım koşulları netleşir.`
+      ]
+    );
   }
 
   if (nameLower.includes("kulaklık") || nameLower.includes("hoparlör")) {
-    return [
-      `${product.name}, ses ve müzik deneyimini günlük kullanımda daha pratik hale getirmek için seçilmiş bir modeldir.`,
-      audio && `${audio} özellikleri; görüşme, müzik dinleme ve medya kontrolü gibi temel ihtiyaçlarda kullanıcıya esneklik sağlar.`,
-      connection && `${connection} bağlantı yapısı ürünün cihazlarla nasıl kullanılacağını netleştirir.`,
-      finish && `${finish} tasarım tarafında ürüne tamamlayıcı bir karakter kazandırır.`,
-      compactValues([warranty && `${warranty} garanti`, status]) && `${compactValues([warranty && `${warranty} garanti`, status])} bilgisi satın alma öncesi önemli detayları tamamlar.`
-    ].filter(Boolean).join(" ");
+    return descriptionParagraphs(
+      [
+        `${product.name}, ses ve müzik deneyimini günlük kullanımda daha pratik hale getirmek için seçilmiş bir modeldir.`,
+        audio && `${audio} özellikleri; görüşme, müzik dinleme ve medya kontrolü gibi temel ihtiyaçlarda kullanıcıya esneklik sağlar.`
+      ],
+      [
+        connection && `${connection} bağlantı yapısı ürünün cihazlarla nasıl kullanılacağını netleştirir.`,
+        finish && `${finish} tasarım tarafında ürüne tamamlayıcı bir karakter kazandırır.`,
+        compactValues([warranty && `${warranty} garanti`, status]) && `${compactValues([warranty && `${warranty} garanti`, status])} bilgisi satın alma öncesi önemli detayları tamamlar.`
+      ]
+    );
   }
 
   if (nameLower.includes("şarj") || nameLower.includes("kablo")) {
-    return [
-      `${product.name}, günlük cihaz kullanımında şarj ve bağlantı ihtiyacını düzenli şekilde karşılamak için tercih edilebilecek tamamlayıcı bir aksesuardır.`,
-      compactValues([power, cable, usage]) && `${compactValues([power, cable, usage])} bilgileri ürünün hangi kullanım senaryolarına daha uygun olduğunu gösterir.`,
-      finish && `${finish} ürünün dayanıklılık ve görünüm beklentilerini destekler.`,
-      compactValues([warranty && `${warranty} garanti`, status]) && `${compactValues([warranty && `${warranty} garanti`, status])} detayı da tercih sürecini kolaylaştırır.`
-    ].filter(Boolean).join(" ");
+    return descriptionParagraphs(
+      [
+        `${product.name}, günlük cihaz kullanımında şarj ve bağlantı ihtiyacını düzenli şekilde karşılamak için tercih edilebilecek tamamlayıcı bir aksesuardır.`,
+        compactValues([power, cable, usage]) && `${compactValues([power, cable, usage])} bilgileri ürünün hangi kullanım senaryolarına daha uygun olduğunu gösterir.`
+      ],
+      [
+        finish && `${finish} ürünün dayanıklılık ve görünüm beklentilerini destekler.`,
+        compactValues([warranty && `${warranty} garanti`, status]) && `${compactValues([warranty && `${warranty} garanti`, status])} detayı da tercih sürecini kolaylaştırır.`
+      ]
+    );
   }
 
-  return [
-    `${product.name}, ${category.toLocaleLowerCase("tr")} kategorisinde işlevi ve teknik özellikleri net biçimde tanımlanmış bir üründür.`,
-    compactValues([finish, connection, usage]) && `${compactValues([finish, connection, usage])} bilgileri ürünün kullanım karakterini ortaya koyar.`,
-    compactValues([audio, battery && `${battery} pil kapasitesi`, power, cable]) && `Öne çıkan teknik detaylar arasında ${compactValues([audio, battery && `${battery} pil kapasitesi`, power, cable])} bulunur.`,
-    compactValues([warranty && `${warranty} garanti`, status]) && `${compactValues([warranty && `${warranty} garanti`, status])} bilgisiyle ürünün satış sonrası beklentileri daha anlaşılır hale gelir.`
-  ].filter(Boolean).join(" ");
+  return descriptionParagraphs(
+    [
+      `${product.name}, ${category.toLocaleLowerCase("tr")} kategorisinde işlevi ve teknik özellikleri net biçimde tanımlanmış bir üründür.`,
+      compactValues([finish, connection, usage]) && `${compactValues([finish, connection, usage])} bilgileri ürünün kullanım karakterini ortaya koyar.`
+    ],
+    [
+      compactValues([audio, battery && `${battery} pil kapasitesi`, power, cable]) && `Öne çıkan teknik detaylar arasında ${compactValues([audio, battery && `${battery} pil kapasitesi`, power, cable])} bulunur.`,
+      compactValues([warranty && `${warranty} garanti`, status]) && `${compactValues([warranty && `${warranty} garanti`, status])} bilgisiyle ürünün satış sonrası beklentileri daha anlaşılır hale gelir.`
+    ]
+  );
 }
 
 const categoryGroups = catalogCategories.reduce((groups, category) => {
@@ -510,7 +530,11 @@ function hydrateProductDetail() {
   if (featureTitle) featureTitle.textContent = "Ürün Özellikleri";
   const specs = parseProductSpecs(currentProduct);
   const generatedDescription = document.querySelector(".product-generated-description");
-  if (generatedDescription) generatedDescription.textContent = buildProductDescription(currentProduct, specs);
+  if (generatedDescription) {
+    generatedDescription.innerHTML = buildProductDescription(currentProduct, specs)
+      .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+      .join("");
+  }
   const featureList = document.querySelector(".product-feature-grid ul");
   if (featureList) {
     featureList.innerHTML = `

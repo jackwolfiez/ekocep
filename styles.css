@@ -2158,6 +2158,14 @@ img {
   line-height: 1.72;
 }
 
+.product-generated-description p {
+  margin: 0;
+}
+
+.product-generated-description p + p {
+  margin-top: 0.85rem;
+}
+
 .product-feature-band {
   margin-top: 3.5rem;
   background: #f4f6f8;
