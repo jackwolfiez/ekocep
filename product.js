@@ -64,6 +64,57 @@ const productCartItem = {
   price: currentProduct.price,
   image: currentProduct.image
 };
+const footerMenuColumns = [
+  {
+    title: "Kurumsal",
+    links: [
+      { label: "Hakkımızda", href: "./about.html" },
+      { label: "Blog", href: "./blog.html" },
+      { label: "İletişim", href: "./contact.html" }
+    ]
+  },
+  {
+    title: "Yardım ve Destek",
+    links: [
+      { label: "Sıkça Sorulan Sorular", href: "./faq.html" },
+      { label: "Sipariş Takibi", href: "./order-tracking.html" },
+      { label: "Kargo ve Teslimat", href: "./shipping-delivery.html" },
+      { label: "İade ve Değişim", href: "./returns-exchanges.html" },
+      { label: "Bize Ulaşın", href: "./contact.html" }
+    ]
+  },
+  {
+    title: "Alışveriş Rehberi",
+    links: [
+      { label: "Nasıl Sipariş Verilir?", href: "./how-to-order.html" },
+      { label: "Ödeme Seçenekleri", href: "./payment-options.html" },
+      { label: "Güvenli Alışveriş", href: "./secure-shopping.html" },
+      { label: "Üyelik İşlemleri", href: "./membership.html" },
+      { label: "Kampanyalar", href: "./campaigns.html" }
+    ]
+  },
+  {
+    title: "Yasal Bilgilendirme",
+    links: [
+      { label: "Gizlilik Politikası", href: "./privacy-policy.html" },
+      { label: "KVKK Aydınlatma Metni", href: "./kvkk.html" },
+      { label: "Mesafeli Satış Sözleşmesi", href: "./distance-sales.html" },
+      { label: "Üyelik Sözleşmesi", href: "./membership-agreement.html" },
+      { label: "Çerez Politikası", href: "./cookie-policy.html" },
+      { label: "Hesap ve Veri Silme Talebi", href: "./data-deletion.html" }
+    ]
+  },
+  {
+    title: "Popüler Kategoriler",
+    links: [
+      { label: "Telefon Aksesuarları", href: "./index.html#shop" },
+      { label: "Şarj Cihazları", href: "./index.html#shop" },
+      { label: "Kulaklıklar", href: "./index.html#shop" },
+      { label: "Kablolar", href: "./index.html#shop" },
+      { label: "Akıllı Saat Aksesuarları", href: "./index.html#shop" }
+    ]
+  }
+];
 const specLabels = [
   "Uyumlu Modeller",
   "Ürün Ağırlığı",
@@ -580,21 +631,19 @@ function hydrateProductDetail() {
 }
 
 function renderFooterCatalogLinks() {
-  const columns = document.querySelectorAll(".site-footer-links > div");
-  const collectionColumn = columns[2];
-  const bestsellerColumn = columns[3];
-  if (collectionColumn) {
-    collectionColumn.innerHTML = `
-      <h3>Koleksiyonlar</h3>
-      ${catalogCategories.slice(0, 5).map((category) => `<a href="./index.html#shop">${category.child || category.parent}</a>`).join("")}
-    `;
-  }
-  if (bestsellerColumn) {
-    bestsellerColumn.innerHTML = `
-      <h3>Çok Satanlar</h3>
-      ${allProducts.slice(0, 5).map((product) => `<a href="${productUrl(product)}">${product.name}</a>`).join("")}
-    `;
-  }
+  const container = document.querySelector(".site-footer-links");
+  if (!container) return;
+
+  container.innerHTML = footerMenuColumns
+    .map(
+      (column) => `
+        <div>
+          <h3>${column.title}</h3>
+          ${column.links.map((link) => `<a href="${link.href}">${link.label}</a>`).join("")}
+        </div>
+      `
+    )
+    .join("");
 }
 
 function bindGallery() {

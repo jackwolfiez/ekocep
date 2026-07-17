@@ -92,40 +92,40 @@ const footerMenuColumns = [
   {
     title: "Kurumsal",
     links: [
-      { label: "Hakkımızda", href: "#top" },
-      { label: "Blog", href: "#features" },
+      { label: "Hakkımızda", href: "./about.html" },
+      { label: "Blog", href: "./blog.html" },
       { label: "İletişim", href: "./contact.html" }
     ]
   },
   {
     title: "Yardım ve Destek",
     links: [
-      { label: "Sıkça Sorulan Sorular", href: "#contact" },
-      { label: "Sipariş Takibi", href: "#contact" },
-      { label: "Kargo ve Teslimat", href: "#contact" },
-      { label: "İade ve Değişim", href: "./refund-policy.html" },
+      { label: "Sıkça Sorulan Sorular", href: "./faq.html" },
+      { label: "Sipariş Takibi", href: "./order-tracking.html" },
+      { label: "Kargo ve Teslimat", href: "./shipping-delivery.html" },
+      { label: "İade ve Değişim", href: "./returns-exchanges.html" },
       { label: "Bize Ulaşın", href: "./contact.html" }
     ]
   },
   {
     title: "Alışveriş Rehberi",
     links: [
-      { label: "Nasıl Sipariş Verilir?", href: "#shop" },
-      { label: "Ödeme Seçenekleri", href: "#shop" },
-      { label: "Güvenli Alışveriş", href: "#shop" },
-      { label: "Üyelik İşlemleri", href: "#shop" },
-      { label: "Kampanyalar", href: "#trending" }
+      { label: "Nasıl Sipariş Verilir?", href: "./how-to-order.html" },
+      { label: "Ödeme Seçenekleri", href: "./payment-options.html" },
+      { label: "Güvenli Alışveriş", href: "./secure-shopping.html" },
+      { label: "Üyelik İşlemleri", href: "./membership.html" },
+      { label: "Kampanyalar", href: "./campaigns.html" }
     ]
   },
   {
     title: "Yasal Bilgilendirme",
     links: [
       { label: "Gizlilik Politikası", href: "./privacy-policy.html" },
-      { label: "KVKK Aydınlatma Metni", href: "./privacy-policy.html" },
-      { label: "Mesafeli Satış Sözleşmesi", href: "./refund-policy.html" },
-      { label: "Üyelik Sözleşmesi", href: "./privacy-policy.html" },
-      { label: "Çerez Politikası", href: "./privacy-policy.html" },
-      { label: "Hesap ve Veri Silme Talebi", href: "./contact.html" }
+      { label: "KVKK Aydınlatma Metni", href: "./kvkk.html" },
+      { label: "Mesafeli Satış Sözleşmesi", href: "./distance-sales.html" },
+      { label: "Üyelik Sözleşmesi", href: "./membership-agreement.html" },
+      { label: "Çerez Politikası", href: "./cookie-policy.html" },
+      { label: "Hesap ve Veri Silme Talebi", href: "./data-deletion.html" }
     ]
   },
   {

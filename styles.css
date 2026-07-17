@@ -915,6 +915,180 @@ img {
   text-transform: uppercase;
 }
 
+.content-page {
+  width: min(100% - 2rem, 1180px);
+}
+
+.content-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+}
+
+.content-info-card,
+.content-blog-card,
+.content-empty {
+  display: grid;
+  gap: 0.8rem;
+  border: 1px solid #e5e9ef;
+  border-radius: 1rem;
+  background: #ffffff;
+  padding: clamp(1.1rem, 3vw, 1.5rem);
+}
+
+.content-info-card svg,
+.content-empty svg {
+  color: #b42318;
+}
+
+.content-info-card h2,
+.content-blog-card h2,
+.content-empty h2 {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 750;
+}
+
+.content-info-card p,
+.content-blog-card p,
+.content-empty p,
+.content-faq p {
+  margin: 0;
+  color: rgb(21 25 34 / 68%);
+  line-height: 1.7;
+}
+
+.content-blog-card span {
+  color: #b42318;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.content-blog-card a,
+.content-empty a {
+  color: #151922;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.content-steps {
+  display: grid;
+  gap: 0.9rem;
+  margin: clamp(2rem, 5vw, 3.5rem) 0 0;
+  padding: 0;
+  counter-reset: step;
+  list-style: none;
+}
+
+.content-steps li {
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  border: 1px solid #e5e9ef;
+  border-radius: 1rem;
+  padding: 1rem;
+  line-height: 1.65;
+}
+
+.content-steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border-radius: 999px;
+  background: #151922;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.content-faq {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+}
+
+.content-faq details {
+  border: 1px solid #e5e9ef;
+  border-radius: 1rem;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.content-faq summary {
+  cursor: pointer;
+  font-weight: 800;
+  list-style: none;
+}
+
+.content-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.content-faq p {
+  margin-top: 0.75rem;
+}
+
+.content-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  border-radius: 1rem;
+  background: #f4f6f8;
+  padding: clamp(1.25rem, 4vw, 2rem);
+}
+
+.content-form label {
+  display: grid;
+  gap: 0.55rem;
+  font-size: 0.85rem;
+  font-weight: 750;
+}
+
+.content-form label:has(textarea),
+.content-form button {
+  grid-column: 1 / -1;
+}
+
+.content-form input,
+.content-form textarea {
+  width: 100%;
+  border: 1px solid #e5e9ef;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  padding: 0.9rem;
+  color: #151922;
+  font: inherit;
+  outline: none;
+}
+
+.content-form button {
+  justify-self: start;
+  border: 0;
+  border-radius: 999px;
+  background: #151922;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.95rem 1.6rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.content-empty {
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  background: #f4f6f8;
+}
+
 .cart-drawer {
   position: fixed;
   inset: 0;
@@ -1649,6 +1823,10 @@ img {
 @media (max-width: 1024px) {
   .site-footer-news {
     grid-template-columns: 1fr;
+  }
+
+  .content-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .site-footer-links {
@@ -2445,6 +2623,15 @@ img {
     font-size: clamp(2rem, 10vw, 3.2rem);
   }
 
+  .content-card-grid,
+  .content-form {
+    grid-template-columns: 1fr;
+  }
+
+  .content-form button {
+    width: 100%;
+  }
+
   .site-footer-links {
     grid-template-columns: 1fr;
   }
@@ -2475,10 +2662,10 @@ img {
     width: min(100% - 1rem, 1080px);
   }
 
-  .policy-content section,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
+.policy-content section,
+.contact-grid {
+  grid-template-columns: 1fr;
+}
 
   .product-page-shell {
     padding-bottom: 8.5rem;

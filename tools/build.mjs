@@ -3,15 +3,13 @@ import path from "node:path";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
+const rootEntries = await fs.readdir(root);
 const files = [
-  "index.html",
-  "product.html",
-  "privacy-policy.html",
-  "contact.html",
-  "refund-policy.html",
+  ...rootEntries.filter((file) => file.endsWith(".html")),
   "styles.css",
   "script.js",
   "product.js",
+  "content-page.js",
   "products-data.js"
 ];
 

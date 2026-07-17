@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ekocep iletişim sayfası." />
+    <meta name="description" content="Ekocep Bursa Nilüfer iletişim bilgileri ve kullanıcı dostu iletişim formu." />
     <title>İletişim - Ekocep</title>
     <link rel="icon" href="/public/favicon.ico" />
     <link rel="stylesheet" href="./styles.css" />
@@ -11,44 +11,72 @@
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body class="bg-background text-foreground antialiased">
+
     <header class="policy-header">
       <a href="./index.html" class="policy-logo">Ekocep</a>
       <nav>
         <a href="./index.html">Ana Sayfa</a>
         <a href="./index.html#shop">Mağaza</a>
-        <a href="./privacy-policy.html">Gizlilik</a>
+        <a href="./contact.html">İletişim</a>
       </nav>
     </header>
-    <main class="policy-page">
-      <div class="policy-hero">
-        <p>Destek</p>
-        <h1>İletişim</h1>
-        <span>Her türlü soru ve destek talebi için bize ulaş.</span>
-      </div>
-      <div class="contact-grid">
-        <section class="contact-card">
-          <i data-lucide="mail" class="h-6 w-6"></i>
-          <h2>E-posta</h2>
-          <a href="mailto:info@example.com">info@example.com</a>
-        </section>
-        <section class="contact-card">
-          <i data-lucide="phone" class="h-6 w-6"></i>
-          <h2>Telefon</h2>
-          <a href="tel:+902125550123">+90 (212) 555 01 23</a>
-        </section>
-        <section class="contact-card">
-          <i data-lucide="map-pin" class="h-6 w-6"></i>
-          <h2>Adres</h2>
-          <p>İstanbul, Türkiye</p>
-        </section>
-      </div>
-      <form class="contact-form">
-        <label>Ad Soyad<input type="text" placeholder="Adını yaz" /></label>
-        <label>E-posta<input type="email" placeholder="E-posta adresin" /></label>
-        <label>Mesaj<textarea rows="5" placeholder="Mesajını yaz"></textarea></label>
-        <button type="button">Gönder</button>
-      </form>
+    <main class="policy-page content-page" data-content-page="contact">
+
+    <div class="policy-hero">
+      <p>Destek</p>
+      <h1>İletişim</h1>
+      <span>Sipariş, ürün, iade veya teknik destek konularında Ekocep destek ekibine ulaşabilirsin.</span>
+    </div>
+    <div class="content-card-grid"><section class="content-info-card"><i data-lucide="mail" class="h-5 w-5"></i><h2>E-posta</h2><p>info@ekocep.com</p></section><section class="content-info-card"><i data-lucide="phone" class="h-5 w-5"></i><h2>Telefon</h2><p>+90 (224) 555 16 16</p></section><section class="content-info-card"><i data-lucide="map-pin" class="h-5 w-5"></i><h2>Adres</h2><p>Ekocep Ltd. Şti., Nilüfer / Bursa</p></section></div>
+    
+    
+    
+    
+    <form class="content-form">
+      <label for="contact-name">Ad Soyad<input id="contact-name" type="text" placeholder="Adın ve soyadın" /></label>
+      <label for="contact-email">E-posta<input id="contact-email" type="email" placeholder="info@ornek.com" /></label>
+      <label for="contact-topic">Konu<input id="contact-topic" type="text" placeholder="Sipariş, iade, ürün veya destek" /></label>
+      <label for="contact-message">Mesaj<textarea id="contact-message" rows="5" placeholder="Mesajını yaz"></textarea></label>
+      <button type="button">Gönder</button>
+    </form>
+  
+    
+    
+  
     </main>
-    <script>lucide.createIcons();</script>
+
+    <footer id="contact" class="site-footer">
+      <div class="site-footer-inner">
+        <div class="site-footer-news">
+          <div>
+            <p class="site-footer-kicker">HABERLERE KAYDOL, %10 İNDİRİM KAZAN</p>
+            <h2>Ekocep fırsatları ve yeni ürünleri kaçırma.</h2>
+          </div>
+          <form class="site-footer-form">
+            <label for="content-footer-email">E-posta adresin</label>
+            <div>
+              <input id="content-footer-email" type="email" placeholder="E-posta adresini gir" />
+              <button type="button" aria-label="Kaydol">
+                <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="site-footer-main">
+          <div class="site-footer-links">
+            <div><h3>Kurumsal</h3><a href="./about.html">Hakkımızda</a><a href="./blog.html">Blog</a><a href="./contact.html">İletişim</a></div>
+            <div><h3>Yardım ve Destek</h3><a href="./faq.html">Sıkça Sorulan Sorular</a><a href="./order-tracking.html">Sipariş Takibi</a><a href="./shipping-delivery.html">Kargo ve Teslimat</a><a href="./returns-exchanges.html">İade ve Değişim</a><a href="./contact.html">Bize Ulaşın</a></div>
+            <div><h3>Alışveriş Rehberi</h3><a href="./how-to-order.html">Nasıl Sipariş Verilir?</a><a href="./payment-options.html">Ödeme Seçenekleri</a><a href="./secure-shopping.html">Güvenli Alışveriş</a><a href="./membership.html">Üyelik İşlemleri</a><a href="./campaigns.html">Kampanyalar</a></div>
+            <div><h3>Yasal Bilgilendirme</h3><a href="./privacy-policy.html">Gizlilik Politikası</a><a href="./kvkk.html">KVKK Aydınlatma Metni</a><a href="./distance-sales.html">Mesafeli Satış Sözleşmesi</a><a href="./membership-agreement.html">Üyelik Sözleşmesi</a><a href="./cookie-policy.html">Çerez Politikası</a><a href="./data-deletion.html">Hesap ve Veri Silme Talebi</a></div>
+            <div><h3>Popüler Kategoriler</h3><a href="./index.html#shop">Telefon Aksesuarları</a><a href="./index.html#shop">Şarj Cihazları</a><a href="./index.html#shop">Kulaklıklar</a><a href="./index.html#shop">Kablolar</a><a href="./index.html#shop">Akıllı Saat Aksesuarları</a></div>
+          </div>
+        </div>
+        <div class="site-footer-bottom">
+          <span>&copy; 2026 Ekocep. Tüm hakları saklıdır.</span>
+          <a href="#top">Yukarı dön <i data-lucide="arrow-up" class="h-3 w-3"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./content-page.js"></script>
   </body>
 </html>

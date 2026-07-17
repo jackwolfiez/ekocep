@@ -1,17 +1,7 @@
-<!doctype html>
-<html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ekocep gizlilik politikası ve kişisel verilerin işlenmesine ilişkin profesyonel taslak metin." />
-    <title>Gizlilik Politikası - Ekocep</title>
-    <link rel="icon" href="/public/favicon.ico" />
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-  </head>
-  <body class="bg-background text-foreground antialiased">
+import fs from "node:fs/promises";
+import { contentPages, renderPageBody } from "../content-page.js";
 
+const header = `
     <header class="policy-header">
       <a href="./index.html" class="policy-logo">Ekocep</a>
       <nav>
@@ -19,24 +9,9 @@
         <a href="./index.html#shop">Mağaza</a>
         <a href="./contact.html">İletişim</a>
       </nav>
-    </header>
-    <main class="policy-page content-page" data-content-page="privacy-policy">
+    </header>`;
 
-    <div class="policy-hero">
-      <p>Yasal Bilgilendirme</p>
-      <h1>Gizlilik Politikası</h1>
-      <span>Bu metin Ekocep.com için hazırlanmış profesyonel taslak niteliğindedir; nihai hukuki kontrol için düzenlenebilir.</span>
-    </div>
-    
-    
-    
-    
-    
-    <article class="policy-content"><section><h2>Toplanan bilgiler</h2><p>Ad, soyad, e-posta, telefon, teslimat adresi, sipariş bilgisi ve destek yazışmaları hizmetin sağlanması için işlenebilir.</p></section><section><h2>Kullanım amaçları</h2><p>Veriler sipariş hazırlama, ödeme, teslimat, müşteri desteği, yasal yükümlülükler ve alışveriş deneyimini iyileştirme amaçlarıyla kullanılabilir.</p></section><section><h2>Paylaşım</h2><p>Kişisel veriler ödeme sağlayıcısı, kargo firması, teknik hizmet sağlayıcılar ve yasal mercilerle yalnızca gerekli ölçüde paylaşılabilir.</p></section><section><h2>Haklarınız</h2><p>Kişisel verilerinize erişme, düzeltme, silme veya işlenmesine itiraz etme talepleriniz için Ekocep ile iletişime geçebilirsiniz.</p></section></article>
-    
-  
-    </main>
-
+const footer = `
     <footer id="contact" class="site-footer">
       <div class="site-footer-inner">
         <div class="site-footer-news">
@@ -68,7 +43,32 @@
           <a href="#top">Yukarı dön <i data-lucide="arrow-up" class="h-3 w-3"></i></a>
         </div>
       </div>
-    </footer>
+    </footer>`;
+
+const pageHtml = (key, page) => `<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="${page.description}" />
+    <title>${page.title} - Ekocep</title>
+    <link rel="icon" href="/public/favicon.ico" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="bg-background text-foreground antialiased">
+${header}
+    <main class="policy-page content-page" data-content-page="${key}">
+${renderPageBody(page)}
+    </main>
+${footer}
     <script type="module" src="./content-page.js"></script>
   </body>
 </html>
+`;
+
+for (const [key, page] of Object.entries(contentPages)) {
+  await fs.writeFile(new URL(`../${page.path}`, import.meta.url), pageHtml(key, page), "utf8");
+  console.log(`Wrote ${page.path}`);
+}
