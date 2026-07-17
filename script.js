@@ -50,8 +50,8 @@ const heroSlides = [
     copy: "Günlük kullanım, ofis, araç ve mobil yaşam için seçilmiş güncel teknoloji ürünleri.",
     cta: "ÜRÜNLERİ İNCELE",
     ctaHref: "#shop",
-    image: featuredProducts[0]?.img || "/public/images/hero.jpg",
-    alt: featuredProducts[0]?.name || "Ekocep teknoloji ürünleri",
+    image: "/public/images/hero-lifestyle-tech.png",
+    alt: "Ekocep teknoloji ürünleri lifestyle görseli",
     products: featuredProducts.slice(0, 2)
   },
   {
@@ -59,8 +59,8 @@ const heroSlides = [
     copy: "Powerbank, adaptör ve kablosuz şarj seçenekleriyle cihazların hazır kalsın.",
     cta: "ŞARJ ÜRÜNLERİ",
     ctaHref: "#shop",
-    image: allProducts.find((product) => product.category === "Powerbank")?.img || featuredProducts[1]?.img,
-    alt: "Ekocep powerbank ve şarj ürünleri",
+    image: "/public/images/hero-lifestyle-power.png",
+    alt: "Ekocep powerbank ve şarj ürünleri lifestyle görseli",
     products: allProducts.filter((product) => product.category === "Powerbank").slice(0, 2)
   },
   {
@@ -68,8 +68,8 @@ const heroSlides = [
     copy: "Kulaklık, hoparlör ve mobil aksesuar kategorilerinde yeni ürünleri keşfet.",
     cta: "POPÜLER ÜRÜNLER",
     ctaHref: "#trending",
-    image: allProducts.find((product) => product.category === "Ses ve Müzik")?.img || featuredProducts[2]?.img,
-    alt: "Ekocep ses ve müzik ürünleri",
+    image: "/public/images/hero-lifestyle-audio.png",
+    alt: "Ekocep ses ve müzik ürünleri lifestyle görseli",
     products: allProducts.filter((product) => product.category === "Ses ve Müzik").slice(0, 2)
   }
 ];
