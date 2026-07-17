@@ -296,7 +296,7 @@ function hydrateProductDetail() {
   const stock = document.querySelector(".product-stock");
   if (stock) stock.textContent = "Stoktan hızlı teslimat";
 
-  const galleryImages = [currentProduct.image, currentProduct.hoverImg || currentProduct.image].filter(Boolean);
+  const galleryImages = [currentProduct.image, ...(currentProduct.images || []), currentProduct.hoverImg].filter(Boolean);
   const uniqueImages = Array.from(new Set(galleryImages));
   const thumbList = document.querySelector(".product-thumb-list");
   if (thumbList) {

@@ -16,25 +16,24 @@ const extensionFrom = (url, contentType) => {
   return ".jpg";
 };
 
-const remoteImageUrls = Array.from(
-  new Set(
-    products
-      .flatMap((product) => [product.image, product.hoverImg])
-      .filter((url) => typeof url === "string" && /^https?:\/\//.test(url))
-  )
+const remoteImages = products.flatMap((product) =>
+  Array.from(new Set([product.image, product.hoverImg, ...(product.images || [])]))
+    .filter((url) => typeof url === "string" && /^https?:\/\//.test(url))
+    .map((url, imageIndex) => ({ product, url, imageIndex }))
 );
 
+await fs.rm(imageDir, { recursive: true, force: true });
 await fs.mkdir(imageDir, { recursive: true });
 
 const replacements = new Map();
-for (const [index, url] of remoteImageUrls.entries()) {
-  const product = products.find((item) => item.image === url || item.hoverImg === url);
+for (const { product, url, imageIndex } of remoteImages) {
+  if (replacements.has(url)) continue;
   const response = await fetch(url);
   if (!response.ok) throw new Error(`Image download failed: ${response.status} ${url}`);
 
   const contentType = response.headers.get("content-type") || "";
   const ext = extensionFrom(url, contentType);
-  const filename = `${String(index + 1).padStart(2, "0")}-${product?.id || "product"}${ext}`;
+  const filename = `${product.id}-${String(imageIndex + 1).padStart(2, "0")}${ext}`;
   const diskPath = path.join(imageDir, filename);
   const publicPath = `/public/images/products/${filename}`;
   const buffer = Buffer.from(await response.arrayBuffer());

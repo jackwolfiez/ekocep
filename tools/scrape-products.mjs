@@ -32,6 +32,42 @@ const meta = (html, property) => {
   return htmlDecode(html.match(pattern)?.[1] || "");
 };
 
+const extractJsonLdProducts = (html) =>
+  Array.from(html.matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi))
+    .flatMap(([, json]) => {
+      try {
+        const parsed = JSON.parse(htmlDecode(json));
+        return Array.isArray(parsed) ? parsed : [parsed];
+      } catch {
+        return [];
+      }
+    })
+    .filter((item) => item?.["@type"] === "Product");
+
+const mediaIdFrom = (url) => url.match(/\/media\/(\d+)\//)?.[1] || url;
+
+const normalizeGalleryImages = (images) => {
+  const urls = Array.from(new Set(images.filter(Boolean).map(String)));
+  const highResIds = new Set(
+    urls
+      .filter((url) => !url.includes("/conversions/"))
+      .map(mediaIdFrom)
+  );
+
+  const preferred = urls.filter((url) => !url.includes("/conversions/") || !highResIds.has(mediaIdFrom(url)));
+  return preferred.length ? preferred : urls;
+};
+
+const extractGalleryImages = (html) => {
+  const product = extractJsonLdProducts(html)[0];
+  const jsonImages = Array.isArray(product?.image) ? product.image : [product?.image].filter(Boolean);
+  const normalized = normalizeGalleryImages(jsonImages);
+  if (normalized.length) return normalized;
+
+  const metaImage = meta(html, "og:image") || meta(html, "image");
+  return metaImage ? [metaImage] : [];
+};
+
 const extractPrice = (html) => {
   const candidates = [
     /itemprop=["']price["'][^>]*content=["']([^"']+)["']/i,
@@ -100,7 +136,8 @@ const getProduct = async (url, group, index) => {
   const fullTitle = meta(html, "og:title") || htmlDecode(html.match(/<title>(.*?)<\/title>/i)?.[1] || "");
   const name = fullTitle.replace(/\s*-\s*Nettech Store\s*$/i, "");
   const description = meta(html, "description") || "Ekocep güvencesiyle seçilmiş teknoloji ürünü.";
-  const image = meta(html, "og:image") || meta(html, "image");
+  const images = extractGalleryImages(html);
+  const image = images[0] || meta(html, "og:image") || meta(html, "image");
   const id = `${slugify(name)}-${index + 1}`;
 
   return {
@@ -110,7 +147,8 @@ const getProduct = async (url, group, index) => {
     subcategory: group.child,
     price: extractPrice(html),
     image,
-    hoverImg: image,
+    hoverImg: images[1] || image,
+    images,
     sourceUrl: url,
     description,
     color: inferColor(name, description)
@@ -127,7 +165,7 @@ for (const group of groups) {
     try {
       products.push(await getProduct(url, group, productIndex));
       productIndex += 1;
-      console.log(`OK ${products.at(-1).name}`);
+      console.log(`OK ${products.at(-1).name} (${products.at(-1).images.length} images)`);
     } catch (error) {
       console.error(`FAIL ${url}`);
       console.error(error);
