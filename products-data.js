@@ -223,6 +223,16 @@ export const products = [
       "/public/images/products/castu-cs59-plus-max-20000pa-arac-ici-arac-ici-vakum-supurge-gri-nt-118037-1-02.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/teknoloji-urunleri/castu-cs59-plus-max-20000pa-arac-ici-arac-ici-vakum-supurge-gri-nt-118037",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Gri"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Gri Ürün Ağırlığı 0 gr",
     "color": "Gri"
   },
@@ -241,6 +251,16 @@ export const products = [
       "/public/images/products/nettech-nt-sk01-profesionel-ev-ofis-okul-sac-kurutma-makinesi-gri-nt-111938-2-04.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/teknoloji-urunleri/nettech-nt-sk01-profesionel-ev-ofis-okul-sac-kurutma-makinesi-gri-nt-111938",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Gri"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Gri Ürün Ağırlığı 0 gr",
     "color": "Gri"
   },
@@ -260,6 +280,16 @@ export const products = [
       "/public/images/products/nettech-hy300-pro-ev-ofis-okul-projektor-beyaz-nt-113331-3-05.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/teknoloji-urunleri/nettech-hy300-pro-ev-ofis-okul-projektor-beyaz-nt-113331",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Beyaz"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr",
     "color": "Beyaz"
   },
@@ -275,6 +305,16 @@ export const products = [
       "/public/images/products/rtako-q12-ev-ofis-okul-tuy-toplayici-krem-nt-106421-4-01.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/teknoloji-urunleri/rtako-q12-ev-ofis-okul-tuy-toplayici-krem-nt-106421",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Krem"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Krem Ürün Ağırlığı 0 gr",
     "color": "Krem"
   },
@@ -292,6 +332,12 @@ export const products = [
       "/public/images/products/nettech-j006-ev-ofis-okul-ortam-nemlendirici-nt-104914-5-03.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/teknoloji-urunleri/nettech-j006-ev-ofis-okul-ortam-nemlendirici-nt-104914",
+    "specs": [
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Ürün Ağırlığı 0 gr",
     "color": "Standart"
   },
@@ -309,8 +355,98 @@ export const products = [
       "/public/images/products/realpower-r-mag-air-pro-20w-pd-10000-mah-magsafe-powerbank-natural-nt-116672-6-03.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/powerbank/realpower-r-mag-air-pro-20w-pd-10000-mah-magsafe-powerbank-natural-nt-116672",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Natural"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "1 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "5V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "12 V"
+      },
+      {
+        "label": "Şarj Tipi",
+        "value": "Magsafe"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Yok"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "10000 MAh"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Batarya Teknolojisi",
+        "value": "Lityum-Lion"
+      },
+      {
+        "label": "Led Pil Göstergesi",
+        "value": "Var"
+      },
+      {
+        "label": "Watt Değeri(W)",
+        "value": "20W PD"
+      },
+      {
+        "label": "Giriş Ucu",
+        "value": "PD"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Natural Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Usb Çıkış Sayısı 1 Çıkışlı Çıkış Voltaj (V) 5V Giriş Voltaj (V) 12 V Şar",
-    "color": "Standart"
+    "color": "Natural"
   },
   {
     "id": "nettech-nt-pw43-22-5w-10000-mah-tasinabilir-powerbank-turuncu-nt-115648-7",
@@ -327,6 +463,96 @@ export const products = [
       "/public/images/products/nettech-nt-pw43-22-5w-10000-mah-tasinabilir-powerbank-turuncu-nt-115648-7-04.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/powerbank/nettech-nt-pw43-225w-10000-mah-tasinabilir-powerbank-turuncu-nt-115648",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Turuncu"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "3 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "9V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "12 V"
+      },
+      {
+        "label": "Şarj Tipi",
+        "value": "Taşınabilir"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Type-C"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "10000 MAh"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Batarya Teknolojisi",
+        "value": "Lityum-Lion"
+      },
+      {
+        "label": "Led Pil Göstergesi",
+        "value": "Var"
+      },
+      {
+        "label": "Watt Değeri(W)",
+        "value": "22.5W"
+      },
+      {
+        "label": "Giriş Ucu",
+        "value": "PD"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "ÖzelliklerUyumlu ModellerRenkTuruncuÜrün Ağırlığı0 grMalzeme CinsiAlüminyumUsb Çıkış Sayısı3 ÇıkışlıÇıkış Voltaj (V)9VGiriş Voltaj (V)12 VŞarj TipiTaşınabi",
     "color": "Turuncu"
   },
@@ -346,6 +572,88 @@ export const products = [
       "/public/images/products/nettech-nt-pw33-15w-20w-pd-10000-mah-magsafe-powerbank-gri-nt-111991-8-05.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/powerbank/nettech-nt-pw33-15w-20w-pd-10000-mah-magsafe-powerbank-gri-nt-111991",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Gri"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "1 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "5V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "12 V"
+      },
+      {
+        "label": "Şarj Tipi",
+        "value": "Magsafe"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Type-C"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "10000 MAh"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "1 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Batarya Teknolojisi",
+        "value": "Lityum-Lion"
+      },
+      {
+        "label": "Led Pil Göstergesi",
+        "value": "Var"
+      },
+      {
+        "label": "Watt Değeri(W)",
+        "value": "20W PD"
+      },
+      {
+        "label": "Giriş Ucu",
+        "value": "PD"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Gri Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Usb Çıkış Sayısı 1 Çıkışlı Çıkış Voltaj (V) 5V Giriş Voltaj (V) 12 V Şarj Ti",
     "color": "Gri"
   },
@@ -364,6 +672,88 @@ export const products = [
       "/public/images/products/nettech-nt-pw32-15w-20w-pd-10000-mah-magsafe-powerbank-siyah-nt-104921-9-04.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/powerbank/nettech-nt-pw32-15w-20w-pd-10000-mah-magsafe-powerbank-siyah-nt-104921",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "2 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "9V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "5 V"
+      },
+      {
+        "label": "Şarj Tipi",
+        "value": "Magsafe"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Type-C"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "10000 MAh"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Batarya Teknolojisi",
+        "value": "Lityum-polimer"
+      },
+      {
+        "label": "Led Pil Göstergesi",
+        "value": "Var"
+      },
+      {
+        "label": "Watt Değeri(W)",
+        "value": "20W PD"
+      },
+      {
+        "label": "Giriş Ucu",
+        "value": "PD"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Usb Çıkış Sayısı 2 Çıkışlı Çıkış Voltaj (V) 9V Giriş Voltaj (V) 5 V Şarj T",
     "color": "Siyah"
   },
@@ -381,6 +771,96 @@ export const products = [
       "/public/images/products/nettech-nt-pw41-45w-20000-mah-tasinabilir-powerbank-siyah-nt-115643-10-03.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/powerbank/nettech-nt-pw41-45w-20000-mah-tasinabilir-powerbank-siyah-nt-115643",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "2 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "5V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "12 V"
+      },
+      {
+        "label": "Şarj Tipi",
+        "value": "Taşınabilir"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Type-C"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "20000 MAh"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Batarya Teknolojisi",
+        "value": "Lityum-Lion"
+      },
+      {
+        "label": "Led Pil Göstergesi",
+        "value": "Var"
+      },
+      {
+        "label": "Watt Değeri(W)",
+        "value": "45W"
+      },
+      {
+        "label": "Giriş Ucu",
+        "value": "PD"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Usb Çıkış Sayısı 2 Çıkışlı Çıkış Voltaj (V) 5V Giriş Voltaj (V) 12 V Şarj",
     "color": "Siyah"
   },
@@ -400,6 +880,76 @@ export const products = [
       "/public/images/products/nettech-nt-hch10-70w-pd-qc-ganprime-sarj-aleti-beyaz-nt-hch10-11-05.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/sarj-aleti/nettech-nt-hch10-70w-pdqc-ganprime-sarj-aleti-beyaz-nt-hch10",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Beyaz"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "3 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "5V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "24 V"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "1 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Giriş Saysı",
+        "value": "3 Girişli"
+      },
+      {
+        "label": "Giriş Ucu",
+        "value": "USB + Pd"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Usb Çıkış Sayısı 3 Çıkışlı Çıkış Voltaj (V) 5V Giriş Voltaj (V) 24 V Otoma",
     "color": "Beyaz"
   },
@@ -420,6 +970,76 @@ export const products = [
       "/public/images/products/nettech-nt-hch09-100w-pd-qc-ganprime-sarj-aleti-beyaz-nt-hch09-12-06.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/sarj-aleti/nettech-nt-hch09-100w-pdqc-ganprime-sarj-aleti-beyaz-nt-hch09",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Beyaz"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "4 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "5V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "220 V"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "1 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Giriş Saysı",
+        "value": "4 Girişli"
+      },
+      {
+        "label": "Giriş Ucu",
+        "value": "USB + Pd"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Usb Çıkış Sayısı 4 Çıkışlı Çıkış Voltaj (V) 5V Giriş Voltaj (V) 220 V Otom",
     "color": "Beyaz"
   },
@@ -440,6 +1060,68 @@ export const products = [
       "/public/images/products/nettech-nt-hch07-33w-gan-pd-qc-sarj-aleti-siyah-nt-hch07-13-06.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/sarj-aleti/nettech-nt-hch07-33w-gan-pdqc-sarj-aleti-siyah-nt-hch07",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "2 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "12V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "24 V"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Org"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Giriş Saysı",
+        "value": "2 Girişli"
+      },
+      {
+        "label": "Watt Değeri(W)",
+        "value": "33W GaN PD+QC"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Usb Çıkış Sayısı 2 Çıkışlı Çıkış Voltaj (V) 12V Giriş Voltaj (V) 24 V Otom",
     "color": "Siyah"
   },
@@ -460,6 +1142,72 @@ export const products = [
       "/public/images/products/nettech-nt-hch04-pd-ganprime-30w-type-c-to-type-c-sarj-aleti-siyah-nt-hch04-14-06.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/sarj-aleti/nettech-nt-hch04-pd-ganprime-30w-type-c-to-type-c-sarj-aleti-siyah-nt-hch04",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "1 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "5V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "24 V"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Type-C To Type-C"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "100 Cm"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "1 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Watt Değeri(W)",
+        "value": "30W"
+      }
+    ],
     "description": "ÖzelliklerUyumlu ModellerRenkSiyahÜrün Ağırlığı0 grMalzeme CinsiAlüminyumUsb Çıkış Sayısı1 ÇıkışlıÇıkış Voltaj (V)5VGiriş Voltaj (V)24 VOtomatik Şarj Kesme",
     "color": "Siyah"
   },
@@ -478,6 +1226,80 @@ export const products = [
       "/public/images/products/nettech-nt-hch08-gan-prime-48w-sarj-aleti-siyah-nt-hch08-15-04.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/sarj-aleti/nettech-nt-hch08-gan-prime-48w-sarj-aleti-siyah-nt-hch08",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "2 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "12V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "24 V"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Org"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Giriş Saysı",
+        "value": "2 Girişli"
+      },
+      {
+        "label": "Watt Değeri(W)",
+        "value": "48W"
+      },
+      {
+        "label": "Giriş Ucu",
+        "value": "USB + Pd"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Tamir Edilemez"
+      }
+    ],
     "description": "ÖzelliklerUyumlu ModellerRenkSiyahÜrün Ağırlığı0 grMalzeme CinsiAlüminyumUsb Çıkış Sayısı2 ÇıkışlıÇıkış Voltaj (V)12VGiriş Voltaj (V)24 VOtomatik Şarj Kesm",
     "color": "Siyah"
   },
@@ -496,6 +1318,80 @@ export const products = [
       "/public/images/products/nettech-nt-wch05-3-in-1-15w-kablosuz-wireless-sarj-siyah-nt-wch05-16-04.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/kablosuz-wireless-sarj/nettech-nt-wch05-3-in-1-15w-kablosuz-wireless-sarj-siyah-nt-wch05",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Stand Olarak Kullanım",
+        "value": "Var"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "1 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "5V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "12 V"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Kullanım Tipi",
+        "value": "Masaüstü"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Watt Değeri(W)",
+        "value": "15W"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Stand Olarak Kullanım Var Usb Çıkış Sayısı 1 Çıkışlı Çıkış Voltaj (V) 5V G",
     "color": "Siyah"
   },
@@ -516,6 +1412,80 @@ export const products = [
       "/public/images/products/nettech-nt-wch04-3in-1-15w-kablosuz-wireless-sarj-gri-nt-wch04-17-06.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/kablosuz-wireless-sarj/nettech-nt-wch04-3in-1-15w-kablosuz-wireless-sarj-gri-nt-wch04",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Gri"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Stand Olarak Kullanım",
+        "value": "Var"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "1 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "5V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "12 V"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Kullanım Tipi",
+        "value": "Masaüstü"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Watt Değeri(W)",
+        "value": "15W"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "ÖzelliklerUyumlu ModellerRenkGriÜrün Ağırlığı0 grMalzeme CinsiAlüminyumStand Olarak KullanımVarUsb Çıkış Sayısı1 ÇıkışlıÇıkış Voltaj (V)5VGiriş Voltaj (V)1",
     "color": "Gri"
   },
@@ -532,6 +1502,68 @@ export const products = [
       "/public/images/products/nettech-gt2-pro-kablosuz-wireless-sarj-beyaz-nt-112071-18-02.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/kablosuz-wireless-sarj/nettech-gt2-pro-kablosuz-wireless-sarj-beyaz-nt-112071",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Beyaz"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Stand Olarak Kullanım",
+        "value": "Var"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "1 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "5V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "12 V"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Kullanım Tipi",
+        "value": "Stand"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Stand Olarak Kullanım Var Usb Çıkış Sayısı 1 Çıkışlı Çıkış Voltaj (V) 5V G",
     "color": "Beyaz"
   },
@@ -551,6 +1583,72 @@ export const products = [
       "/public/images/products/nettech-nt-wch03-3in1-18w-kablosuz-wireless-sarj-siyah-nt-wch03-19-05.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/kablosuz-wireless-sarj/nettech-nt-wch03-3in1-18w-kablosuz-wireless-sarj-siyah-nt-wch03",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Stand Olarak Kullanım",
+        "value": "Var"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "1 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "5V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "24 V"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Kullanım Tipi",
+        "value": "Masaüstü"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Watt Değeri(W)",
+        "value": "18W"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Stand Olarak Kullanım Var Usb Çıkış Sayısı 1 Çıkışlı Çıkış Voltaj (V) 5V G",
     "color": "Siyah"
   },
@@ -568,6 +1666,76 @@ export const products = [
       "/public/images/products/nettech-nt-cch01-30w-bluetooth-fm-transmitter-arac-sarj-aleti-siyah-nt-cch01-20-03.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/arac-sarj-aleti/nettech-nt-cch01-30w-bluetooth-fm-transmitter-arac-sarj-aleti-siyah-nt-cch01",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Plastik"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "5V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "12 V"
+      },
+      {
+        "label": "Şarj Tipi",
+        "value": "Araç Şarjı"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "20 Cm"
+      },
+      {
+        "label": "Kullanım Tipi",
+        "value": "Bluetooth FM Transmitter"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "1 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Watt Değeri(W)",
+        "value": "30W"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Yok"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Çıkış Voltaj (V) 5V Giriş Voltaj (V) 12 V Şarj Tipi Araç Şarjı Otomatik Şarj",
     "color": "Siyah"
   },
@@ -585,6 +1753,72 @@ export const products = [
       "/public/images/products/nettech-nt-cch04-type-c-pd-30w-1-cikisli-arac-sarj-aleti-siyah-nt-cch04-21-03.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/arac-sarj-aleti/nettech-nt-cch04-type-c-pd-30w-1-cikisli-arac-sarj-aleti-siyah-nt-cch04",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "1 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "12V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "24 V"
+      },
+      {
+        "label": "Şarj Tipi",
+        "value": "Araç Şarjı"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "1 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Watt Değeri(W)",
+        "value": "30W"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Var"
+      }
+    ],
     "description": "ÖzelliklerUyumlu ModellerRenkSiyahÜrün Ağırlığı0 grMalzeme CinsiAlüminyumUsb Çıkış Sayısı1 ÇıkışlıÇıkış Voltaj (V)12VGiriş Voltaj (V)24 VŞarj TipiAraç Şarj",
     "color": "Siyah"
   },
@@ -603,6 +1837,72 @@ export const products = [
       "/public/images/products/nettech-nt-cch03-usb-type-c-pd-18w-20w-2-cikisli-arac-sarj-aleti-siyah-nt-cch03-22-04.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/arac-sarj-aleti/nettech-nt-cch03-usb-type-c-pd-18w-20w-2-cikisli-arac-sarj-aleti-siyah-nt-cch03",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "2 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "5V"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "12 V"
+      },
+      {
+        "label": "Şarj Tipi",
+        "value": "Araç Şarjı"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "1 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Watt Değeri(W)",
+        "value": "20W"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Var"
+      }
+    ],
     "description": "ÖzelliklerUyumlu ModellerRenkSiyahÜrün Ağırlığı0 grMalzeme CinsiAlüminyumUsb Çıkış Sayısı2 ÇıkışlıÇıkış Voltaj (V)5VGiriş Voltaj (V)12 VŞarj TipiAraç Şarjı",
     "color": "Siyah"
   },
@@ -621,6 +1921,80 @@ export const products = [
       "/public/images/products/helt-ht-19-10w-2-cikisli-type-c-kablo-arac-sarj-aleti-beyaz-nt-100852-23-04.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/arac-sarj-aleti/helt-ht-19-10w-2-cikisli-type-c-kablo-arac-sarj-aleti-beyaz-nt-100852",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Beyaz"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Plastik"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "2 Çıkışlı"
+      },
+      {
+        "label": "Çıkış Voltaj (V)",
+        "value": "12V"
+      },
+      {
+        "label": "Çıkış Amper (Mah)",
+        "value": "2400 mAh"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "12 V"
+      },
+      {
+        "label": "Şarj Tipi",
+        "value": "Araç Şarjı"
+      },
+      {
+        "label": "Otomatik Şarj Kesme",
+        "value": "Var"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Type-C"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "100 Cm"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "1 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Watt Değeri(W)",
+        "value": "10W"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Usb Çıkış Sayısı 2 Çıkışlı Çıkış Voltaj (V) 12V Çıkış Amper (Mah) 2400 mAh G",
     "color": "Beyaz"
   },
@@ -636,6 +2010,56 @@ export const products = [
       "/public/images/products/nettech-kampanya-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-nt-104373-24-01.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/sarj-ve-data-kablosu/nettech-kampanya-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-nt-104373",
+    "specs": [
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Kablo Dış Materyal",
+        "value": "Plastik"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Type-C To Type-C"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Görüntü Aktarım Desteği",
+        "value": "Yok"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "100 Cm"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunmuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Tamir Edilemez"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Ürün Ağırlığı 0 gr Kablo Dış Materyal Plastik Kablo Tipi Type-C To Type-C Hızlı Şarj Desteği Var Görüntü Aktarım Desteği Yo",
     "color": "Standart"
   },
@@ -653,6 +2077,52 @@ export const products = [
       "/public/images/products/samsung-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-beyaz-nt-97829-25-03.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/sarj-ve-data-kablosu/samsung-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-beyaz-nt-97829",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Beyaz"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Kablo Dış Materyal",
+        "value": "Plastik"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Type-C To Type-C"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Görüntü Aktarım Desteği",
+        "value": "Yok"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "100 Cm"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr Kablo Dış Materyal Plastik Kablo Tipi Type-C To Type-C Hızlı Şarj Desteği Var Görüntü Aktarım Dest",
     "color": "Beyaz"
   },
@@ -670,6 +2140,52 @@ export const products = [
       "/public/images/products/nettech-nt-dc32-60w-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-gri-nt-108299-26-03.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/sarj-ve-data-kablosu/nettech-nt-dc32-60w-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-gri-nt-108299",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Gri"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Kablo Dış Materyal",
+        "value": "Plastik"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Type-C To Type-C"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Görüntü Aktarım Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "100 Cm"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Gri Ürün Ağırlığı 0 gr Kablo Dış Materyal Plastik Kablo Tipi Type-C To Type-C Hızlı Şarj Desteği Var Görüntü Aktarım Desteğ",
     "color": "Gri"
   },
@@ -687,6 +2203,52 @@ export const products = [
       "/public/images/products/nettech-nt-dc40-60w-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-siyah-nt-108309-27-03.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/sarj-ve-data-kablosu/nettech-nt-dc40-60w-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-siyah-nt-108309",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Kablo Dış Materyal",
+        "value": "Plastik"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Type-C To Type-C"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Görüntü Aktarım Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "100 Cm"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Kablo Dış Materyal Plastik Kablo Tipi Type-C To Type-C Hızlı Şarj Desteği Var Görüntü Aktarım Dest",
     "color": "Siyah"
   },
@@ -706,6 +2268,48 @@ export const products = [
       "/public/images/products/nettech-nt-dc44-4-in-1-60w-ip-orgu-usb-to-micro-lightning-type-c-sarj-ve-data-kablosu-gri-nt-108315-28-05.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/sarj-ve-data-kablosu/nettech-nt-dc44-4-in-1-60w-ip-orgu-usb-to-micro-lightning-type-c-sarj-ve-data-kablosu-gri-nt-108315",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Gri"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Kablo Dış Materyal",
+        "value": "İp Örgü"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "USB To Micro + Lightning + Type-C"
+      },
+      {
+        "label": "Hızlı Şarj Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Görüntü Aktarım Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Gri Ürün Ağırlığı 0 gr Kablo Dış Materyal İp Örgü Kablo Tipi USB To Micro + Lightning + Type-C Hızlı Şarj Desteği Var Görün",
     "color": "Gri"
   },
@@ -723,6 +2327,64 @@ export const products = [
       "/public/images/products/nettech-nt-cr02-type-c-ve-lighting-usb-sd-kart-okuyucu-gri-nt-113843-29-03.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/otg-ve-donusturucu-kablo/nettech-nt-cr02-type-c-ve-lighting-usb-sd-kart-okuyucu-gri-nt-113843",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Gri"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Metal"
+      },
+      {
+        "label": "Kablo Dış Materyal",
+        "value": "Aluminyum"
+      },
+      {
+        "label": "Data Aktarım Hızı ( Mb/S)",
+        "value": "10 MB/s Altı"
+      },
+      {
+        "label": "Görüntü Aktarım Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Bağlantı Tipi",
+        "value": "Type-C ve Lighting Usb SD Kart Okuyucu"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Yok"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Gri Ürün Ağırlığı 0 gr Malzeme Cinsi Metal Kablo Dış Materyal Aluminyum Data Aktarım Hızı ( Mb/S) 10 MB/s Altı Görüntü Akta",
     "color": "Gri"
   },
@@ -740,6 +2402,60 @@ export const products = [
       "/public/images/products/nettech-nt-ot010-5-in-1-usb-to-type-c-donusturucu-gri-nt-108340-30-03.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/otg-ve-donusturucu-kablo/nettech-nt-ot010-5-in-1-usb-to-type-c-donusturucu-gri-nt-108340",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Gri"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Kablo Dış Materyal",
+        "value": "Plexy"
+      },
+      {
+        "label": "Data Aktarım Hızı ( Mb/S)",
+        "value": "10 MB/s - 50 MB/s"
+      },
+      {
+        "label": "Görüntü Aktarım Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "20 Cm"
+      },
+      {
+        "label": "Bağlantı Tipi",
+        "value": "USB To Type-c Dönüştürücü"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Yok"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Gri Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Kablo Dış Materyal Plexy Data Aktarım Hızı ( Mb/S) 10 MB/s - 50 MB/s Görüntü",
     "color": "Gri"
   },
@@ -757,6 +2473,60 @@ export const products = [
       "/public/images/products/nettech-nt-ot03-usb-host-to-type-c-donusturucu-gri-nt-100954-31-03.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/otg-ve-donusturucu-kablo/nettech-nt-ot03-usb-host-to-type-c-donusturucu-gri-nt-100954",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Gri"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Kablo Dış Materyal",
+        "value": "Plexy"
+      },
+      {
+        "label": "Data Aktarım Hızı ( Mb/S)",
+        "value": "10 MB/s - 50 MB/s"
+      },
+      {
+        "label": "Görüntü Aktarım Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "20 Cm"
+      },
+      {
+        "label": "Bağlantı Tipi",
+        "value": "USB Host to Type-C Dönüştürücü"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Yok"
+      }
+    ],
     "description": "ÖzelliklerUyumlu ModellerRenkGriÜrün Ağırlığı0 grMalzeme CinsiAlüminyumKablo Dış MateryalPlexyData Aktarım Hızı ( Mb/S)10 MB/s - 50 MB/sGörüntü Aktarım Des",
     "color": "Gri"
   },
@@ -774,6 +2544,60 @@ export const products = [
       "/public/images/products/nettech-nt-0t04-usb-hdmi-sd-kart-to-type-c-donusturucu-siyah-nt-100955-32-03.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/otg-ve-donusturucu-kablo/nettech-nt-0t04-usb-hdmi-sd-kart-to-type-c-donusturucu-siyah-nt-100955",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Kablo Dış Materyal",
+        "value": "Aluminyum"
+      },
+      {
+        "label": "Data Aktarım Hızı ( Mb/S)",
+        "value": "10 MB/s - 50 MB/s"
+      },
+      {
+        "label": "Görüntü Aktarım Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "20 Cm"
+      },
+      {
+        "label": "Bağlantı Tipi",
+        "value": "USB + Hdmi + SD Kart To Type-C Dönüştürücü"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Yok"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Kablo Dış Materyal Aluminyum Data Aktarım Hızı ( Mb/S) 10 MB/s - 50 MB/s G",
     "color": "Siyah"
   },
@@ -790,6 +2614,64 @@ export const products = [
       "/public/images/products/hadron-4k-premium-plastik-500-cm-hdmi-kablo-siyah-nt-119018-33-02.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/hdmi-ve-audio-kablosu/hadron-4k-premium-plastik-500-cm-hdmi-kablo-siyah-nt-119018",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Kablo Dış Materyal",
+        "value": "Plexy"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Hdmi Kablo"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "500 Cm"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Yok"
+      },
+      {
+        "label": "Aux Girişi",
+        "value": "Yok"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Bluetooth",
+        "value": "Yok"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Kablo Dış Materyal Plexy Kablo Tipi Hdmi Kablo Kablo Uzunluğu (Cm.) 500 Cm Medya Kontrol Tuşları Y",
     "color": "Siyah"
   },
@@ -806,6 +2688,52 @@ export const products = [
       "/public/images/products/hadron-metal-orgu-100-cm-jack-girisli-yaka-mikrofonu-siyah-nt-105056-34-02.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/hdmi-ve-audio-kablosu/hadron-metal-orgu-100-cm-jack-girisli-yaka-mikrofonu-siyah-nt-105056",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Kablo Dış Materyal",
+        "value": "Plexy"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Jack Girişli Yaka Mikrofonu"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "100 Cm"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Aux Girişi",
+        "value": "Var"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Bluetooth",
+        "value": "Yok"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Kablo Dış Materyal Plexy Kablo Tipi Jack Girişli Yaka Mikrofonu Kablo Uzunluğu (Cm.) 100 Cm Medya",
     "color": "Siyah"
   },
@@ -824,6 +2752,64 @@ export const products = [
       "/public/images/products/nettech-plastik-20-cm-hdmi-kablo-siyah-vr-13193-35-04.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/hdmi-ve-audio-kablosu/nettech-plastik-20-cm-hdmi-kablo-siyah-vr-13193",
+    "specs": [
+      {
+        "label": "Uyumlu Modeller",
+        "value": "Macbook Pro 15, Microsoft - Surface 2, Microsoft - Surface, Samsung - Type-C, Asus - Type-C"
+      },
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "35 gr"
+      },
+      {
+        "label": "Kablo Dış Materyal",
+        "value": "Plexy"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Hdmi Kablo"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "20 Cm"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Yok"
+      },
+      {
+        "label": "Aux Girişi",
+        "value": "Var"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Bluetooth",
+        "value": "Yok"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Tamir Edilemez"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Macbook Pro 15, Microsoft - Surface 2, Microsoft - Surface, Samsung - Type-C, Asus - Type-C Renk Siyah Ürün Ağırlığı 35 gr Kablo",
     "color": "Siyah"
   },
@@ -842,6 +2828,112 @@ export const products = [
       "/public/images/products/nettech-nt-b34-kulakici-bluetooth-kulaklik-siyah-nt-116022-36-04.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/bluetooth-kulaklik/nettech-nt-b34-kulakici-bluetooth-kulaklik-siyah-nt-116022",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Kulaklık Tipi",
+        "value": "Kulakiçi"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonlu"
+      },
+      {
+        "label": "Gürültü Önleme",
+        "value": "Var"
+      },
+      {
+        "label": "Ses Türü",
+        "value": "Mono"
+      },
+      {
+        "label": "Kulaklık Sayısı",
+        "value": "2"
+      },
+      {
+        "label": "Kullanım Tipi",
+        "value": "Kulak içi"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "900 MAh"
+      },
+      {
+        "label": "Ses Çıkış Gücü",
+        "value": "65 dB"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Org"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirir"
+      },
+      {
+        "label": "Çift Telefon Desteği",
+        "value": "Yok"
+      },
+      {
+        "label": "Bluetooth Mesafesi",
+        "value": "21 m - 30 m"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Bluetooth"
+      },
+      {
+        "label": "Müzik Dinleyebilme",
+        "value": "Var"
+      },
+      {
+        "label": "Bluetooth Versiyonu",
+        "value": "5.0"
+      },
+      {
+        "label": "Dokunmatk Kontrol",
+        "value": "Var"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Medya Kontrol Tuşları Var Kulaklık Tipi Kulakiçi Mikrofon Var Mı ? Mikrofo",
     "color": "Siyah"
   },
@@ -860,6 +2952,112 @@ export const products = [
       "/public/images/products/nettech-nt-bth35-anc-kulakici-bluetooth-kulaklik-siyah-nt-115647-37-04.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/bluetooth-kulaklik/nettech-nt-bth35-anc-kulakici-bluetooth-kulaklik-siyah-nt-115647",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Kulaklık Tipi",
+        "value": "Kulakiçi"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonlu"
+      },
+      {
+        "label": "Gürültü Önleme",
+        "value": "Var"
+      },
+      {
+        "label": "Ses Türü",
+        "value": "Mono"
+      },
+      {
+        "label": "Kulaklık Sayısı",
+        "value": "2"
+      },
+      {
+        "label": "Kullanım Tipi",
+        "value": "Kulak içi"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "1000 MAh"
+      },
+      {
+        "label": "Ses Çıkış Gücü",
+        "value": "85 dB"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat - 4 Saat"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Org"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirir"
+      },
+      {
+        "label": "Çift Telefon Desteği",
+        "value": "Yok"
+      },
+      {
+        "label": "Bluetooth Mesafesi",
+        "value": "10 m- 20 m"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Bluetooth"
+      },
+      {
+        "label": "Müzik Dinleyebilme",
+        "value": "Var"
+      },
+      {
+        "label": "Bluetooth Versiyonu",
+        "value": "5.0"
+      },
+      {
+        "label": "Dokunmatk Kontrol",
+        "value": "Var"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Medya Kontrol Tuşları Var Kulaklık Tipi Kulakiçi Mikrofon Var Mı ? Mikrofo",
     "color": "Siyah"
   },
@@ -879,6 +3077,112 @@ export const products = [
       "/public/images/products/nettech-nt-bth30-makarali-kulakici-bluetooth-kulaklik-siyah-nt-110672-38-05.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/bluetooth-kulaklik/nettech-nt-bth30-makarali-kulakici-bluetooth-kulaklik-siyah-nt-110672",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Kulaklık Tipi",
+        "value": "Kulakiçi"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonlu"
+      },
+      {
+        "label": "Gürültü Önleme",
+        "value": "Var"
+      },
+      {
+        "label": "Ses Türü",
+        "value": "Mono"
+      },
+      {
+        "label": "Kulaklık Sayısı",
+        "value": "1"
+      },
+      {
+        "label": "Kullanım Tipi",
+        "value": "Kulak içi"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "900 MAh"
+      },
+      {
+        "label": "Ses Çıkış Gücü",
+        "value": "70 dB"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat Altı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Org"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirir"
+      },
+      {
+        "label": "Çift Telefon Desteği",
+        "value": "Yok"
+      },
+      {
+        "label": "Bluetooth Mesafesi",
+        "value": "10 m- 20 m"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Bluetooth"
+      },
+      {
+        "label": "Müzik Dinleyebilme",
+        "value": "Var"
+      },
+      {
+        "label": "Bluetooth Versiyonu",
+        "value": "5.0"
+      },
+      {
+        "label": "Dokunmatk Kontrol",
+        "value": "Var"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Medya Kontrol Tuşları Var Kulaklık Tipi Kulakiçi Mikrofon Var Mı ? Mikrofo",
     "color": "Siyah"
   },
@@ -899,6 +3203,96 @@ export const products = [
       "/public/images/products/nettech-nt-bth31-rgb-kulak-ustu-kulaklik-siyah-nt-113777-39-06.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/kulak-ustu-kulaklik/nettech-nt-bth31-rgb-kulak-ustu-kulaklik-siyah-nt-113777",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Plastik"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "Kablosuz"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonlu"
+      },
+      {
+        "label": "Gürültü Önleme",
+        "value": "Var"
+      },
+      {
+        "label": "Ses Türü",
+        "value": "Mono"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "1100 MAh"
+      },
+      {
+        "label": "Multimedya",
+        "value": "Fm Radyo + Mp3 Player + Bluetooth"
+      },
+      {
+        "label": "Bağlantı Tipi",
+        "value": "Kablosuz"
+      },
+      {
+        "label": "Ses Çıkış Gücü",
+        "value": "65 dB"
+      },
+      {
+        "label": "Paket İçeriği",
+        "value": "Kulanım Kılavuzu"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Çift Telefon Desteği",
+        "value": "Yok"
+      },
+      {
+        "label": "Radyo",
+        "value": "Var"
+      },
+      {
+        "label": "Dokunmatk Kontrol",
+        "value": "Yok"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Kablo Uzunluğu (Cm.) Kablosuz Medya Kontrol Tuşları Var Mikrofon Var Mı ? Mi",
     "color": "Siyah"
   },
@@ -919,8 +3313,94 @@ export const products = [
       "/public/images/products/nettech-ke-31-kulak-ustu-kulak-ustu-kulaklik-cesitli-renk-nt-109901-40-06.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/kulak-ustu-kulaklik/nettech-ke-31-kulak-ustu-kulak-ustu-kulaklik-cesitli-renk-nt-109901",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Çeşitli Renk"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Plastik"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "Kablosuz"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Kulaklık Tipi",
+        "value": "Kulak Üstü"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonlu"
+      },
+      {
+        "label": "Gürültü Önleme",
+        "value": "Var"
+      },
+      {
+        "label": "Ses Türü",
+        "value": "Mono"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "900 MAh"
+      },
+      {
+        "label": "Multimedya",
+        "value": "Fm Radyo + Mp3 Player + Bluetooth"
+      },
+      {
+        "label": "Bağlantı Tipi",
+        "value": "Kablosuz"
+      },
+      {
+        "label": "Ses Çıkış Gücü",
+        "value": "70 dB"
+      },
+      {
+        "label": "Paket İçeriği",
+        "value": "Garanti Kitapçığı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Çift Telefon Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Radyo",
+        "value": "Yok"
+      },
+      {
+        "label": "Dokunmatk Kontrol",
+        "value": "Yok"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Çeşitli Renk Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Kablo Uzunluğu (Cm.) Kablosuz Medya Kontrol Tuşları Var Kulaklık Tipi",
-    "color": "Standart"
+    "color": "Çeşitli Renk"
   },
   {
     "id": "nettech-nt-bth16-kulak-ustu-kulak-ustu-kulaklik-kahverengi-nt-103802-41",
@@ -936,6 +3416,92 @@ export const products = [
       "/public/images/products/nettech-nt-bth16-kulak-ustu-kulak-ustu-kulaklik-kahverengi-nt-103802-41-03.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/kulak-ustu-kulaklik/nettech-nt-bth16-kulak-ustu-kulak-ustu-kulaklik-kahverengi-nt-103802",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Kahverengi"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "Kablosuz"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Kulaklık Tipi",
+        "value": "Kulak Üstü"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonlu"
+      },
+      {
+        "label": "Gürültü Önleme",
+        "value": "Var"
+      },
+      {
+        "label": "Ses Türü",
+        "value": "Mono"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "300 MAh"
+      },
+      {
+        "label": "Multimedya",
+        "value": "Fm Radyo + Mp3 Player + Bluetooth"
+      },
+      {
+        "label": "Bağlantı Tipi",
+        "value": "Kablosuz"
+      },
+      {
+        "label": "Ses Çıkış Gücü",
+        "value": "65 dB"
+      },
+      {
+        "label": "Paket İçeriği",
+        "value": "Kulanım Kılavuzu"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Çift Telefon Desteği",
+        "value": "Yok"
+      },
+      {
+        "label": "Radyo",
+        "value": "Yok"
+      },
+      {
+        "label": "Dokunmatk Kontrol",
+        "value": "Yok"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Kahverengi Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Kablo Uzunluğu (Cm.) Kablosuz Medya Kontrol Tuşları Var Kulaklık Tipi",
     "color": "Kahverengi"
   },
@@ -953,6 +3519,120 @@ export const products = [
       "/public/images/products/hepu-hp-939-party-box-kablosuz-hoparlor-speaker-siyah-nt-117702-42-03.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/hoparlor-speaker/hepu-hp-939-party-box-kablosuz-hoparlor-speaker-siyah-nt-117702",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Plastik"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "2 Çıkışlı"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "220 V"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Yok"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonsuz"
+      },
+      {
+        "label": "Ses Türü",
+        "value": "Stereo"
+      },
+      {
+        "label": "Aux Girişi",
+        "value": "Var"
+      },
+      {
+        "label": "Multimedya",
+        "value": "Mp3 Player"
+      },
+      {
+        "label": "Speaker Sayısı",
+        "value": "1+1"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat - 4 Saat"
+      },
+      {
+        "label": "Lamba Türü",
+        "value": "Led"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirmez"
+      },
+      {
+        "label": "Bağlantı Şekli",
+        "value": "Kablosuz"
+      },
+      {
+        "label": "Bluetooth Mesafesi",
+        "value": "10 m- 20 m"
+      },
+      {
+        "label": "Led Pil Göstergesi",
+        "value": "Var"
+      },
+      {
+        "label": "Çalışma Süresi",
+        "value": "5 Saat - 10 Saat"
+      },
+      {
+        "label": "Radyo",
+        "value": "Yok"
+      },
+      {
+        "label": "Uzaktan Kumanda",
+        "value": "Yok"
+      },
+      {
+        "label": "Ürün Tipi",
+        "value": "Party Box"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Usb Çıkış Sayısı 2 Çıkışlı Giriş Voltaj (V) 220 V Kablo Tipi Yok Medya Kontr",
     "color": "Siyah"
   },
@@ -971,6 +3651,108 @@ export const products = [
       "/public/images/products/nettech-nt-bts12-party-box-kablosuz-hoparlor-speaker-siyah-nt-bts12-43-04.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/hoparlor-speaker/nettech-nt-bts12-party-box-kablosuz-hoparlor-speaker-siyah-nt-bts12",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Plastik"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "1 Çıkışlı"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "5 V"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonsuz"
+      },
+      {
+        "label": "Ses Türü",
+        "value": "Mono"
+      },
+      {
+        "label": "Aux Girişi",
+        "value": "Var"
+      },
+      {
+        "label": "Multimedya",
+        "value": "Fm Radyo + MP3 Player"
+      },
+      {
+        "label": "Speaker Sayısı",
+        "value": "1"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat Altı"
+      },
+      {
+        "label": "Lamba Türü",
+        "value": "Led"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirmez"
+      },
+      {
+        "label": "Bağlantı Şekli",
+        "value": "Kablosuz"
+      },
+      {
+        "label": "Bluetooth Mesafesi",
+        "value": "10 m- 20 m"
+      },
+      {
+        "label": "Led Pil Göstergesi",
+        "value": "Yok"
+      },
+      {
+        "label": "Çalışma Süresi",
+        "value": "5 Saat Altı"
+      },
+      {
+        "label": "Radyo",
+        "value": "Var"
+      },
+      {
+        "label": "Uzaktan Kumanda",
+        "value": "Yok"
+      },
+      {
+        "label": "Ürün Tipi",
+        "value": "Party Box"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Usb Çıkış Sayısı 1 Çıkışlı Giriş Voltaj (V) 5 V Medya Kontrol Tuşları Var Mi",
     "color": "Siyah"
   },
@@ -992,8 +3774,114 @@ export const products = [
       "/public/images/products/nettech-ch-m58-karikatur-model-kablosuz-hoparlor-speaker-cesitli-renk-nt-108832-44-07.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/hoparlor-speaker/nettech-ch-m58-karikatur-model-kablosuz-hoparlor-speaker-cesitli-renk-nt-108832",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Çeşitli Renk"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Plastik"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "1 Çıkışlı"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "5 V"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Type-C"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonsuz"
+      },
+      {
+        "label": "Ses Türü",
+        "value": "Stereo"
+      },
+      {
+        "label": "Aux Girişi",
+        "value": "Var"
+      },
+      {
+        "label": "Multimedya",
+        "value": "Fm Radyo + MP3 Player"
+      },
+      {
+        "label": "Speaker Sayısı",
+        "value": "1"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat - 4 Saat"
+      },
+      {
+        "label": "Lamba Türü",
+        "value": "Led"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirmez"
+      },
+      {
+        "label": "Bağlantı Şekli",
+        "value": "Kablosuz"
+      },
+      {
+        "label": "Bluetooth Mesafesi",
+        "value": "10 m Atı"
+      },
+      {
+        "label": "Led Pil Göstergesi",
+        "value": "Var"
+      },
+      {
+        "label": "Çalışma Süresi",
+        "value": "5 Saat Altı"
+      },
+      {
+        "label": "Radyo",
+        "value": "Var"
+      },
+      {
+        "label": "Uzaktan Kumanda",
+        "value": "Yok"
+      },
+      {
+        "label": "Ürün Tipi",
+        "value": "Karikatür Model"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Çeşitli Renk Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Usb Çıkış Sayısı 1 Çıkışlı Giriş Voltaj (V) 5 V Kablo Tipi Type-C Med",
-    "color": "Standart"
+    "color": "Çeşitli Renk"
   },
   {
     "id": "nettech-l5-ducky-duck-karikatur-model-kablosuz-hoparlor-speaker-cesitli-renk-nt-109935-45",
@@ -1010,8 +3898,114 @@ export const products = [
       "/public/images/products/nettech-l5-ducky-duck-karikatur-model-kablosuz-hoparlor-speaker-cesitli-renk-nt-109935-45-04.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/hoparlor-speaker/nettech-l5-ducky-duck-karikatur-model-kablosuz-hoparlor-speaker-cesitli-renk-nt-109935",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Çeşitli Renk"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Plastik"
+      },
+      {
+        "label": "Usb Çıkış Sayısı",
+        "value": "1 Çıkışlı"
+      },
+      {
+        "label": "Giriş Voltaj (V)",
+        "value": "12 V"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Type-C"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonsuz"
+      },
+      {
+        "label": "Ses Türü",
+        "value": "Stereo"
+      },
+      {
+        "label": "Aux Girişi",
+        "value": "Var"
+      },
+      {
+        "label": "Multimedya",
+        "value": "Fm Radyo + MP3 Player"
+      },
+      {
+        "label": "Speaker Sayısı",
+        "value": "1"
+      },
+      {
+        "label": "Şarj Süresi",
+        "value": "2 Saat - 4 Saat"
+      },
+      {
+        "label": "Lamba Türü",
+        "value": "Led"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirir"
+      },
+      {
+        "label": "Bağlantı Şekli",
+        "value": "Kablosuz"
+      },
+      {
+        "label": "Bluetooth Mesafesi",
+        "value": "10 m Atı"
+      },
+      {
+        "label": "Led Pil Göstergesi",
+        "value": "Yok"
+      },
+      {
+        "label": "Çalışma Süresi",
+        "value": "5 Saat Altı"
+      },
+      {
+        "label": "Radyo",
+        "value": "Var"
+      },
+      {
+        "label": "Uzaktan Kumanda",
+        "value": "Var"
+      },
+      {
+        "label": "Ürün Tipi",
+        "value": "Karikatür Model"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Çeşitli Renk Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Usb Çıkış Sayısı 1 Çıkışlı Giriş Voltaj (V) 12 V Kablo Tipi Type-C Me",
-    "color": "Standart"
+    "color": "Çeşitli Renk"
   },
   {
     "id": "nettech-nt-42-type-c-girisli-kulak-ici-kulaklik-siyah-nt-107852-46",
@@ -1027,6 +4021,80 @@ export const products = [
       "/public/images/products/nettech-nt-42-type-c-girisli-kulak-ici-kulaklik-siyah-nt-107852-46-03.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/kulak-ici-kulaklik/nettech-nt-42-type-c-girisli-kulak-ici-kulaklik-siyah-nt-107852",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "100 Cm"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonlu"
+      },
+      {
+        "label": "Gürültü Önleme",
+        "value": "Var"
+      },
+      {
+        "label": "Kulaklık Sayısı",
+        "value": "2"
+      },
+      {
+        "label": "Ses Çıkış Gücü",
+        "value": "65 dB"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirir"
+      },
+      {
+        "label": "Çift Telefon Desteği",
+        "value": "Yok"
+      },
+      {
+        "label": "Kullanım Alanı",
+        "value": "Telefon"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Type-C Girişli"
+      },
+      {
+        "label": "Dokunmatk Kontrol",
+        "value": "Yok"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Kablo Uzunluğu (Cm.) 100 Cm Medya Kontrol Tuşları Var Mikrofon Var Mı ? Mi",
     "color": "Siyah"
   },
@@ -1044,6 +4112,84 @@ export const products = [
       "/public/images/products/nettech-nt-39-3-5-jack-girisli-kulak-ici-kulaklik-siyah-vr-14246-47-03.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/kulak-ici-kulaklik/nettech-nt-39-35-jack-girisli-kulak-ici-kulaklik-siyah-vr-14246",
+    "specs": [
+      {
+        "label": "Uyumlu Modeller",
+        "value": "Turkcell - 3.5 Jack, Samsung - 3.5 jack, Alcatel - 3.5 Jack, Asus - 3.5 Jack, Nokia - 3.5 Jack, HTC - 3.5 Jack"
+      },
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "80 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Plastik"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "100 Cm"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonlu"
+      },
+      {
+        "label": "Gürültü Önleme",
+        "value": "Yok"
+      },
+      {
+        "label": "Kulaklık Sayısı",
+        "value": "2"
+      },
+      {
+        "label": "Ses Çıkış Gücü",
+        "value": "80 dB"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirmez"
+      },
+      {
+        "label": "Çift Telefon Desteği",
+        "value": "Yok"
+      },
+      {
+        "label": "Kullanım Alanı",
+        "value": "Müzik"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "3.5 mm Jack"
+      },
+      {
+        "label": "Dokunmatk Kontrol",
+        "value": "Yok"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Turkcell - 3.5 Jack, Samsung - 3.5 jack, Alcatel - 3.5 Jack, Asus - 3.5 Jack, Nokia - 3.5 Jack, HTC - 3.5 Jack Renk Siyah Ürün A",
     "color": "Siyah"
   },
@@ -1062,6 +4208,80 @@ export const products = [
       "/public/images/products/nettech-nt-hs11-type-c-girisli-kulak-ici-kulaklik-siyah-nt-hs11-48-04.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/kulak-ici-kulaklik/nettech-nt-hs11-type-c-girisli-kulak-ici-kulaklik-siyah-nt-hs11",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Plastik"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "100 Cm"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonlu"
+      },
+      {
+        "label": "Gürültü Önleme",
+        "value": "Yok"
+      },
+      {
+        "label": "Kulaklık Sayısı",
+        "value": "2"
+      },
+      {
+        "label": "Ses Çıkış Gücü",
+        "value": "65 dB"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirir"
+      },
+      {
+        "label": "Çift Telefon Desteği",
+        "value": "Yok"
+      },
+      {
+        "label": "Kullanım Alanı",
+        "value": "Telefon"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Type-C Girişli"
+      },
+      {
+        "label": "Dokunmatk Kontrol",
+        "value": "Yok"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Kablo Uzunluğu (Cm.) 100 Cm Medya Kontrol Tuşları Var Mikrofon Var Mı ? Mikr",
     "color": "Siyah"
   },
@@ -1079,6 +4299,80 @@ export const products = [
       "/public/images/products/nettech-nt-hs08-tak-calistir-kablolu-kulak-ici-kulaklik-beyaz-nt-hs08-49-03.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/kulak-ici-kulaklik/nettech-nt-hs08-tak-calistir-kablolu-kulak-ici-kulaklik-beyaz-nt-hs08",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Beyaz"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Plastik"
+      },
+      {
+        "label": "Kablo Uzunluğu (Cm.)",
+        "value": "100 Cm"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonlu"
+      },
+      {
+        "label": "Gürültü Önleme",
+        "value": "Yok"
+      },
+      {
+        "label": "Kulaklık Sayısı",
+        "value": "2"
+      },
+      {
+        "label": "Ses Çıkış Gücü",
+        "value": "90 dB"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirir"
+      },
+      {
+        "label": "Çift Telefon Desteği",
+        "value": "Yok"
+      },
+      {
+        "label": "Kullanım Alanı",
+        "value": "Telefon"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Kablolu"
+      },
+      {
+        "label": "Dokunmatk Kontrol",
+        "value": "Yok"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Kablo Uzunluğu (Cm.) 100 Cm Medya Kontrol Tuşları Var Mikrofon Var Mı ? Mikr",
     "color": "Beyaz"
   },
@@ -1095,6 +4389,96 @@ export const products = [
       "/public/images/products/imiki-xioami-ecosysstem-company-st2-akilli-saat-mavi-nt-115976-50-02.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/akilli-saat/imiki-xioami-ecosysstem-company-st2-akilli-saat-mavi-nt-115976",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Mavi"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Plastik"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonlu"
+      },
+      {
+        "label": "Çocuklar İçin Uygun mu ?",
+        "value": "Hayır"
+      },
+      {
+        "label": "Kamera Adedi",
+        "value": "Yok"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "1000 MAh"
+      },
+      {
+        "label": "Sesli Görüşme",
+        "value": "Var"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirmez"
+      },
+      {
+        "label": "Uyku Modu",
+        "value": "Var"
+      },
+      {
+        "label": "Titreşim",
+        "value": "Var"
+      },
+      {
+        "label": "Çalışma Süresi",
+        "value": "16 Saat - 20 Saat"
+      },
+      {
+        "label": "Radyo",
+        "value": "Yok"
+      },
+      {
+        "label": "Desteklenen Platform",
+        "value": "IOS"
+      },
+      {
+        "label": "Ekran",
+        "value": "Var"
+      },
+      {
+        "label": "Adım Sayar",
+        "value": "Var"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Yetkili Servis Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Mavi Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Mikrofon Var Mı ? Mikrofonlu Çocuklar İçin Uygun mu ? Hayır Kamera Adedi Yok",
     "color": "Mavi"
   },
@@ -1115,6 +4499,88 @@ export const products = [
       "/public/images/products/imiki-c1-ecosystem-company-akilli-saat-siyah-nt-113374-51-06.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/akilli-saat/imiki-c1-ecosystem-company-akilli-saat-siyah-nt-113374",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonlu"
+      },
+      {
+        "label": "Çocuklar İçin Uygun mu ?",
+        "value": "Hayır"
+      },
+      {
+        "label": "Kamera Adedi",
+        "value": "Var"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "900 MAh"
+      },
+      {
+        "label": "Sesli Görüşme",
+        "value": "Var"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirmez"
+      },
+      {
+        "label": "Uyku Modu",
+        "value": "Var"
+      },
+      {
+        "label": "Titreşim",
+        "value": "Var"
+      },
+      {
+        "label": "Çalışma Süresi",
+        "value": "5 Saat Altı"
+      },
+      {
+        "label": "Radyo",
+        "value": "Yok"
+      },
+      {
+        "label": "Desteklenen Platform",
+        "value": "Android"
+      },
+      {
+        "label": "Ekran",
+        "value": "Var"
+      },
+      {
+        "label": "Adım Sayar",
+        "value": "Var"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Mikrofon Var Mı ? Mikrofonlu Çocuklar İçin Uygun mu ? Hayır Kamera Adedi V",
     "color": "Siyah"
   },
@@ -1132,6 +4598,88 @@ export const products = [
       "/public/images/products/imiki-c1-ecosystem-company-akilli-saat-lacivert-nt-111756-52-03.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/akilli-saat/imiki-c1-ecosystem-company-akilli-saat-lacivert-nt-111756",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Lacivert"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Mikrofon Var Mı ?",
+        "value": "Mikrofonlu"
+      },
+      {
+        "label": "Çocuklar İçin Uygun mu ?",
+        "value": "Hayır"
+      },
+      {
+        "label": "Kamera Adedi",
+        "value": "Var"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "900 MAh"
+      },
+      {
+        "label": "Sesli Görüşme",
+        "value": "Var"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirmez"
+      },
+      {
+        "label": "Uyku Modu",
+        "value": "Var"
+      },
+      {
+        "label": "Titreşim",
+        "value": "Var"
+      },
+      {
+        "label": "Çalışma Süresi",
+        "value": "5 Saat Altı"
+      },
+      {
+        "label": "Radyo",
+        "value": "Yok"
+      },
+      {
+        "label": "Desteklenen Platform",
+        "value": "Android"
+      },
+      {
+        "label": "Ekran",
+        "value": "Var"
+      },
+      {
+        "label": "Adım Sayar",
+        "value": "Var"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Lacivert Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Mikrofon Var Mı ? Mikrofonlu Çocuklar İçin Uygun mu ? Hayır Kamera Aded",
     "color": "Lacivert"
   },
@@ -1150,6 +4698,60 @@ export const products = [
       "/public/images/products/dahua-s5-pro-4k-arac-ici-kamera-aksiyon-kamera-siyah-nt-118992-53-04.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/aksiyon-kamera/dahua-s5-pro-4k-arac-ici-kamera-aksiyon-kamera-siyah-nt-118992",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Görüntü Aktarım Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Kamera Adedi",
+        "value": "2 Kamera"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "900 MAh"
+      },
+      {
+        "label": "Paket İçeriği",
+        "value": "Garanti Kitapçığı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirmez"
+      },
+      {
+        "label": "Bluetooth",
+        "value": "Yok"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Var"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Görüntü Aktarım Desteği Var Kamera Adedi 2 Kamera Pil Kapasitesi (Mah) 900 MAh Paket İçeriği Garan",
     "color": "Siyah"
   },
@@ -1167,6 +4769,60 @@ export const products = [
       "/public/images/products/azdome-xiaomi-ecosystem-company-m330-aksiyon-kamera-siyah-nt-118897-54-03.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/aksiyon-kamera/azdome-xiaomi-ecosystem-company-m330-aksiyon-kamera-siyah-nt-118897",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Görüntü Aktarım Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Kamera Adedi",
+        "value": "2 Kamera"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "900 MAh"
+      },
+      {
+        "label": "Paket İçeriği",
+        "value": "Kulanım Kılavuzu"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirmez"
+      },
+      {
+        "label": "Bluetooth",
+        "value": "Var"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Yok"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Görüntü Aktarım Desteği Var Kamera Adedi 2 Kamera Pil Kapasitesi (Mah) 900 MAh Paket İçeriği Kulan",
     "color": "Siyah"
   },
@@ -1185,6 +4841,60 @@ export const products = [
       "/public/images/products/castu-lk-027-mini-flip-dijital-kamera-aksiyon-kamera-pembe-nt-118027-55-04.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/aksiyon-kamera/castu-lk-027-mini-flip-dijital-kamera-aksiyon-kamera-pembe-nt-118027",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Pembe"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Görüntü Aktarım Desteği",
+        "value": "Var"
+      },
+      {
+        "label": "Kamera Adedi",
+        "value": "1 Kamera"
+      },
+      {
+        "label": "Pil Kapasitesi (Mah)",
+        "value": "900 MAh"
+      },
+      {
+        "label": "Paket İçeriği",
+        "value": "Garanti Kitapçığı"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirir"
+      },
+      {
+        "label": "Bluetooth",
+        "value": "Yok"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Yok"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Pembe Ürün Ağırlığı 0 gr Görüntü Aktarım Desteği Var Kamera Adedi 1 Kamera Pil Kapasitesi (Mah) 900 MAh Paket İçeriği Garan",
     "color": "Pembe"
   },
@@ -1204,6 +4914,68 @@ export const products = [
       "/public/images/products/nettech-apple-iphone-16-uyumlu-nt-n094-arka-koruma-kilif-beyaz-nt-114941-56-05.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/arka-koruma-kilif/nettech-apple-iphone-16-uyumlu-nt-n094-arka-koruma-kilif-beyaz-nt-114941",
+    "specs": [
+      {
+        "label": "Uyumlu Modeller",
+        "value": "iPhone 16"
+      },
+      {
+        "label": "Renk",
+        "value": "Beyaz"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Kılıf Adı",
+        "value": "Şeffaf Seri"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Silikon"
+      },
+      {
+        "label": "Stand Olarak Kullanım",
+        "value": "Yok"
+      },
+      {
+        "label": "Ürün Kalınlık (Mm)",
+        "value": "0.3 mm"
+      },
+      {
+        "label": "Smart Kılıf Özelliği",
+        "value": "Yok"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "1 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirir"
+      },
+      {
+        "label": "Uyku Modu",
+        "value": "Yok"
+      },
+      {
+        "label": "Kılıf Türü",
+        "value": "MagSafe Kılıflar"
+      },
+      {
+        "label": "Bakım Talimatı",
+        "value": "Nemli Bir Bez İle Silin"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller iPhone 16 Renk Beyaz Ürün Ağırlığı 0 gr Kılıf Adı Şeffaf Seri Malzeme Cinsi Silikon Stand Olarak Kullanım Yok Ürün Kalınlık (Mm)",
     "color": "Beyaz"
   },
@@ -1220,6 +4992,68 @@ export const products = [
       "/public/images/products/nettech-apple-iphone-16-uyumlu-nt-n086-arka-koruma-kilif-turkuaz-nt-114277-57-02.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/arka-koruma-kilif/nettech-apple-iphone-16-uyumlu-nt-n086-arka-koruma-kilif-turkuaz-nt-114277",
+    "specs": [
+      {
+        "label": "Uyumlu Modeller",
+        "value": "iPhone 16"
+      },
+      {
+        "label": "Renk",
+        "value": "Turkuaz"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Kılıf Adı",
+        "value": "Desenli Seri"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Silikon"
+      },
+      {
+        "label": "Stand Olarak Kullanım",
+        "value": "Yok"
+      },
+      {
+        "label": "Ürün Kalınlık (Mm)",
+        "value": "0.3 mm"
+      },
+      {
+        "label": "Smart Kılıf Özelliği",
+        "value": "Yok"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "Belirtilmemiş"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirir"
+      },
+      {
+        "label": "Uyku Modu",
+        "value": "Yok"
+      },
+      {
+        "label": "Kılıf Türü",
+        "value": "Karışık Renkli Kılıflar"
+      },
+      {
+        "label": "Bakım Talimatı",
+        "value": "Nemli Bir Bez İle Silin"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller iPhone 16 Renk Turkuaz Ürün Ağırlığı 0 gr Kılıf Adı Desenli Seri Malzeme Cinsi Silikon Stand Olarak Kullanım Yok Ürün Kalınlık (",
     "color": "Turkuaz"
   },
@@ -1237,6 +5071,68 @@ export const products = [
       "/public/images/products/nettech-apple-iphone-16-uyumlu-nt-n074-arka-koruma-kilif-mor-nt-113676-58-03.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/arka-koruma-kilif/nettech-apple-iphone-16-uyumlu-nt-n074-arka-koruma-kilif-mor-nt-113676",
+    "specs": [
+      {
+        "label": "Uyumlu Modeller",
+        "value": "iPhone 16"
+      },
+      {
+        "label": "Renk",
+        "value": "Mor"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Kılıf Adı",
+        "value": "Lansman Seri"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Silikon"
+      },
+      {
+        "label": "Stand Olarak Kullanım",
+        "value": "Yok"
+      },
+      {
+        "label": "Ürün Kalınlık (Mm)",
+        "value": "0.3 mm"
+      },
+      {
+        "label": "Smart Kılıf Özelliği",
+        "value": "Yok"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "Belirtilmemiş"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirir"
+      },
+      {
+        "label": "Uyku Modu",
+        "value": "Yok"
+      },
+      {
+        "label": "Kılıf Türü",
+        "value": "Lüx Lansman Kılıflar"
+      },
+      {
+        "label": "Bakım Talimatı",
+        "value": "Nemli Bir Bez İle Silin"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller iPhone 16 Renk Mor Ürün Ağırlığı 0 gr Kılıf Adı Lansman Seri Malzeme Cinsi Silikon Stand Olarak Kullanım Yok Ürün Kalınlık (Mm)",
     "color": "Mor"
   },
@@ -1254,6 +5150,56 @@ export const products = [
       "/public/images/products/nettech-apple-iphone-xs-max-uyumlu-clear-view-aynali-kapakli-kilif-gri-nt-85407-59-03.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/kapakli-kilif/nettech-apple-iphone-xs-max-uyumlu-clear-view-aynali-kapakli-kilif-gri-nt-85407",
+    "specs": [
+      {
+        "label": "Uyumlu Modeller",
+        "value": "iPhone XS Max"
+      },
+      {
+        "label": "Renk",
+        "value": "Gri"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Kılıf Adı",
+        "value": "Clear View Aynalı"
+      },
+      {
+        "label": "Stand Olarak Kullanım",
+        "value": "Var"
+      },
+      {
+        "label": "Ürün Kalınlık (Mm)",
+        "value": "0.5 mm"
+      },
+      {
+        "label": "Smart Kılıf Özelliği",
+        "value": "Var"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "Belirtilmemiş"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirmez"
+      },
+      {
+        "label": "Desenli/Yazılı",
+        "value": "Desenli/Yazılı"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller iPhone XS Max Renk Gri Ürün Ağırlığı 0 gr Kılıf Adı Clear View Aynalı Stand Olarak Kullanım Var Ürün Kalınlık (Mm) 0.5 mm Smart",
     "color": "Gri"
   },
@@ -1271,6 +5217,56 @@ export const products = [
       "/public/images/products/nettech-apple-iphone-xs-max-uyumlu-clear-view-aynali-kapakli-kilif-rose-gold-nt-85406-60-03.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/kapakli-kilif/nettech-apple-iphone-xs-max-uyumlu-clear-view-aynali-kapakli-kilif-rose-gold-nt-85406",
+    "specs": [
+      {
+        "label": "Uyumlu Modeller",
+        "value": "iPhone XS Max"
+      },
+      {
+        "label": "Renk",
+        "value": "Rose Gold"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Kılıf Adı",
+        "value": "Clear View Aynalı"
+      },
+      {
+        "label": "Stand Olarak Kullanım",
+        "value": "Var"
+      },
+      {
+        "label": "Ürün Kalınlık (Mm)",
+        "value": "0.5 mm"
+      },
+      {
+        "label": "Smart Kılıf Özelliği",
+        "value": "Var"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "Belirtilmemiş"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirmez"
+      },
+      {
+        "label": "Desenli/Yazılı",
+        "value": "Desenli/Yazılı"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller iPhone XS Max Renk Rose Gold Ürün Ağırlığı 0 gr Kılıf Adı Clear View Aynalı Stand Olarak Kullanım Var Ürün Kalınlık (Mm) 0.5 mm",
     "color": "Rose Gold"
   },
@@ -1288,6 +5284,56 @@ export const products = [
       "/public/images/products/nettech-apple-iphone-11-pro-max-uyumlu-clear-view-aynali-kapakli-kilif-rose-gold-nt-85515-61-03.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/kapakli-kilif/nettech-apple-iphone-11-pro-max-uyumlu-clear-view-aynali-kapakli-kilif-rose-gold-nt-85515",
+    "specs": [
+      {
+        "label": "Uyumlu Modeller",
+        "value": "iPhone 11 Pro Max"
+      },
+      {
+        "label": "Renk",
+        "value": "Rose Gold"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Kılıf Adı",
+        "value": "Clear View Aynalı"
+      },
+      {
+        "label": "Stand Olarak Kullanım",
+        "value": "Var"
+      },
+      {
+        "label": "Ürün Kalınlık (Mm)",
+        "value": "0.5 mm"
+      },
+      {
+        "label": "Smart Kılıf Özelliği",
+        "value": "Var"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "Belirtilmemiş"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirmez"
+      },
+      {
+        "label": "Desenli/Yazılı",
+        "value": "Desenli/Yazılı"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller iPhone 11 Pro Max Renk Rose Gold Ürün Ağırlığı 0 gr Kılıf Adı Clear View Aynalı Stand Olarak Kullanım Var Ürün Kalınlık (Mm) 0.5",
     "color": "Rose Gold"
   },
@@ -1306,6 +5352,48 @@ export const products = [
       "/public/images/products/zawa-cuzdan-hakiki-deri-mekanizmali-cuzdan-kahverengi-nt-118424-62-04.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/diger-kiliflar/zawa-cuzdan-hakiki-deri-mekanizmali-cuzdan-kahverengi-nt-118424",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Kahverengi"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Kılıf Adı",
+        "value": "Cüzdan"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Deri"
+      },
+      {
+        "label": "Ürün Kalınlık (Mm)",
+        "value": "0.1 mm"
+      },
+      {
+        "label": "Yapışkan Türü",
+        "value": "Etiket"
+      },
+      {
+        "label": "Baskı Türü",
+        "value": "Uv"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirir"
+      },
+      {
+        "label": "Bakım Talimatı",
+        "value": "Nemli Bir Bez İle Silin"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Kahverengi Ürün Ağırlığı 0 gr Kılıf Adı Cüzdan Malzeme Cinsi Deri Ürün Kalınlık (Mm) 0.1 mm Yapışkan Türü Etiket Baskı Türü",
     "color": "Kahverengi"
   },
@@ -1325,6 +5413,48 @@ export const products = [
       "/public/images/products/nettech-cuzdan-miknatisli-deri-kartlik-cuzdan-mavi-nt-114180-63-05.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/diger-kiliflar/nettech-cuzdan-miknatisli-deri-kartlik-cuzdan-mavi-nt-114180",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Mavi"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Kılıf Adı",
+        "value": "Cüzdan"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Deri"
+      },
+      {
+        "label": "Ürün Kalınlık (Mm)",
+        "value": "0.1 mm"
+      },
+      {
+        "label": "Yapışkan Türü",
+        "value": "Etiket"
+      },
+      {
+        "label": "Baskı Türü",
+        "value": "Uv"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Desenli/Yazılı",
+        "value": "Desenli Şekilli"
+      },
+      {
+        "label": "Bakım Talimatı",
+        "value": "Nemli Bir Bez İle Silin"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Mavi Ürün Ağırlığı 0 gr Kılıf Adı Cüzdan Malzeme Cinsi Deri Ürün Kalınlık (Mm) 0.1 mm Yapışkan Türü Etiket Baskı Türü Uv Ür",
     "color": "Mavi"
   },
@@ -1343,8 +5473,42 @@ export const products = [
       "/public/images/products/nettech-telefon-vantuz-tutucu-uzay-grisi-nt-112378-64-04.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/diger-kiliflar/nettech-telefon-vantuz-tutucu-uzay-grisi-nt-112378",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Uzay Grisi"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Silikon"
+      },
+      {
+        "label": "Ürün Kalınlık (Mm)",
+        "value": "0.5 mm"
+      },
+      {
+        "label": "Yapışkan Türü",
+        "value": "Etiket"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Su Geçirmezlik",
+        "value": "Geçirir"
+      },
+      {
+        "label": "Bakım Talimatı",
+        "value": "Nemli Bir Bez İle Silin"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Uzay Grisi Ürün Ağırlığı 0 gr Malzeme Cinsi Silikon Ürün Kalınlık (Mm) 0.5 mm Yapışkan Türü Etiket Ürün Menşei/Ülke P.R.C S",
-    "color": "Gri"
+    "color": "Uzay Grisi"
   },
   {
     "id": "hadron-hd803-klavye-siyah-nt-114611-65",
@@ -1359,6 +5523,76 @@ export const products = [
       "/public/images/products/hadron-hd803-klavye-siyah-nt-114611-65-02.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/klavye/hadron-hd803-klavye-siyah-nt-114611",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Plastik"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Bağlantı Tipi",
+        "value": "Kablolu"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Buton Sayısı",
+        "value": "1"
+      },
+      {
+        "label": "Desteklenen Platform",
+        "value": "Windows"
+      },
+      {
+        "label": "Dil Seçimi",
+        "value": "Türkçe"
+      },
+      {
+        "label": "Mouse Algılayıcısı Tipi",
+        "value": "Optik"
+      },
+      {
+        "label": "Mouse Azami Hassasiyeti",
+        "value": "500 dpi-1000 dpi"
+      },
+      {
+        "label": "Bluetooth",
+        "value": "Yok"
+      },
+      {
+        "label": "Ürün Tipi",
+        "value": "Klavye"
+      },
+      {
+        "label": "Bağlantı Arayüzü",
+        "value": "USB"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Medya Kontrol Tuşları Var Bağlantı Tipi Kablolu Ürün Durumu Sıfır Ürün Menşe",
     "color": "Siyah"
   },
@@ -1377,6 +5611,72 @@ export const products = [
       "/public/images/products/fd-k912t-bluetooth-klavye-beyaz-nt-105011-66-04.png"
     ],
     "sourceUrl": "https://nettechstore.com/urun/klavye/fd-k912t-bluetooth-klavye-beyaz-nt-105011",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Beyaz"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Alüminyum"
+      },
+      {
+        "label": "Medya Kontrol Tuşları",
+        "value": "Var"
+      },
+      {
+        "label": "Bağlantı Tipi",
+        "value": "Bluetooth"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Bluetooth Mesafesi",
+        "value": "10 m- 20 m"
+      },
+      {
+        "label": "Buton Sayısı",
+        "value": "1"
+      },
+      {
+        "label": "Desteklenen Platform",
+        "value": "IOS"
+      },
+      {
+        "label": "Dil Seçimi",
+        "value": "Türkçe"
+      },
+      {
+        "label": "Mouse Algılayıcısı Tipi",
+        "value": "Lazer"
+      },
+      {
+        "label": "Mouse Azami Hassasiyeti",
+        "value": "3001 dpi-4000 dpi"
+      },
+      {
+        "label": "Bluetooth",
+        "value": "Var"
+      },
+      {
+        "label": "Ürün Tipi",
+        "value": "Klavye"
+      },
+      {
+        "label": "Bağlantı Arayüzü",
+        "value": "USB"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Medya Kontrol Tuşları Var Bağlantı Tipi Bluetooth Ürün Durumu Sıfır Ürün M",
     "color": "Beyaz"
   },
@@ -1394,6 +5694,40 @@ export const products = [
       "/public/images/products/hadron-hdx4252-plastik-notebook-sogutucu-siyah-nt-109586-67-03.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/bilgisayar-bilesenleri/hadron-hdx4252-plastik-notebook-sogutucu-siyah-nt-109586",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Plastik"
+      },
+      {
+        "label": "Kullanım Tipi",
+        "value": "Notebook Soğutucu"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Garanti Süresi",
+        "value": "24 Ay"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Desteklenen Platform",
+        "value": "Windows"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Kullanım Tipi Notebook Soğutucu Garanti Durumu İthaalatçı Garantili Garanti",
     "color": "Siyah"
   },
@@ -1412,6 +5746,56 @@ export const products = [
       "/public/images/products/hadron-hd323ab-ps3-ps4-oyun-konsolu-siyah-nt-114616-68-04.jpg"
     ],
     "sourceUrl": "https://nettechstore.com/urun/oyun-konsolu/hadron-hd323ab-ps3-ps4-oyun-konsolu-siyah-nt-114616",
+    "specs": [
+      {
+        "label": "Renk",
+        "value": "Siyah"
+      },
+      {
+        "label": "Ürün Ağırlığı",
+        "value": "0 gr"
+      },
+      {
+        "label": "Malzeme Cinsi",
+        "value": "Plastik"
+      },
+      {
+        "label": "Kablo Tipi",
+        "value": "Tv Bağlantı Kablosu"
+      },
+      {
+        "label": "Kullanım Tipi",
+        "value": "PS3-PS4"
+      },
+      {
+        "label": "Ürün Durumu",
+        "value": "Sıfır"
+      },
+      {
+        "label": "Garanti Durumu",
+        "value": "İthaalatçı Garantili"
+      },
+      {
+        "label": "Ürün Menşei/Ülke",
+        "value": "P.R.C"
+      },
+      {
+        "label": "Titreşim",
+        "value": "Var"
+      },
+      {
+        "label": "Bağlantı Teknolojisi",
+        "value": "Var"
+      },
+      {
+        "label": "Ce Uygunluk",
+        "value": "Ürün Görselinde Bulunuyor"
+      },
+      {
+        "label": "Tamir Edilebilirlik",
+        "value": "Satıcı Tamir Eder"
+      }
+    ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Kablo Tipi Tv Bağlantı Kablosu Kullanım Tipi PS3-PS4 Ürün Durumu Sıfır Garan",
     "color": "Siyah"
   }

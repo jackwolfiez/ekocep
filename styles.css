@@ -2198,20 +2198,22 @@ img {
 
 .product-spec-table {
   margin-top: 1.7rem;
-  overflow: hidden;
-  border: 1px solid #dde3ea;
-  border-radius: 0.9rem;
-  background: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
 }
 
 .product-spec-row {
   display: grid;
-  grid-template-columns: minmax(140px, 0.42fr) minmax(0, 0.58fr);
-  border-bottom: 1px solid #e8edf2;
+  grid-template-columns: minmax(132px, 0.42fr) minmax(0, 0.58fr);
+  overflow: hidden;
+  border: 1px solid #dde3ea;
+  border-radius: 0.75rem;
+  background: #ffffff;
 }
 
 .product-spec-row:last-child {
-  border-bottom: 0;
+  border-bottom: 1px solid #dde3ea;
 }
 
 .product-spec-label,
@@ -2230,6 +2232,16 @@ img {
 .product-spec-value {
   color: #151922;
   font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .product-spec-table {
+    grid-template-columns: 1fr;
+  }
+
+  .product-spec-row {
+    grid-template-columns: minmax(112px, 0.45fr) minmax(0, 0.55fr);
+  }
 }
 
 .related-products-section {

@@ -32,6 +32,8 @@ const meta = (html, property) => {
   return htmlDecode(html.match(pattern)?.[1] || "");
 };
 
+const stripTags = (value = "") => htmlDecode(value.replace(/<[^>]*>/g, " "));
+
 const extractJsonLdProducts = (html) =>
   Array.from(html.matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi))
     .flatMap(([, json]) => {
@@ -89,6 +91,20 @@ const extractPrice = (html) => {
   return "Fiyat için iletişime geçin";
 };
 
+const extractSpecs = (html) => {
+  const featureStart = html.search(/id=["']product-feature["']/i);
+  const featureHtml = featureStart >= 0 ? html.slice(featureStart) : html;
+  const tables = Array.from(featureHtml.matchAll(/<table[^>]*>\s*<tbody[^>]*>([\s\S]*?)<\/tbody>\s*<\/table>/gi));
+  const preferredTable = tables.at(-1)?.[1] || "";
+
+  return Array.from(preferredTable.matchAll(/<tr[^>]*>\s*<(?:th|td)[^>]*>([\s\S]*?)<\/(?:th|td)>\s*<td[^>]*>([\s\S]*?)<\/td>\s*<\/tr>/gi))
+    .map(([, label, value]) => ({
+      label: stripTags(label),
+      value: stripTags(value)
+    }))
+    .filter((spec) => spec.label && spec.value);
+};
+
 const inferColor = (title, description) => {
   const text = `${title} ${description}`.toLocaleLowerCase("tr");
   const colors = [
@@ -136,6 +152,7 @@ const getProduct = async (url, group, index) => {
   const fullTitle = meta(html, "og:title") || htmlDecode(html.match(/<title>(.*?)<\/title>/i)?.[1] || "");
   const name = fullTitle.replace(/\s*-\s*Nettech Store\s*$/i, "");
   const description = meta(html, "description") || "Ekocep güvencesiyle seçilmiş teknoloji ürünü.";
+  const specs = extractSpecs(html);
   const images = extractGalleryImages(html);
   const image = images[0] || meta(html, "og:image") || meta(html, "image");
   const id = `${slugify(name)}-${index + 1}`;
@@ -150,8 +167,9 @@ const getProduct = async (url, group, index) => {
     hoverImg: images[1] || image,
     images,
     sourceUrl: url,
+    specs,
     description,
-    color: inferColor(name, description)
+    color: specs.find((spec) => spec.label === "Renk")?.value || inferColor(name, description)
   };
 };
 

@@ -112,6 +112,12 @@ function escapeHtml(value) {
 }
 
 function parseProductSpecs(product) {
+  if (Array.isArray(product.specs) && product.specs.length) {
+    return product.specs
+      .filter((spec) => spec.label && spec.value)
+      .map((spec) => ({ label: spec.label, value: spec.value }));
+  }
+
   const description = String(product.description || "").replace(/^Özellikler\s*/i, "").trim();
   const matches = specLabels
     .flatMap((label) => {
