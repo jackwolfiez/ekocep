@@ -162,20 +162,27 @@ function compactValues(values) {
 
 function buildProductDescription(product, specs = parseProductSpecs(product)) {
   const category = product.subcategory || product.category || "teknoloji ürünü";
+  const nameLower = product.name.toLocaleLowerCase("tr");
   const color = specValue(specs, "Renk") || product.color;
   const material = specValue(specs, "Malzeme Cinsi");
   const connection = specValue(specs, "Bağlantı Tipi");
   const usage = specValue(specs, "Kullanım Tipi") || specValue(specs, "Şarj Tipi");
   const battery = specValue(specs, "Pil Kapasitesi (Mah)") || specValue(specs, "Kamera Pil Kapasitesi (Mah)");
+  const outputVoltage = specValue(specs, "Çıkış Voltaj (V)");
+  const inputVoltage = specValue(specs, "Giriş Voltaj (V)");
+  const outputAmp = specValue(specs, "Çıkış Amper (Mah)");
+  const cableType = specValue(specs, "Kablo Tipi");
+  const cableLength = specValue(specs, "Kablo Uzunluğu (Cm.)");
+  const fastCharge = specValue(specs, "Hızlı Şarj Desteği");
   const power = compactValues([
-    specValue(specs, "Çıkış Voltaj (V)"),
-    specValue(specs, "Giriş Voltaj (V)"),
-    specValue(specs, "Çıkış Amper (Mah)")
+    outputVoltage && `${outputVoltage} çıkış voltajı`,
+    inputVoltage && `${inputVoltage} giriş voltajı`,
+    outputAmp && `${outputAmp} çıkış akımı`
   ]);
   const cable = compactValues([
-    specValue(specs, "Kablo Tipi"),
-    specValue(specs, "Kablo Uzunluğu (Cm.)"),
-    specValue(specs, "Hızlı Şarj Desteği")
+    cableType && `${cableType} bağlantı`,
+    cableLength && `${cableLength} kablo uzunluğu`,
+    fastCharge?.toLocaleLowerCase("tr") === "var" ? "hızlı şarj desteği" : null
   ]);
   const audio = compactValues([
     specValue(specs, "Kulaklık Tipi"),
@@ -184,16 +191,43 @@ function buildProductDescription(product, specs = parseProductSpecs(product)) {
     specValue(specs, "Ses Türü")
   ]);
   const warranty = specValue(specs, "Garanti Süresi") || specValue(specs, "Garanti Durumu");
+  const status = specValue(specs, "Ürün Durumu");
+  const finish = compactValues([color && `${color.toLocaleLowerCase("tr")} renk`, material && `${material.toLocaleLowerCase("tr")} gövde`]);
 
-  const details = compactValues([color && `${color} renk`, material && `${material} malzeme`, connection, usage]);
-  const performance = compactValues([audio, battery && `${battery} pil kapasitesi`, power, cable]);
-  const support = compactValues([warranty && `${warranty} garanti`, specValue(specs, "Ürün Durumu")]);
+  if (nameLower.includes("powerbank")) {
+    return [
+      `${product.name}, telefonunu ve günlük mobil cihazlarını yanında priz aramadan kullanmak isteyenler için tasarlanmış taşınabilir bir güç çözümüdür.`,
+      battery && `${battery} kapasitesi, gün içinde şarj ihtiyacı doğduğunda pratik bir yedek enerji alanı sunar.`,
+      compactValues([power, cable]) && `${compactValues([power, cable])} özellikleri sayesinde farklı cihaz ve kablo senaryolarına uyum sağlar.`,
+      finish && `${finish} ile ürün hem teknik hem de görsel olarak sade, modern bir kullanım hissi verir.`,
+      compactValues([warranty && `${warranty} garanti`, status]) && `${compactValues([warranty && `${warranty} garanti`, status])} bilgisiyle ürünün temel satış ve kullanım koşulları netleşir.`
+    ].filter(Boolean).join(" ");
+  }
+
+  if (nameLower.includes("kulaklık") || nameLower.includes("hoparlör")) {
+    return [
+      `${product.name}, ses ve müzik deneyimini günlük kullanımda daha pratik hale getirmek için seçilmiş bir modeldir.`,
+      audio && `${audio} özellikleri; görüşme, müzik dinleme ve medya kontrolü gibi temel ihtiyaçlarda kullanıcıya esneklik sağlar.`,
+      connection && `${connection} bağlantı yapısı ürünün cihazlarla nasıl kullanılacağını netleştirir.`,
+      finish && `${finish} tasarım tarafında ürüne tamamlayıcı bir karakter kazandırır.`,
+      compactValues([warranty && `${warranty} garanti`, status]) && `${compactValues([warranty && `${warranty} garanti`, status])} bilgisi satın alma öncesi önemli detayları tamamlar.`
+    ].filter(Boolean).join(" ");
+  }
+
+  if (nameLower.includes("şarj") || nameLower.includes("kablo")) {
+    return [
+      `${product.name}, günlük cihaz kullanımında şarj ve bağlantı ihtiyacını düzenli şekilde karşılamak için tercih edilebilecek tamamlayıcı bir aksesuardır.`,
+      compactValues([power, cable, usage]) && `${compactValues([power, cable, usage])} bilgileri ürünün hangi kullanım senaryolarına daha uygun olduğunu gösterir.`,
+      finish && `${finish} ürünün dayanıklılık ve görünüm beklentilerini destekler.`,
+      compactValues([warranty && `${warranty} garanti`, status]) && `${compactValues([warranty && `${warranty} garanti`, status])} detayı da tercih sürecini kolaylaştırır.`
+    ].filter(Boolean).join(" ");
+  }
 
   return [
-    `${product.name}, ${category.toLocaleLowerCase("tr")} kategorisinde günlük kullanım için değerlendirilebilecek pratik bir seçenektir.`,
-    details && `Üründe ${details} bilgileri öne çıkar.`,
-    performance && `Teknik özelliklerde ${performance} gibi değerler ürünün kullanım alanını daha net gösterir.`,
-    support && `${support} bilgisi de ürün tercihinde yardımcı olur.`
+    `${product.name}, ${category.toLocaleLowerCase("tr")} kategorisinde işlevi ve teknik özellikleri net biçimde tanımlanmış bir üründür.`,
+    compactValues([finish, connection, usage]) && `${compactValues([finish, connection, usage])} bilgileri ürünün kullanım karakterini ortaya koyar.`,
+    compactValues([audio, battery && `${battery} pil kapasitesi`, power, cable]) && `Öne çıkan teknik detaylar arasında ${compactValues([audio, battery && `${battery} pil kapasitesi`, power, cable])} bulunur.`,
+    compactValues([warranty && `${warranty} garanti`, status]) && `${compactValues([warranty && `${warranty} garanti`, status])} bilgisiyle ürünün satış sonrası beklentileri daha anlaşılır hale gelir.`
   ].filter(Boolean).join(" ");
 }
 
