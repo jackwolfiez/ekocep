@@ -1,8 +1,22 @@
-import { animate, stagger } from "https://cdn.jsdelivr.net/npm/animejs@4.5.0/+esm";
 import { categories as catalogCategories, products as catalogProducts } from "./products-data.js";
+import { initSiteAnimations } from "./site-animations.js";
+
+let animate = () => {};
+let stagger = () => 0;
+
+import("https://cdn.jsdelivr.net/npm/animejs@4.5.0/+esm")
+  .then((anime) => {
+    animate = anime.animate || animate;
+    stagger = anime.stagger || stagger;
+  })
+  .catch(() => {});
+
+function createIcons() {
+  window.lucide?.createIcons?.();
+}
 
 const targetDate = new Date("2026-10-10T00:00:00").getTime();
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches || false;
 const announcements = [
   "Tüm siparişlerde ücretsiz teslimat",
   "Yeni ürünler yayında",
@@ -10,6 +24,8 @@ const announcements = [
 ];
 
 const productUrl = (product) => `./product.html?id=${encodeURIComponent(product.id)}`;
+const categoryUrl = (category, subcategory = "") =>
+  `./category.html?category=${encodeURIComponent(category)}${subcategory ? `&subcategory=${encodeURIComponent(subcategory)}` : ""}`;
 const colorValues = {
   Siyah: "#111111",
   Beyaz: "#f7f7f2",
@@ -34,10 +50,10 @@ const withCardFields = (product) => ({
 const allProducts = catalogProducts.map(withCardFields);
 const featuredProducts = allProducts.slice(0, 8);
 const categoryGroups = catalogCategories.reduce((groups, category) => {
-  const existing = groups.get(category.parent) || { label: category.parent, href: "#shop", children: [], productIds: [] };
+  const existing = groups.get(category.parent) || { label: category.parent, href: categoryUrl(category.parent), children: [], productIds: [] };
   existing.productIds.push(...category.productIds);
   if (category.child) {
-    existing.children.push({ label: category.child, href: "#shop", productIds: category.productIds });
+    existing.children.push({ label: category.child, href: categoryUrl(category.parent, category.child), productIds: category.productIds });
   }
   groups.set(category.parent, existing);
   return groups;
@@ -76,7 +92,7 @@ const heroSlides = [
 
 const accessories = catalogCategories.slice(0, 9).map((category) => {
   const product = allProducts.find((item) => category.productIds.includes(item.id)) || allProducts[0];
-  return { label: category.child || category.parent, href: "#shop", img: product.img };
+  return { label: category.child || category.parent, href: categoryUrl(category.parent, category.child || ""), img: product.img };
 });
 
 const boldProducts = featuredProducts.slice(0, 7);
@@ -131,11 +147,11 @@ const footerMenuColumns = [
   {
     title: "Popüler Kategoriler",
     links: [
-      { label: "Telefon Aksesuarları", href: "#shop" },
-      { label: "Şarj Cihazları", href: "#shop" },
-      { label: "Kulaklıklar", href: "#shop" },
-      { label: "Kablolar", href: "#shop" },
-      { label: "Akıllı Saat Aksesuarları", href: "#shop" }
+      { label: "Telefon Aksesuarları", href: categoryUrl("Telefon Kılıfı") },
+      { label: "Şarj Cihazları", href: categoryUrl("Şarj Cihazı") },
+      { label: "Kulaklıklar", href: categoryUrl("Ses ve Müzik") },
+      { label: "Kablolar", href: categoryUrl("Kablo") },
+      { label: "Akıllı Saat Aksesuarları", href: categoryUrl("Giyilebilir Teknoloji", "Akıllı Saat") }
     ]
   }
 ];
@@ -261,6 +277,7 @@ function animateProductGrid() {
 
 function bindScrollAnimations() {
   if (prefersReducedMotion) return;
+  if (!("IntersectionObserver" in window)) return;
 
   const groups = [
     { selector: "#accessories > a", delay: 35 },
@@ -299,6 +316,12 @@ function bindScrollAnimations() {
 }
 
 function updateCountdown() {
+  const daysOutput = document.querySelector("#days");
+  const hoursOutput = document.querySelector("#hours");
+  const minutesOutput = document.querySelector("#minutes");
+  const secondsOutput = document.querySelector("#seconds");
+  if (!daysOutput || !hoursOutput || !minutesOutput || !secondsOutput) return;
+
   const diff = Math.max(0, targetDate - Date.now());
   const days = Math.floor(diff / 86400000);
   const hours = Math.floor((diff / 3600000) % 24);
@@ -333,7 +356,7 @@ function renderPopularCategories() {
     .map((category) => {
       const product = allProducts.find((item) => category.productIds.includes(item.id)) || allProducts[0];
       return `
-        <a href="#shop" class="popular-category-card">
+        <a href="${categoryUrl(category.parent, category.child || "")}" class="popular-category-card">
           <span class="popular-category-media">
             <img src="${product.img}" alt="${category.child || category.parent}" loading="lazy" />
           </span>
@@ -369,7 +392,7 @@ function renderBoldProducts() {
   container.innerHTML = repeatedProducts
     .map((product) => renderBoldProductCard(product, product.productIndex))
     .join("");
-  lucide.createIcons();
+  createIcons();
 }
 
 function renderBoldProductCard(product, productIndex) {
@@ -527,7 +550,7 @@ function renderProducts(type = "trending") {
       `
     )
     .join("");
-  lucide.createIcons();
+  createIcons();
   animateProductGrid();
 }
 
@@ -553,6 +576,9 @@ function bindTabs() {
 function bindAnnouncementControls() {
   let index = 0;
   const output = document.querySelector("#announcement");
+  const prev = document.querySelector("#announcement-prev");
+  const next = document.querySelector("#announcement-next");
+  if (!output || !prev || !next) return;
   let timer;
   const animateAnnouncement = (direction) => {
     if (prefersReducedMotion) return;
@@ -585,7 +611,9 @@ function bindAnnouncementControls() {
 }
 
 function renderCategories() {
+  renderHeaderCategoryNav("#home-category-nav");
   const list = document.querySelector("#category-list");
+  if (!list) return;
   const firstCategory = categories[0];
   list.innerHTML = `
     <div class="grid max-h-[72svh] overflow-y-auto lg:grid-cols-[290px_1fr]">
@@ -647,7 +675,38 @@ function renderCategories() {
   `;
   updateCategoryDetail(0);
   bindCategoryTabs();
-  lucide.createIcons();
+  createIcons();
+}
+
+function renderHeaderCategoryNav(selector) {
+  const nav = document.querySelector(selector);
+  if (!nav) return;
+
+  const navMarkup = categories
+    .map((category) => {
+      const children = category.children || [];
+      const submenu = children.length
+        ? `
+          <div class="page-category-panel">
+            <div class="page-category-panel-links">
+              ${children.map((child) => `<a href="${child.href}">${child.label}</a>`).join("")}
+            </div>
+          </div>
+        `
+        : "";
+      return `
+        <div class="page-category-item${children.length ? " has-submenu" : ""}">
+          <a href="${category.href}" class="page-category-link">
+            <span>${category.label}</span>
+            ${children.length ? '<i data-lucide="chevron-down" class="h-3.5 w-3.5"></i>' : ""}
+          </a>
+          ${submenu}
+        </div>
+      `;
+    })
+    .join("");
+
+  nav.innerHTML = navMarkup;
 }
 
 function updateCategoryDetail(index) {
@@ -678,7 +737,7 @@ function updateCategoryDetail(index) {
       `
     )
     .join("");
-  lucide.createIcons();
+  createIcons();
 }
 
 function bindCategoryTabs() {
@@ -922,6 +981,7 @@ function bindSearchDrawer() {
   const toggles = document.querySelectorAll("[data-search-toggle]");
   const closeTriggers = document.querySelectorAll("[data-search-close]");
   const input = document.querySelector("[data-search-input]");
+  const headerSearchInput = document.querySelector(".commerce-search input");
   const clearButton = document.querySelector("[data-search-clear]");
   const productsContainer = drawer?.querySelector(".search-products");
   const emptyState = document.querySelector("[data-search-empty]");
@@ -967,6 +1027,16 @@ function bindSearchDrawer() {
   toggles.forEach((toggle) => {
     toggle.addEventListener("click", (event) => {
       event.stopPropagation();
+      if (input && headerSearchInput?.value) input.value = headerSearchInput.value;
+      filterItems();
+      setOpen(true);
+    });
+  });
+  document.querySelectorAll(".commerce-search").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (input && headerSearchInput?.value) input.value = headerSearchInput.value;
+      filterItems();
       setOpen(true);
     });
   });
@@ -1010,5 +1080,6 @@ document.addEventListener("DOMContentLoaded", () => {
   bindCartDrawer();
   bindLoginDrawer();
   bindSearchDrawer();
-  lucide.createIcons();
+  initSiteAnimations("home");
+  createIcons();
 });

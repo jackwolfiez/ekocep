@@ -71,6 +71,24 @@ const extractGalleryImages = (html) => {
 };
 
 const extractPrice = (html) => {
+  const parseNumericPrice = (rawPrice) => {
+    const raw = rawPrice.replace(/\s/g, "").replace(/[^\d.,]/g, "");
+    if (!raw) return Number.NaN;
+
+    if (/^\d+\.\d{2}$/.test(raw)) return Number(raw);
+    if (/^\d+,\d{2}$/.test(raw)) return Number(raw.replace(",", "."));
+
+    if (raw.includes(",") && raw.includes(".")) {
+      return Number(raw.replace(/\./g, "").replace(",", "."));
+    }
+
+    if (/^\d{1,3}(?:\.\d{3})+$/.test(raw)) {
+      return Number(raw.replace(/\./g, ""));
+    }
+
+    return Number(raw.replace(",", "."));
+  };
+
   const candidates = [
     /itemprop=["']price["'][^>]*content=["']([^"']+)["']/i,
     /"price"\s*:\s*"([^"]+)"/i,
@@ -81,14 +99,23 @@ const extractPrice = (html) => {
   for (const pattern of candidates) {
     const match = html.match(pattern);
     if (!match) continue;
-    const raw = match[1].replace(/\s/g, "");
-    const numeric = Number(raw.replace(/\./g, "").replace(",", "."));
+    const numeric = parseNumericPrice(match[1]);
     if (Number.isFinite(numeric) && numeric > 0) {
       return `${new Intl.NumberFormat("tr-TR").format(Math.round(numeric))} TL`;
     }
   }
 
   return "Fiyat için iletişime geçin";
+};
+
+const splitProductCode = (name) => {
+  const match = name.match(/\s+((?:NT|VR)-[A-Z0-9]+)$/i);
+  if (!match) return { name, sku: null };
+
+  return {
+    name: name.slice(0, match.index).trim(),
+    sku: match[1].toUpperCase()
+  };
 };
 
 const extractSpecs = (html) => {
@@ -150,7 +177,7 @@ const getProduct = async (url, group, index) => {
   if (!response.ok) throw new Error(`${response.status} ${url}`);
   const html = await response.text();
   const fullTitle = meta(html, "og:title") || htmlDecode(html.match(/<title>(.*?)<\/title>/i)?.[1] || "");
-  const name = fullTitle.replace(/\s*-\s*Nettech Store\s*$/i, "");
+  const { name, sku } = splitProductCode(fullTitle.replace(/\s*-\s*Nettech Store\s*$/i, ""));
   const description = meta(html, "description") || "Ekocep güvencesiyle seçilmiş teknoloji ürünü.";
   const specs = extractSpecs(html);
   const images = extractGalleryImages(html);
@@ -162,6 +189,7 @@ const getProduct = async (url, group, index) => {
     name,
     category: group.parent,
     subcategory: group.child,
+    sku,
     price: extractPrice(html),
     image,
     hoverImg: images[1] || image,

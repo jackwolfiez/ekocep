@@ -1,4 +1,9 @@
 import { categories as catalogCategories, products as catalogProducts } from "./products-data.js";
+import { initSiteAnimations } from "./site-animations.js";
+
+function createIcons() {
+  window.lucide?.createIcons?.();
+}
 
 const drawer = document.querySelector("#cart-drawer");
 const cartToggle = document.querySelector("#cart-toggle");
@@ -21,6 +26,8 @@ const cartRemove = drawer?.querySelector("[data-cart-remove]");
 
 let cartCount = 0;
 const productUrl = (product) => `./product.html?id=${encodeURIComponent(product.id)}`;
+const categoryUrl = (category, subcategory = "") =>
+  `./category.html?category=${encodeURIComponent(category)}${subcategory ? `&subcategory=${encodeURIComponent(subcategory)}` : ""}`;
 const colorValues = {
   Siyah: "#111111",
   Beyaz: "#f7f7f2",
@@ -107,11 +114,11 @@ const footerMenuColumns = [
   {
     title: "Popüler Kategoriler",
     links: [
-      { label: "Telefon Aksesuarları", href: "./index.html#shop" },
-      { label: "Şarj Cihazları", href: "./index.html#shop" },
-      { label: "Kulaklıklar", href: "./index.html#shop" },
-      { label: "Kablolar", href: "./index.html#shop" },
-      { label: "Akıllı Saat Aksesuarları", href: "./index.html#shop" }
+      { label: "Telefon Aksesuarları", href: categoryUrl("Telefon Kılıfı") },
+      { label: "Şarj Cihazları", href: categoryUrl("Şarj Cihazı") },
+      { label: "Kulaklıklar", href: categoryUrl("Ses ve Müzik") },
+      { label: "Kablolar", href: categoryUrl("Kablo") },
+      { label: "Akıllı Saat Aksesuarları", href: categoryUrl("Giyilebilir Teknoloji", "Akıllı Saat") }
     ]
   }
 ];
@@ -164,9 +171,15 @@ function escapeHtml(value) {
 
 function parseProductSpecs(product) {
   if (Array.isArray(product.specs) && product.specs.length) {
-    return product.specs
+    const rows = product.specs
       .filter((spec) => spec.label && spec.value)
       .map((spec) => ({ label: spec.label, value: spec.value }));
+
+    if (product.sku && !rows.some((row) => row.label === "Ürün Kodu")) {
+      rows.unshift({ label: "Ürün Kodu", value: product.sku });
+    }
+
+    return rows;
   }
 
   const description = String(product.description || "").replace(/^Özellikler\s*/i, "").trim();
@@ -197,7 +210,12 @@ function parseProductSpecs(product) {
     rows.unshift({ label: "Renk", value: product.color });
   }
 
+  if (product.sku && !rows.some((row) => row.label === "Ürün Kodu")) {
+    rows.unshift({ label: "Ürün Kodu", value: product.sku });
+  }
+
   return rows.length ? rows : [
+    ...(product.sku ? [{ label: "Ürün Kodu", value: product.sku }] : []),
     { label: "Kategori", value: product.subcategory || product.category },
     { label: "Renk", value: product.color || "Standart" }
   ];
@@ -303,10 +321,10 @@ function buildProductDescription(product, specs = parseProductSpecs(product)) {
 }
 
 const categoryGroups = catalogCategories.reduce((groups, category) => {
-  const existing = groups.get(category.parent) || { label: category.parent, href: "./index.html#shop", children: [], productIds: [] };
+  const existing = groups.get(category.parent) || { label: category.parent, href: categoryUrl(category.parent), children: [], productIds: [] };
   existing.productIds.push(...category.productIds);
   if (category.child) {
-    existing.children.push({ label: category.child, href: "./index.html#shop", productIds: category.productIds });
+    existing.children.push({ label: category.child, href: categoryUrl(category.parent, category.child), productIds: category.productIds });
   }
   groups.set(category.parent, existing);
   return groups;
@@ -444,6 +462,7 @@ function bindSearchDrawer() {
   const toggles = document.querySelectorAll("[data-search-toggle]");
   const closeTriggers = document.querySelectorAll("[data-search-close]");
   const input = document.querySelector("[data-search-input]");
+  const headerSearchInput = document.querySelector(".commerce-search input");
   const clearButton = document.querySelector("[data-search-clear]");
   const productsContainer = searchDrawer?.querySelector(".search-products");
   const emptyState = document.querySelector("[data-search-empty]");
@@ -489,6 +508,16 @@ function bindSearchDrawer() {
   toggles.forEach((toggle) => {
     toggle.addEventListener("click", (event) => {
       event.stopPropagation();
+      if (input && headerSearchInput?.value) input.value = headerSearchInput.value;
+      filterItems();
+      setOpen(true);
+    });
+  });
+  document.querySelectorAll(".commerce-search").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (input && headerSearchInput?.value) input.value = headerSearchInput.value;
+      filterItems();
       setOpen(true);
     });
   });
@@ -590,6 +619,7 @@ function hydrateProductDetail() {
   if (featureList) {
     featureList.innerHTML = `
       <li>Kategori: ${currentProduct.subcategory || currentProduct.category}</li>
+      ${currentProduct.sku ? `<li>Ürün Kodu: ${currentProduct.sku}</li>` : ""}
       <li>Renk: ${currentProduct.color || "Standart"}</li>
       <li>Ekocep vitrininde güncel ürün listesine dahil edildi</li>
       <li>Kaynak ürün bilgileri Nettech Store sayfasından alınmıştır</li>
@@ -646,6 +676,26 @@ function renderFooterCatalogLinks() {
     .join("");
 }
 
+function bindStickyBarVisibility() {
+  const stickyBar = document.querySelector(".product-sticky-bar");
+  const footer = document.querySelector(".site-footer");
+  if (!stickyBar || !footer) return;
+
+  if (!("IntersectionObserver" in window)) {
+    stickyBar.classList.add("is-hidden");
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      stickyBar.classList.toggle("is-hidden", entry.isIntersecting);
+    },
+    { threshold: 0.02 }
+  );
+
+  observer.observe(footer);
+}
+
 function bindGallery() {
   const mainImage = document.querySelector("#product-main-image");
   document.querySelectorAll("[data-product-image]").forEach((button) => {
@@ -695,6 +745,37 @@ function bindQuantity() {
   });
 
   quantityInput?.addEventListener("change", () => setQuantity(quantityInput.value));
+}
+
+function renderHeaderCategoryNav() {
+  const nav = document.querySelector("#product-category-nav");
+  if (!nav) return;
+
+  const navMarkup = categories
+    .map((category) => {
+      const children = category.children || [];
+      const submenu = children.length
+        ? `
+          <div class="page-category-panel">
+            <div class="page-category-panel-links">
+              ${children.map((child) => `<a href="${child.href}">${child.label}</a>`).join("")}
+            </div>
+          </div>
+        `
+        : "";
+      return `
+        <div class="page-category-item${children.length ? " has-submenu" : ""}">
+          <a href="${category.href}" class="page-category-link">
+            <span>${category.label}</span>
+            ${children.length ? '<i data-lucide="chevron-down" class="h-3.5 w-3.5"></i>' : ""}
+          </a>
+          ${submenu}
+        </div>
+      `;
+    })
+    .join("");
+
+  nav.innerHTML = navMarkup;
 }
 
 function renderProductCategories() {
@@ -786,7 +867,7 @@ function updateProductCategoryDetail(index) {
       `
     )
     .join("");
-  lucide.createIcons();
+  createIcons();
 }
 
 function bindProductCategoryTabs() {
@@ -808,39 +889,17 @@ function setActiveProductCategoryTab(tab) {
   updateProductCategoryDetail(index);
 }
 
-function bindProductCategoryMenu() {
-  const button = document.querySelector("#product-menu-toggle");
-  const menu = document.querySelector("#product-category-menu");
-  if (!button || !menu) return;
-
-  const setOpen = (isOpen) => {
-    menu.classList.toggle("hidden", !isOpen);
-    button.setAttribute("aria-expanded", String(isOpen));
-  };
-
-  button.addEventListener("click", (event) => {
-    event.stopPropagation();
-    setOpen(menu.classList.contains("hidden"));
-  });
-
-  menu.addEventListener("click", (event) => event.stopPropagation());
-  menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setOpen(false)));
-  document.addEventListener("click", () => setOpen(false));
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") setOpen(false);
-  });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
+  renderHeaderCategoryNav();
   hydrateProductDetail();
   renderFooterCatalogLinks();
   bindGallery();
   bindOptions();
   bindQuantity();
-  renderProductCategories();
-  bindProductCategoryMenu();
   bindCartDrawer();
   bindLoginDrawer();
   bindSearchDrawer();
-  lucide.createIcons();
+  bindStickyBarVisibility();
+  initSiteAnimations("product");
+  createIcons();
 });

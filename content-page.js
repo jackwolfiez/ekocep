@@ -1,3 +1,6 @@
+import { categories as catalogCategories, products as catalogProducts } from "./products-data.js";
+import { initSiteAnimations } from "./site-animations.js";
+
 export const contentPages = {
   about: {
     path: "about.html",
@@ -87,6 +90,20 @@ export const contentPages = {
       ["Hangi ürünler iade edilemez?", "Kullanılmış, hasar görmüş, eksik aksesuarla gönderilmiş veya hijyen nedeniyle yeniden satışı uygun olmayan ürünlerde iade kabul edilmeyebilir."],
       ["Değişim yapabilir miyim?", "Stok durumuna göre model, renk veya ürün değişimi için destek ekibimiz yardımcı olabilir."],
       ["Geri ödeme ne zaman yapılır?", "Ürün kontrolü tamamlandıktan sonra geri ödeme ödeme yöntemin üzerinden başlatılır; banka süreleri değişebilir."]
+    ]
+  },
+  "refund-policy": {
+    path: "refund-policy.html",
+    title: "İade ve Geri Ödeme Politikası",
+    eyebrow: "Politikalar",
+    description: "Ekocep iade ve geri ödeme politikası.",
+    intro: "Alışverişini güvenle tamamlaman için açık iade süreci.",
+    sections: [
+      ["İade Süresi", "Teslim aldığın ürünü, kullanılmamış ve yeniden satılabilir durumda olması şartıyla 14 gün içinde iade talebiyle gönderebilirsin."],
+      ["İade Koşulları", "Ürünün orijinal ambalajı, aksesuarları ve faturasıyla birlikte gönderilmesi gerekir. Kullanım izi, hasar veya eksik parça bulunan ürünlerde iade kabul edilmeyebilir."],
+      ["Geri Ödeme", "İade ürün kontrol edildikten sonra ödeme yöntemin üzerinden geri ödeme süreci başlatılır. Banka işlem süreleri ödeme sağlayıcına göre değişebilir."],
+      ["Değişim", "Renk, model veya ürün değişimi taleplerinde stok durumuna göre destek ekibimiz yardımcı olur."],
+      ["İade Başlatma", "İade veya değişim talebin için sipariş numaranla birlikte iletişim sayfamızdan bize ulaşabilirsin."]
     ]
   },
   "how-to-order": {
@@ -238,6 +255,20 @@ export const contentPages = {
 const iconFor = (icon) => `<i data-lucide="${icon}" class="h-5 w-5"></i>`;
 const sectionHtml = ([title, text]) => `<section><h2>${title}</h2><p>${text}</p></section>`;
 const cardHtml = ([icon, title, text]) => `<section class="content-info-card">${iconFor(icon)}<h2>${title}</h2><p>${text}</p></section>`;
+const productUrl = (product) => `./product.html?id=${encodeURIComponent(product.id)}`;
+const categoryUrl = (category, subcategory = "") =>
+  `./category.html?category=${encodeURIComponent(category)}${subcategory ? `&subcategory=${encodeURIComponent(subcategory)}` : ""}`;
+const allProducts = catalogProducts.map((product) => ({ ...product, img: product.image }));
+const categoryGroups = catalogCategories.reduce((groups, category) => {
+  const existing = groups.get(category.parent) || { label: category.parent, href: categoryUrl(category.parent), children: [], productIds: [] };
+  existing.productIds.push(...category.productIds);
+  if (category.child) {
+    existing.children.push({ label: category.child, href: categoryUrl(category.parent, category.child), productIds: category.productIds });
+  }
+  groups.set(category.parent, existing);
+  return groups;
+}, new Map());
+const pageCategories = Array.from(categoryGroups.values());
 
 function formHtml(type) {
   if (type === "tracking") {
@@ -302,14 +333,269 @@ export function renderPageBody(page) {
   `;
 }
 
+function renderHeaderCategoryNav(selector = "#content-category-nav") {
+  const nav = document.querySelector(selector);
+  if (!nav) return;
+
+  const navMarkup = pageCategories
+    .map((category) => {
+      const children = category.children || [];
+      const submenu = children.length
+        ? `
+          <div class="page-category-panel">
+            <div class="page-category-panel-links">
+              ${children.map((child) => `<a href="${child.href}">${child.label}</a>`).join("")}
+            </div>
+          </div>
+        `
+        : "";
+      return `
+        <div class="page-category-item${children.length ? " has-submenu" : ""}">
+          <a href="${category.href}" class="page-category-link">
+            <span>${category.label}</span>
+            ${children.length ? '<i data-lucide="chevron-down" class="h-3.5 w-3.5"></i>' : ""}
+          </a>
+          ${submenu}
+        </div>
+      `;
+    })
+    .join("");
+
+  nav.innerHTML = navMarkup;
+}
+
+function bindSearchDrawer() {
+  const drawer = document.querySelector("#search-drawer");
+  const toggles = document.querySelectorAll("[data-search-toggle]");
+  const closeTriggers = document.querySelectorAll("[data-search-close]");
+  const input = document.querySelector("[data-search-input]");
+  const headerSearchInput = document.querySelector(".commerce-search input");
+  const clearButton = document.querySelector("[data-search-clear]");
+  const productsContainer = drawer?.querySelector(".search-products");
+  const emptyState = document.querySelector("[data-search-empty]");
+  if (!drawer || !toggles.length) return;
+
+  if (productsContainer) {
+    productsContainer.innerHTML = allProducts
+      .map(
+        (product) => `
+          <a href="${productUrl(product)}" class="search-product-card" data-search-item="${product.name}">
+            <img src="${product.img}" alt="${product.name}" loading="lazy" />
+            <span>
+              <strong>${product.name}</strong>
+              <small>${product.subcategory || product.category}</small>
+            </span>
+          </a>
+        `
+      )
+      .join("");
+  }
+
+  const items = document.querySelectorAll("[data-search-item]");
+  const filterItems = () => {
+    const term = (input?.value || "").trim().toLocaleLowerCase("tr");
+    let visibleCount = 0;
+    items.forEach((item) => {
+      const matches = !term || item.dataset.searchItem.toLocaleLowerCase("tr").includes(term);
+      item.hidden = !matches;
+      if (matches) visibleCount += 1;
+    });
+    if (emptyState) emptyState.hidden = visibleCount > 0;
+  };
+
+  const setOpen = (isOpen) => {
+    drawer.classList.toggle("is-open", isOpen);
+    drawer.setAttribute("aria-hidden", String(!isOpen));
+    toggles.forEach((toggle) => toggle.setAttribute("aria-expanded", String(isOpen)));
+    document.body.classList.toggle("search-drawer-open", isOpen);
+    if (isOpen) window.setTimeout(() => input?.focus(), 120);
+  };
+
+  toggles.forEach((toggle) => toggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    if (input && headerSearchInput?.value) input.value = headerSearchInput.value;
+    filterItems();
+    setOpen(true);
+  }));
+  document.querySelectorAll(".commerce-search").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (input && headerSearchInput?.value) input.value = headerSearchInput.value;
+      filterItems();
+      setOpen(true);
+    });
+  });
+  closeTriggers.forEach((trigger) => trigger.addEventListener("click", () => setOpen(false)));
+  input?.addEventListener("input", filterItems);
+  clearButton?.addEventListener("click", () => {
+    if (input) input.value = "";
+    filterItems();
+    input?.focus();
+  });
+  document.addEventListener("click", (event) => {
+    if (!drawer.classList.contains("is-open")) return;
+    if (drawer.contains(event.target) || event.target.closest("[data-search-toggle]")) return;
+    setOpen(false);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setOpen(false);
+  });
+  filterItems();
+}
+
+function bindLoginDrawer() {
+  const drawer = document.querySelector("#login-drawer");
+  const toggles = document.querySelectorAll("[data-login-toggle]");
+  const closeTriggers = document.querySelectorAll("[data-login-close]");
+  const viewButtons = document.querySelectorAll("[data-login-view]");
+  if (!drawer || !toggles.length) return;
+
+  const setOpen = (isOpen) => {
+    drawer.classList.toggle("is-open", isOpen);
+    drawer.setAttribute("aria-hidden", String(!isOpen));
+    toggles.forEach((toggle) => toggle.setAttribute("aria-expanded", String(isOpen)));
+    document.body.classList.toggle("login-drawer-open", isOpen);
+  };
+
+  const setView = (view) => {
+    const mainPanel = document.querySelector("#login-main-panel");
+    const resetPanel = document.querySelector("#login-reset-panel");
+    const createPanel = document.querySelector("#login-create-panel");
+    if (!mainPanel || !resetPanel || !createPanel) return;
+    mainPanel.hidden = view !== "login";
+    resetPanel.hidden = view !== "reset";
+    createPanel.hidden = view !== "create";
+  };
+
+  toggles.forEach((toggle) => toggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setView("login");
+    setOpen(true);
+  }));
+  closeTriggers.forEach((trigger) => trigger.addEventListener("click", () => setOpen(false)));
+  viewButtons.forEach((button) => button.addEventListener("click", () => setView(button.dataset.loginView)));
+  document.addEventListener("click", (event) => {
+    if (!drawer.classList.contains("is-open")) return;
+    if (drawer.contains(event.target) || event.target.closest("[data-login-toggle]")) return;
+    setOpen(false);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setOpen(false);
+  });
+}
+
+function bindCartDrawer() {
+  const drawer = document.querySelector("#cart-drawer");
+  const toggle = document.querySelector("#cart-toggle");
+  const closeTriggers = document.querySelectorAll("[data-cart-close]");
+  const countOutputs = document.querySelectorAll("[data-cart-count]");
+  const countLabel = document.querySelector("[data-cart-count-label]");
+  const emptyState = drawer?.querySelector(".cart-empty-state");
+  const filledState = drawer?.querySelector("[data-cart-filled]");
+  const cartItemImage = drawer?.querySelector("[data-cart-item-image]");
+  const cartItemName = drawer?.querySelector("[data-cart-item-name]");
+  const cartItemVariant = drawer?.querySelector("[data-cart-item-variant]");
+  const cartItemQuantity = drawer?.querySelector("[data-cart-item-quantity]");
+  const cartItemPrice = drawer?.querySelector("[data-cart-item-price]");
+  const cartSubtotal = drawer?.querySelector("[data-cart-subtotal]");
+  const qtyMinus = drawer?.querySelector("[data-cart-qty-minus]");
+  const qtyPlus = drawer?.querySelector("[data-cart-qty-plus]");
+  const removeButton = drawer?.querySelector("[data-cart-remove]");
+  if (!drawer || !toggle) return;
+
+  let cartCount = 0;
+  let cartItem = {
+    name: allProducts[0]?.name || "Ürün",
+    price: allProducts[0]?.price || "0 TL",
+    image: allProducts[0]?.img || "",
+    variant: "Renk seçimi"
+  };
+
+  const setOpen = (isOpen) => {
+    drawer.classList.toggle("is-open", isOpen);
+    drawer.setAttribute("aria-hidden", String(!isOpen));
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    document.body.classList.toggle("cart-drawer-open", isOpen);
+  };
+
+  const syncCount = () => {
+    countOutputs.forEach((output) => {
+      output.textContent = String(cartCount);
+      output.hidden = cartCount === 0;
+    });
+    if (countLabel) countLabel.textContent = `(${cartCount})`;
+    if (emptyState) emptyState.hidden = cartCount > 0;
+    if (filledState) filledState.hidden = cartCount === 0;
+    if (cartItemImage) cartItemImage.src = cartItem.image;
+    if (cartItemName) cartItemName.textContent = cartItem.name;
+    if (cartItemVariant) cartItemVariant.textContent = cartItem.variant;
+    if (cartItemQuantity) cartItemQuantity.textContent = String(Math.max(cartCount, 1));
+    if (cartItemPrice) cartItemPrice.textContent = cartItem.price;
+    if (cartSubtotal) cartSubtotal.textContent = cartItem.price;
+  };
+
+  toggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setOpen(true);
+  });
+  closeTriggers.forEach((trigger) => trigger.addEventListener("click", () => setOpen(false)));
+  document.addEventListener("click", (event) => {
+    if (!drawer.classList.contains("is-open")) return;
+    if (drawer.contains(event.target) || event.target.closest("#cart-toggle")) return;
+    setOpen(false);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setOpen(false);
+  });
+  document.addEventListener("click", (event) => {
+    const addButton = event.target.closest("[data-cart-add]");
+    if (!addButton) return;
+    cartItem = {
+      name: addButton.dataset.cartName || addButton.dataset.cartAdd || cartItem.name,
+      price: addButton.dataset.cartPrice || cartItem.price,
+      image: addButton.dataset.cartImg || cartItem.image,
+      variant: addButton.dataset.cartVariant || cartItem.variant
+    };
+    cartCount += 1;
+    syncCount();
+    setOpen(true);
+  });
+  qtyMinus?.addEventListener("click", () => {
+    cartCount = Math.max(0, cartCount - 1);
+    syncCount();
+  });
+  qtyPlus?.addEventListener("click", () => {
+    cartCount += 1;
+    syncCount();
+  });
+  removeButton?.addEventListener("click", () => {
+    cartCount = 0;
+    syncCount();
+  });
+  syncCount();
+}
+
 function renderContentPage() {
+  renderHeaderCategoryNav();
   const main = document.querySelector("[data-content-page]");
-  if (!main) return;
+  if (!main) {
+    bindSearchDrawer();
+    bindLoginDrawer();
+    bindCartDrawer();
+    initSiteAnimations("content");
+    window.lucide?.createIcons?.();
+    return;
+  }
   const page = contentPages[main.dataset.contentPage];
   if (!page) return;
 
   main.innerHTML = renderPageBody(page);
-  window.lucide?.createIcons();
+  renderHeaderCategoryNav();
+  bindSearchDrawer();
+  bindLoginDrawer();
+  bindCartDrawer();
+  initSiteAnimations("content");
+  window.lucide?.createIcons?.();
 }
 
 if (typeof document !== "undefined") {

@@ -212,10 +212,10 @@ export const categories = [
 export const products = [
   {
     "id": "castu-cs59-plus-max-20000pa-arac-ici-arac-ici-vakum-supurge-gri-nt-118037-1",
-    "name": "Castu CS59 Plus Max 20000Pa Araç içi Araç İçi Vakum Süpürge (Gri) NT-118037",
+    "name": "Castu CS59 Plus Max 20000Pa Araç içi Araç İçi Vakum Süpürge (Gri)",
     "category": "Teknolojik Ürünler",
     "subcategory": null,
-    "price": "250.000 TL",
+    "price": "2.500 TL",
     "image": "/public/images/products/castu-cs59-plus-max-20000pa-arac-ici-arac-ici-vakum-supurge-gri-nt-118037-1-01.png",
     "hoverImg": "/public/images/products/castu-cs59-plus-max-20000pa-arac-ici-arac-ici-vakum-supurge-gri-nt-118037-1-02.png",
     "images": [
@@ -234,14 +234,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Gri Ürün Ağırlığı 0 gr",
-    "color": "Gri"
+    "color": "Gri",
+    "sku": "NT-118037"
   },
   {
     "id": "nettech-nt-sk01-profesionel-ev-ofis-okul-sac-kurutma-makinesi-gri-nt-111938-2",
-    "name": "Nettech NT-SK01 Profesionel Ev-Ofis-Okul Saç Kurutma Makinesi (Gri) NT-111938",
+    "name": "Nettech NT-SK01 Profesionel Ev-Ofis-Okul Saç Kurutma Makinesi (Gri)",
     "category": "Teknolojik Ürünler",
     "subcategory": null,
-    "price": "390.000 TL",
+    "price": "3.900 TL",
     "image": "/public/images/products/nettech-nt-sk01-profesionel-ev-ofis-okul-sac-kurutma-makinesi-gri-nt-111938-2-01.png",
     "hoverImg": "/public/images/products/nettech-nt-sk01-profesionel-ev-ofis-okul-sac-kurutma-makinesi-gri-nt-111938-2-02.png",
     "images": [
@@ -262,14 +263,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Gri Ürün Ağırlığı 0 gr",
-    "color": "Gri"
+    "color": "Gri",
+    "sku": "NT-111938"
   },
   {
     "id": "nettech-hy300-pro-ev-ofis-okul-projektor-beyaz-nt-113331-3",
-    "name": "Nettech HY300 Pro Ev-Ofis-Okul Projektör (Beyaz) NT-113331",
+    "name": "Nettech HY300 Pro Ev-Ofis-Okul Projektör (Beyaz)",
     "category": "Teknolojik Ürünler",
     "subcategory": null,
-    "price": "299.000 TL",
+    "price": "2.990 TL",
     "image": "/public/images/products/nettech-hy300-pro-ev-ofis-okul-projektor-beyaz-nt-113331-3-01.png",
     "hoverImg": "/public/images/products/nettech-hy300-pro-ev-ofis-okul-projektor-beyaz-nt-113331-3-02.png",
     "images": [
@@ -291,14 +293,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr",
-    "color": "Beyaz"
+    "color": "Beyaz",
+    "sku": "NT-113331"
   },
   {
     "id": "rtako-q12-ev-ofis-okul-tuy-toplayici-krem-nt-106421-4",
-    "name": "Rtako Q12 Ev-Ofis-Okul Tüy Toplayıcı (Krem) NT-106421",
+    "name": "Rtako Q12 Ev-Ofis-Okul Tüy Toplayıcı (Krem)",
     "category": "Teknolojik Ürünler",
     "subcategory": null,
-    "price": "255.000 TL",
+    "price": "2.550 TL",
     "image": "/public/images/products/rtako-q12-ev-ofis-okul-tuy-toplayici-krem-nt-106421-4-01.png",
     "hoverImg": "/public/images/products/rtako-q12-ev-ofis-okul-tuy-toplayici-krem-nt-106421-4-01.png",
     "images": [
@@ -316,14 +319,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Krem Ürün Ağırlığı 0 gr",
-    "color": "Krem"
+    "color": "Krem",
+    "sku": "NT-106421"
   },
   {
     "id": "nettech-j006-ev-ofis-okul-ortam-nemlendirici-nt-104914-5",
-    "name": "Nettech J006 Ev-Ofis-Okul Ortam Nemlendirici NT-104914",
+    "name": "Nettech J006 Ev-Ofis-Okul Ortam Nemlendirici",
     "category": "Teknolojik Ürünler",
     "subcategory": null,
-    "price": "155.000 TL",
+    "price": "1.550 TL",
     "image": "/public/images/products/nettech-j006-ev-ofis-okul-ortam-nemlendirici-nt-104914-5-01.jpg",
     "hoverImg": "/public/images/products/nettech-j006-ev-ofis-okul-ortam-nemlendirici-nt-104914-5-02.jpg",
     "images": [
@@ -339,14 +343,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Ürün Ağırlığı 0 gr",
-    "color": "Standart"
+    "color": "Standart",
+    "sku": "NT-104914"
   },
   {
     "id": "realpower-r-mag-air-pro-20w-pd-10000-mah-magsafe-powerbank-natural-nt-116672-6",
-    "name": "RealPower R Mag Air Pro 20W PD 10000 MAh Magsafe Powerbank (Natural) NT-116672",
+    "name": "RealPower R Mag Air Pro 20W PD 10000 MAh Magsafe Powerbank (Natural)",
     "category": "Powerbank",
     "subcategory": null,
-    "price": "185.000 TL",
+    "price": "1.850 TL",
     "image": "/public/images/products/realpower-r-mag-air-pro-20w-pd-10000-mah-magsafe-powerbank-natural-nt-116672-6-01.jpg",
     "hoverImg": "/public/images/products/realpower-r-mag-air-pro-20w-pd-10000-mah-magsafe-powerbank-natural-nt-116672-6-02.jpg",
     "images": [
@@ -446,14 +451,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Natural Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Usb Çıkış Sayısı 1 Çıkışlı Çıkış Voltaj (V) 5V Giriş Voltaj (V) 12 V Şar",
-    "color": "Natural"
+    "color": "Natural",
+    "sku": "NT-116672"
   },
   {
     "id": "nettech-nt-pw43-22-5w-10000-mah-tasinabilir-powerbank-turuncu-nt-115648-7",
-    "name": "Nettech NT-PW43 22.5W 10000 MAh Taşınabilir Powerbank (Turuncu) NT-115648",
+    "name": "Nettech NT-PW43 22.5W 10000 MAh Taşınabilir Powerbank (Turuncu)",
     "category": "Powerbank",
     "subcategory": null,
-    "price": "169.000 TL",
+    "price": "1.690 TL",
     "image": "/public/images/products/nettech-nt-pw43-22-5w-10000-mah-tasinabilir-powerbank-turuncu-nt-115648-7-01.png",
     "hoverImg": "/public/images/products/nettech-nt-pw43-22-5w-10000-mah-tasinabilir-powerbank-turuncu-nt-115648-7-02.png",
     "images": [
@@ -554,14 +560,15 @@ export const products = [
       }
     ],
     "description": "ÖzelliklerUyumlu ModellerRenkTuruncuÜrün Ağırlığı0 grMalzeme CinsiAlüminyumUsb Çıkış Sayısı3 ÇıkışlıÇıkış Voltaj (V)9VGiriş Voltaj (V)12 VŞarj TipiTaşınabi",
-    "color": "Turuncu"
+    "color": "Turuncu",
+    "sku": "NT-115648"
   },
   {
     "id": "nettech-nt-pw33-15w-20w-pd-10000-mah-magsafe-powerbank-gri-nt-111991-8",
-    "name": "Nettech NT-PW33 15W + 20W PD 10000 MAh Magsafe Powerbank (Gri) NT-111991",
+    "name": "Nettech NT-PW33 15W + 20W PD 10000 MAh Magsafe Powerbank (Gri)",
     "category": "Powerbank",
     "subcategory": null,
-    "price": "200.000 TL",
+    "price": "2.000 TL",
     "image": "/public/images/products/nettech-nt-pw33-15w-20w-pd-10000-mah-magsafe-powerbank-gri-nt-111991-8-01.png",
     "hoverImg": "/public/images/products/nettech-nt-pw33-15w-20w-pd-10000-mah-magsafe-powerbank-gri-nt-111991-8-02.png",
     "images": [
@@ -655,14 +662,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Gri Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Usb Çıkış Sayısı 1 Çıkışlı Çıkış Voltaj (V) 5V Giriş Voltaj (V) 12 V Şarj Ti",
-    "color": "Gri"
+    "color": "Gri",
+    "sku": "NT-111991"
   },
   {
     "id": "nettech-nt-pw32-15w-20w-pd-10000-mah-magsafe-powerbank-siyah-nt-104921-9",
-    "name": "Nettech NT-PW32 15W + 20W PD 10000 MAh Magsafe Powerbank (Siyah) NT-104921",
+    "name": "Nettech NT-PW32 15W + 20W PD 10000 MAh Magsafe Powerbank (Siyah)",
     "category": "Powerbank",
     "subcategory": null,
-    "price": "139.900 TL",
+    "price": "1.399 TL",
     "image": "/public/images/products/nettech-nt-pw32-15w-20w-pd-10000-mah-magsafe-powerbank-siyah-nt-104921-9-01.png",
     "hoverImg": "/public/images/products/nettech-nt-pw32-15w-20w-pd-10000-mah-magsafe-powerbank-siyah-nt-104921-9-02.png",
     "images": [
@@ -755,14 +763,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Usb Çıkış Sayısı 2 Çıkışlı Çıkış Voltaj (V) 9V Giriş Voltaj (V) 5 V Şarj T",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-104921"
   },
   {
     "id": "nettech-nt-pw41-45w-20000-mah-tasinabilir-powerbank-siyah-nt-115643-10",
-    "name": "Nettech NT-PW41 45W 20000 MAh Taşınabilir Powerbank (Siyah) NT-115643",
+    "name": "Nettech NT-PW41 45W 20000 MAh Taşınabilir Powerbank (Siyah)",
     "category": "Powerbank",
     "subcategory": null,
-    "price": "275.000 TL",
+    "price": "2.750 TL",
     "image": "/public/images/products/nettech-nt-pw41-45w-20000-mah-tasinabilir-powerbank-siyah-nt-115643-10-01.png",
     "hoverImg": "/public/images/products/nettech-nt-pw41-45w-20000-mah-tasinabilir-powerbank-siyah-nt-115643-10-02.png",
     "images": [
@@ -862,14 +871,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Usb Çıkış Sayısı 2 Çıkışlı Çıkış Voltaj (V) 5V Giriş Voltaj (V) 12 V Şarj",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-115643"
   },
   {
     "id": "nettech-nt-hch10-70w-pd-qc-ganprime-sarj-aleti-beyaz-nt-hch10-11",
-    "name": "Nettech NT-HCH10 70W PD+QC GaNPrime Şarj Aleti (Beyaz) NT-HCH10",
+    "name": "Nettech NT-HCH10 70W PD+QC GaNPrime Şarj Aleti (Beyaz)",
     "category": "Şarj Cihazı",
     "subcategory": "Şarj Aleti",
-    "price": "200.000 TL",
+    "price": "2.000 TL",
     "image": "/public/images/products/nettech-nt-hch10-70w-pd-qc-ganprime-sarj-aleti-beyaz-nt-hch10-11-01.png",
     "hoverImg": "/public/images/products/nettech-nt-hch10-70w-pd-qc-ganprime-sarj-aleti-beyaz-nt-hch10-11-02.png",
     "images": [
@@ -951,14 +961,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Usb Çıkış Sayısı 3 Çıkışlı Çıkış Voltaj (V) 5V Giriş Voltaj (V) 24 V Otoma",
-    "color": "Beyaz"
+    "color": "Beyaz",
+    "sku": "NT-HCH10"
   },
   {
     "id": "nettech-nt-hch09-100w-pd-qc-ganprime-sarj-aleti-beyaz-nt-hch09-12",
-    "name": "Nettech NT-HCH09 100W PD+QC GaNPrime Şarj Aleti (Beyaz) NT-HCH09",
+    "name": "Nettech NT-HCH09 100W PD+QC GaNPrime Şarj Aleti (Beyaz)",
     "category": "Şarj Cihazı",
     "subcategory": "Şarj Aleti",
-    "price": "250.000 TL",
+    "price": "2.500 TL",
     "image": "/public/images/products/nettech-nt-hch09-100w-pd-qc-ganprime-sarj-aleti-beyaz-nt-hch09-12-01.png",
     "hoverImg": "/public/images/products/nettech-nt-hch09-100w-pd-qc-ganprime-sarj-aleti-beyaz-nt-hch09-12-02.png",
     "images": [
@@ -1041,14 +1052,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Usb Çıkış Sayısı 4 Çıkışlı Çıkış Voltaj (V) 5V Giriş Voltaj (V) 220 V Otom",
-    "color": "Beyaz"
+    "color": "Beyaz",
+    "sku": "NT-HCH09"
   },
   {
     "id": "nettech-nt-hch07-33w-gan-pd-qc-sarj-aleti-siyah-nt-hch07-13",
-    "name": "Nettech NT-HCH07 33W GaN PD+QC Şarj Aleti (Siyah) NT-HCH07",
+    "name": "Nettech NT-HCH07 33W GaN PD+QC Şarj Aleti (Siyah)",
     "category": "Şarj Cihazı",
     "subcategory": "Şarj Aleti",
-    "price": "95.000 TL",
+    "price": "950 TL",
     "image": "/public/images/products/nettech-nt-hch07-33w-gan-pd-qc-sarj-aleti-siyah-nt-hch07-13-01.png",
     "hoverImg": "/public/images/products/nettech-nt-hch07-33w-gan-pd-qc-sarj-aleti-siyah-nt-hch07-13-02.png",
     "images": [
@@ -1123,14 +1135,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Usb Çıkış Sayısı 2 Çıkışlı Çıkış Voltaj (V) 12V Giriş Voltaj (V) 24 V Otom",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-HCH07"
   },
   {
     "id": "nettech-nt-hch04-pd-ganprime-30w-type-c-to-type-c-sarj-aleti-siyah-nt-hch04-14",
-    "name": "Nettech NT-HCH04 PD GaNPrime 30W Type-C To Type-C Şarj Aleti (Siyah) NT-HCH04",
+    "name": "Nettech NT-HCH04 PD GaNPrime 30W Type-C To Type-C Şarj Aleti (Siyah)",
     "category": "Şarj Cihazı",
     "subcategory": "Şarj Aleti",
-    "price": "75.000 TL",
+    "price": "750 TL",
     "image": "/public/images/products/nettech-nt-hch04-pd-ganprime-30w-type-c-to-type-c-sarj-aleti-siyah-nt-hch04-14-01.png",
     "hoverImg": "/public/images/products/nettech-nt-hch04-pd-ganprime-30w-type-c-to-type-c-sarj-aleti-siyah-nt-hch04-14-02.png",
     "images": [
@@ -1209,14 +1222,15 @@ export const products = [
       }
     ],
     "description": "ÖzelliklerUyumlu ModellerRenkSiyahÜrün Ağırlığı0 grMalzeme CinsiAlüminyumUsb Çıkış Sayısı1 ÇıkışlıÇıkış Voltaj (V)5VGiriş Voltaj (V)24 VOtomatik Şarj Kesme",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-HCH04"
   },
   {
     "id": "nettech-nt-hch08-gan-prime-48w-sarj-aleti-siyah-nt-hch08-15",
-    "name": "Nettech NT-HCH08 GaN Prime 48W Şarj Aleti (Siyah) NT-HCH08",
+    "name": "Nettech NT-HCH08 GaN Prime 48W Şarj Aleti (Siyah)",
     "category": "Şarj Cihazı",
     "subcategory": "Şarj Aleti",
-    "price": "145.000 TL",
+    "price": "1.450 TL",
     "image": "/public/images/products/nettech-nt-hch08-gan-prime-48w-sarj-aleti-siyah-nt-hch08-15-01.png",
     "hoverImg": "/public/images/products/nettech-nt-hch08-gan-prime-48w-sarj-aleti-siyah-nt-hch08-15-02.png",
     "images": [
@@ -1301,14 +1315,15 @@ export const products = [
       }
     ],
     "description": "ÖzelliklerUyumlu ModellerRenkSiyahÜrün Ağırlığı0 grMalzeme CinsiAlüminyumUsb Çıkış Sayısı2 ÇıkışlıÇıkış Voltaj (V)12VGiriş Voltaj (V)24 VOtomatik Şarj Kesm",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-HCH08"
   },
   {
     "id": "nettech-nt-wch05-3-in-1-15w-kablosuz-wireless-sarj-siyah-nt-wch05-16",
-    "name": "Nettech NT-WCH05 3 in 1 15W Kablosuz Wireless Şarj (Siyah) NT-WCH05",
+    "name": "Nettech NT-WCH05 3 in 1 15W Kablosuz Wireless Şarj (Siyah)",
     "category": "Şarj Cihazı",
     "subcategory": "Kablosuz Wireless Şarj",
-    "price": "225.000 TL",
+    "price": "2.250 TL",
     "image": "/public/images/products/nettech-nt-wch05-3-in-1-15w-kablosuz-wireless-sarj-siyah-nt-wch05-16-01.jpg",
     "hoverImg": "/public/images/products/nettech-nt-wch05-3-in-1-15w-kablosuz-wireless-sarj-siyah-nt-wch05-16-02.jpg",
     "images": [
@@ -1393,14 +1408,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Stand Olarak Kullanım Var Usb Çıkış Sayısı 1 Çıkışlı Çıkış Voltaj (V) 5V G",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-WCH05"
   },
   {
     "id": "nettech-nt-wch04-3in-1-15w-kablosuz-wireless-sarj-gri-nt-wch04-17",
-    "name": "Nettech NT-WCH04 3in 1 15W Kablosuz Wireless Şarj (Gri) NT-WCH04",
+    "name": "Nettech NT-WCH04 3in 1 15W Kablosuz Wireless Şarj (Gri)",
     "category": "Şarj Cihazı",
     "subcategory": "Kablosuz Wireless Şarj",
-    "price": "220.000 TL",
+    "price": "2.200 TL",
     "image": "/public/images/products/nettech-nt-wch04-3in-1-15w-kablosuz-wireless-sarj-gri-nt-wch04-17-01.jpg",
     "hoverImg": "/public/images/products/nettech-nt-wch04-3in-1-15w-kablosuz-wireless-sarj-gri-nt-wch04-17-02.jpg",
     "images": [
@@ -1487,14 +1503,15 @@ export const products = [
       }
     ],
     "description": "ÖzelliklerUyumlu ModellerRenkGriÜrün Ağırlığı0 grMalzeme CinsiAlüminyumStand Olarak KullanımVarUsb Çıkış Sayısı1 ÇıkışlıÇıkış Voltaj (V)5VGiriş Voltaj (V)1",
-    "color": "Gri"
+    "color": "Gri",
+    "sku": "NT-WCH04"
   },
   {
     "id": "nettech-gt2-pro-kablosuz-wireless-sarj-beyaz-nt-112071-18",
-    "name": "Nettech GT2 Pro Kablosuz Wireless Şarj (Beyaz) NT-112071",
+    "name": "Nettech GT2 Pro Kablosuz Wireless Şarj (Beyaz)",
     "category": "Şarj Cihazı",
     "subcategory": "Kablosuz Wireless Şarj",
-    "price": "45.000 TL",
+    "price": "450 TL",
     "image": "/public/images/products/nettech-gt2-pro-kablosuz-wireless-sarj-beyaz-nt-112071-18-01.png",
     "hoverImg": "/public/images/products/nettech-gt2-pro-kablosuz-wireless-sarj-beyaz-nt-112071-18-02.png",
     "images": [
@@ -1565,14 +1582,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Stand Olarak Kullanım Var Usb Çıkış Sayısı 1 Çıkışlı Çıkış Voltaj (V) 5V G",
-    "color": "Beyaz"
+    "color": "Beyaz",
+    "sku": "NT-112071"
   },
   {
     "id": "nettech-nt-wch03-3in1-18w-kablosuz-wireless-sarj-siyah-nt-wch03-19",
-    "name": "Nettech NT-WCH03 3in1 18W Kablosuz Wireless Şarj (Siyah) NT-WCH03",
+    "name": "Nettech NT-WCH03 3in1 18W Kablosuz Wireless Şarj (Siyah)",
     "category": "Şarj Cihazı",
     "subcategory": "Kablosuz Wireless Şarj",
-    "price": "190.000 TL",
+    "price": "1.900 TL",
     "image": "/public/images/products/nettech-nt-wch03-3in1-18w-kablosuz-wireless-sarj-siyah-nt-wch03-19-01.png",
     "hoverImg": "/public/images/products/nettech-nt-wch03-3in1-18w-kablosuz-wireless-sarj-siyah-nt-wch03-19-02.png",
     "images": [
@@ -1650,14 +1668,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Stand Olarak Kullanım Var Usb Çıkış Sayısı 1 Çıkışlı Çıkış Voltaj (V) 5V G",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-WCH03"
   },
   {
     "id": "nettech-nt-cch01-30w-bluetooth-fm-transmitter-arac-sarj-aleti-siyah-nt-cch01-20",
-    "name": "Nettech NT-CCH01 30W Bluetooth FM Transmitter Araç Şarj Aleti (Siyah) NT-CCH01",
+    "name": "Nettech NT-CCH01 30W Bluetooth FM Transmitter Araç Şarj Aleti (Siyah)",
     "category": "Şarj Cihazı",
     "subcategory": "Araç Şarj Aleti",
-    "price": "100.000 TL",
+    "price": "1.000 TL",
     "image": "/public/images/products/nettech-nt-cch01-30w-bluetooth-fm-transmitter-arac-sarj-aleti-siyah-nt-cch01-20-01.jpg",
     "hoverImg": "/public/images/products/nettech-nt-cch01-30w-bluetooth-fm-transmitter-arac-sarj-aleti-siyah-nt-cch01-20-02.png",
     "images": [
@@ -1737,14 +1756,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Çıkış Voltaj (V) 5V Giriş Voltaj (V) 12 V Şarj Tipi Araç Şarjı Otomatik Şarj",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-CCH01"
   },
   {
     "id": "nettech-nt-cch04-type-c-pd-30w-1-cikisli-arac-sarj-aleti-siyah-nt-cch04-21",
-    "name": "Nettech NT-CCH04 Type-C Pd 30W 1 Çıkışlı Araç Şarj Aleti (Siyah) NT-CCH04",
+    "name": "Nettech NT-CCH04 Type-C Pd 30W 1 Çıkışlı Araç Şarj Aleti (Siyah)",
     "category": "Şarj Cihazı",
     "subcategory": "Araç Şarj Aleti",
-    "price": "39.900 TL",
+    "price": "399 TL",
     "image": "/public/images/products/nettech-nt-cch04-type-c-pd-30w-1-cikisli-arac-sarj-aleti-siyah-nt-cch04-21-01.png",
     "hoverImg": "/public/images/products/nettech-nt-cch04-type-c-pd-30w-1-cikisli-arac-sarj-aleti-siyah-nt-cch04-21-02.png",
     "images": [
@@ -1820,14 +1840,15 @@ export const products = [
       }
     ],
     "description": "ÖzelliklerUyumlu ModellerRenkSiyahÜrün Ağırlığı0 grMalzeme CinsiAlüminyumUsb Çıkış Sayısı1 ÇıkışlıÇıkış Voltaj (V)12VGiriş Voltaj (V)24 VŞarj TipiAraç Şarj",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-CCH04"
   },
   {
     "id": "nettech-nt-cch03-usb-type-c-pd-18w-20w-2-cikisli-arac-sarj-aleti-siyah-nt-cch03-22",
-    "name": "Nettech NT-CCH03 Usb + Type-C PD 18W + 20W 2 Çıkışlı Araç Şarj Aleti (Siyah) NT-CCH03",
+    "name": "Nettech NT-CCH03 Usb + Type-C PD 18W + 20W 2 Çıkışlı Araç Şarj Aleti (Siyah)",
     "category": "Şarj Cihazı",
     "subcategory": "Araç Şarj Aleti",
-    "price": "55.000 TL",
+    "price": "550 TL",
     "image": "/public/images/products/nettech-nt-cch03-usb-type-c-pd-18w-20w-2-cikisli-arac-sarj-aleti-siyah-nt-cch03-22-01.png",
     "hoverImg": "/public/images/products/nettech-nt-cch03-usb-type-c-pd-18w-20w-2-cikisli-arac-sarj-aleti-siyah-nt-cch03-22-02.png",
     "images": [
@@ -1904,14 +1925,15 @@ export const products = [
       }
     ],
     "description": "ÖzelliklerUyumlu ModellerRenkSiyahÜrün Ağırlığı0 grMalzeme CinsiAlüminyumUsb Çıkış Sayısı2 ÇıkışlıÇıkış Voltaj (V)5VGiriş Voltaj (V)12 VŞarj TipiAraç Şarjı",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-CCH03"
   },
   {
     "id": "helt-ht-19-10w-2-cikisli-type-c-kablo-arac-sarj-aleti-beyaz-nt-100852-23",
-    "name": "Helt HT-19 10W 2 Çıkışlı Type-C Kablo + Araç Şarj Aleti (Beyaz) NT-100852",
+    "name": "Helt HT-19 10W 2 Çıkışlı Type-C Kablo + Araç Şarj Aleti (Beyaz)",
     "category": "Şarj Cihazı",
     "subcategory": "Araç Şarj Aleti",
-    "price": "19.900 TL",
+    "price": "199 TL",
     "image": "/public/images/products/helt-ht-19-10w-2-cikisli-type-c-kablo-arac-sarj-aleti-beyaz-nt-100852-23-01.jpg",
     "hoverImg": "/public/images/products/helt-ht-19-10w-2-cikisli-type-c-kablo-arac-sarj-aleti-beyaz-nt-100852-23-02.jpg",
     "images": [
@@ -1996,14 +2018,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Usb Çıkış Sayısı 2 Çıkışlı Çıkış Voltaj (V) 12V Çıkış Amper (Mah) 2400 mAh G",
-    "color": "Beyaz"
+    "color": "Beyaz",
+    "sku": "NT-100852"
   },
   {
     "id": "nettech-kampanya-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-nt-104373-24",
-    "name": "Nettech Kampanya Plastik 100 Cm Type-C To Type-C Şarj ve Data Kablosu NT-104373",
+    "name": "Nettech Kampanya Plastik 100 Cm Type-C To Type-C Şarj ve Data Kablosu",
     "category": "Kablo",
     "subcategory": "Şarj ve Data Kablosu",
-    "price": "19.900 TL",
+    "price": "199 TL",
     "image": "/public/images/products/nettech-kampanya-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-nt-104373-24-01.jpg",
     "hoverImg": "/public/images/products/nettech-kampanya-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-nt-104373-24-01.jpg",
     "images": [
@@ -2061,14 +2084,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Ürün Ağırlığı 0 gr Kablo Dış Materyal Plastik Kablo Tipi Type-C To Type-C Hızlı Şarj Desteği Var Görüntü Aktarım Desteği Yo",
-    "color": "Standart"
+    "color": "Standart",
+    "sku": "NT-104373"
   },
   {
     "id": "samsung-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-beyaz-nt-97829-25",
-    "name": "Samsung Plastik 100 Cm Type-C To Type-C Şarj ve Data Kablosu (Beyaz) NT-97829",
+    "name": "Samsung Plastik 100 Cm Type-C To Type-C Şarj ve Data Kablosu (Beyaz)",
     "category": "Kablo",
     "subcategory": "Şarj ve Data Kablosu",
-    "price": "99.000 TL",
+    "price": "990 TL",
     "image": "/public/images/products/samsung-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-beyaz-nt-97829-25-01.png",
     "hoverImg": "/public/images/products/samsung-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-beyaz-nt-97829-25-02.jpg",
     "images": [
@@ -2124,14 +2148,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr Kablo Dış Materyal Plastik Kablo Tipi Type-C To Type-C Hızlı Şarj Desteği Var Görüntü Aktarım Dest",
-    "color": "Beyaz"
+    "color": "Beyaz",
+    "sku": "NT-97829"
   },
   {
     "id": "nettech-nt-dc32-60w-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-gri-nt-108299-26",
-    "name": "Nettech NT-DC32 60W Plastik 100 Cm Type-C To Type-C Şarj ve Data Kablosu (Gri) NT-108299",
+    "name": "Nettech NT-DC32 60W Plastik 100 Cm Type-C To Type-C Şarj ve Data Kablosu (Gri)",
     "category": "Kablo",
     "subcategory": "Şarj ve Data Kablosu",
-    "price": "35.000 TL",
+    "price": "350 TL",
     "image": "/public/images/products/nettech-nt-dc32-60w-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-gri-nt-108299-26-01.png",
     "hoverImg": "/public/images/products/nettech-nt-dc32-60w-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-gri-nt-108299-26-02.png",
     "images": [
@@ -2187,14 +2212,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Gri Ürün Ağırlığı 0 gr Kablo Dış Materyal Plastik Kablo Tipi Type-C To Type-C Hızlı Şarj Desteği Var Görüntü Aktarım Desteğ",
-    "color": "Gri"
+    "color": "Gri",
+    "sku": "NT-108299"
   },
   {
     "id": "nettech-nt-dc40-60w-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-siyah-nt-108309-27",
-    "name": "Nettech NT-DC40 60W Plastik 100 Cm Type-C To Type-C Şarj ve Data Kablosu (Siyah) NT-108309",
+    "name": "Nettech NT-DC40 60W Plastik 100 Cm Type-C To Type-C Şarj ve Data Kablosu (Siyah)",
     "category": "Kablo",
     "subcategory": "Şarj ve Data Kablosu",
-    "price": "37.500 TL",
+    "price": "375 TL",
     "image": "/public/images/products/nettech-nt-dc40-60w-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-siyah-nt-108309-27-01.png",
     "hoverImg": "/public/images/products/nettech-nt-dc40-60w-plastik-100-cm-type-c-to-type-c-sarj-ve-data-kablosu-siyah-nt-108309-27-02.png",
     "images": [
@@ -2250,14 +2276,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Kablo Dış Materyal Plastik Kablo Tipi Type-C To Type-C Hızlı Şarj Desteği Var Görüntü Aktarım Dest",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-108309"
   },
   {
     "id": "nettech-nt-dc44-4-in-1-60w-ip-orgu-usb-to-micro-lightning-type-c-sarj-ve-data-kablosu-gri-nt-108315-28",
-    "name": "Nettech NT-DC44 4 in 1 60W İp Örgü USB To Micro + Lightning + Type-C Şarj ve Data Kablosu (Gri) NT-108315",
+    "name": "Nettech NT-DC44 4 in 1 60W İp Örgü USB To Micro + Lightning + Type-C Şarj ve Data Kablosu (Gri)",
     "category": "Kablo",
     "subcategory": "Şarj ve Data Kablosu",
-    "price": "45.000 TL",
+    "price": "450 TL",
     "image": "/public/images/products/nettech-nt-dc44-4-in-1-60w-ip-orgu-usb-to-micro-lightning-type-c-sarj-ve-data-kablosu-gri-nt-108315-28-01.png",
     "hoverImg": "/public/images/products/nettech-nt-dc44-4-in-1-60w-ip-orgu-usb-to-micro-lightning-type-c-sarj-ve-data-kablosu-gri-nt-108315-28-02.png",
     "images": [
@@ -2311,14 +2338,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Gri Ürün Ağırlığı 0 gr Kablo Dış Materyal İp Örgü Kablo Tipi USB To Micro + Lightning + Type-C Hızlı Şarj Desteği Var Görün",
-    "color": "Gri"
+    "color": "Gri",
+    "sku": "NT-108315"
   },
   {
     "id": "nettech-nt-cr02-type-c-ve-lighting-usb-sd-kart-okuyucu-gri-nt-113843-29",
-    "name": "Nettech NT-CR02 Type-C ve Lighting Usb SD Kart Okuyucu (Gri) NT-113843",
+    "name": "Nettech NT-CR02 Type-C ve Lighting Usb SD Kart Okuyucu (Gri)",
     "category": "Kablo",
     "subcategory": "Otg ve Dönüştürücü Kablo",
-    "price": "55.000 TL",
+    "price": "550 TL",
     "image": "/public/images/products/nettech-nt-cr02-type-c-ve-lighting-usb-sd-kart-okuyucu-gri-nt-113843-29-01.png",
     "hoverImg": "/public/images/products/nettech-nt-cr02-type-c-ve-lighting-usb-sd-kart-okuyucu-gri-nt-113843-29-02.png",
     "images": [
@@ -2386,14 +2414,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Gri Ürün Ağırlığı 0 gr Malzeme Cinsi Metal Kablo Dış Materyal Aluminyum Data Aktarım Hızı ( Mb/S) 10 MB/s Altı Görüntü Akta",
-    "color": "Gri"
+    "color": "Gri",
+    "sku": "NT-113843"
   },
   {
     "id": "nettech-nt-ot010-5-in-1-usb-to-type-c-donusturucu-gri-nt-108340-30",
-    "name": "Nettech NT-OT010 5 in 1 USB To Type-c Dönüştürücü (Gri) NT-108340",
+    "name": "Nettech NT-OT010 5 in 1 USB To Type-c Dönüştürücü (Gri)",
     "category": "Kablo",
     "subcategory": "Otg ve Dönüştürücü Kablo",
-    "price": "95.000 TL",
+    "price": "950 TL",
     "image": "/public/images/products/nettech-nt-ot010-5-in-1-usb-to-type-c-donusturucu-gri-nt-108340-30-01.png",
     "hoverImg": "/public/images/products/nettech-nt-ot010-5-in-1-usb-to-type-c-donusturucu-gri-nt-108340-30-02.png",
     "images": [
@@ -2457,14 +2486,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Gri Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Kablo Dış Materyal Plexy Data Aktarım Hızı ( Mb/S) 10 MB/s - 50 MB/s Görüntü",
-    "color": "Gri"
+    "color": "Gri",
+    "sku": "NT-108340"
   },
   {
     "id": "nettech-nt-ot03-usb-host-to-type-c-donusturucu-gri-nt-100954-31",
-    "name": "Nettech NT-OT03 USB Host to Type-C Dönüştürücü (Gri) NT-100954",
+    "name": "Nettech NT-OT03 USB Host to Type-C Dönüştürücü (Gri)",
     "category": "Kablo",
     "subcategory": "Otg ve Dönüştürücü Kablo",
-    "price": "75.000 TL",
+    "price": "750 TL",
     "image": "/public/images/products/nettech-nt-ot03-usb-host-to-type-c-donusturucu-gri-nt-100954-31-01.jpg",
     "hoverImg": "/public/images/products/nettech-nt-ot03-usb-host-to-type-c-donusturucu-gri-nt-100954-31-02.jpg",
     "images": [
@@ -2528,14 +2558,15 @@ export const products = [
       }
     ],
     "description": "ÖzelliklerUyumlu ModellerRenkGriÜrün Ağırlığı0 grMalzeme CinsiAlüminyumKablo Dış MateryalPlexyData Aktarım Hızı ( Mb/S)10 MB/s - 50 MB/sGörüntü Aktarım Des",
-    "color": "Gri"
+    "color": "Gri",
+    "sku": "NT-100954"
   },
   {
     "id": "nettech-nt-0t04-usb-hdmi-sd-kart-to-type-c-donusturucu-siyah-nt-100955-32",
-    "name": "Nettech NT-0T04 USB + Hdmi + SD Kart To Type-C Dönüştürücü (Siyah) NT-100955",
+    "name": "Nettech NT-0T04 USB + Hdmi + SD Kart To Type-C Dönüştürücü (Siyah)",
     "category": "Kablo",
     "subcategory": "Otg ve Dönüştürücü Kablo",
-    "price": "115.000 TL",
+    "price": "1.150 TL",
     "image": "/public/images/products/nettech-nt-0t04-usb-hdmi-sd-kart-to-type-c-donusturucu-siyah-nt-100955-32-01.jpg",
     "hoverImg": "/public/images/products/nettech-nt-0t04-usb-hdmi-sd-kart-to-type-c-donusturucu-siyah-nt-100955-32-02.jpg",
     "images": [
@@ -2599,14 +2630,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Kablo Dış Materyal Aluminyum Data Aktarım Hızı ( Mb/S) 10 MB/s - 50 MB/s G",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-100955"
   },
   {
     "id": "hadron-4k-premium-plastik-500-cm-hdmi-kablo-siyah-nt-119018-33",
-    "name": "Hadron 4K Premium Plastik 500 Cm Hdmi Kablo (Siyah) NT-119018",
+    "name": "Hadron 4K Premium Plastik 500 Cm Hdmi Kablo (Siyah)",
     "category": "Kablo",
     "subcategory": "Hdmi ve Audio Kablosu",
-    "price": "49.000 TL",
+    "price": "490 TL",
     "image": "/public/images/products/hadron-4k-premium-plastik-500-cm-hdmi-kablo-siyah-nt-119018-33-01.png",
     "hoverImg": "/public/images/products/hadron-4k-premium-plastik-500-cm-hdmi-kablo-siyah-nt-119018-33-02.png",
     "images": [
@@ -2673,14 +2705,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Kablo Dış Materyal Plexy Kablo Tipi Hdmi Kablo Kablo Uzunluğu (Cm.) 500 Cm Medya Kontrol Tuşları Y",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-119018"
   },
   {
     "id": "hadron-metal-orgu-100-cm-jack-girisli-yaka-mikrofonu-siyah-nt-105056-34",
-    "name": "Hadron Metal Örgü 100 Cm Jack Girişli Yaka Mikrofonu (Siyah) NT-105056",
+    "name": "Hadron Metal Örgü 100 Cm Jack Girişli Yaka Mikrofonu (Siyah)",
     "category": "Kablo",
     "subcategory": "Hdmi ve Audio Kablosu",
-    "price": "50.000 TL",
+    "price": "500 TL",
     "image": "/public/images/products/hadron-metal-orgu-100-cm-jack-girisli-yaka-mikrofonu-siyah-nt-105056-34-01.jpg",
     "hoverImg": "/public/images/products/hadron-metal-orgu-100-cm-jack-girisli-yaka-mikrofonu-siyah-nt-105056-34-02.jpg",
     "images": [
@@ -2735,14 +2768,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Kablo Dış Materyal Plexy Kablo Tipi Jack Girişli Yaka Mikrofonu Kablo Uzunluğu (Cm.) 100 Cm Medya",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-105056"
   },
   {
     "id": "nettech-plastik-20-cm-hdmi-kablo-siyah-vr-13193-35",
-    "name": "Nettech Plastik 20 Cm Hdmi Kablo (Siyah) VR-13193",
+    "name": "Nettech Plastik 20 Cm Hdmi Kablo (Siyah)",
     "category": "Kablo",
     "subcategory": "Hdmi ve Audio Kablosu",
-    "price": "85.000 TL",
+    "price": "850 TL",
     "image": "/public/images/products/nettech-plastik-20-cm-hdmi-kablo-siyah-vr-13193-35-01.jpg",
     "hoverImg": "/public/images/products/nettech-plastik-20-cm-hdmi-kablo-siyah-vr-13193-35-02.jpg",
     "images": [
@@ -2811,14 +2845,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Macbook Pro 15, Microsoft - Surface 2, Microsoft - Surface, Samsung - Type-C, Asus - Type-C Renk Siyah Ürün Ağırlığı 35 gr Kablo",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "VR-13193"
   },
   {
     "id": "nettech-nt-b34-kulakici-bluetooth-kulaklik-siyah-nt-116022-36",
-    "name": "Nettech NT-B34 Kulakiçi Bluetooth Kulaklık (Siyah) NT-116022",
+    "name": "Nettech NT-B34 Kulakiçi Bluetooth Kulaklık (Siyah)",
     "category": "Ses ve Müzik",
     "subcategory": "Bluetooth Kulaklık",
-    "price": "133.300 TL",
+    "price": "1.333 TL",
     "image": "/public/images/products/nettech-nt-b34-kulakici-bluetooth-kulaklik-siyah-nt-116022-36-01.jpg",
     "hoverImg": "/public/images/products/nettech-nt-b34-kulakici-bluetooth-kulaklik-siyah-nt-116022-36-02.jpg",
     "images": [
@@ -2935,14 +2970,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Medya Kontrol Tuşları Var Kulaklık Tipi Kulakiçi Mikrofon Var Mı ? Mikrofo",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-116022"
   },
   {
     "id": "nettech-nt-bth35-anc-kulakici-bluetooth-kulaklik-siyah-nt-115647-37",
-    "name": "Nettech NT-BTH35 ANC Kulakiçi Bluetooth Kulaklık (Siyah) NT-115647",
+    "name": "Nettech NT-BTH35 ANC Kulakiçi Bluetooth Kulaklık (Siyah)",
     "category": "Ses ve Müzik",
     "subcategory": "Bluetooth Kulaklık",
-    "price": "199.000 TL",
+    "price": "1.990 TL",
     "image": "/public/images/products/nettech-nt-bth35-anc-kulakici-bluetooth-kulaklik-siyah-nt-115647-37-01.png",
     "hoverImg": "/public/images/products/nettech-nt-bth35-anc-kulakici-bluetooth-kulaklik-siyah-nt-115647-37-02.png",
     "images": [
@@ -3059,14 +3095,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Medya Kontrol Tuşları Var Kulaklık Tipi Kulakiçi Mikrofon Var Mı ? Mikrofo",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-115647"
   },
   {
     "id": "nettech-nt-bth30-makarali-kulakici-bluetooth-kulaklik-siyah-nt-110672-38",
-    "name": "Nettech NT-BTH30 Makaralı Kulakiçi Bluetooth Kulaklık (Siyah) NT-110672",
+    "name": "Nettech NT-BTH30 Makaralı Kulakiçi Bluetooth Kulaklık (Siyah)",
     "category": "Ses ve Müzik",
     "subcategory": "Bluetooth Kulaklık",
-    "price": "150.000 TL",
+    "price": "1.500 TL",
     "image": "/public/images/products/nettech-nt-bth30-makarali-kulakici-bluetooth-kulaklik-siyah-nt-110672-38-01.png",
     "hoverImg": "/public/images/products/nettech-nt-bth30-makarali-kulakici-bluetooth-kulaklik-siyah-nt-110672-38-02.png",
     "images": [
@@ -3184,14 +3221,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Medya Kontrol Tuşları Var Kulaklık Tipi Kulakiçi Mikrofon Var Mı ? Mikrofo",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-110672"
   },
   {
     "id": "nettech-nt-bth31-rgb-kulak-ustu-kulaklik-siyah-nt-113777-39",
-    "name": "Nettech NT-BTH31 RGB Kulak Üstü Kulaklık (Siyah) NT-113777",
+    "name": "Nettech NT-BTH31 RGB Kulak Üstü Kulaklık (Siyah)",
     "category": "Ses ve Müzik",
     "subcategory": "Kulak Üstü Kulaklık",
-    "price": "115.000 TL",
+    "price": "1.150 TL",
     "image": "/public/images/products/nettech-nt-bth31-rgb-kulak-ustu-kulaklik-siyah-nt-113777-39-01.png",
     "hoverImg": "/public/images/products/nettech-nt-bth31-rgb-kulak-ustu-kulaklik-siyah-nt-113777-39-02.png",
     "images": [
@@ -3294,14 +3332,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Kablo Uzunluğu (Cm.) Kablosuz Medya Kontrol Tuşları Var Mikrofon Var Mı ? Mi",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-113777"
   },
   {
     "id": "nettech-ke-31-kulak-ustu-kulak-ustu-kulaklik-cesitli-renk-nt-109901-40",
-    "name": "Nettech KE-31 Kulak Üstü Kulak Üstü Kulaklık (Çeşitli Renk) NT-109901",
+    "name": "Nettech KE-31 Kulak Üstü Kulak Üstü Kulaklık (Çeşitli Renk)",
     "category": "Ses ve Müzik",
     "subcategory": "Kulak Üstü Kulaklık",
-    "price": "125.000 TL",
+    "price": "1.250 TL",
     "image": "/public/images/products/nettech-ke-31-kulak-ustu-kulak-ustu-kulaklik-cesitli-renk-nt-109901-40-01.jpg",
     "hoverImg": "/public/images/products/nettech-ke-31-kulak-ustu-kulak-ustu-kulaklik-cesitli-renk-nt-109901-40-02.jpg",
     "images": [
@@ -3400,14 +3439,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Çeşitli Renk Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Kablo Uzunluğu (Cm.) Kablosuz Medya Kontrol Tuşları Var Kulaklık Tipi",
-    "color": "Çeşitli Renk"
+    "color": "Çeşitli Renk",
+    "sku": "NT-109901"
   },
   {
     "id": "nettech-nt-bth16-kulak-ustu-kulak-ustu-kulaklik-kahverengi-nt-103802-41",
-    "name": "Nettech NT-BTH16 Kulak Üstü Kulak Üstü Kulaklık (Kahverengi) NT-103802",
+    "name": "Nettech NT-BTH16 Kulak Üstü Kulak Üstü Kulaklık (Kahverengi)",
     "category": "Ses ve Müzik",
     "subcategory": "Kulak Üstü Kulaklık",
-    "price": "125.000 TL",
+    "price": "1.250 TL",
     "image": "/public/images/products/nettech-nt-bth16-kulak-ustu-kulak-ustu-kulaklik-kahverengi-nt-103802-41-01.jpg",
     "hoverImg": "/public/images/products/nettech-nt-bth16-kulak-ustu-kulak-ustu-kulaklik-kahverengi-nt-103802-41-02.png",
     "images": [
@@ -3503,14 +3543,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Kahverengi Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Kablo Uzunluğu (Cm.) Kablosuz Medya Kontrol Tuşları Var Kulaklık Tipi",
-    "color": "Kahverengi"
+    "color": "Kahverengi",
+    "sku": "NT-103802"
   },
   {
     "id": "hepu-hp-939-party-box-kablosuz-hoparlor-speaker-siyah-nt-117702-42",
-    "name": "Hepu HP-939 Party Box Kablosuz Hoparlör - Speaker (Siyah) NT-117702",
+    "name": "Hepu HP-939 Party Box Kablosuz Hoparlör - Speaker (Siyah)",
     "category": "Ses ve Müzik",
     "subcategory": "Hoparlör - Speaker",
-    "price": "1.225.000 TL",
+    "price": "12.250 TL",
     "image": "/public/images/products/hepu-hp-939-party-box-kablosuz-hoparlor-speaker-siyah-nt-117702-42-01.png",
     "hoverImg": "/public/images/products/hepu-hp-939-party-box-kablosuz-hoparlor-speaker-siyah-nt-117702-42-02.png",
     "images": [
@@ -3634,14 +3675,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Usb Çıkış Sayısı 2 Çıkışlı Giriş Voltaj (V) 220 V Kablo Tipi Yok Medya Kontr",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-117702"
   },
   {
     "id": "nettech-nt-bts12-party-box-kablosuz-hoparlor-speaker-siyah-nt-bts12-43",
-    "name": "Nettech NT-BTS12 Party Box Kablosuz Hoparlör - Speaker (Siyah) NT-BTS12",
+    "name": "Nettech NT-BTS12 Party Box Kablosuz Hoparlör - Speaker (Siyah)",
     "category": "Ses ve Müzik",
     "subcategory": "Hoparlör - Speaker",
-    "price": "150.000 TL",
+    "price": "1.500 TL",
     "image": "/public/images/products/nettech-nt-bts12-party-box-kablosuz-hoparlor-speaker-siyah-nt-bts12-43-01.png",
     "hoverImg": "/public/images/products/nettech-nt-bts12-party-box-kablosuz-hoparlor-speaker-siyah-nt-bts12-43-02.png",
     "images": [
@@ -3754,14 +3796,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Usb Çıkış Sayısı 1 Çıkışlı Giriş Voltaj (V) 5 V Medya Kontrol Tuşları Var Mi",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-BTS12"
   },
   {
     "id": "nettech-ch-m58-karikatur-model-kablosuz-hoparlor-speaker-cesitli-renk-nt-108832-44",
-    "name": "Nettech CH-M58 Karikatür Model Kablosuz Hoparlör - Speaker (Çeşitli Renk) NT-108832",
+    "name": "Nettech CH-M58 Karikatür Model Kablosuz Hoparlör - Speaker (Çeşitli Renk)",
     "category": "Ses ve Müzik",
     "subcategory": "Hoparlör - Speaker",
-    "price": "130.000 TL",
+    "price": "1.300 TL",
     "image": "/public/images/products/nettech-ch-m58-karikatur-model-kablosuz-hoparlor-speaker-cesitli-renk-nt-108832-44-01.jpg",
     "hoverImg": "/public/images/products/nettech-ch-m58-karikatur-model-kablosuz-hoparlor-speaker-cesitli-renk-nt-108832-44-02.jpg",
     "images": [
@@ -3881,14 +3924,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Çeşitli Renk Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Usb Çıkış Sayısı 1 Çıkışlı Giriş Voltaj (V) 5 V Kablo Tipi Type-C Med",
-    "color": "Çeşitli Renk"
+    "color": "Çeşitli Renk",
+    "sku": "NT-108832"
   },
   {
     "id": "nettech-l5-ducky-duck-karikatur-model-kablosuz-hoparlor-speaker-cesitli-renk-nt-109935-45",
-    "name": "Nettech L5 Ducky Duck Karikatür Model Kablosuz Hoparlör - Speaker (Çeşitli Renk) NT-109935",
+    "name": "Nettech L5 Ducky Duck Karikatür Model Kablosuz Hoparlör - Speaker (Çeşitli Renk)",
     "category": "Ses ve Müzik",
     "subcategory": "Hoparlör - Speaker",
-    "price": "75.000 TL",
+    "price": "750 TL",
     "image": "/public/images/products/nettech-l5-ducky-duck-karikatur-model-kablosuz-hoparlor-speaker-cesitli-renk-nt-109935-45-01.png",
     "hoverImg": "/public/images/products/nettech-l5-ducky-duck-karikatur-model-kablosuz-hoparlor-speaker-cesitli-renk-nt-109935-45-02.png",
     "images": [
@@ -4005,14 +4049,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Çeşitli Renk Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Usb Çıkış Sayısı 1 Çıkışlı Giriş Voltaj (V) 12 V Kablo Tipi Type-C Me",
-    "color": "Çeşitli Renk"
+    "color": "Çeşitli Renk",
+    "sku": "NT-109935"
   },
   {
     "id": "nettech-nt-42-type-c-girisli-kulak-ici-kulaklik-siyah-nt-107852-46",
-    "name": "Nettech NT-42 Type-C Girişli Kulak İçi Kulaklık (Siyah) NT-107852",
+    "name": "Nettech NT-42 Type-C Girişli Kulak İçi Kulaklık (Siyah)",
     "category": "Ses ve Müzik",
     "subcategory": "Kulak İçi Kulaklık",
-    "price": "24.900 TL",
+    "price": "249 TL",
     "image": "/public/images/products/nettech-nt-42-type-c-girisli-kulak-ici-kulaklik-siyah-nt-107852-46-01.png",
     "hoverImg": "/public/images/products/nettech-nt-42-type-c-girisli-kulak-ici-kulaklik-siyah-nt-107852-46-02.png",
     "images": [
@@ -4096,14 +4141,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Kablo Uzunluğu (Cm.) 100 Cm Medya Kontrol Tuşları Var Mikrofon Var Mı ? Mi",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-107852"
   },
   {
     "id": "nettech-nt-39-3-5-jack-girisli-kulak-ici-kulaklik-siyah-vr-14246-47",
-    "name": "Nettech NT-39 3.5 Jack Girişli Kulak İçi Kulaklık (Siyah) VR-14246",
+    "name": "Nettech NT-39 3.5 Jack Girişli Kulak İçi Kulaklık (Siyah)",
     "category": "Ses ve Müzik",
     "subcategory": "Kulak İçi Kulaklık",
-    "price": "32.500 TL",
+    "price": "325 TL",
     "image": "/public/images/products/nettech-nt-39-3-5-jack-girisli-kulak-ici-kulaklik-siyah-vr-14246-47-01.jpg",
     "hoverImg": "/public/images/products/nettech-nt-39-3-5-jack-girisli-kulak-ici-kulaklik-siyah-vr-14246-47-02.jpg",
     "images": [
@@ -4191,14 +4237,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Turkcell - 3.5 Jack, Samsung - 3.5 jack, Alcatel - 3.5 Jack, Asus - 3.5 Jack, Nokia - 3.5 Jack, HTC - 3.5 Jack Renk Siyah Ürün A",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "VR-14246"
   },
   {
     "id": "nettech-nt-hs11-type-c-girisli-kulak-ici-kulaklik-siyah-nt-hs11-48",
-    "name": "Nettech NT-HS11 Type-C Girişli Kulak İçi Kulaklık (Siyah) NT-HS11",
+    "name": "Nettech NT-HS11 Type-C Girişli Kulak İçi Kulaklık (Siyah)",
     "category": "Ses ve Müzik",
     "subcategory": "Kulak İçi Kulaklık",
-    "price": "35.000 TL",
+    "price": "350 TL",
     "image": "/public/images/products/nettech-nt-hs11-type-c-girisli-kulak-ici-kulaklik-siyah-nt-hs11-48-01.jpg",
     "hoverImg": "/public/images/products/nettech-nt-hs11-type-c-girisli-kulak-ici-kulaklik-siyah-nt-hs11-48-02.jpg",
     "images": [
@@ -4283,14 +4330,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Kablo Uzunluğu (Cm.) 100 Cm Medya Kontrol Tuşları Var Mikrofon Var Mı ? Mikr",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-HS11"
   },
   {
     "id": "nettech-nt-hs08-tak-calistir-kablolu-kulak-ici-kulaklik-beyaz-nt-hs08-49",
-    "name": "Nettech NT-HS08 Tak Çalıştır Kablolu Kulak İçi Kulaklık (Beyaz) NT-HS08",
+    "name": "Nettech NT-HS08 Tak Çalıştır Kablolu Kulak İçi Kulaklık (Beyaz)",
     "category": "Ses ve Müzik",
     "subcategory": "Kulak İçi Kulaklık",
-    "price": "55.000 TL",
+    "price": "550 TL",
     "image": "/public/images/products/nettech-nt-hs08-tak-calistir-kablolu-kulak-ici-kulaklik-beyaz-nt-hs08-49-01.jpg",
     "hoverImg": "/public/images/products/nettech-nt-hs08-tak-calistir-kablolu-kulak-ici-kulaklik-beyaz-nt-hs08-49-02.jpg",
     "images": [
@@ -4374,14 +4422,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Kablo Uzunluğu (Cm.) 100 Cm Medya Kontrol Tuşları Var Mikrofon Var Mı ? Mikr",
-    "color": "Beyaz"
+    "color": "Beyaz",
+    "sku": "NT-HS08"
   },
   {
     "id": "imiki-xioami-ecosysstem-company-st2-akilli-saat-mavi-nt-115976-50",
-    "name": "İmiki Xioami Ecosysstem Company ST2 Akıllı Saat (Mavi) NT-115976",
+    "name": "İmiki Xioami Ecosysstem Company ST2 Akıllı Saat (Mavi)",
     "category": "Giyilebilir Teknoloji",
     "subcategory": "Akıllı Saat",
-    "price": "215.000 TL",
+    "price": "2.150 TL",
     "image": "/public/images/products/imiki-xioami-ecosysstem-company-st2-akilli-saat-mavi-nt-115976-50-01.png",
     "hoverImg": "/public/images/products/imiki-xioami-ecosysstem-company-st2-akilli-saat-mavi-nt-115976-50-02.png",
     "images": [
@@ -4480,14 +4529,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Mavi Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Mikrofon Var Mı ? Mikrofonlu Çocuklar İçin Uygun mu ? Hayır Kamera Adedi Yok",
-    "color": "Mavi"
+    "color": "Mavi",
+    "sku": "NT-115976"
   },
   {
     "id": "imiki-c1-ecosystem-company-akilli-saat-siyah-nt-113374-51",
-    "name": "İmiki C1 Ecosystem Company Akıllı Saat (Siyah) NT-113374",
+    "name": "İmiki C1 Ecosystem Company Akıllı Saat (Siyah)",
     "category": "Giyilebilir Teknoloji",
     "subcategory": "Akıllı Saat",
-    "price": "349.000 TL",
+    "price": "3.490 TL",
     "image": "/public/images/products/imiki-c1-ecosystem-company-akilli-saat-siyah-nt-113374-51-01.png",
     "hoverImg": "/public/images/products/imiki-c1-ecosystem-company-akilli-saat-siyah-nt-113374-51-02.png",
     "images": [
@@ -4582,14 +4632,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Mikrofon Var Mı ? Mikrofonlu Çocuklar İçin Uygun mu ? Hayır Kamera Adedi V",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-113374"
   },
   {
     "id": "imiki-c1-ecosystem-company-akilli-saat-lacivert-nt-111756-52",
-    "name": "İmiki C1 Ecosystem Company Akıllı Saat (Lacivert) NT-111756",
+    "name": "İmiki C1 Ecosystem Company Akıllı Saat (Lacivert)",
     "category": "Giyilebilir Teknoloji",
     "subcategory": "Akıllı Saat",
-    "price": "349.000 TL",
+    "price": "3.490 TL",
     "image": "/public/images/products/imiki-c1-ecosystem-company-akilli-saat-lacivert-nt-111756-52-01.jpg",
     "hoverImg": "/public/images/products/imiki-c1-ecosystem-company-akilli-saat-lacivert-nt-111756-52-02.png",
     "images": [
@@ -4681,14 +4732,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Lacivert Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Mikrofon Var Mı ? Mikrofonlu Çocuklar İçin Uygun mu ? Hayır Kamera Aded",
-    "color": "Lacivert"
+    "color": "Lacivert",
+    "sku": "NT-111756"
   },
   {
     "id": "dahua-s5-pro-4k-arac-ici-kamera-aksiyon-kamera-siyah-nt-118992-53",
-    "name": "Dahua S5 Pro 4K Araç İçi Kamera Aksiyon Kamera (Siyah) NT-118992",
+    "name": "Dahua S5 Pro 4K Araç İçi Kamera Aksiyon Kamera (Siyah)",
     "category": "Giyilebilir Teknoloji",
     "subcategory": "Aksiyon Kamera",
-    "price": "415.000 TL",
+    "price": "4.150 TL",
     "image": "/public/images/products/dahua-s5-pro-4k-arac-ici-kamera-aksiyon-kamera-siyah-nt-118992-53-01.png",
     "hoverImg": "/public/images/products/dahua-s5-pro-4k-arac-ici-kamera-aksiyon-kamera-siyah-nt-118992-53-02.png",
     "images": [
@@ -4753,14 +4805,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Görüntü Aktarım Desteği Var Kamera Adedi 2 Kamera Pil Kapasitesi (Mah) 900 MAh Paket İçeriği Garan",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-118992"
   },
   {
     "id": "azdome-xiaomi-ecosystem-company-m330-aksiyon-kamera-siyah-nt-118897-54",
-    "name": "Azdome Xiaomi Ecosystem Company M330 Aksiyon Kamera (Siyah) NT-118897",
+    "name": "Azdome Xiaomi Ecosystem Company M330 Aksiyon Kamera (Siyah)",
     "category": "Giyilebilir Teknoloji",
     "subcategory": "Aksiyon Kamera",
-    "price": "295.000 TL",
+    "price": "2.950 TL",
     "image": "/public/images/products/azdome-xiaomi-ecosystem-company-m330-aksiyon-kamera-siyah-nt-118897-54-01.png",
     "hoverImg": "/public/images/products/azdome-xiaomi-ecosystem-company-m330-aksiyon-kamera-siyah-nt-118897-54-02.png",
     "images": [
@@ -4824,14 +4877,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Görüntü Aktarım Desteği Var Kamera Adedi 2 Kamera Pil Kapasitesi (Mah) 900 MAh Paket İçeriği Kulan",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-118897"
   },
   {
     "id": "castu-lk-027-mini-flip-dijital-kamera-aksiyon-kamera-pembe-nt-118027-55",
-    "name": "Castu LK-027 Mini Flip Dijital Kamera Aksiyon Kamera (Pembe) NT-118027",
+    "name": "Castu LK-027 Mini Flip Dijital Kamera Aksiyon Kamera (Pembe)",
     "category": "Giyilebilir Teknoloji",
     "subcategory": "Aksiyon Kamera",
-    "price": "235.000 TL",
+    "price": "2.350 TL",
     "image": "/public/images/products/castu-lk-027-mini-flip-dijital-kamera-aksiyon-kamera-pembe-nt-118027-55-01.jpg",
     "hoverImg": "/public/images/products/castu-lk-027-mini-flip-dijital-kamera-aksiyon-kamera-pembe-nt-118027-55-02.jpg",
     "images": [
@@ -4896,14 +4950,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Pembe Ürün Ağırlığı 0 gr Görüntü Aktarım Desteği Var Kamera Adedi 1 Kamera Pil Kapasitesi (Mah) 900 MAh Paket İçeriği Garan",
-    "color": "Pembe"
+    "color": "Pembe",
+    "sku": "NT-118027"
   },
   {
     "id": "nettech-apple-iphone-16-uyumlu-nt-n094-arka-koruma-kilif-beyaz-nt-114941-56",
-    "name": "Nettech Apple iPhone 16 Uyumlu NT-N094 Arka Koruma Kılıf (Beyaz) NT-114941",
+    "name": "Nettech Apple iPhone 16 Uyumlu NT-N094 Arka Koruma Kılıf (Beyaz)",
     "category": "Telefon Kılıfı",
     "subcategory": "Arka Koruma Kılıf",
-    "price": "66.500 TL",
+    "price": "665 TL",
     "image": "/public/images/products/nettech-apple-iphone-16-uyumlu-nt-n094-arka-koruma-kilif-beyaz-nt-114941-56-01.png",
     "hoverImg": "/public/images/products/nettech-apple-iphone-16-uyumlu-nt-n094-arka-koruma-kilif-beyaz-nt-114941-56-02.png",
     "images": [
@@ -4977,14 +5032,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller iPhone 16 Renk Beyaz Ürün Ağırlığı 0 gr Kılıf Adı Şeffaf Seri Malzeme Cinsi Silikon Stand Olarak Kullanım Yok Ürün Kalınlık (Mm)",
-    "color": "Beyaz"
+    "color": "Beyaz",
+    "sku": "NT-114941"
   },
   {
     "id": "nettech-apple-iphone-16-uyumlu-nt-n086-arka-koruma-kilif-turkuaz-nt-114277-57",
-    "name": "Nettech Apple iPhone 16 Uyumlu NT-N086 Arka Koruma Kılıf (Turkuaz) NT-114277",
+    "name": "Nettech Apple iPhone 16 Uyumlu NT-N086 Arka Koruma Kılıf (Turkuaz)",
     "category": "Telefon Kılıfı",
     "subcategory": "Arka Koruma Kılıf",
-    "price": "37.500 TL",
+    "price": "375 TL",
     "image": "/public/images/products/nettech-apple-iphone-16-uyumlu-nt-n086-arka-koruma-kilif-turkuaz-nt-114277-57-01.png",
     "hoverImg": "/public/images/products/nettech-apple-iphone-16-uyumlu-nt-n086-arka-koruma-kilif-turkuaz-nt-114277-57-02.png",
     "images": [
@@ -5055,14 +5111,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller iPhone 16 Renk Turkuaz Ürün Ağırlığı 0 gr Kılıf Adı Desenli Seri Malzeme Cinsi Silikon Stand Olarak Kullanım Yok Ürün Kalınlık (",
-    "color": "Turkuaz"
+    "color": "Turkuaz",
+    "sku": "NT-114277"
   },
   {
     "id": "nettech-apple-iphone-16-uyumlu-nt-n074-arka-koruma-kilif-mor-nt-113676-58",
-    "name": "Nettech Apple iPhone 16 Uyumlu NT-N074 Arka Koruma Kılıf (Mor) NT-113676",
+    "name": "Nettech Apple iPhone 16 Uyumlu NT-N074 Arka Koruma Kılıf (Mor)",
     "category": "Telefon Kılıfı",
     "subcategory": "Arka Koruma Kılıf",
-    "price": "80.000 TL",
+    "price": "800 TL",
     "image": "/public/images/products/nettech-apple-iphone-16-uyumlu-nt-n074-arka-koruma-kilif-mor-nt-113676-58-01.jpg",
     "hoverImg": "/public/images/products/nettech-apple-iphone-16-uyumlu-nt-n074-arka-koruma-kilif-mor-nt-113676-58-02.jpg",
     "images": [
@@ -5134,14 +5191,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller iPhone 16 Renk Mor Ürün Ağırlığı 0 gr Kılıf Adı Lansman Seri Malzeme Cinsi Silikon Stand Olarak Kullanım Yok Ürün Kalınlık (Mm)",
-    "color": "Mor"
+    "color": "Mor",
+    "sku": "NT-113676"
   },
   {
     "id": "nettech-apple-iphone-xs-max-uyumlu-clear-view-aynali-kapakli-kilif-gri-nt-85407-59",
-    "name": "Nettech Apple iPhone XS Max Uyumlu Clear View Aynalı Kapaklı Kılıf (Gri) NT-85407",
+    "name": "Nettech Apple iPhone XS Max Uyumlu Clear View Aynalı Kapaklı Kılıf (Gri)",
     "category": "Telefon Kılıfı",
     "subcategory": "Kapaklı Kılıf",
-    "price": "30.000 TL",
+    "price": "300 TL",
     "image": "/public/images/products/nettech-apple-iphone-xs-max-uyumlu-clear-view-aynali-kapakli-kilif-gri-nt-85407-59-01.jpg",
     "hoverImg": "/public/images/products/nettech-apple-iphone-xs-max-uyumlu-clear-view-aynali-kapakli-kilif-gri-nt-85407-59-02.jpg",
     "images": [
@@ -5201,14 +5259,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller iPhone XS Max Renk Gri Ürün Ağırlığı 0 gr Kılıf Adı Clear View Aynalı Stand Olarak Kullanım Var Ürün Kalınlık (Mm) 0.5 mm Smart",
-    "color": "Gri"
+    "color": "Gri",
+    "sku": "NT-85407"
   },
   {
     "id": "nettech-apple-iphone-xs-max-uyumlu-clear-view-aynali-kapakli-kilif-rose-gold-nt-85406-60",
-    "name": "Nettech Apple iPhone XS Max Uyumlu Clear View Aynalı Kapaklı Kılıf (Rose Gold) NT-85406",
+    "name": "Nettech Apple iPhone XS Max Uyumlu Clear View Aynalı Kapaklı Kılıf (Rose Gold)",
     "category": "Telefon Kılıfı",
     "subcategory": "Kapaklı Kılıf",
-    "price": "30.000 TL",
+    "price": "300 TL",
     "image": "/public/images/products/nettech-apple-iphone-xs-max-uyumlu-clear-view-aynali-kapakli-kilif-rose-gold-nt-85406-60-01.jpg",
     "hoverImg": "/public/images/products/nettech-apple-iphone-xs-max-uyumlu-clear-view-aynali-kapakli-kilif-rose-gold-nt-85406-60-02.jpg",
     "images": [
@@ -5268,14 +5327,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller iPhone XS Max Renk Rose Gold Ürün Ağırlığı 0 gr Kılıf Adı Clear View Aynalı Stand Olarak Kullanım Var Ürün Kalınlık (Mm) 0.5 mm",
-    "color": "Rose Gold"
+    "color": "Rose Gold",
+    "sku": "NT-85406"
   },
   {
     "id": "nettech-apple-iphone-11-pro-max-uyumlu-clear-view-aynali-kapakli-kilif-rose-gold-nt-85515-61",
-    "name": "Nettech Apple iPhone 11 Pro Max Uyumlu Clear View Aynalı Kapaklı Kılıf (Rose Gold) NT-85515",
+    "name": "Nettech Apple iPhone 11 Pro Max Uyumlu Clear View Aynalı Kapaklı Kılıf (Rose Gold)",
     "category": "Telefon Kılıfı",
     "subcategory": "Kapaklı Kılıf",
-    "price": "35.000 TL",
+    "price": "350 TL",
     "image": "/public/images/products/nettech-apple-iphone-11-pro-max-uyumlu-clear-view-aynali-kapakli-kilif-rose-gold-nt-85515-61-01.jpg",
     "hoverImg": "/public/images/products/nettech-apple-iphone-11-pro-max-uyumlu-clear-view-aynali-kapakli-kilif-rose-gold-nt-85515-61-02.jpg",
     "images": [
@@ -5335,14 +5395,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller iPhone 11 Pro Max Renk Rose Gold Ürün Ağırlığı 0 gr Kılıf Adı Clear View Aynalı Stand Olarak Kullanım Var Ürün Kalınlık (Mm) 0.5",
-    "color": "Rose Gold"
+    "color": "Rose Gold",
+    "sku": "NT-85515"
   },
   {
     "id": "zawa-cuzdan-hakiki-deri-mekanizmali-cuzdan-kahverengi-nt-118424-62",
-    "name": "Zawa Cüzdan Hakiki Deri Mekanizmalı Cüzdan (Kahverengi) NT-118424",
+    "name": "Zawa Cüzdan Hakiki Deri Mekanizmalı Cüzdan (Kahverengi)",
     "category": "Telefon Kılıfı",
     "subcategory": "Diğer Kılıflar",
-    "price": "94.900 TL",
+    "price": "949 TL",
     "image": "/public/images/products/zawa-cuzdan-hakiki-deri-mekanizmali-cuzdan-kahverengi-nt-118424-62-01.png",
     "hoverImg": "/public/images/products/zawa-cuzdan-hakiki-deri-mekanizmali-cuzdan-kahverengi-nt-118424-62-02.png",
     "images": [
@@ -5395,14 +5456,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Kahverengi Ürün Ağırlığı 0 gr Kılıf Adı Cüzdan Malzeme Cinsi Deri Ürün Kalınlık (Mm) 0.1 mm Yapışkan Türü Etiket Baskı Türü",
-    "color": "Kahverengi"
+    "color": "Kahverengi",
+    "sku": "NT-118424"
   },
   {
     "id": "nettech-cuzdan-miknatisli-deri-kartlik-cuzdan-mavi-nt-114180-63",
-    "name": "Nettech Cüzdan Mıknatıslı Deri Kartlık Cüzdan (Mavi) NT-114180",
+    "name": "Nettech Cüzdan Mıknatıslı Deri Kartlık Cüzdan (Mavi)",
     "category": "Telefon Kılıfı",
     "subcategory": "Diğer Kılıflar",
-    "price": "40.000 TL",
+    "price": "400 TL",
     "image": "/public/images/products/nettech-cuzdan-miknatisli-deri-kartlik-cuzdan-mavi-nt-114180-63-01.png",
     "hoverImg": "/public/images/products/nettech-cuzdan-miknatisli-deri-kartlik-cuzdan-mavi-nt-114180-63-02.png",
     "images": [
@@ -5456,14 +5518,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Mavi Ürün Ağırlığı 0 gr Kılıf Adı Cüzdan Malzeme Cinsi Deri Ürün Kalınlık (Mm) 0.1 mm Yapışkan Türü Etiket Baskı Türü Uv Ür",
-    "color": "Mavi"
+    "color": "Mavi",
+    "sku": "NT-114180"
   },
   {
     "id": "nettech-telefon-vantuz-tutucu-uzay-grisi-nt-112378-64",
-    "name": "Nettech Telefon Vantuz Tutucu (Uzay Grisi) NT-112378",
+    "name": "Nettech Telefon Vantuz Tutucu (Uzay Grisi)",
     "category": "Telefon Kılıfı",
     "subcategory": "Diğer Kılıflar",
-    "price": "15.000 TL",
+    "price": "150 TL",
     "image": "/public/images/products/nettech-telefon-vantuz-tutucu-uzay-grisi-nt-112378-64-01.png",
     "hoverImg": "/public/images/products/nettech-telefon-vantuz-tutucu-uzay-grisi-nt-112378-64-02.jpg",
     "images": [
@@ -5508,14 +5571,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Uzay Grisi Ürün Ağırlığı 0 gr Malzeme Cinsi Silikon Ürün Kalınlık (Mm) 0.5 mm Yapışkan Türü Etiket Ürün Menşei/Ülke P.R.C S",
-    "color": "Uzay Grisi"
+    "color": "Uzay Grisi",
+    "sku": "NT-112378"
   },
   {
     "id": "hadron-hd803-klavye-siyah-nt-114611-65",
-    "name": "Hadron HD803 Klavye (Siyah) NT-114611",
+    "name": "Hadron HD803 Klavye (Siyah)",
     "category": "Çevre Birimleri",
     "subcategory": "Klavye",
-    "price": "55.000 TL",
+    "price": "550 TL",
     "image": "/public/images/products/hadron-hd803-klavye-siyah-nt-114611-65-01.png",
     "hoverImg": "/public/images/products/hadron-hd803-klavye-siyah-nt-114611-65-02.png",
     "images": [
@@ -5594,14 +5658,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Medya Kontrol Tuşları Var Bağlantı Tipi Kablolu Ürün Durumu Sıfır Ürün Menşe",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-114611"
   },
   {
     "id": "fd-k912t-bluetooth-klavye-beyaz-nt-105011-66",
-    "name": "FD K912T Bluetooth Klavye (Beyaz) NT-105011",
+    "name": "FD K912T Bluetooth Klavye (Beyaz)",
     "category": "Çevre Birimleri",
     "subcategory": "Klavye",
-    "price": "255.000 TL",
+    "price": "2.550 TL",
     "image": "/public/images/products/fd-k912t-bluetooth-klavye-beyaz-nt-105011-66-01.jpg",
     "hoverImg": "/public/images/products/fd-k912t-bluetooth-klavye-beyaz-nt-105011-66-02.jpg",
     "images": [
@@ -5678,14 +5743,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Beyaz Ürün Ağırlığı 0 gr Malzeme Cinsi Alüminyum Medya Kontrol Tuşları Var Bağlantı Tipi Bluetooth Ürün Durumu Sıfır Ürün M",
-    "color": "Beyaz"
+    "color": "Beyaz",
+    "sku": "NT-105011"
   },
   {
     "id": "hadron-hdx4252-plastik-notebook-sogutucu-siyah-nt-109586-67",
-    "name": "Hadron HDX4252 Plastik Notebook Soğutucu (Siyah) NT-109586",
+    "name": "Hadron HDX4252 Plastik Notebook Soğutucu (Siyah)",
     "category": "Çevre Birimleri",
     "subcategory": "Bilgisayar Bileşenleri",
-    "price": "139.000 TL",
+    "price": "1.390 TL",
     "image": "/public/images/products/hadron-hdx4252-plastik-notebook-sogutucu-siyah-nt-109586-67-01.jpg",
     "hoverImg": "/public/images/products/hadron-hdx4252-plastik-notebook-sogutucu-siyah-nt-109586-67-02.png",
     "images": [
@@ -5729,14 +5795,15 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Kullanım Tipi Notebook Soğutucu Garanti Durumu İthaalatçı Garantili Garanti",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-109586"
   },
   {
     "id": "hadron-hd323ab-ps3-ps4-oyun-konsolu-siyah-nt-114616-68",
-    "name": "Hadron HD323AB PS3-PS4 Oyun Konsolu (Siyah) NT-114616",
+    "name": "Hadron HD323AB PS3-PS4 Oyun Konsolu (Siyah)",
     "category": "Çevre Birimleri",
     "subcategory": "Oyun Konsolu",
-    "price": "145.000 TL",
+    "price": "1.450 TL",
     "image": "/public/images/products/hadron-hd323ab-ps3-ps4-oyun-konsolu-siyah-nt-114616-68-01.png",
     "hoverImg": "/public/images/products/hadron-hd323ab-ps3-ps4-oyun-konsolu-siyah-nt-114616-68-02.png",
     "images": [
@@ -5797,6 +5864,7 @@ export const products = [
       }
     ],
     "description": "Özellikler Uyumlu Modeller Renk Siyah Ürün Ağırlığı 0 gr Malzeme Cinsi Plastik Kablo Tipi Tv Bağlantı Kablosu Kullanım Tipi PS3-PS4 Ürün Durumu Sıfır Garan",
-    "color": "Siyah"
+    "color": "Siyah",
+    "sku": "NT-114616"
   }
 ];

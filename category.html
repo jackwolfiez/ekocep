@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ekocep kategori ürün listeleme sayfası." />
+    <title>Kategori - Ekocep</title>
+    <link rel="icon" href="/public/favicon.ico" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script>
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "#ffffff",
+              foreground: "#151922",
+              secondary: "#f4f6f8",
+              muted: "#eef1f4",
+              "muted-foreground": "#667085",
+              border: "#e5e9ef",
+              destructive: "#b42318",
+              "destructive-foreground": "#ffffff"
+            },
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+              serif: ["Georgia", "ui-serif", "serif"]
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="bg-background text-foreground antialiased">
+    <div class="category-page-shell">
+      <header class="commerce-header">
+        <div class="commerce-promo" aria-label="Kampanya duyurusu">
+          <div class="commerce-promo-track">
+            <span>%100 orijinal ve garantili elektronik</span>
+            <span>Çok satan teknolojiler tek tıkla</span>
+            <span>Güvenli ödeme ve hızlı kargo</span>
+            <span>500 TL üzeri siparişlerde ücretsiz teslimat</span>
+          </div>
+        </div>
+        <div class="commerce-utility"><div class="commerce-utility-inner">
+          <nav aria-label="Kurumsal bağlantılar">
+            <a href="./about.html">Hakkımızda</a>
+            <a href="./blog.html">Blog</a>
+            <a href="./faq.html">SSS</a>
+            <a href="./contact.html">İletişim</a>
+          </nav>
+          <div class="commerce-utility-actions">
+            <a href="./campaigns.html" class="commerce-gift"><i data-lucide="gift" class="h-3.5 w-3.5"></i> Kampanyalar</a>
+          </div>
+        </div></div>
+        <div class="commerce-main">
+          <a href="./index.html" class="commerce-logo">Ekocep<span>.</span></a>
+          <form class="commerce-search" role="search">
+            <label for="header-search">Arama</label>
+            <input id="header-search" type="search" placeholder="Ürün, kategori veya aksesuar ara" autocomplete="off" />
+            <button class="commerce-search-submit" type="button" data-search-toggle aria-controls="search-drawer" aria-expanded="false">
+              <i data-lucide="search" class="h-4 w-4"></i>
+              <span>Arama</span>
+            </button>
+          </form>
+          <div class="commerce-actions" aria-label="Hızlı işlemler">
+            <button type="button" class="commerce-account" data-login-toggle aria-controls="login-drawer" aria-expanded="false">
+              <i data-lucide="user" class="h-5 w-5"></i>
+              <span>Giriş yap</span>
+            </button>
+            <button id="cart-toggle" type="button" class="commerce-cart" aria-label="Sepet" aria-controls="cart-drawer" aria-expanded="false">
+              <span data-cart-count>0</span>
+              <i data-lucide="shopping-bag" class="h-5 w-5"></i>
+              <span>Sepet</span>
+            </button>
+          </div>
+        </div>
+        <div class="commerce-nav-row">
+          <nav class="commerce-category-nav" id="category-category-nav" aria-label="Ürün kategorileri"></nav>
+        </div>
+      </header>
+
+      <main class="category-page" data-category-page>
+        <nav class="category-breadcrumb" aria-label="Sayfa yolu">
+          <a href="./index.html">Ana Sayfa</a>
+          <span>/</span>
+          <span data-category-breadcrumb>Kategori</span>
+        </nav>
+        <section class="category-hero">
+          <p>Ürün Kategorisi</p>
+          <h1 data-category-title>Kategori</h1>
+          <span data-category-summary></span>
+        </section>
+        <section class="category-layout">
+          <aside class="category-sidebar">
+            <h2>Kategoriler</h2>
+            <div data-category-filter-list></div>
+          </aside>
+          <div class="category-results">
+            <div class="category-toolbar">
+              <span data-category-count></span>
+              <select data-category-sort aria-label="Sıralama">
+                <option value="default">Önerilen sıralama</option>
+                <option value="price-asc">Fiyat artan</option>
+                <option value="price-desc">Fiyat azalan</option>
+                <option value="name-asc">İsim A-Z</option>
+              </select>
+            </div>
+            <div class="category-product-grid" data-category-products></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <aside id="search-drawer" class="search-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="search-drawer-title">
+      <button class="search-drawer-overlay" type="button" data-search-close aria-label="Arama panelini kapat"></button>
+      <div class="search-drawer-panel">
+        <div class="search-drawer-head">
+          <h2 id="search-drawer-title">Arama</h2>
+          <button class="search-drawer-close" type="button" data-search-close aria-label="Arama panelini kapat"><i data-lucide="x" class="h-5 w-5"></i></button>
+        </div>
+        <div class="search-drawer-body">
+          <form class="search-form" role="search">
+            <label for="site-search">Arama</label>
+            <div class="search-input-wrap">
+              <i data-lucide="search" class="h-5 w-5"></i>
+              <input id="site-search" type="search" placeholder="Ürün, kategori veya aksesuar ara" autocomplete="off" data-search-input />
+              <button type="button" data-search-clear>Temizle</button>
+            </div>
+          </form>
+          <div class="search-section-title">Hızlı görünüm</div>
+          <div class="search-products"></div>
+          <p class="search-empty" hidden data-search-empty>Aramana uygun ürün bulunamadı.</p>
+        </div>
+      </div>
+    </aside>
+
+    <aside id="login-drawer" class="login-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="login-drawer-title">
+      <button class="login-drawer-overlay" type="button" data-login-close aria-label="Giriş panelini kapat"></button>
+      <div class="login-drawer-panel">
+        <div class="login-drawer-head">
+          <h2 id="login-drawer-title">Hesaba giriş</h2>
+          <button class="login-drawer-close" type="button" data-login-close aria-label="Giriş panelini kapat"><i data-lucide="x" class="h-5 w-5"></i></button>
+        </div>
+        <div class="login-drawer-body">
+          <section data-login-panel="login">
+            <p class="login-helper">Devam etmek için bilgilerini doldur.</p>
+            <label for="login-email">E-posta<input id="login-email" type="email" placeholder="ornek@mail.com" /></label>
+            <label for="login-password">Şifre<input id="login-password" type="password" placeholder="••••••••" /></label>
+            <button type="button" class="login-text-button" data-login-view="reset">Şifreni mi unuttun?</button>
+            <button type="button" class="login-submit-button">Giriş yap</button>
+            <button type="button" class="login-create-link" data-login-view="create">Hesap oluştur</button>
+          </section>
+          <section data-login-panel="reset" hidden>
+            <h3>Şifreni sıfırla</h3>
+            <p>E-postanı yaz, şifreni yenilemen için bağlantı gönderelim.</p>
+            <label for="reset-email">E-posta<input id="reset-email" type="email" placeholder="ornek@mail.com" /></label>
+            <button type="button" class="login-submit-button">Gönder</button>
+            <button type="button" class="login-text-button" data-login-view="login">Vazgeç</button>
+          </section>
+          <section data-login-panel="create" hidden>
+            <h3>Hesap oluştur</h3>
+            <p>Bilgilerini doldur, siparişlerini daha kolay takip et.</p>
+            <label for="register-name">Ad Soyad<input id="register-name" type="text" placeholder="Ad Soyad" /></label>
+            <label for="register-email">E-posta<input id="register-email" type="email" placeholder="ornek@mail.com" /></label>
+            <label for="register-password">Şifre<input id="register-password" type="password" placeholder="••••••••" /></label>
+            <button type="button" class="login-submit-button">Oluştur</button>
+            <button type="button" class="login-text-button" data-login-view="login">Giriş yap</button>
+          </section>
+        </div>
+      </div>
+    </aside>
+
+    <aside id="cart-drawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
+      <button class="cart-drawer-overlay" type="button" data-cart-close aria-label="Sepeti kapat"></button>
+      <div class="cart-drawer-panel">
+        <div class="cart-drawer-head">
+          <h2 id="cart-drawer-title" class="text-3xl font-semibold tracking-tight">Sepet <span data-cart-count-label>(0)</span></h2>
+          <button class="cart-drawer-close" type="button" data-cart-close aria-label="Sepeti kapat"><i data-lucide="x" class="h-5 w-5"></i></button>
+        </div>
+        <div class="cart-drawer-body">
+          <div class="cart-empty-state">
+            <i data-lucide="shopping-bag" class="h-9 w-9"></i>
+            <h3 class="mt-5 text-xl font-semibold">Sepetin şu anda boş.</h3>
+            <p class="mt-2 text-sm text-muted-foreground">Ürün sepete eklenince drawer burada güncellenir.</p>
+            <a href="./index.html#shop" class="cart-continue-button" data-cart-close>Alışverişe devam et</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <script type="module" src="./category.js"></script>
+  </body>
+</html>

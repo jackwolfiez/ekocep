@@ -39,6 +39,52 @@
   </head>
   <body id="top" class="bg-background text-foreground antialiased">
     <div class="min-h-screen">
+      <header class="commerce-header">
+        <div class="commerce-promo" aria-label="Kampanya duyurusu">
+          <div class="commerce-promo-track">
+            <span>%100 orijinal ve garantili elektronik</span>
+            <span>Çok satan teknolojiler tek tıkla</span>
+            <span>Güvenli ödeme ve hızlı kargo</span>
+            <span>500 TL üzeri siparişlerde ücretsiz teslimat</span>
+          </div>
+        </div>
+        <div class="commerce-utility"><div class="commerce-utility-inner">
+          <nav aria-label="Kurumsal bağlantılar">
+            <a href="./about.html">Hakkımızda</a>
+            <a href="./blog.html">Blog</a>
+            <a href="./faq.html">SSS</a>
+            <a href="./contact.html">İletişim</a>
+          </nav>
+          <div class="commerce-utility-actions">
+            <a href="./campaigns.html" class="commerce-gift"><i data-lucide="gift" class="h-3.5 w-3.5"></i> Kampanyalar</a>
+          </div>
+        </div></div>
+        <div class="commerce-main">
+          <a href="#top" class="commerce-logo">Ekocep<span>.</span></a>
+          <form class="commerce-search" role="search">
+            <label for="header-search">Arama</label>
+            <input id="header-search" type="search" placeholder="Ürün, kategori veya aksesuar ara" autocomplete="off" />
+            <button class="commerce-search-submit" type="button" data-search-toggle aria-controls="search-drawer" aria-expanded="false">
+              <i data-lucide="search" class="h-4 w-4"></i>
+              <span>Arama</span>
+            </button>
+          </form>
+          <div class="commerce-actions" aria-label="Hızlı işlemler">
+            <button type="button" class="commerce-account" data-login-toggle aria-controls="login-drawer" aria-expanded="false">
+              <i data-lucide="user" class="h-5 w-5"></i>
+              <span>Giriş yap</span>
+            </button>
+            <button id="cart-toggle" type="button" class="commerce-cart" aria-label="Sepet" aria-controls="cart-drawer" aria-expanded="false">
+              <span data-cart-count>0</span>
+              <i data-lucide="shopping-bag" class="h-5 w-5"></i>
+              <span>Sepet</span>
+            </button>
+          </div>
+        </div>
+        <div class="commerce-nav-row">
+          <nav class="commerce-category-nav" id="home-category-nav" aria-label="Ürün kategorileri"></nav>
+        </div>
+      </header>
       <div class="w-full border-b border-border/70 bg-background text-foreground">
         <div class="mx-auto grid max-w-[1600px] grid-cols-[1fr_auto_1fr] items-center gap-4 px-4 py-3 text-xs sm:px-6 sm:text-sm">
           <div class="col-start-1 flex min-w-0 items-center gap-2 tabular-nums" aria-label="Geri sayım">
@@ -106,7 +152,7 @@
                 </button>
               </li>
               <li class="cart">
-                <button id="cart-toggle" type="button" class="header-icon" aria-label="Sepet" aria-controls="cart-drawer" aria-expanded="false">
+                <button id="legacy-cart-toggle" type="button" class="header-icon" aria-label="Sepet" aria-controls="cart-drawer" aria-expanded="false">
                   <span data-cart-count>0</span>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M14.0002 3H11.7502V1.75C11.7502 0.79 10.9702 0 10.0002 0H5.99023C5.03023 0 4.24023 0.78 4.24023 1.75V3H1.99023C0.890234 3 -0.00976562 3.89 -0.00976562 5V14C-0.00976562 15.1 0.880234 16 1.99023 16H13.9902C15.0902 16 15.9902 15.11 15.9902 14V5C15.9902 3.9 15.1002 3 13.9902 3H14.0002ZM5.75023 1.75C5.75023 1.61 5.86023 1.5 6.0002 1.5H10.0102C10.1502 1.5 10.2602 1.61 10.2602 1.75V3H5.76023V1.75H5.75023ZM14.5002 14.01C14.5002 14.28 14.2802 14.51 14.0002 14.51H2.00023C1.73023 14.51 1.50023 14.29 1.50023 14.01V5.01C1.50023 4.74 1.72023 4.51 2.00023 4.51H4.25023V6.01H5.75023V4.51H10.2502V6.01H11.7502V4.51H14.0002C14.2702 4.51 14.5002 4.73 14.5002 5.01V14.01Z" fill="currentColor"></path>

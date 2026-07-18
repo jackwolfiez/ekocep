@@ -12,13 +12,51 @@
   </head>
   <body class="bg-background text-foreground antialiased">
 
-    <header class="policy-header">
-      <a href="./index.html" class="policy-logo">Ekocep</a>
-      <nav>
-        <a href="./index.html">Ana Sayfa</a>
-        <a href="./index.html#shop">Mağaza</a>
-        <a href="./contact.html">İletişim</a>
-      </nav>
+    <header class="commerce-header">
+      <div class="commerce-promo" aria-label="Kampanya duyurusu">
+        <div class="commerce-promo-track">
+          <span>%100 orijinal ve garantili elektronik</span>
+          <span>&Ccedil;ok satan teknolojiler tek t&#305;kla</span>
+          <span>G&uuml;venli &ouml;deme ve h&#305;zl&#305; kargo</span>
+          <span>500 TL &uuml;zeri sipari&#351;lerde &uuml;cretsiz teslimat</span>
+        </div>
+      </div>
+      <div class="commerce-utility"><div class="commerce-utility-inner">
+        <nav aria-label="Kurumsal ba&#287;lant&#305;lar">
+          <a href="./about.html">Hakk&#305;m&#305;zda</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./faq.html">SSS</a>
+          <a href="./contact.html">&#304;leti&#351;im</a>
+        </nav>
+        <div class="commerce-utility-actions">
+          <a href="./campaigns.html" class="commerce-gift"><i data-lucide="gift" class="h-3.5 w-3.5"></i> Kampanyalar</a>
+        </div>
+      </div></div>
+      <div class="commerce-main">
+        <a href="./index.html" class="commerce-logo">Ekocep<span>.</span></a>
+        <form class="commerce-search" role="search">
+          <label for="header-search">Arama</label>
+          <input id="header-search" type="search" placeholder="&Uuml;r&uuml;n, kategori veya aksesuar ara" autocomplete="off" />
+          <button class="commerce-search-submit" type="button" data-search-toggle aria-controls="search-drawer" aria-expanded="false">
+            <i data-lucide="search" class="h-4 w-4"></i>
+            <span>Arama</span>
+          </button>
+        </form>
+        <div class="commerce-actions" aria-label="H&#305;zl&#305; i&#351;lemler">
+          <button type="button" class="commerce-account" data-login-toggle aria-controls="login-drawer" aria-expanded="false">
+            <i data-lucide="user" class="h-5 w-5"></i>
+            <span>Giri&#351; yap</span>
+          </button>
+          <button id="cart-toggle" type="button" class="commerce-cart" aria-label="Sepet" aria-controls="cart-drawer" aria-expanded="false">
+            <span data-cart-count>0</span>
+            <i data-lucide="shopping-bag" class="h-5 w-5"></i>
+            <span>Sepet</span>
+          </button>
+        </div>
+      </div>
+      <div class="commerce-nav-row">
+        <nav class="commerce-category-nav" id="content-category-nav" aria-label="&Uuml;r&uuml;n kategorileri"></nav>
+      </div>
     </header>
     <main class="policy-page content-page" data-content-page="kvkk">
 
@@ -60,7 +98,7 @@
             <div><h3>Yardım ve Destek</h3><a href="./faq.html">Sıkça Sorulan Sorular</a><a href="./order-tracking.html">Sipariş Takibi</a><a href="./shipping-delivery.html">Kargo ve Teslimat</a><a href="./returns-exchanges.html">İade ve Değişim</a><a href="./contact.html">Bize Ulaşın</a></div>
             <div><h3>Alışveriş Rehberi</h3><a href="./how-to-order.html">Nasıl Sipariş Verilir?</a><a href="./payment-options.html">Ödeme Seçenekleri</a><a href="./secure-shopping.html">Güvenli Alışveriş</a><a href="./membership.html">Üyelik İşlemleri</a><a href="./campaigns.html">Kampanyalar</a></div>
             <div><h3>Yasal Bilgilendirme</h3><a href="./privacy-policy.html">Gizlilik Politikası</a><a href="./kvkk.html">KVKK Aydınlatma Metni</a><a href="./distance-sales.html">Mesafeli Satış Sözleşmesi</a><a href="./membership-agreement.html">Üyelik Sözleşmesi</a><a href="./cookie-policy.html">Çerez Politikası</a><a href="./data-deletion.html">Hesap ve Veri Silme Talebi</a></div>
-            <div><h3>Popüler Kategoriler</h3><a href="./index.html#shop">Telefon Aksesuarları</a><a href="./index.html#shop">Şarj Cihazları</a><a href="./index.html#shop">Kulaklıklar</a><a href="./index.html#shop">Kablolar</a><a href="./index.html#shop">Akıllı Saat Aksesuarları</a></div>
+            <div><h3>Popüler Kategoriler</h3><a href="./category.html?category=Telefon%20K%C4%B1l%C4%B1f%C4%B1">Telefon Aksesuarları</a><a href="./category.html?category=%C5%9Earj%20Cihaz%C4%B1">Şarj Cihazları</a><a href="./category.html?category=Ses%20ve%20M%C3%BCzik">Kulaklıklar</a><a href="./category.html?category=Kablo">Kablolar</a><a href="./category.html?category=Giyilebilir%20Teknoloji&subcategory=Ak%C4%B1ll%C4%B1%20Saat">Akıllı Saat Aksesuarları</a></div>
           </div>
         </div>
         <div class="site-footer-bottom">
@@ -69,6 +107,130 @@
         </div>
       </div>
     </footer>
+
+    <aside id="search-drawer" class="search-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="search-drawer-title">
+      <button class="search-drawer-overlay" type="button" data-search-close aria-label="Arama panelini kapat"></button>
+      <div class="search-drawer-panel">
+        <div class="search-drawer-head">
+          <h2 id="search-drawer-title">Arama</h2>
+          <button class="search-drawer-close" type="button" data-search-close aria-label="Arama panelini kapat">
+            <i data-lucide="x" class="h-5 w-5"></i>
+          </button>
+        </div>
+        <div class="search-drawer-body">
+          <form class="search-form" role="search">
+            <label for="site-search">Arama</label>
+            <div class="search-input-wrap">
+              <input id="site-search" type="search" placeholder="&Uuml;r&uuml;n, kategori veya aksesuar ara" autocomplete="off" data-search-input />
+              <button type="button" data-search-clear>Temizle</button>
+            </div>
+          </form>
+          <div class="search-quick-view">
+            <div class="search-section-title">H&#305;zl&#305; g&ouml;r&uuml;n&uuml;m</div>
+            <div class="search-products"></div>
+            <p class="search-empty" hidden data-search-empty>Aramana uygun &uuml;r&uuml;n bulunamad&#305;.</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <aside id="login-drawer" class="login-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="login-drawer-title">
+      <button class="login-drawer-overlay" type="button" data-login-close aria-label="Giri&#351; panelini kapat"></button>
+      <div class="login-drawer-panel">
+        <div class="login-drawer-head">
+          <h2 id="login-drawer-title">Hesaba giri&#351;</h2>
+          <button class="login-drawer-close" type="button" data-login-close aria-label="Giri&#351; panelini kapat">
+            <i data-lucide="x" class="h-5 w-5"></i>
+          </button>
+        </div>
+        <div class="login-drawer-body">
+          <section class="login-panel-section login-reset-panel" id="login-reset-panel" hidden>
+            <h3>&#350;ifreni s&#305;f&#305;rla</h3>
+            <p>E-postan&#305; yaz, &#351;ifreni yenilemen i&ccedil;in ba&#287;lant&#305; g&ouml;nderelim.</p>
+            <label for="reset-email">E-posta</label>
+            <input id="reset-email" type="email" autocomplete="email" />
+            <button type="button" class="login-submit-button">G&ouml;nder</button>
+            <button type="button" class="login-text-button" data-login-view="login">Vazge&ccedil;</button>
+          </section>
+          <section class="login-panel-section login-main-panel" id="login-main-panel">
+            <p class="login-helper">Devam etmek i&ccedil;in bilgilerini doldur.</p>
+            <label for="login-email">E-posta</label>
+            <input id="login-email" type="email" autocomplete="email" />
+            <label for="login-password">&#350;ifre</label>
+            <input id="login-password" type="password" autocomplete="current-password" />
+            <button type="button" class="login-text-button" data-login-view="reset">&#350;ifreni mi unuttun?</button>
+            <button type="button" class="login-submit-button">Giri&#351; yap</button>
+            <button type="button" class="login-create-link" data-login-view="create">Hesap olu&#351;tur</button>
+          </section>
+          <section class="login-perks">
+            <h3>&Ouml;zel avantajlardan yararlan</h3>
+            <ul>
+              <li>&Uuml;yelere &ouml;zel &uuml;r&uuml;nlere eri&#351;im</li>
+              <li>Premium destek deneyimi</li>
+              <li>Ki&#351;iselle&#351;tirilmi&#351; &ouml;neriler</li>
+            </ul>
+          </section>
+          <section class="login-panel-section login-create-panel" id="login-create-panel" hidden>
+            <h3>Hesap olu&#351;tur</h3>
+            <p>Bilgilerini doldur, sipari&#351;lerini daha kolay takip et.</p>
+            <label for="register-email">E-posta</label>
+            <input id="register-email" type="email" autocomplete="email" />
+            <label for="register-password">&#350;ifre</label>
+            <input id="register-password" type="password" autocomplete="new-password" />
+            <button type="button" class="login-submit-button">Olu&#351;tur</button>
+            <button type="button" class="login-text-button" data-login-view="login">Giri&#351; yap</button>
+          </section>
+        </div>
+      </div>
+    </aside>
+    <aside id="cart-drawer" class="cart-drawer" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
+      <button class="cart-drawer-overlay" type="button" data-cart-close aria-label="Sepeti kapat"></button>
+      <div class="cart-drawer-panel">
+        <div class="cart-drawer-head">
+          <h2 id="cart-drawer-title" class="text-3xl font-semibold tracking-tight">Sepet <span data-cart-count-label>(0)</span></h2>
+          <button class="cart-drawer-close" type="button" data-cart-close aria-label="Sepeti kapat">
+            <i data-lucide="x" class="h-5 w-5"></i>
+          </button>
+        </div>
+        <div class="cart-drawer-body">
+          <div class="cart-empty-state">
+            <i data-lucide="shopping-bag" class="h-11 w-11"></i>
+            <h3 class="mt-5 text-xl font-semibold">Sepetin &#351;u anda bo&#351;.</h3>
+            <p class="mt-2 text-sm text-muted-foreground">En sevilen &uuml;r&uuml;nler sadece bir t&#305;k uzakta.</p>
+            <a href="./index.html#shop" class="cart-continue-button" data-cart-close>Al&#305;&#351;veri&#351;e devam et</a>
+          </div>
+          <div class="cart-filled-state" data-cart-filled hidden>
+            <div class="cart-line-item">
+              <img src="" alt="" loading="lazy" data-cart-item-image />
+              <div class="cart-line-main">
+                <div class="cart-line-top">
+                  <div>
+                    <a href="./product.html" data-cart-item-name>&Uuml;r&uuml;n</a>
+                    <p data-cart-item-variant>Renk se&ccedil;imi</p>
+                  </div>
+                  <button type="button" data-cart-remove aria-label="&Uuml;r&uuml;n&uuml; sepetten kald&#305;r">
+                    <i data-lucide="x" class="h-4 w-4"></i>
+                  </button>
+                </div>
+                <div class="cart-line-bottom">
+                  <div class="cart-line-quantity" aria-label="Sepet adedi">
+                    <button type="button" data-cart-qty-minus aria-label="Adedi azalt">-</button>
+                    <span data-cart-item-quantity>1</span>
+                    <button type="button" data-cart-qty-plus aria-label="Adedi art&#305;r">+</button>
+                  </div>
+                  <strong data-cart-item-price>0 TL</strong>
+                </div>
+              </div>
+            </div>
+            <div class="cart-summary-row">
+              <span>Ara toplam</span>
+              <strong data-cart-subtotal>0 TL</strong>
+            </div>
+            <a href="./index.html#shop" class="cart-checkout-button">&Ouml;DEMEYE GE&Ccedil;</a>
+            <button type="button" class="cart-view-button" data-cart-close>Al&#305;&#351;veri&#351;e devam et</button>
+          </div>
+        </div>
+      </div>
+    </aside>
     <script type="module" src="./content-page.js"></script>
   </body>
 </html>
